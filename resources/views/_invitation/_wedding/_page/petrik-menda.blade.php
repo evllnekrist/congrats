@@ -1,21 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Glanz</title>
-        <!-- Favicon -->
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <!-- Library CSS -->
-        <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
-        <!-- Icons CSS -->
-        <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
-        <!-- Theme CSS -->
-        <link href="{{asset('asset-wedding-1/css/glanz_style.css')}}" rel="stylesheet">
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,600,700%7COpen+Sans:300,400,700%7CPlayfair+Display:400,400i,700,700i" rel="stylesheet">
-        <!-- Other Fonts -->
-        <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
+        @include('_invitation._wedding._include.head-1')
+        @include('_invitation._wedding._include.asset-top-1')
     </head>
     <body class="gla_middle_titles">
         <div class="gla_page" id="gla_page">
@@ -24,14 +11,14 @@
                 <i class="ti ti-music"></i>
             </div>
             <div class="gla_music_icon_cont">
-                <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66757544&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+                <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/108238095&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true"></iframe>
             </div>
             <header hidden>      
                 <nav class="gla_light_nav gla_transp_nav">
 
                     <div class="container">
                         <div class="gla_logo_container clearfix">
-                            <img src="images/glanz_logo.png" alt="" class="gla_logo_rev">
+                            <img src="{{asset('asset-wedding-1/images/glanz_logo.png')}}" alt="" class="gla_logo_rev">
                             <div class="gla_logo_txt">
                                 <a href="/" class="gla_logo">Petrik & Menda</a>
                                 <div class="gla_logo_und">January 20th, 2021</div>
@@ -297,7 +284,7 @@
                 </nav>
             </header>
             <!-- Slider -->
-            <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="images/wedding/Petrik_Menda/14400933225_3b844816c3_k.jpg" data-stellar-background-ratio="0.8">
+            <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset('asset-sample/images/wedding-1-5d.jpg')}}" data-stellar-background-ratio="0.8">
                 <div class="gla_over" data-color="#1e1d2d" data-opacity="0.2"></div>
                 <div class="container">
                     <!-- Slider Texts -->
@@ -305,7 +292,7 @@
                         <div class="gla_flower gla_flower2">
                             <div class="gla_flower2_name_l">Petrik <b>Save The Date</b></div>
                             <div class="gla_flower2_name_r">Menda <b>January 20th, 2021</b></div>
-                            <img src="http://placehold.it/600x600" alt="">
+                            <img src="{{asset('asset-sample/images/wedding-1-1.jpg')}}" alt=""><!-- http://placehold.it/600x600 -->
                         </div>
                     </div>
                     <!-- Slider Texts End -->
@@ -321,7 +308,7 @@
             <section id="gla_content" class="gla_content">
                 <section class="gla_section gla_image_bck" data-color="#fafafd">
                     <div class="container text-center">
-                        <p><img src="images/animations/flower5.gif" data-bottom-top="@src:images/animations/flower5.gif; opacity:1" class="gla_animated_flower" height="150" alt=""></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/flower5.gif')}}" data-bottom-top="@src:../asset-wedding-1/images/animations/flower5.gif; opacity:1" class="gla_animated_flower" height="150" alt=""></p>
                         <h2>Our Story</h2>
                         <h3 class="gla_subtitle">The Fourth of July</h3>
                         <p>My fiancé proposed on the Fourth of July. My mother asked us to go to the backyard to get some chairs and he took me by the shed where we could see all of the fireworks. He kissed me, then he took the ring box out of his pocket and asked me to be his wife. He was shaking a little. The proposal was a little silly but perfect, just like him." — Jeska Cords</p>
@@ -331,15 +318,15 @@
                 <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="http://placehold.it/1400x800">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.4"></div>
                     <div class="container text-center">
-                        <p><img src="images/animations/savethedate_wh.gif" data-bottom-top="@src:images/animations/savethedate_wh.gif" height="150" alt=""></p>
-                        <h2>January 20thth, 2021</h2>
-                        <h3 class="gla_subtitle">St. Thomas's Church,<br>Bristol, U.K.</h3>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/savethedate_wh.gif')}}" data-bottom-top="@src:../asset-wedding-1/images/animations/savethedate_wh.gif" height="150" alt=""></p>
+                        <h2>January 20th, 2021</h2>
+                        <h3 class="gla_subtitle">St. Thomas's Church,<br>Jayapura, Indonesia</h3>
                         <div class="gla_countdown" data-year="2021" data-month="08" data-day="10"></div>
                     </div>
                 </section>
                 <section class="gla_section">
                     <div class="container text-center">
-                        <p><img src="images/animations/flower6.gif" data-bottom-top="@src:images/animations/flower6.gif; opacity:1" class="gla_animated_flower" height="110" alt=""></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/flower6.gif')}}" data-bottom-top="@src:../asset-wedding-1/images/animations/flower6.gif; opacity:1" class="gla_animated_flower" height="110" alt=""></p>
                         <h2>Wedding Details</h2>
                         <h3 class="gla_subtitle">When & Where</h3>
                         <p>Our ceremony and reception will be held at the Liberty House. Located on the Hudson River, it has a beautiful, unobstructed view of the World Trade One building and a convenient ferry that runs between it and Manhattan.</p>
@@ -349,8 +336,8 @@
                                 <h3>The Reception</h3>
                                 <p>4:00 PM – 5:30 PM<br>
                                 St. Thomas's Church,<br>
-                                Bristol<br>
-                                U.K.<br>
+                                Jayapura<br>
+                                Indonesia<br>
                                 +1 777-123-4567</p>
                                 <a href="#" class="btn">View Map</a>
                             </div>
@@ -359,8 +346,8 @@
                                 <h3>The Ceremony</h3>
                                 <p>4:00 PM – 5:30 PM<br>
                                 St. Thomas's Church,<br>
-                                Bristol<br>
-                                U.K.<br>
+                                Jayapura<br>
+                                Indonesia<br>
                                 +1 777-123-4567</p>
                                 <a href="#" class="btn">View Map</a>
                             </div>
@@ -369,8 +356,8 @@
                                 <h3>The Afterparty</h3>
                                 <p>4:00 PM – 5:30 PM<br>
                                 St. Thomas's Church,<br>
-                                Bristol<br>
-                                U.K.<br>
+                                Jayapura<br>
+                                Indonesia<br>
                                 +1 777-123-4567</p>
                                 <a href="#" class="btn">View Map</a>
                             </div>
@@ -380,7 +367,7 @@
                 <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.2" data-image="http://placehold.it/1400x800">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.4"></div>
                     <div class="container text-center">
-                        <p><img src="images/animations/rsvp_wh.gif" data-bottom-top="@src:images/animations/rsvp_wh.gif" height="200" alt=""></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:../asset-wedding-1/images/animations/rsvp_wh.gif" height="200" alt=""></p>
                         <div class="row">
                             <div class="col-md-8 col-md-push-2">
                                 <form action="https://formspree.io/your@mail.com" method="POST">
@@ -424,7 +411,7 @@
                 </section>
                 <section class="gla_section gla_image_bck">
                     <div class="container text-center">
-                        <p><img src="images/animations/flower7.gif" data-bottom-top="@src:images/animations/flower7.gif; opacity:1" class="gla_animated_flower" height="110" alt=""></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/flower7.gif')}}" data-bottom-top="@src:../asset-wedding-1/images/animations/flower7.gif; opacity:1" class="gla_animated_flower" height="110" alt=""></p>
                         <h2>The Day They Got Engaged</h2>
                         <p>Andy and Jeska met in university in the Graphic Design program. They both remember each other from orientation, but it wasn’t love at first sight, that’s for sure. Andy remembers Jeska as a ‘snooty art bitch (having been in the visual arts program at the time), and she remembers Andy being an ‘arrogant computer nerd’, boasting his knowledge of Macs over the other students.</p>
                         <!-- filters -->
@@ -755,7 +742,7 @@
                 <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="http://placehold.it/1400x800">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.4"></div>
                     <div class="container text-center">
-                        <p><img src="images/animations/thnyou_wh.gif" alt="" height="200" data-bottom-top="@src:images/animations/thnyou_wh.gif"></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" alt="" height="200" data-bottom-top="@src:../asset-wedding-1/images/animations/thnyou_wh.gif"></p>
                     </div>
                 </section>
             </section>

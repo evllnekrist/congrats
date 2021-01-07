@@ -17,9 +17,15 @@ class WeddingController extends Controller
     }
     
     public function index($code){
+        $event = 'Wedding';
+        $subject_name = explode("-",$code);
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
-        return view('_invitation._wedding._page.'.$code,[
-            "invited_name" => $invited_name
-        ]);
+
+        if(sizeof($subject_name) > 1){
+            return view('_invitation._wedding._page.'.$code,[
+                "event" => ucfirst($subject_name[0])." & ".ucfirst($subject_name[1])."'s ".$event." | ".env("APP_NAME", "KabarBaik"),
+                "invited_name" => $invited_name,
+            ]);
+        }
     }
 }
