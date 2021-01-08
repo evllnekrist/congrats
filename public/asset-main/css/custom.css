@@ -1,0 +1,32 @@
+.tbody-white{
+    background-color: white;
+    color: rgb(41, 41, 41);
+}
+
+.n-font{
+    font-family:  Dosis, Arial !important;
+}
+
+.b-box-white{
+    padding: 5px;
+    background-color: white;
+    color: rgb(41, 41, 41) !important;
+}
+
+.b-box-pink{
+    padding: 5px;
+    background-color: #f3bad6;
+    color: rgb(41, 41, 41) !important;
+}
+
+.img-wrapper {
+    height:520px;
+    width:250px;
+    position: relative;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+
+.img-wrapper > img {
+    position: relative;
+}

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Main\HomeController@index');
 
 /*--------------------------------------------------------------------------START--*/ 
     Route::group(['prefix' => 'wedding'], function()

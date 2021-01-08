@@ -23,7 +23,7 @@ class WeddingController extends Controller
 
         if(sizeof($subject_name) > 1){
             return view('_invitation._wedding._page.'.$code,[
-                "event" => ucfirst($subject_name[0])." & ".ucfirst($subject_name[1])."'s ".$event." | ".env("APP_NAME", "KabarBaik"),
+                "event" => ucfirst($subject_name[0])." & ".ucfirst($subject_name[1])."'s ".$event." | ".env("APP_NAME", "BeritaBaik"),
                 "invited_name" => $invited_name,
             ]);
         }
