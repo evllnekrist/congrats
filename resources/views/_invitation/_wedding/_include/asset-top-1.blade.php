@@ -1,5 +1,5 @@
 <?php
-    $version = "?var=".date("Ymd")."001";
+    $version = "?var=".date("Ymd")."002";
 ?>
 <!-- Favicon -->
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">

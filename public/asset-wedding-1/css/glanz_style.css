@@ -1778,7 +1778,7 @@ ul.mega-menu {
 		}
 	
 		.gla_logo {
-			font:900 24px/18px Dosis, Arial;
+			font:900 22px/16px Dosis, Arial;
 			color:#333;
 			text-transform: uppercase;
 			position: relative;
@@ -2441,14 +2441,12 @@ ul.mega-menu {
 			font:400 130px/117px marsha, Arial;
 			margin-bottom: 30px;
 		}
-		.gla_slide_title {
-	
-		}
+		/* .gla_slide_title {} */
 		h2.gla_slide_title:after {
 			margin-bottom: 20px;
 		}
 			.gla_slide_midtitle {
-				font:900 80px/80px marsha, Arial;
+				font:900 60px/60px marsha, Arial;
 				margin-bottom: 30px;
 			}
 			.gla_slide_title b {

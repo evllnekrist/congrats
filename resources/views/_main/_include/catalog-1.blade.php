@@ -2,10 +2,10 @@
 <section class="gla_section" id="catalog-template">
 <div class="container">
     <div class="row">
-        <div class="col-md-3 gla_anim_box">
+        <div class="col-md-3 col-sm-6 gla_anim_box">
             <div class="gla_shop_item">
                 <span class="gla_shop_item_slider img-wrapper">
-                    <img src="{{asset('asset-main/images/template/temp-1.png')}}">
+                     <img src="{{asset('asset-main/images/template/temp-1.png')}}">
                 </span>
                 <a href="#" class="gla_shop_item_title">
                     Template<b>Wedding-1</b>
@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 gla_anim_box">
+        <div class="col-md-3 col-sm-6 gla_anim_box">
             <div class="gla_shop_item">
                 <span class="gla_shop_item_slider img-wrapper">
                     <img src="{{asset('asset-main/images/template/temp-2.png')}}">
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 gla_anim_box">
+        <div class="col-md-3 col-sm-6 gla_anim_box">
             <div class="gla_shop_item">
                 <span class="gla_shop_item_slider img-wrapper">
                     <img src="{{asset('asset-main/images/template/temp-3.png')}}">
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 gla_anim_box">
+        <div class="col-md-3 col-sm-6 gla_anim_box">
             <div class="gla_shop_item">
                 <span class="gla_shop_item_slider img-wrapper">
                     <img src="{{asset('asset-main/images/template/temp-4.png')}}">
