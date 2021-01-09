@@ -1,6 +1,6 @@
 <!-- Asset TOP -->
     <?php
-        $version = "?var=".date("Ymd")."002";
+        $version = "?var=".date("Ymd")."003";
     ?>
     <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
     <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
