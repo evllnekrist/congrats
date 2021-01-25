@@ -108,7 +108,7 @@
             </div>
             <div class="gla_music_icon_cont">
                 <br><br><br><br>
-                <audio id="myaudio" autoplay controls>
+                <audio id="myaudio" controls>
                 <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
                     <source src="{{asset($cdn_link.'audios/violin__how_does_a_moment_last_forever.mp3')}}" type="audio/mpeg">
                     <source src="{{asset($cdn_link.'audios/violin__how_does_a_moment_last_forever.mp3')}}" type="audio/ogg">
@@ -132,9 +132,9 @@
                                 <b class="gla_main_menu_icon_b">Back</b>
                             </div>
                         </div>
-                        <!-- <div class="gla_main_menu_content gla_image_bck" data-color="rgba(0,0,0,0.9)" data-image="images/wedding/Petrik_Menda/14400933225_3b844816c3_k.jpg">
+                        <div class="gla_main_menu_content gla_image_bck" data-color="rgba(0,0,0,0.9)" data-image="images/wedding/Petrik_Menda/14400933225_3b844816c3_k.jpg">
                             <div class="gla_over" data-color="#000" data-opacity="0.7"></div>
-                        </div> -->
+                        </div>
                         <div class="gla_main_menu_content_menu gla_wht_txt text-right">
                             <div class="container">
                                 <ul>
