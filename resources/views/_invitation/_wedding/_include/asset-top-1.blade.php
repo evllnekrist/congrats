@@ -1,8 +1,6 @@
 <?php
     $version = "?var=".date("Ymd")."002";
 ?>
-<!-- Favicon -->
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 <!-- Library CSS -->
 <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
 <!-- Icons CSS -->

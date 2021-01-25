@@ -132,9 +132,9 @@ html {
 	z-index: 1
 }
 .gla_image_bck {
-	-webkit-background-size: cover;
+	-webkit-background-size: cover !important;
 	background-size: cover;
-	background-position: center;
+	background-position: center !important;
 }
 .gla_top_menu_mobile_link {
 	display: none;
@@ -289,6 +289,9 @@ h2:after {
 h3 {
 	font:italic 400 30px/40px Playfair Display, Arial;
 	margin-bottom: 40px;
+}
+h5 {
+	font:italic 400 18px/30px Playfair Display, Arial
 }
 
 
@@ -2483,6 +2486,14 @@ ul.mega-menu {
 			margin: 20px 0;
 		}
 
+		.gla_slide_subtitle_s {
+			font:400 16px Dosis, Arial;
+			text-transform: none;
+			line-height: 1.125;
+			margin-bottom: 20px;
+			margin: 20px 0;
+		}
+
 		.gla_slide_desq {
 			font:400 24px Dosis, Arial;
 			line-height: 1.35417;
@@ -2940,7 +2951,7 @@ ul.mega-menu {
 	border-radius: 20px;
 	overflow: hidden;
 	text-align: center;
-	padding: 120px 140px;
+	padding: 60px 140px; /* 120px 140px */
 	color: #000;
 	-webkit-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
   -moz-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
@@ -5816,6 +5827,17 @@ footer {
 
 
 @media (max-width:1000px){
+/* custom-start */
+	.gla_round_im {
+		width: 150px;
+		height: 150px;
+		display: inline-block;
+		margin: 0 auto 20px;
+		border-radius: 50%;
+		position: relative;
+		z-index: 1;
+	}
+/* custom-end */
 
 	.gla_music_icon { 
 		bottom: 33px;
@@ -5891,12 +5913,18 @@ footer {
 	}
 	.gla_slide_txt,
 	.gla_slide_txt.gla_slide_center_middle, 
-	.gla_slide_txt.gla_slide_center_top, 
-	.gla_slide_txt.gla_slide_center_bottom {
+	.gla_slide_txt.gla_slide_center_top{
 		width: 100%;
 		left: 0;
 		top: 50%;
 		transform:translateY(-50%);
+		padding: 0 10px;
+	}
+	.gla_slide_txt.gla_slide_center_bottom {
+		width: 100%;
+		left: 0;
+		top: 84%;
+		transform:translateY(-84%);
 		padding: 0 10px;
 	}
 
