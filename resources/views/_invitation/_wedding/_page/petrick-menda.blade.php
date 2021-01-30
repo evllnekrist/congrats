@@ -558,6 +558,11 @@
                                 data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" height="70" alt=""></p>
                     </div>
                 </section>
+                <section class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
+                    <div class="container">
+                        <a href='{{env("APP_URL", "beritabaik.co")}}'>© beritabaik.co</a>
+                    </div>
+                </section>
             </section>
             <!-- Content End -->
         </div>
