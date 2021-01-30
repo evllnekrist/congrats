@@ -24,11 +24,6 @@ Route::get('/','Main\HomeController@index');
     });
 /*--------------------------------------------------------------------------END----*/
  
-//Clear Cache facade value:
-Route::get('/clear-cache', function() {
-    $exitCode = Artisan::call('cache:clear');
-    return '<h1>Cache facade value cleared</h1>';
-});
 
 //Reoptimized class loader:
 Route::get('/optimize', function() {
@@ -54,4 +49,9 @@ Route::get('/view-clear', function() {
 Route::get('/config-cache', function() {
     $exitCode = Artisan::call('config:cache');
     return '<h1>Clear Config cleared</h1>';
+});
+//Clear Cache facade value:
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return '<h1>Cache facade value cleared</h1>';
 });

@@ -176,7 +176,7 @@ return [
         /*
          * NEW ~
          */
-        Yajra\Datatables\DatatablesServiceProvider::class
+        Yajra\Datatables\DataTablesServiceProvider::class
     ],
 
     /*
