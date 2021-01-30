@@ -14,7 +14,7 @@
 Route::get('/','Main\HomeController@index');
 
 /*--------------------------------------------------------------------------START--*/ 
-    Route::group(['prefix' => 'wedding'], function()
+    Route::group(['prefix' => 'w'], function()
     {
         Route::get('{code}','Invitation\WeddingController@index');
         Route::post('{code}/send-rsvp','Invitation\WeddingController@ajax_send_rsvp');

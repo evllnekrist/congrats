@@ -89,12 +89,11 @@
     </head>
     <body class="gla_middle_titles">
         <?php 
-            $cdn_link   = "asset-wedding-gb/petrick-menda/";
+            $cdn_link   = "asset-wedding-a/petrick-menda/";
         ?>
         
         <div class="gla_invitation_container" id="gla_welcome">
-            <div class="gla_invitation_i gla_invitation_ii gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/card-bg.jpg')}}">
-                
+            <div class="gla_invitation_i gla_invitation_ii gla_image_bck gla_wht_txt box-shadow" data-image="{{asset($cdn_link.'images/card-bg.jpg')}}">
                 <p><img src="{{asset('asset-wedding-1/images/invitations/inv_i/save_the_date.gif')}}" alt="" height="180"></p>
                 <br><br><br><br><br><br><br>
                 <span class="gla_wht_txt fix-dosis-m-b">
@@ -116,7 +115,7 @@
             </div>
             <div class="gla_music_icon_cont">
                 <br><br><br><br>
-                <audio id="myaudio" controls>
+                <audio id="myaudio" controls loop>
                 <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
                     <source src="{{asset($cdn_link.'audios/sezairi__its_you.mp3')}}" type="audio/mpeg">
                     <source src="{{asset($cdn_link.'audios/sezairi__its_you.mp3')}}" type="audio/ogg">
@@ -244,8 +243,8 @@
                     </div>
                 </section>
                 <section    id="timeline" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0" 
-                            data-image="{{asset($cdn_link.'images/timeline-bg-2.jpg')}}">
-                    <div class="container text-center">
+                            data-image="{{asset($cdn_link.'images/timeline-bg.jpg')}}">
+                    <div class="container text-center"><br>
                         <h4>Cerita Tentang Kami</h4>
                         <div class="gla_slider_carousel" style="margin-top:50px">
                             <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/timeline-1.jpg')}}">
@@ -320,7 +319,11 @@
                                 </div>
                             </div>
                         </div>
-                        <br><br>
+                    </div><br><br><br>
+                </section>
+                <section    id="timeline-2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
+                            data-image="{{asset($cdn_link.'images/timeline-bg-3.jpg')}}">
+                    <div class="container text-center"><br>
                         <h4>Pre Wedding</h4>
                         <div class="gla_slider_carousel" style="margin-top:50px">
                             <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-1.jpg')}}">
@@ -384,7 +387,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div><br><br><br>
                 </section>
                 <section    id="event-detail" class="gla_section">
                     <div class="container text-center">

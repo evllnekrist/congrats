@@ -33,7 +33,7 @@
     29 => 'App\\Providers\\AuthServiceProvider',
     30 => 'App\\Providers\\EventServiceProvider',
     31 => 'App\\Providers\\RouteServiceProvider',
-    32 => 'Yajra\\Datatables\\DatatablesServiceProvider',
+    32 => 'yajra\\Datatables\\DatatablesServiceProvider',
   ),
   'eager' => 
   array (
@@ -55,7 +55,7 @@
     15 => 'App\\Providers\\AuthServiceProvider',
     16 => 'App\\Providers\\EventServiceProvider',
     17 => 'App\\Providers\\RouteServiceProvider',
-    18 => 'Yajra\\Datatables\\DatatablesServiceProvider',
+    18 => 'yajra\\Datatables\\DatatablesServiceProvider',
   ),
   'deferred' => 
   array (
