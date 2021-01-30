@@ -223,7 +223,8 @@
                             <center>    
                                 <div class="bio-card-m-top">
                                     <span class="fix-dosis-m-b">dr. Petrick <br>Aqrasvawinata</span>
-                                </div><a><i class="ti ti-align-right"></i></a>
+                                </div>
+                                <a href="https://www.instagram.com/petrick_aqras/"><i class="ti ti-instagram gla_wht_txt"></i><br></a>
                                 <div class="bio-card-m">
                                     <p class="fix-dosis-m"><br>putra dari<br><br><b>Arius F.S.</b><br>&<br><b>Marilaniasie</b></p>
                                 </div>
@@ -234,7 +235,8 @@
                             <center>
                                 <div class="bio-card-f-top">
                                     <span class="fix-dosis-m-b">dr. Rimenda <br>Dwirana Barus</span>
-                                </div><a><i class="ti ti-align-left"></i></a>
+                                </div>
+                                <a href="https://www.instagram.com/rimendadb/"><i class="ti ti-instagram gla_wht_txt"><br></i></a>
                                 <div class="bio-card-f">
                                     <p class="fix-dosis-m"><br>putri dari<br><br><b>Drs. Rakhmad Barus, Apt</b><br>&<br><b>Magdalena K. Girsang, SE</b></p>
                                 </div>
@@ -460,7 +462,7 @@
                                             <span>Maaf, saya tidak bisa hadir.</span>
                                         </div>
                                         <div class="col-md-12" style="padding-top:50px">
-                                            <input type="submit" class="btn submit" id="form-rsvp-send" value="Simpan">
+                                            <input type="submit" class="btn submit" id="form-rsvp-send" value="simpan">
                                         </div>
                                         @if($display['rsvp'] == 1)
                                         <div class="panel panel-default" style="margin-top:50px">
@@ -493,17 +495,17 @@
                 <section    id="wishes" class="gla_section">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xs-6">
-                                <p><img src="{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" 
-                                        data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" height="150" alt=""></p>   
+                            <div class="col-xs-6 text-left">
+                                <p><img src="{{asset($cdn_link.'images/corner.png')}}" 
+                                        data-bottom-top="@src:{{asset($cdn_link.'images/corner.png')}}" height="100" alt=""></p>   
                             </div> 
-                            <div class="col-xs-6">
-                                <p><img src="{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" 
-                                        data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" height="150" alt=""></p>   
+                            <div class="col-xs-6 text-right">
+                                <p><img src="{{asset($cdn_link.'images/corner-2.png')}}" 
+                                        data-bottom-top="@src:{{asset($cdn_link.'images/corner-2.png')}}" height="100" alt=""></p>   
                             </div> 
                         </div>
                         <div class="row text-left">
-                            <table class="table table-sm table-hover" id="table-wish">
+                            <table class="table table-sm table-striped" id="table-wish">
                                 <thead>
                                     <tr>
                                         <th width="25%">Pengirim</th>                              
@@ -513,7 +515,11 @@
                             </table>
                         </div>
                         <br><br><br><br>
-                        <h2>Ucapan</h2>
+                        <div class="row">
+                            <img    src="{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" 
+                                    data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" height="150" alt="">   
+                        </div> 
+                        <br><br>     
                         <div class="row">
                             <div class="col-md-8 col-md-push-2">
                                 <form id="form-wish" onsubmit="return false;">
@@ -527,11 +533,21 @@
                                             <textarea name="wish_message" maxlength="500" class="form-control form-opacity" required></textarea>
                                         </div>
                                         <div class="col-md-12">
-                                            <input type="submit" class="btn submit" id="form-wish-send" value="Kirim">
+                                            <input type="submit" class="btn submit" id="form-wish-send" value="kirim ucapan-mu">
                                         </div>
                                     </div>
                                 </form>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 text-left">
+                                <p><img src="{{asset($cdn_link.'images/corner-3.png')}}" 
+                                        data-bottom-top="@src:{{asset($cdn_link.'images/corner-3.png')}}" height="100" alt=""></p>   
+                            </div> 
+                            <div class="col-xs-6 text-right">
+                                <p><img src="{{asset($cdn_link.'images/corner-4.png')}}" 
+                                        data-bottom-top="@src:{{asset($cdn_link.'images/corner-4.png')}}" height="100" alt=""></p>   
+                            </div> 
                         </div>
                     </div>
                 </section>
@@ -562,66 +578,73 @@
                     seeWishes();
 
                     $(document).on("click","#form-rsvp-send",function(){
-                        console.log('handling :: form-rsvp');
-                        let name = $('[name="rsvp_name"]').val();
-                        let address = $('[name="rsvp_address"]').val();
-                        let attend = $('[name="rsvp_attend"]').val();
 
-                        $.ajax({
-                            url: '{{$code}}/send-rsvp',
-                            headers: {
-                                'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
-                            },
-                            type: 'POST',
-                            data: JSON.stringify({
-                                sender_name: name,
-                                sender_address: address,
-                                attend: attend
-                            }),
-                            contentType: 'application/json; charset=utf-8',
-                            success: (function (data) {
-                                if(data.status){
-                                    if("{{$display['rsvp']}}"  == 1){
-                                        seeRSVP();
+                        if(document.getElementById('form-rsvp').checkValidity()){ 
+                            console.log('handling :: form-rsvp | validity passed');
+                            let name = $('[name="rsvp_name"]').val();
+                            let address = $('[name="rsvp_address"]').val();
+                            let attend = $('[name="rsvp_attend"]').val();
+                            $.ajax({
+                                url: '{{$code}}/send-rsvp',
+                                headers: {
+                                    'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
+                                },
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    sender_name: name,
+                                    sender_address: address,
+                                    attend: attend
+                                }),
+                                contentType: 'application/json; charset=utf-8',
+                                success: (function (data) {
+                                    if(data.status){
+                                        if("{{$display['rsvp']}}"  == 1){
+                                            seeRSVP();
+                                        }
+                                        alert(data.message+'\nthankyou!');
+                                    }else{
+                                        alert('error','',data.message);
                                     }
-                                    alert(data.message+'\nthankyou!');
-                                }else{
-                                    alert('error','',data.message);
+                                }),error:function(xhr,status,error) {
+                                    alert('error [sys]','',xhr.responseText);
                                 }
-                            }),error:function(xhr,status,error) {
-                                alert('error [sys]','',xhr.responseText);
-                            }
-                        });
+                            });
+                        }else{
+                            console.log('handling :: form-rsvp | validity 0');
+                        }
                     });
 
                     $(document).on("click","#form-wish-send",function(){
-                        console.log('handling :: form-wish');
-                        let name = $('[name="wish_name"]').val();
-                        let message = $('[name="wish_message"]').val();
-
-                        $.ajax({
-                            url: '{{$code}}/send-wish',
-                            headers: {
-                                'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
-                            },
-                            type: 'POST',
-                            data: JSON.stringify({
-                                sender_name: name,
-                                message: message
-                            }),
-                            contentType: 'application/json; charset=utf-8',
-                            success: (function (data) {
-                                console.log(data);
-                                if(data.status){
-                                    seeWishes();
-                                    alert(data.message+'\nthankyou!');
-                                }else{
-                                    alert('error','',data.message);
+                        if(document.getElementById('form-wish').checkValidity()){ 
+                            console.log('handling :: form-wish | validity passed');
+                            let name = $('[name="wish_name"]').val();
+                            let message = $('[name="wish_message"]').val();
+                            $.ajax({
+                                url: '{{$code}}/send-wish',
+                                headers: {
+                                    'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
+                                },
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    sender_name: name,
+                                    message: message
+                                }),
+                                contentType: 'application/json; charset=utf-8',
+                                success: (function (data) {
+                                    console.log(data);
+                                    if(data.status){
+                                        seeWishes();
+                                        alert(data.message+'\nthankyou!');
+                                    }else{
+                                        alert('error','',data.message);
+                                    }
+                                }),error:function(xhr,status,error) {
+                                    alert('error [sys]','',xhr.responseText);
                                 }
-                            }),error:function(xhr,status,error) {
-                                alert('error [sys]','',xhr.responseText);
-                            }
-                        });
+                            });
+                        }else{
+                            console.log('handling :: form-wish | validity 0');
+                        }
                     });
 
                     function seeRSVP(){
