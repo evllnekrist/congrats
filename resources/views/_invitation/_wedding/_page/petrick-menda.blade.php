@@ -86,6 +86,16 @@
             $cdn_link   = "asset-wedding-bg/petrick-menda/";
         ?>
         
+        
+        <!-- Preloader -->
+        <div class="gla_page_loader gla_image_bck" data-color="#f2f2f2">
+            <div class="gla_loader">
+                <p><img src="{{asset('asset-wedding-1/images/animations/icons/icon19.gif')}}" height="150" alt=""></p>
+                <p>Loading...</p>
+            </div>
+        </div>
+        <!-- Preloader End-->
+
         <div class="gla_invitation_container" id="gla_welcome">
             <div class="gla_invitation_i gla_invitation_ii gla_image_bck gla_wht_txt box-shadow" data-image="{{asset($cdn_link.'images/card-bg.jpg')}}">
                 <p><img src="{{asset('asset-wedding-1/images/invitations/inv_i/save_the_date.gif')}}" alt="" height="180"></p>
@@ -207,7 +217,7 @@
                     <div class="row text-center">
                         <div class="col gla_round_block">    
                             <span class="fix-dosis-l-b gla_wht_txt">Are getting married<br>20 February, 2021</span>
-                            <p class="gla_slide_subtitle gla_wht_txt">St. Thomas's Church,<br>Bristol, U.K.</p>
+                            <p class="gla_slide_subtitle gla_wht_txt">Jayapura</p>
                             <!-- <div class="gla_countdown" data-year="2021" data-month="02" data-day="20"></div> -->
                         </div>
                     </div>
