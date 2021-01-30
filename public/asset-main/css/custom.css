@@ -25,6 +25,7 @@
     overflow-y:auto;
 }
 
+
 @media (min-width: 200px) { 
 .img-wrapper {
     height:540px;

@@ -7,11 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class WeddingWishes extends Model
 {
     protected $table = 'tr_wedding_wishes';
+    protected $fillable = [
+                            'code',
+                            'sender_name',
+                            'message',
+                        ];
 
-    // public function member(){
-    //     return $this->belongsTo('App\Http\Models\Member', 'card_id');
-    // }
-    // public function transaction(){
-    //     return $this->hasOne('App\Http\Models\MemberTransaction','code','transaction_code');
-    // }
+    public function wedding(){
+        return $this->belongsTo('App\Http\Models\Invitation\Wedding', 'code');
+    }
 }

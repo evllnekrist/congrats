@@ -107,7 +107,7 @@
 				touchDrag:true,
 				singleItem:true,
 				navigationText:['<i class="ti ti-angle-left"></i>','<i class="ti ti-angle-right"></i>'],
-				transitionStyle:"fade",
+				// transitionStyle:"fade",
 				afterAction: function(current) {
 		        current.find('video').get(0).play();
 		    }
@@ -128,11 +128,10 @@
 				touchDrag:true,
 				singleItem:true,
 				navigationText:['<i class="ti ti-angle-left"></i>','<i class="ti ti-angle-right"></i>'],
-				transitionStyle:"fade",
+				// transitionStyle:"fade",
 			});
 		}
 	}
-
 
 
   /*OWL Team*/

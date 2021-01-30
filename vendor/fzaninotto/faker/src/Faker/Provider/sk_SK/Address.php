@@ -181,7 +181,7 @@ class Address extends \Faker\Provider\Address
         'Paňa', 'Paňovce', 'Papín', 'Papradno', 'Parchovany', 'Parihuzovce', 'Párnica', 'Partizánska Ľupča', 'Partizánske', 'Pastovce', 'Pastuchov',
         'Pašková', 'Paština Závada', 'Pata', 'Pataš', 'Patince', 'Pavčina Lehota', 'Pavlice', 'Pavlová', 'Pavlova Ves', 'Pavlovce', 'Pavlovce',
         'Pavlovce nad Uhom', 'Pavľany', 'Pažiť', 'Pčoliné', 'Pečenice', 'Pečeňady', 'Pečeňany', 'Pečovská Nová Ves', 'Peder', 'Perín-Chym',
-        'Pernek', 'Petkovce', 'Petrikovce', 'Petrová', 'Petrova Lehota', 'Petrova Ves', 'Petrovany', 'Petrovce', 'Petrovce', 'Petrovce',
+        'Pernek', 'Petkovce', 'Petrickovce', 'Petrová', 'Petrova Lehota', 'Petrova Ves', 'Petrovany', 'Petrovce', 'Petrovce', 'Petrovce',
         'Petrovce nad Laborcom', 'Petrovice', 'Petrovo', 'Pezinok', 'Piešťany', 'Pichne', 'Píla', 'Píla', 'Píla', 'Pinciná', 'Pinkovce',
         'Piskorovce', 'Pitelová', 'Plášťovce', 'Plavé Vozokany', 'Plavecké Podhradie', 'Plavecký Mikuláš', 'Plavecký Peter', 'Plavecký Štvrtok',
         'Plaveč', 'Plavnica', 'Plechotice', 'Pleš', 'Plešivec', 'Plevník-Drienové', 'Pliešovce', 'Ploské', 'Ploské', 'Pobedim', 'Počarová',
