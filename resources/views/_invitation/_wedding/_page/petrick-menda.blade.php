@@ -4,15 +4,6 @@
         @include('_invitation._wedding._include.head-1')
         @include('_invitation._wedding._include.asset-top-1')
         <style>
-            .spec-ft-blue{
-                color:#154167 !important;
-            }
-            .spec-bg-blue{
-                background-color:#154167;
-            }
-            .spec-border-blue{
-                border:2px solid #154167;
-            }
             .fix-dosis-l-b{
                 font:900 30px/30px Dosis, Arial;
                 margin-bottom: 50px;
@@ -75,6 +66,9 @@
                 bottom:0;
                 width:100%;
             }
+            /* .dataTables_wrapper .dataTables_filter input{
+                border:1px solid grey;
+            } */
             @media (max-width:768px){
                 .img-fix-h{
                     max-height:30vh;
@@ -89,7 +83,7 @@
     </head>
     <body class="gla_middle_titles">
         <?php 
-            $cdn_link   = "asset-wedding-a/petrick-menda/";
+            $cdn_link   = "asset-wedding-bg/petrick-menda/";
         ?>
         
         <div class="gla_invitation_container" id="gla_welcome">
@@ -244,8 +238,7 @@
                         </div>
                     </div>
                 </section>
-                <section    id="timeline" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0" 
-                            data-image="{{asset($cdn_link.'images/timeline-bg.jpg')}}">
+                <section    id="timeline" class="gla_section gla_image_bck gla_fixed">
                     <div class="container text-center"><br>
                         <h4>Cerita Tentang Kami</h4>
                         <div class="gla_slider_carousel" style="margin-top:50px">
@@ -473,7 +466,7 @@
                                             </div>
                                             <div id="table-rsvp-wrap" class="panel-collapse collapse">
                                                 <div class="panel-body">
-                                                    <table class="table table-sm table-striped ft-dark" id="table-rsvp" width="100%">
+                                                    <table class="table table-sm table-borderless table-striped ft-dark" id="table-rsvp" width="100%">
                                                         <thead>
                                                             <tr>
                                                                 <th width="40%">Pengirim</th>
@@ -498,14 +491,14 @@
                             <div class="col-xs-6 text-left">
                                 <p><img src="{{asset($cdn_link.'images/corner.png')}}" 
                                         data-bottom-top="@src:{{asset($cdn_link.'images/corner.png')}}" height="100" alt=""></p>   
-                            </div> 
+                            </div>  
                             <div class="col-xs-6 text-right">
                                 <p><img src="{{asset($cdn_link.'images/corner-2.png')}}" 
                                         data-bottom-top="@src:{{asset($cdn_link.'images/corner-2.png')}}" height="100" alt=""></p>   
                             </div> 
-                        </div>
+                        </div>  
                         <div class="row text-left">
-                            <table class="table table-sm table-striped" id="table-wish">
+                            <table class="table table-sm table-borderless table-striped" id="table-wish">
                                 <thead>
                                     <tr>
                                         <th width="25%">Pengirim</th>                              
@@ -514,12 +507,12 @@
                                 </thead>
                             </table>
                         </div>
-                        <br><br><br><br>
+                        <br>
                         <div class="row">
                             <img    src="{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" 
-                                    data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" height="150" alt="">   
-                        </div> 
-                        <br><br>     
+                                    data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" height="100" alt="">
+                        </div>
+                        <br>
                         <div class="row">
                             <div class="col-md-8 col-md-push-2">
                                 <form id="form-wish" onsubmit="return false;">
@@ -657,6 +650,7 @@
                         $('#table-rsvp').DataTable({
                             processing: true,
                             serverSide: true,
+                            paging: false,
                             ajax: '{{$code}}/get-rsvp',
                             columns: [
                                 {data: 'sender_name', name: 'sender_name'},
@@ -671,6 +665,7 @@
                         $('#table-wish').DataTable({
                             processing: true,
                             serverSide: true,
+                            paging: false,
                             ajax: '{{$code}}/get-wish',
                             columns: [
                                 {data: 'sender_name', name: 'sender_name'},
