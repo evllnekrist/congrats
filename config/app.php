@@ -176,7 +176,7 @@ return [
         /*
          * NEW ~
          */
-        Yajra\Datatables\DatatablesServiceProvider::class,
+        yajra\Datatables\DatatablesServiceProvider::class,
     ],
 
     /*
@@ -227,7 +227,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'DataTables' => Yajra\DataTables\Facades\Datatables::class,
+        'DataTables' => yajra\Datatables\Facades\Datatables::class,
     ],
 
 ];
