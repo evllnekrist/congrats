@@ -18,7 +18,20 @@ class WeddingController extends Controller
 	{
 		// parent::__construct();
     }
-    public function index($code){
+    public function outer_index($code){
+        $event = 'Wedding';
+        $subject_name = explode("-",$code);
+        $invited_name = (isset($_GET['i'])?$_GET['i']:'');
+        $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
+
+        if(sizeof($subject_name) > 1){
+            return view('_invitation._wedding._page.'.$code.'-wrap',[
+                "event"     => ucfirst($subject_name[0])." & ".ucfirst($subject_name[1])."'s ".$event." | ".env("APP_NAME", "BeritaBaik"),
+                "url"      => url('/w/'.$code.'/inner?i='.$invited_name.'&rsvp='.$display_rsvp)
+            ]);
+        }
+    }
+    public function inner_index($code){
         $event = 'Wedding';
         $subject_name = explode("-",$code);
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');

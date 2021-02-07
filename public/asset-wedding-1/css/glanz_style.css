@@ -2456,6 +2456,10 @@ ul.mega-menu {
 				font:900 60px/60px marsha, Arial;
 				margin-bottom: 30px;
 			}
+			.gla_slide_midtitle_m {
+				font:900 40px/40px marsha, Arial;
+				margin-bottom: 30px;
+			}
 			.gla_slide_title b {
 				font-weight: normal!important;
 			}
@@ -2464,6 +2468,9 @@ ul.mega-menu {
 			}
 			.gla_slide_midtitle span {
 				font:italic 400 50px/50px marsha, Arial!important;
+			}
+			.gla_slide_midtitle_m span {
+				font:italic 400 30px/30px marsha, Arial!important;
 			}
 			.gla_slide_subtitle span {
 				font:italic 400 20px/20px marsha, Arial!important;
@@ -2958,11 +2965,11 @@ ul.mega-menu {
 	padding: 60px 140px; /* 120px 140px */
 	color: #000;
 	-webkit-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
-  -moz-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
-  box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+	-moz-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
 }
 	.gla_invitation_i:hover {
 		-webkit-box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.2);
@@ -2975,7 +2982,7 @@ ul.mega-menu {
 	line-height: 30px;
 }
 .gla_invitation_container {
-	padding: 100px 0;
+	padding: 8vh 0;
 }
 .gla_invitation_container h2 {
 	margin-bottom: 20px;
