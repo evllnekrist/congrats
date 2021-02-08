@@ -28,9 +28,8 @@
                 <a href="#wishes">Ucapan</a>
             </li>
         </ul>
-        <div class="gla_main_menu_content_menu_copy">
-            <p>© beritabaik.co 2021</p>
-        </div>
+        <br><br>
+        <a href='{{env("APP_URL", "beritabaik.co")}}' target="_blank" class="ft-m">© beritabaik.co</a>
     </div>
 </div>
 <div class="gla_default_menu">

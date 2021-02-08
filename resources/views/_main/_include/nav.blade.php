@@ -28,7 +28,7 @@
                         <li><a href="{{url('/#catalog-template')}}">Catalog Template</a></li>
                         <li><a href="{{url('/#pricelist')}}">Pricelist</a></li>
                         <li><a href="" class="link_wa" target="_blank">Order</a></li>
-                        <li class="gla_parent"><a href="#">More</a>
+                        <li class="gla_parent" hidden><a href="#">More</a>
                             <ul class="mega-menu">
                                 <li class="mega-menu-col">
                                     <ul>
@@ -91,7 +91,7 @@
                     <li><a href="{{url('/#catalog-template')}}">Catalog Template</a></li>
                     <li><a href="{{url('/#pricelist')}}">Pricelist</a></li>
                     <li><a href="" class="link_wa" target="_blank">Order</a></li>
-                    <li class="gla_parent"><a href="#">More</a>
+                    <li class="gla_parent" hidden><a href="#">More</a>
                         <ul class="mega-menu">
                             <li class="mega-menu-col">
                                 <ul>

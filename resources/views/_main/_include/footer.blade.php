@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="gla_block">
-                    <p>© <a href="https://beritabaik.co">beritabaik.co 2020</a> | Copyright | Glanz Theme </p>
+                    <p>© <a href="https://beritabaik.co">beritabaik.co 2020</a> | Copyright</p>
                 </div>
             </div>
         </div>

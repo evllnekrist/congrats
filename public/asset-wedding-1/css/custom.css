@@ -1,3 +1,6 @@
+.bg-navy{
+    background-color:#181d23;
+}
 .fix-dosis-l-b{
     font:900 30px/30px Dosis, Arial;
     margin-bottom: 50px;
@@ -16,6 +19,9 @@
 }
 .ft-dark{
     color:rgb(41, 41, 41) !important;
+}
+.ft-m{
+    font-size: 16px !important;
 }
 .border-wh{
     border:3px dashed white;
@@ -76,13 +82,22 @@
     border: 0px
 }
 .wrap-preview-mobile{
-    width: 414px;
+    min-width: 375px;
+    max-width: 768px;
     left: 50%;
     transform: translateX(-50%);
 }
-/* .dataTables_wrapper .dataTables_filter input{
-    border:1px solid grey;
-} */
+.wrap-vertical-img-fix{
+    width: 100%;
+    overflow-x: auto; 
+    white-space: nowrap;
+}
+.inner-vertical-img-fix{
+    display: inline-block; 
+    vertical-align:middle;
+    margin: 0 5px;
+}
+
 @media (max-width:768px){
     .img-fix-h{
         max-height:30vh;

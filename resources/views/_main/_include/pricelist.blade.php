@@ -37,7 +37,7 @@
                                     <th scope="row">1</th><td>Tujuan undangan unlimited</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th><td>Max <b>5</b> foto galeri</td>
+                                    <th scope="row">2</th><td>Max <b>5</b> foto</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th><td>Musik pilihan (tidak request)</td>
@@ -82,10 +82,10 @@
                                     <th scope="row">1</th><td>Tujuan undangan unlimited</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th><td>Max <b>10</b> foto galeri</td>
+                                    <th scope="row">2</th><td>Max <b>10</b> foto</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">3</th><td>Musik pilihan (tidak request)</td>
+                                    <th scope="row">3</th><td>Musik pilihan (bisa request)</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th><td>Countdown timer</td>
@@ -133,10 +133,10 @@
                                     <th scope="row">1</th><td>Tujuan undangan unlimited</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th><td>Max <b>20</b> foto galeri</td>
+                                    <th scope="row">2</th><td>Max <b>20</b> foto</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">3</th><td>Musik pilihan (tidak request)</td>
+                                    <th scope="row">3</th><td>Musik pilihan (bisa request)</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th><td>Countdown timer</td>
@@ -200,10 +200,10 @@
                                     <th scope="row">1</th><td>Tujuan undangan unlimited</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th><td>Max <b>50</b> foto galeri</td>
+                                    <th scope="row">2</th><td>Max <b>50</b> foto</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">3</th><td>Musik pilihan (tidak request)</td>
+                                    <th scope="row">3</th><td>Musik pilihan (bisa request)</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th><td>Countdown timer</td>
@@ -245,6 +245,41 @@
         </div>
         <!-- icon boxes end -->
         
+        <table class="table table-hover text-left">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Syarat & Ketentuan</th>
+                </tr>
+            </thead>
+            <tbody class="tbody-white">
+                <tr>
+                    <th scope="row">1</th><td>Pilih warna dasar (max 3) dan sediakan foto/video. Beritabaik.co tidak melayani edit foto/video</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th><td>Tulis detail acara (nama acara,nama tempat dan waktu). Sertakan navigasi google map pada detail</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th><td>Jika foto/video perlu ditulis waktu, tempat dan keterangan (timeline), dapat juga disertakan</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th><td>Order/diskusi dapat dilakukan <a href="" class="link_wa" target="_blank" style="color:green;font-weight:600">disini</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th><td>Pengerjaan 3-5 hari</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th><td>Jika dibutuhkan udangan yang telah selesai dapat direvisi</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th><td>Sebar berita baikmu ke tujuan sampai tak terhingga!</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th><td>30 hari setelahnya web invitation akan diarsipkan dalam bentuk image</td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
     <!-- container end -->
 

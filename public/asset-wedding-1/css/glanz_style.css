@@ -2952,17 +2952,20 @@ ul.mega-menu {
 
 /*Invitations*/
 .gla_invitation_i {
-	width: 525px;
-	height: 743px;
+	width: 100%; /*525px;*/
+	height: 80vh;/*743px;*/
 	-webkit-background-size: cover;
 	background-size: cover;
-	position: relative;
+	margin: 0;
+	position: absolute;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 	left: 50%;
 	transform: translateY(0) translateX(-50%);
-	border-radius: 20px;
+	border-radius: 10px;
 	overflow: hidden;
 	text-align: center;
-	padding: 60px 140px; /* 120px 140px */
+	padding: 40px 40px; /* 120px 140px */
 	color: #000;
 	-webkit-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
@@ -2982,7 +2985,7 @@ ul.mega-menu {
 	line-height: 30px;
 }
 .gla_invitation_container {
-	padding: 8vh 0;
+	padding: 5vh 0;
 }
 .gla_invitation_container h2 {
 	margin-bottom: 20px;

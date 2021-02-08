@@ -7,7 +7,7 @@
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
     </head>
-    <body style="background-color:#181d23">
+    <body class="bg-navy">
         <!-- Preloader -->
             <div class="gla_page_loader gla_image_bck gla_wht_txt" data-color="#181d23">
                 <div class="gla_loader">
@@ -19,8 +19,7 @@
         <!-- OPEN -->
             <div class="gla_invitation_container" id="gla_welcome">
                 <div class="gla_invitation_i gla_invitation_ii gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/card-bg-3.jpg')}}">
-                    <p><img src="{{asset('asset-wedding-1/images/invitations/inv_i/save_the_date.gif')}}" alt="" height="180"></p>
-                    <br><br><br><br><br><br><br>
+                    <p><img src="{{asset('asset-wedding-1/images/invitations/inv_i/save_the_date.gif')}}" style="height:20vh;margin-bottom:20vh"></p>
                     <span class="gla_wht_txt fix-dosis-m-b">
                         @if($invite)
                             Dear, {{$invite}}<br>
@@ -173,21 +172,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 no-margin-top-2"> 
-                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-4.jpg')}}"><br><br>
-                                </div>
-                            </div>
-                            <div class="row" style="margin:0 2px"> 
-                                <div class="col-xs-6">
-                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-5.jpg')}}">
-                                </div>
-                                <div class="col-xs-6">
-                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-6.jpg')}}">
+                                <div class="col-xs-12 no-margin-top wrap-vertical-img-fix"> 
+                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-4.jpg')}}">
+                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-5.jpg')}}">
+                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-6.jpg')}}">
                                 </div> 
                             </div>
                             <div class="row"> 
                                 <div class="col-xs-12">
-                                    <div class="txt_block text-center">
+                                    <div class="txt_block text-center"><br><br>
                                         <div class="gla_slide_midtitle">2019</div>
                                         <div class="gla_slide_subtitle no-margin-top">
                                             <b>Jayapura</b><br><br>
@@ -272,12 +265,12 @@
                         <div class="container text-center">
                             <h2>Waktu & Tempat</h2>
                             <div class="gla_icon_boxes row text-left">
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-sm-4 col-xs-12">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7553214899303!2d140.64103621475596!3d-2.5859568981158003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5d1456d53a3%3A0xb96ef2ed929477c!2sGKI%20Siloam%20Waena!5e0!3m2!1sen!2sid!4v1612002853028!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
                                         </span>
-                                        <span class="gla_news_title">Pemberkatan/Sakramen</span>
+                                        <span class="gla_news_title">Pemberkatan / Sakramen</span>
                                         <p>
                                             <b>Gereja GKI Siloam Waena</b><br>
                                             Sabtu, 20 Februari 2021<br><br>
@@ -285,7 +278,7 @@
                                         </p>
                                     </a>
                                 </div> 
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-sm-4 col-xs-12">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7330346681897!2d140.67327171475603!3d-2.593040798110677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5f73e046929%3A0x24492cd17ffb9584!2sTongkonan%20Convention%20Center!5e0!3m2!1sen!2sid!4v1612002926508!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>  
@@ -298,7 +291,7 @@
                                         </p>
                                     </a>
                                 </div>
-                                <div class="col-md-4 col-sm-12">
+                                <div class="col-sm-4 col-xs-12">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7330346681897!2d140.67327171475603!3d-2.593040798110677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5f73e046929%3A0x24492cd17ffb9584!2sTongkonan%20Convention%20Center!5e0!3m2!1sen!2sid!4v1612002926508!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -437,7 +430,7 @@
                     </section>
                     <section class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
-                            <a href='{{env("APP_URL", "beritabaik.co")}}'>© beritabaik.co</a>
+                            <a href='{{env("APP_URL", "beritabaik.co")}}' target="_blank">© beritabaik.co</a>
                         </div>
                     </section>
                 </section>
@@ -447,7 +440,7 @@
         @include('_invitation._wedding._include.asset-bottom-1')
         <script>
             function executeInv(){
-                document.body.style = '';
+                $("body").removeClass("bg-navy");
                 document.getElementById('myaudio').play(); 
                 document.getElementById('myaudio').volume = .35;
                 $('#gla_welcome').remove();
