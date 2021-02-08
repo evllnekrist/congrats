@@ -46,8 +46,8 @@
             <div class="col-md-4 col-sm-4">
                 <h4>Latest Portfolio</h4>
                 <ul class="list-unstyled">
-                    <li><a href="https://beritabaik.co/wedding/petrick-menda" target="_blank">Petrick & Menda's Wedding</a></li>
-                    <li><a href="https://beritabaik.co/wedding/tohom-risma" target="_blank">Tohom & Risma's Wedding</a></li>
+                    <li><a href="https://beritabaik.co/w/petrick-menda" target="_blank">Petrick & Menda's Wedding</a></li>
+                    <li><a href="https://beritabaik.co/w/tohom-risma" target="_blank">Tohom & Risma's Wedding</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4">

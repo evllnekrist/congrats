@@ -59,6 +59,9 @@
 .no-margin-top{
     margin-top: -30px;
 }
+.no-margin-top-2{
+    margin-top: -40px;
+}
 .stick-bottom{
     position:absolute;
     bottom:0;
@@ -66,10 +69,11 @@
 }
 .wrap-preview{
     position: absolute;
-    height: calc(100% - 18px);
+    height: 100%;
     width: 100%;
-    border: none;
-    margin-top: 10px;
+    padding:0px;
+    margin:0px;
+    border: 0px
 }
 .wrap-preview-mobile{
     width: 414px;

@@ -54,7 +54,7 @@
                             <div class="gla_logo_container clearfix">
                                 <div class="gla_logo_txt">
                                     <a href="/" class="gla_logo">Petrick & Menda</a>
-                                    <div class="gla_logo_und">20 February, 2021</div>
+                                    <div class="gla_logo_und">February 20, 2021</div>
                                 </div>
                             </div>
                             @include('_invitation._wedding._include.nav-1')
@@ -121,7 +121,7 @@
                     <section    id="timeline" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.9" 
                                 data-image="{{asset($cdn_link.'images/timeline-bg.jpg')}}">
                         <div class="container text-center">
-                            <h2>Cerita Tentang Kami</h2>
+                            <h4>Cerita Tentang Kami</h4><br>
                             <div class="row"> 
                                 <div class="col-xs-5 col-md-8">
                                     <div class="txt_block text-right">
@@ -141,7 +141,7 @@
                                     <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-2.jpg')}}">
                                 </div>
                                 <div class="col-xs-5 col-md-8">
-                                    <div class="txt_block text-left">
+                                    <div class="txt_block text-left"><br>
                                         <div class="gla_slide_midtitle">2016</div>
                                         <div class="gla_slide_subtitle">
                                             In relationship saat koass
@@ -151,7 +151,7 @@
                             </div>
                             <div class="row"> 
                                 <div class="col-xs-5 col-md-8">
-                                    <div class="txt_block text-right"><br><br>
+                                    <div class="txt_block text-right"><br><br><br>
                                         <div class="gla_slide_midtitle">2016</div>
                                         <div class="gla_slide_subtitle no-margin-top">
                                             <b>Jakarta</b><br><br>
@@ -164,57 +164,37 @@
                                 </div>
                             </div>
                             <div class="row"> 
-                                <div class="col-xs-7 col-md-4"><br><br><br>
-                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-4.jpg')}}">
-                                </div>
-                                <div class="col-xs-5 col-md-8">
-                                    <div class="txt_block text-left">
-                                        <div class="gla_slide_midtitle_m">2016-2017</div>
+                                <div class="col-xs-12">
+                                    <div class="txt_block text-center">
+                                        <div class="gla_slide_midtitle">2016-2017</div>
                                         <div class="gla_slide_subtitle no-margin-top">
                                             <b>Tenggarong, Kalimantan Timur</b><br><br>
-                                            Masa internsip Dokter [1]
+                                            Masa internsip Dokter
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-xs-12 no-margin-top-2"> 
+                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-4.jpg')}}"><br><br>
                                 </div>
                             </div>
-                            <div class="row"> 
-                                <div class="col-xs-5 col-md-8">
-                                    <div class="txt_block text-right">
-                                        <div class="gla_slide_midtitle_m">2016-2017</div>
-                                        <div class="gla_slide_subtitle no-margin-top">
-                                            <b>Tenggarong, Kalimantan Timur</b><br><br>
-                                            Masa internsip Dokter [2]
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-7 col-md-4">
+                            <div class="row" style="margin:0 2px"> 
+                                <div class="col-xs-6">
                                     <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-5.jpg')}}">
                                 </div>
-                            </div>
-                            <div class="row"> 
-                                <div class="col-xs-7 col-md-4">
+                                <div class="col-xs-6">
                                     <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-6.jpg')}}">
-                                </div>
-                                <div class="col-xs-5 col-md-8">
-                                    <div class="txt_block text-left">
-                                        <div class="gla_slide_midtitle_m">2016-2017</div>
-                                        <div class="gla_slide_subtitle no-margin-top">
-                                            <b>Tenggarong, Kalimantan Timur</b><br><br>
-                                            Masa internsip Dokter [3]
-                                        </div>
-                                    </div>
-                                </div>
+                                </div> 
                             </div>
                             <div class="row"> 
-                                <div class="col-xs-5 col-md-8">
-                                    <div class="txt_block text-right">
+                                <div class="col-xs-12">
+                                    <div class="txt_block text-center">
                                         <div class="gla_slide_midtitle">2019</div>
                                         <div class="gla_slide_subtitle no-margin-top">
                                             <b>Jayapura</b><br><br>
                                             Tunangan</div>
                                     </div>
                                 </div>
-                                <div class="col-xs-7 col-md-4">
+                                <div class="col-xs-12 no-margin-top-2">
                                     <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-7.jpg')}}">
                                 </div>
                             </div>
@@ -314,7 +294,7 @@
                                         <p>
                                             <b>Gedung Pertemuan Tongkonan Kotaraja</b><br>
                                             Sabtu, 20 Februari 2021<br><br>
-                                            <span class="label label-info">10.30 – 12.00</span>
+                                            <span class="label label-info">11.00 – 12.30</span>
                                         </p>
                                     </a>
                                 </div>
