@@ -459,7 +459,7 @@
                         console.log('handling :: form-rsvp | validity passed');
                         let name = $('[name="rsvp_name"]').val();
                         let address = $('[name="rsvp_address"]').val();
-                        let attend = $('[name="rsvp_attend"]').val();
+                        let attend = $('input[name="rsvp_attend"]:checked').val();
                         $.ajax({
                             url: 'send-rsvp',
                             headers: {
