@@ -461,7 +461,7 @@
                         let address = $('[name="rsvp_address"]').val();
                         let attend = $('[name="rsvp_attend"]').val();
                         $.ajax({
-                            url: '{{$code}}/send-rsvp',
+                            url: 'send-rsvp',
                             headers: {
                                 'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
                             },
@@ -496,7 +496,7 @@
                         let name = $('[name="wish_name"]').val();
                         let message = $('[name="wish_message"]').val();
                         $.ajax({
-                            url: '{{$code}}/send-wish',
+                            url: 'send-wish',
                             headers: {
                                 'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
                             },
