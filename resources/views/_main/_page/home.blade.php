@@ -11,7 +11,7 @@
             <!-- Slider -->
             <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset('asset-main/images/bg/couple-1.jpg')}}" data-stellar-background-ratio="0.8">
 
-                <div class="gla_over" data-color="#282828" data-opacity="0.2"></div>
+                <div class="gla_over" data-color="#282828" data-opacity="0.15"></div>
                 <div class="container">
                     <div class="gla_slide_txt gla_slide_center_middle text-center">
                         <div class="gla_slide_midtitle">bagikan kebahagianmu lewat berita baik</div>

@@ -28,24 +28,19 @@
                         <li><a href="{{url('/#catalog-template')}}">Catalog Template</a></li>
                         <li><a href="{{url('/#pricelist')}}">Pricelist</a></li>
                         <li><a href="" class="link_wa" target="_blank">Order</a></li>
-                        <li class="gla_parent" hidden><a href="#">More</a>
+                        <li class="gla_parent"><a href="#">More</a>
                             <ul class="mega-menu">
                                 <li class="mega-menu-col">
                                     <ul>
-                                        <li class="mega-menu-col-header">Web Invitation</li>
-                                        <li><a href="{{url('/in/portfolio')}}">Portfolio</a></li>
-                                    </ul>
-                                </li>
-                                <li class="mega-menu-col" hidden>
-                                    <ul>
-                                        <li class="mega-menu-col-header">Digital Marketing</li>
-                                        <li><a href="{{url('/dig-marketing/portfolio')}}">Portfolio</a></li>
+                                        <li class="mega-menu-col-header">Apps Development</li>
+                                        <li><a href="{{url('/co-solution')}}"><b>Company Solution</b></a></li>
+                                        <li><a href="{{url('/co-profile')}}"><b>Company profile</b></a></li>
                                     </ul>
                                 </li>
                                 <li class="mega-menu-col">
                                     <ul>
-                                        <li class="mega-menu-col-header">Company Solution</li>
-                                        <li><a href="{{url('/co-solution/portfolio')}}">Portfolio</a></li>
+                                        <li class="mega-menu-col-header">Commerce</li>
+                                        <li><a href="{{url('/jastip')}}"><b>Jasa Titip</b></a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -91,28 +86,23 @@
                     <li><a href="{{url('/#catalog-template')}}">Catalog Template</a></li>
                     <li><a href="{{url('/#pricelist')}}">Pricelist</a></li>
                     <li><a href="" class="link_wa" target="_blank">Order</a></li>
-                    <li class="gla_parent" hidden><a href="#">More</a>
+                    <li class="gla_parent"><a href="#">More</a>
                         <ul class="mega-menu">
                             <li class="mega-menu-col">
                                 <ul>
-                                    <li class="mega-menu-col-header">Web Invitation</li>
-                                    <li><a href="{{url('/in/portfolio')}}">Portfolio</a></li>
-                                </ul>
-                            </li>
-                            <li class="mega-menu-col" hidden>
-                                <ul>
-                                    <li class="mega-menu-col-header">Digital Marketing</li>
-                                    <li><a href="{{url('/dig-marketing/portfolio')}}">Portfolio</a></li>
+                                    <li class="mega-menu-col-header">Apps Development</li>
+                                    <li><a href="{{url('/co-solution')}}"><b>Company Solution</b></a></li>
+                                    <li><a href="{{url('/co-profile')}}"><b>Company profile</b></a></li>
                                 </ul>
                             </li>
                             <li class="mega-menu-col">
                                 <ul>
-                                    <li class="mega-menu-col-header">Company Solution</li>
-                                    <li><a href="{{url('/co-solution/portfolio')}}">Portfolio</a></li>
+                                    <li class="mega-menu-col-header">Commerce</li>
+                                    <li><a href="{{url('/jastip')}}"><b>Jasa Titip</b></a></li>
                                 </ul>
                             </li>
                         </ul>
-                    </li>  
+                    </li> 
                 </ul>
             </div>
             <!-- Top Menu End -->
