@@ -34,7 +34,6 @@
                                     <ul>
                                         <li class="mega-menu-col-header">Apps Development</li>
                                         <li><a href="{{url('/co-solution')}}"><b>Company Solution</b></a></li>
-                                        <li><a href="{{url('/co-profile')}}"><b>Company profile</b></a></li>
                                     </ul>
                                 </li>
                                 <li class="mega-menu-col">
@@ -92,7 +91,6 @@
                                 <ul>
                                     <li class="mega-menu-col-header">Apps Development</li>
                                     <li><a href="{{url('/co-solution')}}"><b>Company Solution</b></a></li>
-                                    <li><a href="{{url('/co-profile')}}"><b>Company profile</b></a></li>
                                 </ul>
                             </li>
                             <li class="mega-menu-col">

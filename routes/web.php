@@ -23,6 +23,14 @@ Route::get('/','Main\HomeController@index');
         Route::get('{code}/get-rsvp','Invitation\WeddingController@ajax_get_rsvp');
         Route::get('{code}/get-wish','Invitation\WeddingController@ajax_get_wish');
     });
+    Route::group(['prefix' => 'co-solution'], function()
+    {
+        Route::get('/','Main\CoSoController@index');
+    });
+    Route::group(['prefix' => 'jastip'], function()
+    {
+        Route::get('/','Main\JastipController@index');
+    });
 /*--------------------------------------------------------------------------END----*/
  
 

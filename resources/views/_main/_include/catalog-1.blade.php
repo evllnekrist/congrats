@@ -1,62 +1,91 @@
 
 <section class="gla_section" id="catalog-template">
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 col-xs-6 gla_anim_box">
-            <div class="gla_shop_item">
-                <span class="gla_shop_item_slider img-wrapper">
-                     <img src="{{asset('asset-main/images/template/temp-1.png')}}">
-                </span>
-                <a href="#" class="gla_shop_item_title">
-                    Template<b>Wedding-1</b>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-xs-6 gla_anim_box">
-            <div class="gla_shop_item">
-                <span class="gla_shop_item_slider img-wrapper">
-                    <img src="{{asset('asset-main/images/template/temp-2.png')}}">
-                </span>
-                <a href="#" class="gla_shop_item_title">
-                    Template<b>Wedding-2</b>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-xs-6 gla_anim_box">
-            <div class="gla_shop_item">
-                <span class="gla_shop_item_slider img-wrapper">
-                    <img src="{{asset('asset-main/images/template/temp-3.png')}}">
-                </span>
-                <a href="#" class="gla_shop_item_title">
-                    Template<b>Wedding-3</b>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3 col-xs-6 gla_anim_box">
-            <div class="gla_shop_item">
-                <span class="gla_shop_item_slider img-wrapper">
-                    <img src="{{asset('asset-main/images/template/temp-4.png')}}">
-                </span>
-                <a href="#" class="gla_shop_item_title">
-                    Template<b>Wedding-4</b>
-                </a>
-            </div>
-        </div>    
-    </div>
+<div class="container"> 
     
-    <!-- <nav class="gla_blog_pag">
-        <ul class="pagination">
-            <li><a href="#"><i class="ti ti-angle-left"></i></a></li>
-            <li class="active" ><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#"><i class="ti ti-angle-right"></i></a></li>
-        </ul>
-    </nav>  -->
+    <div class="row">
+            
+        <div class="col-md-4 gla_anim_box">
+            <a href="http://glanz.starkethemes.com/html/01_01_home_simple_flowers.html" target="_blank">
+                <div class="gla_shop_item">
+                    <span class="gla_shop_item_slider">
+                        <img src="{{asset('asset-main/images/template/temp-thumb-1.jpg')}}" alt="">
+                    </span>
+                    <b class="gla_shop_item_title">Template 1</b>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 gla_anim_box">
+            <a href="http://glanz.starkethemes.com/html/01_02_home_pink_flowers.html" target="_blank">
+                <div class="gla_shop_item">
+                    <span class="gla_shop_item_slider">
+                        <img src="{{asset('asset-main/images/template/temp-thumb-2.jpg')}}" alt="">
+                    </span>
+                    <b class="gla_shop_item_title">Template 2</b>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 gla_anim_box">
+            <a href="http://glanz.starkethemes.com/html/01_03_home_golden.html" target="_blank">
+                <div class="gla_shop_item">
+                    <span class="gla_shop_item_slider">
+                        <img src="{{asset('asset-main/images/template/temp-thumb-3.jpg')}}" alt="">
+                    </span>
+                    <b class="gla_shop_item_title">Template 3</b>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 gla_anim_box">
+            <a href="http://glanz.starkethemes.com/html/01_04_home_flbg.html" target="_blank">
+                <div class="gla_shop_item">
+                    <span class="gla_shop_item_slider">
+                        <img src="{{asset('asset-main/images/template/temp-thumb-4.jpg')}}" alt="">
+                    </span>
+                    <b class="gla_shop_item_title">Template 4</b>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 gla_anim_box">
+            <a href="http://glanz.starkethemes.com/html/01_05_home_flbg.html" target="_blank">
+                <div class="gla_shop_item">
+                    <span class="gla_shop_item_slider">
+                        <img src="{{asset('asset-main/images/template/temp-thumb-5.jpg')}}" alt="">
+                    </span>
+                    <b class="gla_shop_item_title">Template 5</b>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 gla_anim_box">
+            <a href="http://glanz.starkethemes.com/html/01_06_home_flbg.html" target="_blank">
+                <div class="gla_shop_item">
+                    <span class="gla_shop_item_slider">
+                        <img src="{{asset('asset-main/images/template/temp-thumb-6.jpg')}}" alt="">
+                    </span>
+                    <b class="gla_shop_item_title">Template 6</b>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 gla_anim_box">
+            <a href="http://glanz.starkethemes.com/html/01_10_home_parallax.html" target="_blank">
+                <div class="gla_shop_item">
+                    <span class="gla_shop_item_slider">
+                        <img src="{{asset('asset-main/images/template/temp-thumb-7.jpg')}}" alt="">
+                    </span>
+                    <b class="gla_shop_item_title">Template 7</b>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 gla_anim_box">
+            <a href="http://glanz.starkethemes.com/html/01_09_home_land.html" target="_blank">
+                <div class="gla_shop_item">
+                    <span class="gla_shop_item_slider">
+                        <img src="{{asset('asset-main/images/template/temp-thumb-8.jpg')}}" alt="">
+                    </span>
+                    <b class="gla_shop_item_title">Template 8</b>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+
 </div>
 </section>

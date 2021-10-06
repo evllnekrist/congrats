@@ -23,53 +23,8 @@
                     <i class="flaticon-024-rose"></i>
                     <div class="gla_icon_box_content">
                         <h4><b>Budget</b></h4>
-                        <button type="button" class="btn btn-dark link_wa">Rp. 155.000,-</button>
-                        <br><br><br><br><br>
-                        <table class="table table-hover text-left">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Feature</th>
-                                </tr>
-                            </thead>
-                            <tbody class="tbody-white">
-                                <tr>
-                                    <th scope="row">1</th><td>Tujuan undangan unlimited</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th><td>Max <b>5</b> foto</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th><td>Musik pilihan (tidak request)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th><td>Countdown timer</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th><td>Kolom ucapan (guest book)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th><td>Detail event</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th><td>Navigasi peta</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th><td>Link sosial media</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                </div>
-
-                <!-- item -->
-                <div class="gla_icon_box col-md-3 col-sm-6">
-                    <i class="flaticon-013-bells"></i>
-                    <div class="gla_icon_box_content">
-                        <h4><b>Standard</b></h4>
                         <button type="button" class="btn btn-dark link_wa">Rp. 240.000,-</button>
-                        <br><br><br><br><br>
+                        <br><br>
                         <table class="table table-hover text-left">
                             <thead>
                                 <tr>
@@ -79,34 +34,31 @@
                             </thead>
                             <tbody class="tbody-white">
                                 <tr>
-                                    <th scope="row">1</th><td>Tujuan undangan unlimited</td>
+                                    <th scope="row">1</th><td>Tujuan undangan <b>unlimited</b></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th><td>Max <b>10</b> foto</td>
+                                    <th scope="row">2</th><td>Max <b>8</b> foto</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th><td>Musik pilihan (bisa request)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">4</th><td>Countdown timer</td>
+                                    <th scope="row">4</th><td>Kolom ucapan (guest book)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">5</th><td>Kolom ucapan (guest book)</td>
+                                    <th scope="row">5</th><td>Detail event</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">6</th><td>Detail event</td>
+                                    <th scope="row">6</th><td>Navigasi peta</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">7</th><td>Navigasi peta</td>
+                                    <th scope="row">7</th><td>Link sosial media</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">8</th><td>Link sosial media</td>
+                                    <th scope="row">8</th><td>Quotes</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">9</th><td>Quotes</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th><td>Profil groom & bride</td>
+                                    <th scope="row">9</th><td>Profil groom & bride</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -120,7 +72,7 @@
                     <div class="gla_icon_box_content">
                         <h4><b>Comfort</b></h4>
                         <button type="button" class="btn btn-dark link_wa">Rp. 340.000,-</button>
-                        <br><br><br><br><br>
+                        <br><br>
                         <table class="table table-hover text-left">
                             <thead>
                                 <tr>
@@ -130,7 +82,7 @@
                             </thead>
                             <tbody class="tbody-white">
                                 <tr>
-                                    <th scope="row">1</th><td>Tujuan undangan unlimited</td>
+                                    <th scope="row">1</th><td>Tujuan undangan <b>unlimited</b></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th><td>Max <b>20</b> foto</td>
@@ -139,31 +91,28 @@
                                     <th scope="row">3</th><td>Musik pilihan (bisa request)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">4</th><td>Countdown timer</td>
+                                    <th scope="row">4</th><td>Kolom ucapan (guest book)</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">5</th><td>Kolom ucapan (guest book)</td>
+                                    <th scope="row">5</th><td>Detail event</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">6</th><td>Detail event</td>
+                                    <th scope="row">6</th><td>Navigasi peta</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">7</th><td>Navigasi peta</td>
+                                    <th scope="row">7</th><td>Link sosial media</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">8</th><td>Link sosial media</td>
+                                    <th scope="row">8</th><td>Quotes</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">9</th><td>Quotes</td>
+                                    <th scope="row">9</th><td>Profil groom & bride</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">10</th><td>Profil groom & bride</td>
+                                    <th scope="row">10</th><td>Video gallery</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">11</th><td>Video gallery</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12</th><td>Konfirmasi kehadiran (RSVP)</td>
+                                    <th scope="row">11</th><td>Konfirmasi kehadiran (RSVP)</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -176,7 +125,71 @@
                     <i class="flaticon-005-camera-2"></i>
                     <div class="gla_icon_box_content">
                         <h4><b>First Class</b></h4>
-                        <button type="button" class="btn btn-dark link_wa">Rp. 550.000,-</button>
+                        <button type="button" class="btn btn-dark link_wa">Rp. 500.000,-</button>
+                        <br><br>
+                        <table class="table table-hover text-left">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Feature</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody-white">
+                                <tr>
+                                    <th scope="row">1</th><td>Tujuan undangan <b>unlimited</b></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th><td>Max <b>50</b> foto</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th><td>Musik pilihan (bisa request)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th><td>Kolom ucapan (guest book)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th><td>Detail event</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th><td>Navigasi peta</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th><td>Link sosial media</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th><td>Quotes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th><td>Profil groom & bride</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th><td>Video gallery</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">11</th><td>Konfirmasi kehadiran (RSVP)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th><td>Countdown timer</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13</th><td>QRIS gift (link transfer)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">14</th><td>Bonus prosedur Covid-19</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div> 
+
+                <!-- more -->
+                <div class="gla_icon_box col-md-3 col-sm-6">
+                    <i class="flaticon-005-camera-2"></i>
+                    <div class="gla_icon_box_content">
+                        <br><br><br>
+                        <button type="button" class="btn btn-dark link_wa">opsional</button>
+                        <br><br>
                         <table class="table table-hover text-left">
                             <thead>
                                 <tr>
@@ -186,58 +199,21 @@
                             </thead>
                             <tbody class="tbody-white">
                                 <tr>
-                                    <td colspan="2">Subdomain URL >> <br><small><b>groomname-bridename.beritabaik.co</b></small></td>
-                                </tr>
-                            </tbody>
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Feature</th>
-                                </tr>
-                            </thead>
-                            <tbody class="tbody-white">
-                                <tr>
-                                    <th scope="row">1</th><td>Tujuan undangan unlimited</td>
+                                    <td colspan="2">Subdomain URL >> <br>
+                                                    <small><b>groomname-bridename.beritabaik.co</b></small><br>
+                                                    <b>+ 60.000,-</b>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th><td>Max <b>50</b> foto</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th><td>Musik pilihan (bisa request)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th><td>Countdown timer</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th><td>Kolom ucapan (guest book)</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th><td>Detail event</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th><td>Navigasi peta</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th><td>Link sosial media</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th><td>Quotes</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th><td>Profil groom & bride</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">11</th><td>Video gallery</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12</th><td>Konfirmasi kehadiran (RSVP)</td>
+                                    <td colspan="2">Prosedur Covid-19 >> <br>
+                                                    <b>+ 50.000,-</b>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     
                 </div> 
-
             
             </div>
             <!-- anmation end -->
@@ -269,10 +245,10 @@
                     <th scope="row">5</th><td>Pengerjaan 3-5 hari</td>
                 </tr>
                 <tr>
-                    <th scope="row">6</th><td>Jika dibutuhkan udangan yang telah selesai dapat direvisi</td>
+                    <th scope="row">6</th><td>Jika dibutuhkan udangan yang telah selesai dapat direvisi (max 3 kali)</td>
                 </tr>
                 <tr>
-                    <th scope="row">7</th><td>Sebar berita baikmu ke tujuan sampai tak terhingga!</td>
+                    <th scope="row">7</th><td>Sebar berita baikmu ke teman dan saudara hingga jumlah tak terhingga!</td>
                 </tr>
                 <tr>
                     <th scope="row">8</th><td>30 hari setelahnya web invitation akan diarsipkan dalam bentuk image</td>
