@@ -11,7 +11,7 @@
 
                 <!-- Slider -->
                 <div class="gla_slider_carousel">
-                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/0.jpg')}}">
+                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/0.JPG')}}">
                         <div class="gla_over" data-color="#000" data-opacity="0.5"></div>
                         <div class="container">
                             <div class="gla_slide_txt gla_slide_center_middle text-center">
@@ -19,15 +19,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/1.jpg')}}">
+                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/1.JPG')}}">
                     </div>
-                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/1b.jpg')}}">
+                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/1b.JPG')}}">
                     </div>
-                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/2.jpg')}}">
+                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/2.JPG')}}">
                     </div>
-                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/3.jpg')}}">
+                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/3.JPG')}}">
                     </div>
-                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/4.jpg')}}">
+                    <div class="gla_slider gla_image_bck" data-image="{{asset('asset-main/images/porto/muscleb/4.JPG')}}">
                     </div>
                     <!-- Slider End -->
                 </div>
