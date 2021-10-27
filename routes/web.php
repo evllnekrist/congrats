@@ -30,6 +30,7 @@ Route::get('/','Main\HomeController@index');
     Route::group(['prefix' => 'jastip'], function()
     {
         Route::get('/','Main\JastipController@index');
+        Route::get('/get-page','Main\JastipController@ajax_get_nextprev_page');
     });
 /*--------------------------------------------------------------------------END----*/
  
