@@ -94,7 +94,7 @@
                                     <input name="limit_list" value="{{$limit_list}}" hidden>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <select name="category" onchange="reloadWebsiteCatalog_trigger()">
+                                    <select name="category" onchange="reloadWebsiteCatalog(1)">
                                         <option value="" selected="selected">Semua Category</option>
                                         <option value="fashion">Fashion</option>
                                         <option value="bag">Bag</option>
@@ -129,16 +129,17 @@
                         <nav class="gla_blog_pag">
                             <ul class="pagination">
                                 <?php
-                                    $total_pag = ceil($brand_list_total/@$limit_list);
+                                    $total_page = ceil($brand_list_total/@$limit_list);
                                 ?>
                                 <li><a href="#"><i class="ti ti-angle-left"></i></a></li>
-                                @for($i=1;$i<=$total_pag;$i++)
+                                @for($i=1;$i<=$total_page;$i++)
                                 <li class="reload-website-catalog-li {{$i==1?'active':''}} reload-website-catalog-li-{{$i}}">
-                                    <a href="#website-catalog" class="reload-website-catalog" data-reload_type="pagination" data-page_num="{{$i}}">{{$i}}</a>
+                                    <a href="#website-catalog" onclick="reloadWebsiteCatalog({{$i}})">{{$i}}</a>
                                 </li>
                                 @endfor
                                 <li><a href="#"><i class="ti ti-angle-right"></i></a></li>
                             </ul>
+                            <input name="total_page" value="{{$total_page}}" hidden>
                         </nav> 
                     </div>
                     <!-- container end -->
@@ -187,61 +188,74 @@
 </html>
 
 <script>
-        $('.reload-website-catalog').click(function(){
-            reloadWebsiteCatalog($(this).data('page_num'),$('[name="category"]').val());
-        })
-
-        function reloadWebsiteCatalog_trigger(){
-            reloadWebsiteCatalog(1,$('[name="category"]').val());
-        }
-
-        function reloadWebsiteCatalog(page_num,category=''){
-            let limit_list  = $("[name='limit_list']").val();
-            $('#website-catalog-loading').show();
-            $('#website-catalog').hide();
-            $.ajax({
-                url: '{{url("/jastip/get-page")}}',
-                headers: {
-                    'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
-                },
-                type: 'GET',
-                data: {
-                    page_num: page_num,
-                    limit_list: limit_list,
-                    category: category
-                },
-                success: (function (data) {
-                    console.log(data);
-                    if(data.status){
-                        $('#start_list_info').html(data.detail.start_list);
-                        $('#until_list_info').html(data.detail.until_list);
-                        $('#total_list_info').html(data.detail.brand_list_total);
+    function reloadWebsiteCatalog(page_num){
+        let limit_list  = $("[name='limit_list']").val();
+        let category    = $('[name="category"]').val();
+        $('#website-catalog-loading').show();
+        $('#website-catalog').hide();
+        $.ajax({
+            url: '{{url("/jastip/get-page")}}',
+            headers: {
+                'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
+            },
+            type: 'GET',
+            data: {
+                page_num: page_num,
+                limit_list: limit_list,
+                category: category
+            },
+            success: (function (data) {
+                // console.log(data);
+                if(data.status){
+                    $('#start_list_info').html(data.detail.start_list);
+                    $('#until_list_info').html(data.detail.until_list);
+                    $('#total_list_info').html(data.detail.brand_list_total);
+                    let total_page_current = Math.ceil(data.detail.brand_list_total/limit_list);
+                    let template = '';
+                    if($('[name="total_page"]').val() != total_page_current){
+                        $('[name="total_page"]').val(total_page_current);
+                        $('.pagination').html('');
+                        let active_page = 1;
+                        if(data.detail.start_list != 1){
+                            active_page = Math.ceil(data.detail.start_list/limit_list);
+                        }
+                        template = `<li><a href="#"><i class="ti ti-angle-left"></i></a></li>`;
+                        for(let i=1;i<=total_page_current;i++){
+                            template += `<li class="reload-website-catalog-li `+(i==active_page?`active`:``)+` reload-website-catalog-li-`+i+`">
+                                            <a href="#website-catalog" onclick="reloadWebsiteCatalog(`+i+`)">`+i+`</a>
+                                        </li>`;
+                        }
+                        template += `<li><a href="#"><i class="ti ti-angle-right"></i></a></li>`;
+                        $('.pagination').append(template);
+                    }else{
                         $('.reload-website-catalog-li').removeClass('active');
                         $('.reload-website-catalog-li-'+page_num).addClass('active');
-                        let template = '';
-                        $('#website-catalog-item').html('');
-                        (data.detail.brand_list).forEach(function(obj,key){
-                            template = `<div class="col-xs-6 col-md-3 gla_anim_box">
-                                            <div class="gla_shop_item">`+(obj.is_sale_available?`<span class="gla_shop_item_sale">Diskon tersedia</span>`:``)+`
-                                                <span class="gla_shop_item_slider">
-                                                    <img src="`+(obj.image_preview)+`" alt="">
-                                                </span>
-                                                <a href="`+(obj.catalog_url)+`" target="_blank" class="gla_shop_item_title">
-                                                    <img src="`+(obj.image_logo)+`" style="height:100px;width:auto !important">
-                                                    <br><br><small class="text-muted">lihat catalog</small>
-                                                </a>
-                                            </div>
-                                        </div>`;
-                            $('#website-catalog-item').append(template);
-                        });
-                    }else{
-                        alert('Oops, we`re sorry','',data.message);
                     }
-                    $('#website-catalog-loading').hide();
-                    $('#website-catalog').show();
-                }),error:function(xhr,status,error) {
-                    alert('error [sys]','',xhr.responseText);
+                    
+                    template = '';
+                    $('#website-catalog-item').html('');
+                    (data.detail.brand_list).forEach(function(obj,key){
+                        template = `<div class="col-xs-6 col-md-3 gla_anim_box">
+                                        <div class="gla_shop_item">`+(obj.is_sale_available?`<span class="gla_shop_item_sale">Diskon tersedia</span>`:``)+`
+                                            <span class="gla_shop_item_slider">
+                                                <img src="`+(obj.image_preview)+`" alt="">
+                                            </span>
+                                            <a href="`+(obj.catalog_url)+`" target="_blank" class="gla_shop_item_title">
+                                                <img src="`+(obj.image_logo)+`" style="height:100px;width:auto !important">
+                                                <br><br><small class="text-muted">lihat catalog</small>
+                                            </a>
+                                        </div>
+                                    </div>`;
+                        $('#website-catalog-item').append(template);
+                    });
+                }else{
+                    alert('Oops, we`re sorry','',data.message);
                 }
-            });
-        }
+                $('#website-catalog-loading').hide();
+                $('#website-catalog').show();
+            }),error:function(xhr,status,error) {
+                alert('error [sys]','',xhr.responseText);
+            }
+        });
+    }
 </script>
