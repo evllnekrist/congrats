@@ -41,11 +41,15 @@ class JastipController extends Controller
             $item = $request->all(); 
         
             $start_list         = ($item['page_num']-1)*$item['limit_list'];
-            $brand_list_total   = JastipBrand::where('is_enabled',true)->count();
-            $brand_list         = JastipBrand::where('is_enabled',true)->skip($start_list)->take($item['limit_list'])->get();
+            $brand_list_core    = JastipBrand::where('is_enabled',true);
+            if($item['category']){
+                $brand_list_core = $brand_list_core->where('categories',$item['category'])->orWhere('categories','like','%,'.$item['category'])->orWhere('categories','like',$item['category'].',%');
+            }
+            $brand_list_total   = $brand_list_core->count();
+            $brand_list         = $brand_list_core->skip($start_list)->take($item['limit_list'])->get();
             $until_list         = $start_list+sizeof($brand_list);
             $data               = [
-                "start_list"        => $start_list,
+                "start_list"        => $start_list+1,
                 "until_list"        => $until_list,
                 "brand_list_total"  => $brand_list_total,
                 "brand_list"        => $brand_list,

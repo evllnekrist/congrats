@@ -94,7 +94,7 @@
                                     <input name="limit_list" value="{{$limit_list}}" hidden>
                                 </div>
                                 <div class="col-md-6 text-right">
-                                    <select name="type">
+                                    <select name="category" onchange="reloadWebsiteCatalog_trigger()">
                                         <option value="" selected="selected">Semua Category</option>
                                         <option value="fashion">Fashion</option>
                                         <option value="bag">Bag</option>
@@ -134,7 +134,7 @@
                                 <li><a href="#"><i class="ti ti-angle-left"></i></a></li>
                                 @for($i=1;$i<=$total_pag;$i++)
                                 <li class="reload-website-catalog-li {{$i==1?'active':''}} reload-website-catalog-li-{{$i}}">
-                                    <a href="#website-catalog" class="reload-website-catalog" data-page_num="{{$i}}">{{$i}}</a>
+                                    <a href="#website-catalog" class="reload-website-catalog" data-reload_type="pagination" data-page_num="{{$i}}">{{$i}}</a>
                                 </li>
                                 @endfor
                                 <li><a href="#"><i class="ti ti-angle-right"></i></a></li>
@@ -187,12 +187,18 @@
 </html>
 
 <script>
-    $( document ).ready(function() {
         $('.reload-website-catalog').click(function(){
+            reloadWebsiteCatalog($(this).data('page_num'),$('[name="category"]').val());
+        })
+
+        function reloadWebsiteCatalog_trigger(){
+            reloadWebsiteCatalog(1,$('[name="category"]').val());
+        }
+
+        function reloadWebsiteCatalog(page_num,category=''){
+            let limit_list  = $("[name='limit_list']").val();
             $('#website-catalog-loading').show();
             $('#website-catalog').hide();
-            let page_num = $(this).data('page_num');
-            let limit_list = $("[name='limit_list']").val();
             $.ajax({
                 url: '{{url("/jastip/get-page")}}',
                 headers: {
@@ -202,6 +208,7 @@
                 data: {
                     page_num: page_num,
                     limit_list: limit_list,
+                    category: category
                 },
                 success: (function (data) {
                     console.log(data);
@@ -212,7 +219,20 @@
                         $('.reload-website-catalog-li').removeClass('active');
                         $('.reload-website-catalog-li-'+page_num).addClass('active');
                         let template = '';
-                        (data.detail.brand_list).forEach(function(){
+                        $('#website-catalog-item').html('');
+                        (data.detail.brand_list).forEach(function(obj,key){
+                            template = `<div class="col-xs-6 col-md-3 gla_anim_box">
+                                            <div class="gla_shop_item">`+(obj.is_sale_available?`<span class="gla_shop_item_sale">Diskon tersedia</span>`:``)+`
+                                                <span class="gla_shop_item_slider">
+                                                    <img src="`+(obj.image_preview)+`" alt="">
+                                                </span>
+                                                <a href="`+(obj.catalog_url)+`" target="_blank" class="gla_shop_item_title">
+                                                    <img src="`+(obj.image_logo)+`" style="height:100px;width:auto !important">
+                                                    <br><br><small class="text-muted">lihat catalog</small>
+                                                </a>
+                                            </div>
+                                        </div>`;
+                            $('#website-catalog-item').append(template);
                         });
                     }else{
                         alert('Oops, we`re sorry','',data.message);
@@ -223,6 +243,5 @@
                     alert('error [sys]','',xhr.responseText);
                 }
             });
-        })
-    });
+        }
 </script>
