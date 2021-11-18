@@ -25,7 +25,7 @@ class WeddingController extends Controller
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
 
         if(sizeof($subject_name) > 1){
-            return view('_invitation._wedding._page.'.$code.'-wrap',[
+            return view('_invitation._wedding._page.'.$subject_name[0]."-".$subject_name[1].'-wrap',[
                 "event"     => ucfirst($subject_name[0])." & ".ucfirst($subject_name[1])."'s ".$event." | ".env("APP_NAME", "BeritaBaik"),
                 "url"      => url('/w/'.$code.'/inner?i='.$invited_name.'&rsvp='.$display_rsvp)
             ]);
@@ -36,13 +36,18 @@ class WeddingController extends Controller
         $subject_name = explode("-",$code);
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
+        $addition_logic = '';
+        if(array_key_exists(2, $subject_name)){
+            $addition_logic = $subject_name[2];
+        }
 
         if(sizeof($subject_name) > 1){
-            return view('_invitation._wedding._page.'.$code,[
+            return view('_invitation._wedding._page.'.$subject_name[0]."-".$subject_name[1],[
                 "event"     => ucfirst($subject_name[0])." & ".ucfirst($subject_name[1])."'s ".$event." | ".env("APP_NAME", "BeritaBaik"),
-                "code"      => $code,
+                "code"      => $subject_name[0]."-".$subject_name[1],
                 "invite"    => $invited_name,
-                "display"   => ["rsvp" => $display_rsvp]
+                "display"   => ["rsvp" => $display_rsvp],
+                "addition_logic" => $addition_logic,
             ]);
         }
     }

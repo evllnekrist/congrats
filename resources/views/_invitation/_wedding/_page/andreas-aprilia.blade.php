@@ -51,7 +51,7 @@
         <!-- Preloader End-->
         <!-- OPEN -->
             <div class="gla_invitation_container" id="gla_welcome">
-                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3_inv_ver2.jpg')}}">
+                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3_inv_ver3.jpg')}}">
                     <p><img src="{{asset('asset-wedding-1/images/invitations/inv_i/save_the_date_bl.gif')}}" style="height:20vh;margin-bottom:15vh"></p>
                     <span class="fix-dosis-m-b"><br><br>
                         @if($invite)
@@ -74,8 +74,8 @@
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/bg_track.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/bg_track.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/gamaliel_ isyana__a_whole_new_world_from_aladdin.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/gamaliel_ isyana__a_whole_new_world_from_aladdin.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -88,7 +88,7 @@
                                     <div class="gla_logo_und">December 11, 2021</div>
                                 </div>
                             </div>
-                            @include('_invitation._wedding._include.nav-1')
+                            @include('_invitation._wedding._include.nav-2')
                         </div>
                     </nav>
                 </header>
@@ -109,10 +109,10 @@
                 <section id="gla_content" class="gla_content">
                     <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/quote-bg.jpg')}}">
                         <div class="container text-left pd-md-h">
-                            <h3>"<sup>4</sup> Love is patient, love is kind. <br>It does not envy, it does not boast, it is not proud. 
-                            <br><sup>5</sup>It does not dishonor others, it is not self-seeking, <br>it is not easily angered, it keeps no record of wrongs. 
-                            <br><sup>6</sup>Love does not delight in evil but rejoices with the truth. 
-                            <br><sup>7</sup>It always protects, always trusts, <br>always hopes, always perseveres."</h3><br>
+                            <h5>"<sup>4</sup> Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud. 
+                            <br><sup>5</sup>It does not dishonor others, <br>it is not self-seeking, <br>it is not easily angered, <br>it keeps no record of wrongs. 
+                            <br><sup>6</sup>Love does not delight in evil <br>but rejoices with the truth. 
+                            <br><sup>7</sup>It always protects, always trusts, <br>always hopes, always perseveres."</h5><br><br><br>
                             <p class="gla_subtitle">— 1 Corinthians 13:4-7 (NIV)</p>
                         </div>
                     </section>
@@ -141,9 +141,9 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
+                                    <img src="{{asset('asset-wedding-1/images/animations/and_wh.gif')}}" class="pd-md-h" height="70px">
                                 </div>
                                 <div class="col-sm-5">
-                                    
                                     <div class="gla_news_block">
                                         <a href="{{asset($cdn_link.'images/15.jpg')}}" class="lightbox">
                                             <img src="{{asset($cdn_link.'images/bio-f.jpg')}}" alt="">
@@ -178,6 +178,7 @@
                                         </p>
                                     </a>
                                 </div> 
+                                @if($addition_logic && $addition_logic == 'wedding')
                                 <div class="col-sm-6 col-xs-12">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
@@ -192,9 +193,11 @@
                                         </p>
                                     </a>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </section>
+                    @if($addition_logic && $addition_logic == 'wedding')
                     <section    id="physical-inv" class="gla_section gla_image_bck" data-color="#ecf2f0">
                         <div class="container">
                             <div class="row">
@@ -206,6 +209,7 @@
                             </div>
                         </div>
                     </section>
+                    @endif
                     <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
                         <div class="container-fluid text-center pd-md">
                             <h2>Health Protocol</h2>
