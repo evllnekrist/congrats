@@ -5843,8 +5843,8 @@ footer {
 @media (max-width:1000px){
 /* custom-start */
 	.gla_round_im {
-		width: 150px;
-		height: 150px;
+		width: 125px;
+		height: 125px;
 		display: inline-block;
 		margin: 0 auto 20px;
 		border-radius: 50%;

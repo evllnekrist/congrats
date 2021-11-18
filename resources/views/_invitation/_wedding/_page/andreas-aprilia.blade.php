@@ -30,7 +30,14 @@
             }
             .pd-md{
                 padding-top: 20px;
+                padding-bottom: 20px;
             }  
+            .pd-md-h{
+                padding: 20px 20px 20px 20px;
+            }
+            .gla_round_block{
+                margin-top: 0px !important;
+            }
         </style>
     </head>
     <body class="bg-navy">
@@ -67,8 +74,8 @@
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/sezairi__its_you.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/sezairi__its_you.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/bg_track.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/bg_track.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -90,7 +97,7 @@
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div>
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
-                            <div class="gla_slide_midtitle">We're Getting Married</div>
+                            <div class="gla_slide_midtitle">A & A</div>
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
@@ -101,15 +108,14 @@
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
                     <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/quote-bg.jpg')}}">
-                        <div class="container text-left">
-                            <h3>"<sup>4</sup> Love is patient, love is kind. It does not envy, it does not boast, it is not proud. 
-                            <sup>5</sup> It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. 
-                            <sup>6</sup> Love does not delight in evil but rejoices with the truth. 
-                            <sup>7</sup> It always protects, always trusts, always hopes, always perseveres."</h3><br>
+                        <div class="container text-left pd-md-h">
+                            <h3>"<sup>4</sup> Love is patient, love is kind. <br>It does not envy, it does not boast, it is not proud. 
+                            <br><sup>5</sup>It does not dishonor others, it is not self-seeking, <br>it is not easily angered, it keeps no record of wrongs. 
+                            <br><sup>6</sup>Love does not delight in evil but rejoices with the truth. 
+                            <br><sup>7</sup>It always protects, always trusts, <br>always hopes, always perseveres."</h3><br>
                             <p class="gla_subtitle">— 1 Corinthians 13:4-7 (NIV)</p>
                         </div>
                     </section>
-                    
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
                                 data-image="{{asset($cdn_link.'images/7.jpg')}}">  
                         <div class="gla_over" data-color="#282828" data-opacity="0.4"></div>
@@ -189,6 +195,41 @@
                             </div>
                         </div>
                     </section>
+                    <section    id="physical-inv" class="gla_section gla_image_bck" data-color="#ecf2f0">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a href="{{asset($cdn_link.'images/inv.jpg')}}" class="lightbox">
+                                        <img src="{{asset($cdn_link.'images/inv.jpg')}}" width="100%">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
+                        <div class="container-fluid text-center pd-md">
+                            <h2>Health Protocol</h2>
+                            <p class="gla_slide_subtitle text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p>
+                            <div class="row text-center">
+                                <div class="col-sm-3 col-xs-12 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.jpg')}}"></div>
+                                    <p class="gla_slide_subtitle text-choco-1"><b>wash hands & use hand sanitizer</b></p>
+                                </div>
+                                <div class="col-sm-3 col-xs-4 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-2.jpg')}}"></div>
+                                    <p class="gla_slide_subtitle text-choco-1"><b>use mask</b></p>
+                                </div>
+                                <div class="col-sm-3 col-xs-4 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3.jpg')}}"></div>
+                                    <p class="gla_slide_subtitle text-choco-1"><b>don't shake hands</b></p>
+                                </div>
+                                <div class="col-sm-3 col-xs-4 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-4.jpg')}}"></div>
+                                    <p class="gla_slide_subtitle text-choco-1"><b>don't crowd</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.jpg')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-right">
@@ -214,14 +255,14 @@
                                                 <span>Sorry, I cant be there.</span>
                                             </div>
                                             <div class="col-md-12" style="padding-top:50px">
-                                                <input type="submit" class="btn submit" id="form-rsvp-send" value="simpan">
+                                                <input type="submit" class="btn submit" id="form-rsvp-send" value="save">
                                             </div>
                                             @if($display['rsvp'] == 1)
                                             <div class="panel panel-default" style="margin-top:50px">
                                                 <div class="panel-heading">
-                                                    <h4 class="panel-title">
+                                                    <h5 class="panel-title">
                                                         <a class="ft-dark" data-toggle="collapse" href="#table-rsvp-wrap">Look for RSVP list</a>
-                                                    </h4>
+                                                    </h5>
                                                 </div>
                                                 <div id="table-rsvp-wrap" class="panel-collapse collapse">
                                                     <div class="panel-body">
@@ -244,63 +285,61 @@
                             </div>
                         </div>
                     </section>
-                    <section class="gla_section gla_image_bck" data-color="#ecf2f0">
+                    <section    id="live-streaming" class="gla_section gla_image_bck" data-color="#ecf2f0">
                         <div class="container">
                             <div class="row">
+                                <h2>Live Streaming</h2><br><br>
                                 <div class="col-sm-4 col-xs-12 gla_image_bck" data-color="#fff">
                                     <div class="gla_simple_block">
-                                        <h2>Live Streaming</h2>
-                                        <p class="text-muted">MISA PEMBERKATAN ANDREAS & APRILIA | SABTU 11 DESEMBER 2021, PUKUL 13.00</p>
+                                        <h2>MISA PEMBERKATAN ANDREAS & APRILIA</h2>
+                                        <p class="text-muted"> | SABTU 11 DESEMBER 2021, PUKUL 13.00</p>
                                         <a href="https://www.youtube.com/watch?v=LCDEbiOboiI">live at <i class="ti ti-youtube gla_icon_box"></i></a>
                                     </div>
                                 </div>
                                 <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/LCDEbiOboiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
-                            
                         </div>
-                        <!-- container end -->
-
                     </section>
                     <section    id="wishes" class="gla_section">
-                        <div class="container">
-                            <div class="row text-left">
-                                <table class="table table-sm table-borderless table-striped fix-dosis-s" style="width:80%" id="table-wish">
-                                    <thead>
-                                        <tr>
-                                            <th width="25%">Sender</th>                              
-                                            <th width="75%">Whishes</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8 col-md-push-2">
-                                    <form id="form-wish" onsubmit="return false;">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <label>Sender</label>
-                                                <input type="text" name="wish_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label>Wishes</label>
-                                                <textarea name="wish_message" maxlength="500" class="form-control form-opacity" required></textarea>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <input type="submit" class="btn submit" id="form-wish-send" value="send your wishes">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+                        <div class="row text-left pd-md">
+                            <table class="table table-sm table-borderless table-striped fix-dosis-s ft-dark" style="width:80%" id="table-wish">
+                                <thead>
+                                    <tr>
+                                        <th width="25%">Sender</th>                              
+                                        <th width="75%">Whishes</th>
+                                    </tr>
+                                </thead>
+                            </table>
                         </div>
                     </section>
-                    <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/17-mini.jpg')}}">
+                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/1.jpg')}}">
+                        <div class="gla_over" data-color="#282828" data-opacity="0.65"></div>
+                        <div class="container">
+                            <form id="form-wish" onsubmit="return false;">
+                                <div class="row pd-md-h">
+                                    <h2>Also want to say something to the goom & bride?</h2><br><br>
+                                    <div class="col-md-12">
+                                        <label>Sender</label>
+                                        <input type="text" name="wish_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Wishes</label>
+                                        <textarea name="wish_message" maxlength="500" class="form-control form-opacity" required></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="submit" class="btn submit" id="form-wish-send" value="send">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <section    id="thank-you" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/17-mini.jpg')}}">
                         <div class="container text-center">
                             <p style="height:100vh"><img src="{{asset('asset-wedding-1/images/animations/thanks_gold_wh.gif')}}" 
                                     data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thanks_gold_wh.gif')}}" height="150" alt=""></p>
                         </div>
                     </section>
-                    <section class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
+                    <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
                             <a href='{{env("APP_URL", "beritabaik.co")}}' target="_blank">© beritabaik.co</a>
                         </div>
