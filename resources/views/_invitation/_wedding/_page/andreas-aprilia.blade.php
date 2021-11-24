@@ -49,6 +49,10 @@
             .gla_round_block{
                 margin-top: 0px !important;
             }
+            .ft-shadow{
+                color: white;
+                text-shadow: 2px 2px 4px #000000;
+            }
         </style>
     </head>
     <body class="bg-navy">
@@ -162,41 +166,49 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="event-detail" class="gla_section">
-                        <div class="container text-center">                        
-                            <span class="fix-montserrat-m">By the grace of God,</span><br>
-                            <span class="fix-montserrat-s-b text-choco-1">we are pleased to announce our wedding to you, <br>our family and friends</span><br><br><br><br>
-                            <div class="gla_icon_boxes row justify-content-center">
-                                <div class="{{($addition_logic && in_array('wedding',$addition_logic))?'col-sm-6':'col-12'}} col-xs-12">
-                                    <a href="#" class="gla_news_block">
-                                        <span class="gla_news_img">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.465837869644!2d106.5314932!3d-6.2483813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46ab143bbc85215e!2sCatholic%20Church%20St.%20Odilia!5e0!3m2!1sen!2sid!4v1637230122830!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                        </span>
-                                        <span class="gla_news_title">Private Holy Matrimony</span>
-                                        <p>
-                                            <span class="fix-montserrat-sm-b text-success">Santa Odilia Citra Raya Church</span><br>
-                                            Jl. Citra Raya Utama Timur <br>Blok L2 Kav. 31<br>Tangerang<br><br><br>
-                                            <span class="fix-montserrat-s-b text-success">Saturday, 11 December 2021</span><br><br>
-                                            <span class="label label-success">at 13:00 (1 PM)</span>
-                                        </p>
-                                    </a>
-                                </div> 
-                                @if($addition_logic && in_array('wedding',$addition_logic))
-                                <div class="col-sm-6 col-xs-12">
-                                    <a href="#" class="gla_news_block">
-                                        <span class="gla_news_img">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.143202959447!2d106.6585633!3d-6.225998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0158cf1ec37a4a8!2sMenara%20Top%20Food!5e0!3m2!1sen!2sid!4v1637230173149!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                        </span>
-                                        <span class="gla_news_title">Wedding Reception</span>
-                                        <p>
-                                            <span class="fix-montserrat-sm-b text-info">Menara Top Food - Alam Sutera</span><br>
-                                            Jl. Jalur Sutera Bar. <br>No. 3<br>Tangerang<br><br><br>
-                                            <span class="fix-montserrat-s-b text-info">Saturday, 11 December 2021</span><br><br>
-                                            <span class="label label-info">at 18:00 (6 PM)</span>
-                                        </p>
-                                    </a>
+                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/21.jpg')}}" data-stellar-background-ratio="0.8">
+                        <div class="container text-center">     
+                            <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>   
+                            <div class="container text-center">                
+                                <span class="fix-montserrat-m text-choco-2">By the grace of God,</span><br>
+                                <span class="fix-montserrat-s-b text-choco-1">we are pleased to announce our wedding to you, <br>our family and friends</span><br><br><br><br>
+                                <div class="gla_icon_boxes row justify-content-center">
+                                    @if(!($addition_logic && in_array('wedding',$addition_logic)))
+                                    <div class="col-sm-3 col-xs-12"></div>
+                                    @endif
+                                    <div class="col-sm-6 col-xs-12">
+                                        <a href="#" class="gla_news_block">
+                                            <span class="gla_news_img">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.465837869644!2d106.5314932!3d-6.2483813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46ab143bbc85215e!2sCatholic%20Church%20St.%20Odilia!5e0!3m2!1sen!2sid!4v1637230122830!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                            </span>
+                                            <span class="gla_news_title">Private Holy Matrimony</span>
+                                            <p>
+                                                <span class="fix-montserrat-sm-b text-success">Santa Odilia Citra Raya Church</span><br>
+                                                Jl. Citra Raya Utama Timur <br>Blok L2 Kav. 31<br>Tangerang<br><br><br>
+                                                <span class="fix-montserrat-s-b text-success">Saturday, 11 December 2021</span><br><br>
+                                                <span class="label label-success">at 13:00 (1 PM)</span>
+                                            </p>
+                                        </a>
+                                    </div> 
+                                    @if($addition_logic && in_array('wedding',$addition_logic))
+                                    <div class="col-sm-6 col-xs-12">
+                                        <a href="#" class="gla_news_block">
+                                            <span class="gla_news_img">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.143202959447!2d106.6585633!3d-6.225998!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0158cf1ec37a4a8!2sMenara%20Top%20Food!5e0!3m2!1sen!2sid!4v1637230173149!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                            </span>
+                                            <span class="gla_news_title">Wedding Reception</span>
+                                            <p>
+                                                <span class="fix-montserrat-sm-b text-info">Menara Top Food - Alam Sutera</span><br>
+                                                Jl. Jalur Sutera Bar. <br>No. 3<br>Tangerang<br><br><br>
+                                                <span class="fix-montserrat-s-b text-info">Saturday, 11 December 2021</span><br><br>
+                                                <span class="label label-info">at 18:00 (6 PM)</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                    @else
+                                    <div class="col-sm-3 col-xs-12"></div>
+                                    @endif
                                 </div>
-                                @endif
                             </div>
                         </div>
                     </section>
@@ -281,7 +293,7 @@
                     </section>
                     <section    id="wishes" class="gla_section">
                         <div class="row text-left pd-md">
-                            <table class="table table-sm table-borderless table-striped fix-montserrat-s ft-dark" style="width:80%" id="table-wish">
+                            <table class="table table-sm table-borderless table-striped fix-montserrat-s text-choco-1" style="width:80%" id="table-wish">
                                 <thead>
                                     <tr>
                                         <th width="25%">Sender</th>                              
@@ -339,11 +351,11 @@
                     <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4-scretch.jpg')}}">
                         <div class="gla_over" data-color="#ffff" data-opacity="0.4"></div>
                         <div class="container text-right pd-md-h">
-                            <span class="text-choco-1"><i>
-                                <sup>4</sup> Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud. 
-                                <br><sup>5</sup> It does not dishonor others, <br>it is not self-seeking, <br>it is not easily angered, <br>it keeps no record of wrongs. 
-                                <br><sup>6</sup> Love does not delight in evil <br>but rejoices with the truth. 
-                                <br><sup>7</sup> It always protects, always trusts, <br>always hopes, always perseveres.</i>
+                            <span class="fix-montserrat-s-b text-choco-1"><i>
+                                <sup>4</sup> <span class="ft-shadow">Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud.</span> 
+                                <br><sup>5</sup> <span class="ft-shadow">It does not dishonor others, <br>it is not self-seeking, <br>it is not easily angered, <br>it keeps no record of wrongs.</span> 
+                                <br><sup>6</sup> <span class="ft-shadow">Love does not delight in evil <br>but rejoices with the truth.</span> 
+                                <br><sup>7</sup> <span class="ft-shadow">It always protects, always trusts, <br>always hopes, always perseveres.</span></i>
                             </span><br><br><br><br><br>
                             <p class="gla_subtitle">— 1 Corinthians 13:4-7 (NIV)</p>
                         </div>
