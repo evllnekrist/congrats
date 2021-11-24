@@ -580,6 +580,11 @@
 	    $("body").imagesLoaded(function(){
 	        $(".gla_page_loader div").fadeOut();
 	    	$(".gla_page_loader").delay(200).fadeOut("slow");
+			setTimeout(function(){
+				if($('#gla_after_loader_gif').length){
+					$(`<img src="/asset-wedding-1/images/animations/icons/icon15_wh.gif" height="50" alt="">`).appendTo($('#gla_after_loader_gif'));
+				}
+			}, 300);
 	    });
 
 

@@ -36,9 +36,13 @@ class WeddingController extends Controller
         $subject_name = explode("-",$code);
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
-        $addition_logic = '';
+        $addition_logic = array();
         if(array_key_exists(2, $subject_name)){
-            $addition_logic = $subject_name[2];
+            foreach($subject_name as $key => $value){
+                if($key > 1){
+                    array_push($addition_logic,$value);
+                }
+            }
         }
 
         if(sizeof($subject_name) > 1){

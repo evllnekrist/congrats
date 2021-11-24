@@ -17,6 +17,48 @@
     font:400 13px/13px Dosis, Arial;
     margin-bottom: 50px;
 }
+.fix-montserrat-l-b{
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
+    font-weight:900;
+    font-size:30px;
+    margin-bottom: 50px;
+}
+.fix-montserrat-m-b{
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
+    font-weight:600;
+    font-size:20px;
+    margin-bottom: 50px;
+}
+.fix-montserrat-sm-b{
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
+    font-weight:600;
+    font-size:16px;
+    margin-bottom: 50px;
+}
+.fix-montserrat-s-b{
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
+    font-weight:600;
+    font-size:13px;
+    margin-bottom: 50px;
+}
+.fix-montserrat-l{
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
+    font-weight:300;
+    font-size:30px;
+    margin-bottom: 50px;
+}
+.fix-montserrat-m{
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
+    font-weight:400;
+    font-size:18px;
+    margin-bottom: 50px;
+}
+.fix-montserrat-s{
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
+    font-weight:300;
+    font-size:13px;
+    margin-bottom: 50px;
+}
 .ft-dark{
     color:rgb(41, 41, 41) !important;
 }

@@ -2,7 +2,18 @@
 <html lang="en">
     <head>
         @include('_invitation._wedding._include.head-1')
-        @include('_invitation._wedding._include.asset-top-1')
+        <?php
+            $version = "?var=".date("Ymd")."009";
+        ?>
+        <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
+        <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
+        <link href="{{asset('asset-wedding-1/css/glanz_style_montserrat.css').$version}}" rel="stylesheet">
+        <link href="{{asset('asset-wedding-1/css/custom.css').$version}}" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap" rel="stylesheet">
+        <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
+        <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
         <?php 
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
@@ -51,15 +62,18 @@
         <!-- Preloader End-->
         <!-- OPEN -->
             <div class="gla_invitation_container" id="gla_welcome">
-                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3_inv_ver3.jpg')}}">
-                    <p><img src="{{asset('asset-wedding-1/images/invitations/inv_i/save_the_date_bl.gif')}}" style="height:20vh;margin-bottom:15vh"></p>
-                    <span class="fix-dosis-m-b"><br><br>
+                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3_inv_ver3.jpg')}}"> 
+                    <p style="margin-top:15vh;margin-bottom:5vh">               
+                        <span class="fix-montserrat-m">The Wedding of</span><br>
+                        <span class="fix-montserrat-m-b">Andreas & Aprilia</span><br><br>
+                    </p>
+                    <p style="height:5vh;margin-bottom:5vh" id="gla_after_loader_gif"></p>
+                    <span class="fix-montserrat-m"><br><br>
                         @if($invite)
-                            <strong class="text-choco-1">Dear, {{$invite}}</strong><br>
+                            <strong class="fix-montserrat-s-b text-choco-1">Dear, {{$invite}}</strong><br>
                         @endif
                         you are invited!
                     </span><br><br>
-                    <span class="fix-dosis-m-b">Wedding of Andreas & Aprilia</span><br>
                     <button type="button" class="btn btn-light" onclick="executeInv()">Open Invitation</button>
                 </div>
             </div>
@@ -93,7 +107,7 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/20.jpg')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/20.jpg')}}" data-stellar-background-ratio="0.8">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div>
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
@@ -107,23 +121,13 @@
                 <!-- Slider End -->
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
-                    <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/quote-bg.jpg')}}">
-                        <div class="container text-left pd-md-h">
-                            <h5>"<sup>4</sup> Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud. 
-                            <br><sup>5</sup>It does not dishonor others, <br>it is not self-seeking, <br>it is not easily angered, <br>it keeps no record of wrongs. 
-                            <br><sup>6</sup>Love does not delight in evil <br>but rejoices with the truth. 
-                            <br><sup>7</sup>It always protects, always trusts, <br>always hopes, always perseveres."</h5><br><br><br>
-                            <p class="gla_subtitle">— 1 Corinthians 13:4-7 (NIV)</p>
-                        </div>
-                    </section>
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
                                 data-image="{{asset($cdn_link.'images/7.jpg')}}">  
-                        <div class="gla_over" data-color="#282828" data-opacity="0.4"></div>
+                        <div class="gla_over" data-color="#282828" data-opacity="0.9"></div>
                         <div class="container text-center">
-                            <div class="col gla_round_block">    
-                                <span class="fix-dosis-l-b gla_wht_txt">Are getting married<br>Saturday, 11 December 2021</span>
-                                <p class="gla_slide_subtitle gla_wht_txt">Santa Odilia Citra Raya Church<br>Tanggerang</p>
-                                <!-- <div class="gla_countdown" data-year="2021" data-month="02" data-day="20"></div> -->
+                            <div class="col gla_round_block gla_wht_txt">
+                                <span class="fix-montserrat-m">We are tying the knot!</span><br><span class="fix-montserrat-m-b">Saturday, 11 December 2021</span><br><br>
+                                <div class="gla_countdown" data-year="2021" data-month="12" data-day="11"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
                                 <div class="col-sm-5">
@@ -140,9 +144,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-sm-2">
-                                    <img src="{{asset('asset-wedding-1/images/animations/and_wh.gif')}}" class="pd-md-h" height="70px">
-                                </div>
+                                <div class="col-sm-2"></div>
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
                                         <a href="{{asset($cdn_link.'images/15.jpg')}}" class="lightbox">
@@ -161,24 +163,25 @@
                         </div>
                     </section>
                     <section    id="event-detail" class="gla_section">
-                        <div class="container text-center">
-                            <h2>Where & When</h2><br><br>
-                            <div class="gla_icon_boxes row text-left">
-                                <div class="col-sm-6 col-xs-12">
+                        <div class="container text-center">                        
+                            <span class="fix-montserrat-m">By the grace of God,</span><br>
+                            <span class="fix-montserrat-s-b text-choco-1">we are pleased to announce our wedding to you, <br>our family and friends</span><br><br><br><br>
+                            <div class="gla_icon_boxes row justify-content-center">
+                                <div class="{{($addition_logic && in_array('wedding',$addition_logic))?'col-sm-6':'col-12'}} col-xs-12">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15864.465837869644!2d106.5314932!3d-6.2483813!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46ab143bbc85215e!2sCatholic%20Church%20St.%20Odilia!5e0!3m2!1sen!2sid!4v1637230122830!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                         </span>
                                         <span class="gla_news_title">Private Holy Matrimony</span>
                                         <p>
-                                            <b>Santa Odilia Citra Raya Church</b><br>
-                                            Jl. Citra Raya Utama Timur Blok L2 Kav. 31<br>Tanggerang<br>
-                                            Saturday, 11 December 2021<br><br>
+                                            <span class="fix-montserrat-sm-b text-success">Santa Odilia Citra Raya Church</span><br>
+                                            Jl. Citra Raya Utama Timur <br>Blok L2 Kav. 31<br>Tangerang<br><br><br>
+                                            <span class="fix-montserrat-s-b text-success">Saturday, 11 December 2021</span><br><br>
                                             <span class="label label-success">at 13:00 (1 PM)</span>
                                         </p>
                                     </a>
                                 </div> 
-                                @if($addition_logic && $addition_logic == 'wedding')
+                                @if($addition_logic && in_array('wedding',$addition_logic))
                                 <div class="col-sm-6 col-xs-12">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
@@ -186,9 +189,9 @@
                                         </span>
                                         <span class="gla_news_title">Wedding Reception</span>
                                         <p>
-                                            <b>Menara Top Food - Alam Sutera</b><br>
-                                            Jl. Jalur Sutera Bar. No. 3<br>Tanggerang<br>
-                                            Saturday, 11 December 2021<br><br>
+                                            <span class="fix-montserrat-sm-b text-info">Menara Top Food - Alam Sutera</span><br>
+                                            Jl. Jalur Sutera Bar. <br>No. 3<br>Tangerang<br><br><br>
+                                            <span class="fix-montserrat-s-b text-info">Saturday, 11 December 2021</span><br><br>
                                             <span class="label label-info">at 18:00 (6 PM)</span>
                                         </p>
                                     </a>
@@ -197,7 +200,7 @@
                             </div>
                         </div>
                     </section>
-                    @if($addition_logic && $addition_logic == 'wedding')
+                    @if($addition_logic && in_array('wedding',$addition_logic))
                     <section    id="physical-inv" class="gla_section gla_image_bck" data-color="#ecf2f0">
                         <div class="container">
                             <div class="row">
@@ -210,89 +213,10 @@
                         </div>
                     </section>
                     @endif
-                    <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
-                        <div class="container-fluid text-center pd-md">
-                            <h2>Health Protocol</h2>
-                            <p class="gla_slide_subtitle text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p>
-                            <div class="row text-center">
-                                <div class="col-sm-3 col-xs-12 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.jpg')}}"></div>
-                                    <p class="gla_slide_subtitle text-choco-1"><b>wash hands & use hand sanitizer</b></p>
-                                </div>
-                                <div class="col-sm-3 col-xs-4 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-2.jpg')}}"></div>
-                                    <p class="gla_slide_subtitle text-choco-1"><b>use mask</b></p>
-                                </div>
-                                <div class="col-sm-3 col-xs-4 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3.jpg')}}"></div>
-                                    <p class="gla_slide_subtitle text-choco-1"><b>don't shake hands</b></p>
-                                </div>
-                                <div class="col-sm-3 col-xs-4 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-4.jpg')}}"></div>
-                                    <p class="gla_slide_subtitle text-choco-1"><b>don't crowd</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.jpg')}}">
-                        <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
-                        <div class="container text-right">
-                            <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_gold_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_gold_wh.gif')}}" height="150" alt=""></p>         
-                            <p>Can't wait to welcome our happy day with you. <br>At below you can confirm your attendance, thank you.</p>
-                            <div class="row">
-                                <div class="col-md-8 col-md-push-2">
-                                    <form id="form-rsvp" onsubmit="return false;">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                                <input type="text" name="rsvp_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label>Address</label>
-                                                <input type="text" name="rsvp_address" maxlength="50" class="form-control form-opacity" required>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <label>Will you come?</label>
-                                                <input type="radio" name="rsvp_attend" value="1" required>
-                                                <span>Yes, of course!</span><br>
-                                                <input type="radio" name="rsvp_attend" value="0">
-                                                <span>Sorry, I cant be there.</span>
-                                            </div>
-                                            <div class="col-md-12" style="padding-top:50px">
-                                                <input type="submit" class="btn submit" id="form-rsvp-send" value="save">
-                                            </div>
-                                            @if($display['rsvp'] == 1)
-                                            <div class="panel panel-default" style="margin-top:50px">
-                                                <div class="panel-heading">
-                                                    <h5 class="panel-title">
-                                                        <a class="ft-dark" data-toggle="collapse" href="#table-rsvp-wrap">Look for RSVP list</a>
-                                                    </h5>
-                                                </div>
-                                                <div id="table-rsvp-wrap" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                        <table class="table table-sm table-borderless table-striped ft-dark" id="table-rsvp" width="100%">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th width="40%">Sender</th>
-                                                                    <th width="40%">Address</th>                              
-                                                                    <th width="20%">Presence Status</th>
-                                                                </tr>
-                                                            </thead>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            @endif
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                     <section    id="live-streaming" class="gla_section gla_image_bck" data-color="#ecf2f0">
                         <div class="container">
                             <div class="row">
-                                <h2>Live Streaming</h2><br><br>
+                                <span class="fix-montserrat-m">Live Streaming</span><br><br>
                                 <div class="col-sm-4 col-xs-12 gla_image_bck" data-color="#fff">
                                     <div class="gla_simple_block">
                                         <h2>MISA PEMBERKATAN ANDREAS & APRILIA</h2>
@@ -304,9 +228,60 @@
                             </div>
                         </div>
                     </section>
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.jpg')}}">
+                        <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
+                        <div class="container text-right">
+                            <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>         
+                            <p class="fix-montserrat-s">Can't wait to welcome our happy day with you. <br>At below you can confirm your attendance, thank you.</p>
+                            <form id="form-rsvp" onsubmit="return false;">
+                                <div class="row">
+                                    <div class="col-sm-6"><br>
+                                        <span class="fix-montserrat-s-b">Name</span>
+                                        <input type="text" name="rsvp_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
+                                    </div>
+                                    <div class="col-sm-6"><br>
+                                        <span class="fix-montserrat-s-b">Address</span>
+                                        <input type="text" name="rsvp_address" maxlength="50" class="form-control form-opacity" required>
+                                    </div>
+                                    <div class="col-md-12"><br>
+                                        <span class="fix-montserrat-s-b">Will you come?</span><br>
+                                        <input type="radio" name="rsvp_attend" value="1" required>
+                                        <small>Yes, of course!</small><br>
+                                        <input type="radio" name="rsvp_attend" value="0">
+                                        <small>Sorry, I cant be there.</small>
+                                    </div>
+                                    <div class="col-md-12" style="padding-top:50px">
+                                        <input type="submit" class="btn submit" id="form-rsvp-send" value="save">
+                                    </div>
+                                    @if($display['rsvp'] == 1)
+                                    <div class="panel panel-default" style="margin-top:50px">
+                                        <div class="panel-heading">
+                                            <h5 class="panel-title">
+                                                <a class="ft-dark" data-toggle="collapse" href="#table-rsvp-wrap">Look for RSVP list</a>
+                                            </h5>
+                                        </div>
+                                        <div id="table-rsvp-wrap" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <table class="table table-sm table-borderless table-striped ft-dark" id="table-rsvp" width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th width="40%">Sender</th>
+                                                            <th width="40%">Address</th>                              
+                                                            <th width="20%">Presence Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endif
+                                </div>
+                            </form>
+                        </div>
+                    </section>
                     <section    id="wishes" class="gla_section">
                         <div class="row text-left pd-md">
-                            <table class="table table-sm table-borderless table-striped fix-dosis-s ft-dark" style="width:80%" id="table-wish">
+                            <table class="table table-sm table-borderless table-striped fix-montserrat-s ft-dark" style="width:80%" id="table-wish">
                                 <thead>
                                     <tr>
                                         <th width="25%">Sender</th>                              
@@ -321,13 +296,13 @@
                         <div class="container">
                             <form id="form-wish" onsubmit="return false;">
                                 <div class="row pd-md-h">
-                                    <h2>Also want to say something to the goom & bride?</h2><br><br>
+                                    <p class="fix-montserrat-s">Leave us<br>your beautiful wishes and most sincere prayers here<br>as we are so excited to embark on this new journey together</p>
                                     <div class="col-md-12">
-                                        <label>Sender</label>
+                                        <span class="fix-montserrat-s-b">Sender</span>
                                         <input type="text" name="wish_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
                                     </div>
                                     <div class="col-md-12">
-                                        <label>Wishes</label>
+                                        <span class="fix-montserrat-s-b">Wishes</span>
                                         <textarea name="wish_message" maxlength="500" class="form-control form-opacity" required></textarea>
                                     </div>
                                     <div class="col-md-12">
@@ -335,6 +310,42 @@
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </section>
+                    <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
+                        <div class="container text-center pd-md">
+                            <span class="fix-montserrat-m">Health Protocol</span>
+                            <p class="fix-montserrat-s-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p><br>
+                            <div class="row text-center fix-montserrat-s-b">
+                                <div class="col-sm-3 col-xs-12 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.jpg')}}"></div>
+                                    <p class="text-choco-1">wash hands & use hand sanitizer</p>
+                                </div>
+                                <div class="col-sm-3 col-xs-4 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-2.jpg')}}"></div>
+                                    <p class="text-choco-1">use mask</p>
+                                </div>
+                                <div class="col-sm-3 col-xs-4 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3.jpg')}}"></div>
+                                    <p class="text-choco-1">don't shake hands</p>
+                                </div>
+                                <div class="col-sm-3 col-xs-4 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-4.jpg')}}"></div>
+                                    <p class="text-choco-1">don't crowd</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4-scretch.jpg')}}">
+                        <div class="gla_over" data-color="#ffff" data-opacity="0.4"></div>
+                        <div class="container text-right pd-md-h">
+                            <span class="text-choco-1"><i>
+                                <sup>4</sup> Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud. 
+                                <br><sup>5</sup> It does not dishonor others, <br>it is not self-seeking, <br>it is not easily angered, <br>it keeps no record of wrongs. 
+                                <br><sup>6</sup> Love does not delight in evil <br>but rejoices with the truth. 
+                                <br><sup>7</sup> It always protects, always trusts, <br>always hopes, always perseveres.</i>
+                            </span><br><br><br><br><br>
+                            <p class="gla_subtitle">— 1 Corinthians 13:4-7 (NIV)</p>
                         </div>
                     </section>
                     <section    id="thank-you" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/17-mini.jpg')}}">
@@ -368,74 +379,86 @@
                     seeRSVP();
                 }
                 seeWishes();
-
+                @if($addition_logic && in_array('do',$addition_logic))
+                    let auth_msg = `Hello! Thankyou for trying this page, 
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom. 
+                    Even so, please feel free to contact our admin by select order menu at beritabaik.co main page`;
+                @endif
                 $(document).on("click","#form-rsvp-send",function(){
-                    if(document.getElementById('form-rsvp').checkValidity()){ 
-                        console.log('handling :: form-rsvp | validity passed');
-                        let name = $('[name="rsvp_name"]').val();
-                        let address = $('[name="rsvp_address"]').val();
-                        let attend = $('input[name="rsvp_attend"]:checked').val();
-                        $.ajax({
-                            url: 'send-rsvp',
-                            headers: {
-                                'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
-                            },
-                            type: 'POST',
-                            data: JSON.stringify({
-                                sender_name: name,
-                                sender_address: address,
-                                attend: attend
-                            }),
-                            contentType: 'application/json; charset=utf-8',
-                            success: (function (data) {
-                                if(data.status){
-                                    if("{{$display['rsvp']}}"  == 1){
-                                        seeRSVP();
+                    @if($addition_logic && in_array('do',$addition_logic))
+                        alert(auth_msg);
+                    @else
+                        if(document.getElementById('form-rsvp').checkValidity()){ 
+                            console.log('handling :: form-rsvp | validity passed');
+                            let name = $('[name="rsvp_name"]').val();
+                            let address = $('[name="rsvp_address"]').val();
+                            let attend = $('input[name="rsvp_attend"]:checked').val();
+                            $.ajax({
+                                url: 'send-rsvp',
+                                headers: {
+                                    'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
+                                },
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    sender_name: name,
+                                    sender_address: address,
+                                    attend: attend
+                                }),
+                                contentType: 'application/json; charset=utf-8',
+                                success: (function (data) {
+                                    if(data.status){
+                                        if("{{$display['rsvp']}}"  == 1){
+                                            seeRSVP();
+                                        }
+                                        alert(data.message+'\nthankyou!');
+                                    }else{
+                                        alert('error','',data.message);
                                     }
-                                    alert(data.message+'\nthankyou!');
-                                }else{
-                                    alert('error','',data.message);
+                                }),error:function(xhr,status,error) {
+                                    alert('error [sys]','',xhr.responseText);
                                 }
-                            }),error:function(xhr,status,error) {
-                                alert('error [sys]','',xhr.responseText);
-                            }
-                        });
-                    }else{
-                        console.log('handling :: form-rsvp | validity 0');
-                    }
+                            });
+                        }else{
+                            console.log('handling :: form-rsvp | validity 0');
+                        }
+                    @endif
                 });
 
                 $(document).on("click","#form-wish-send",function(){
-                    if(document.getElementById('form-wish').checkValidity()){ 
-                        console.log('handling :: form-wish | validity passed');
-                        let name = $('[name="wish_name"]').val();
-                        let message = $('[name="wish_message"]').val();
-                        $.ajax({
-                            url: 'send-wish',
-                            headers: {
-                                'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
-                            },
-                            type: 'POST',
-                            data: JSON.stringify({
-                                sender_name: name,
-                                message: message
-                            }),
-                            contentType: 'application/json; charset=utf-8',
-                            success: (function (data) {
-                                console.log(data);
-                                if(data.status){
-                                    seeWishes();
-                                    alert(data.message+'\nthankyou!');
-                                }else{
-                                    alert('error','',data.message);
+                    @if($addition_logic && in_array('do',$addition_logic))
+                        alert(auth_msg);
+                    @else
+                        if(document.getElementById('form-wish').checkValidity()){ 
+                            console.log('handling :: form-wish | validity passed');
+                            let name = $('[name="wish_name"]').val();
+                            let message = $('[name="wish_message"]').val();
+                            $.ajax({
+                                url: 'send-wish',
+                                headers: {
+                                    'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
+                                },
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    sender_name: name,
+                                    message: message
+                                }),
+                                contentType: 'application/json; charset=utf-8',
+                                success: (function (data) {
+                                    console.log(data);
+                                    if(data.status){
+                                        seeWishes();
+                                        alert(data.message+'\nthankyou!');
+                                    }else{
+                                        alert('error','',data.message);
+                                    }
+                                }),error:function(xhr,status,error) {
+                                    alert('error [sys]','',xhr.responseText);
                                 }
-                            }),error:function(xhr,status,error) {
-                                alert('error [sys]','',xhr.responseText);
-                            }
-                        });
-                    }else{
-                        console.log('handling :: form-wish | validity 0');
-                    }
+                            });
+                        }else{
+                            console.log('handling :: form-wish | validity 0');
+                        }
+                    @endif
                 });
 
                 function seeRSVP(){

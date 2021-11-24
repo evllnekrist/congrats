@@ -46,7 +46,8 @@
             <div class="col-md-4 col-sm-4">
                 <h4>Latest Portfolio</h4>
                 <ul class="list-unstyled">
-                    <li><a href="{{url('/w/petrick-menda')}}" target="_blank">Petrick & Menda's Wedding</a></li>
+                    <li><a href="{{url('/w/petrick-menda-do')}}" target="_blank">Petrick & Menda's Wedding</a></li>
+                    <li><a href="{{url('/w/andreas-aprilia-do')}}" target="_blank">Andreas & Aprilia's Wedding</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4">

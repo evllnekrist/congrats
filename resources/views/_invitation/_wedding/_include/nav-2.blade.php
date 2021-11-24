@@ -19,7 +19,7 @@
                 <a href="#event-detail">Event</a>
             </li>
             <li>
-                <a href="#health-protocol">Protokol Kesehatan</a>
+                <a href="#live-streaming">Live Streaming</a>
             </li>
             <li>
                 <a href="#rsvp">Konfirmasi Kehadiran</a>
@@ -28,7 +28,7 @@
                 <a href="#wishes">Ucapan</a>
             </li>
             <li>
-                <a href="#live-streaming">Live Streaming</a>
+                <a href="#health-protocol">Protokol Kesehatan</a>
             </li>
         </ul>
         <br><br>
@@ -44,7 +44,7 @@
             <a href="#event-detail">Event</a>
         </li>
         <li>
-            <a href="#health-protocol">Protokol Kesehatan</a>
+            <a href="#live-streaming">Live Streaming</a>
         </li>
         <li>
             <a href="#rsvp">Konfirmasi Kehadiran</a>
@@ -53,7 +53,7 @@
             <a href="#wishes">Ucapan</a>
         </li>
         <li>
-            <a href="#live-streaming">Live Streaming</a>
+            <a href="#health-protocol">Protokol Kesehatan</a>
         </li>
     </ul>
 </div>

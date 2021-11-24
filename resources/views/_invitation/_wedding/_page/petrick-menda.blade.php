@@ -453,74 +453,86 @@
                     seeRSVP();
                 }
                 seeWishes();
-
+                @if($addition_logic && in_array('do',$addition_logic))
+                    let auth_msg = `Hello! Thankyou for trying this page, 
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom. 
+                    Even so, please feel free to contact our admin by select order menu at beritabaik.co main page`;
+                @endif
                 $(document).on("click","#form-rsvp-send",function(){
-                    if(document.getElementById('form-rsvp').checkValidity()){ 
-                        console.log('handling :: form-rsvp | validity passed');
-                        let name = $('[name="rsvp_name"]').val();
-                        let address = $('[name="rsvp_address"]').val();
-                        let attend = $('input[name="rsvp_attend"]:checked').val();
-                        $.ajax({
-                            url: 'send-rsvp',
-                            headers: {
-                                'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
-                            },
-                            type: 'POST',
-                            data: JSON.stringify({
-                                sender_name: name,
-                                sender_address: address,
-                                attend: attend
-                            }),
-                            contentType: 'application/json; charset=utf-8',
-                            success: (function (data) {
-                                if(data.status){
-                                    if("{{$display['rsvp']}}"  == 1){
-                                        seeRSVP();
+                    @if($addition_logic && in_array('do',$addition_logic))
+                        alert(auth_msg);
+                    @else
+                        if(document.getElementById('form-rsvp').checkValidity()){ 
+                            console.log('handling :: form-rsvp | validity passed');
+                            let name = $('[name="rsvp_name"]').val();
+                            let address = $('[name="rsvp_address"]').val();
+                            let attend = $('input[name="rsvp_attend"]:checked').val();
+                            $.ajax({
+                                url: 'send-rsvp',
+                                headers: {
+                                    'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
+                                },
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    sender_name: name,
+                                    sender_address: address,
+                                    attend: attend
+                                }),
+                                contentType: 'application/json; charset=utf-8',
+                                success: (function (data) {
+                                    if(data.status){
+                                        if("{{$display['rsvp']}}"  == 1){
+                                            seeRSVP();
+                                        }
+                                        alert(data.message+'\nthankyou!');
+                                    }else{
+                                        alert('error','',data.message);
                                     }
-                                    alert(data.message+'\nthankyou!');
-                                }else{
-                                    alert('error','',data.message);
+                                }),error:function(xhr,status,error) {
+                                    alert('error [sys]','',xhr.responseText);
                                 }
-                            }),error:function(xhr,status,error) {
-                                alert('error [sys]','',xhr.responseText);
-                            }
-                        });
-                    }else{
-                        console.log('handling :: form-rsvp | validity 0');
-                    }
+                            });
+                        }else{
+                            console.log('handling :: form-rsvp | validity 0');
+                        }
+                    @endif
                 });
 
                 $(document).on("click","#form-wish-send",function(){
-                    if(document.getElementById('form-wish').checkValidity()){ 
-                        console.log('handling :: form-wish | validity passed');
-                        let name = $('[name="wish_name"]').val();
-                        let message = $('[name="wish_message"]').val();
-                        $.ajax({
-                            url: 'send-wish',
-                            headers: {
-                                'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
-                            },
-                            type: 'POST',
-                            data: JSON.stringify({
-                                sender_name: name,
-                                message: message
-                            }),
-                            contentType: 'application/json; charset=utf-8',
-                            success: (function (data) {
-                                console.log(data);
-                                if(data.status){
-                                    seeWishes();
-                                    alert(data.message+'\nthankyou!');
-                                }else{
-                                    alert('error','',data.message);
+                    @if($addition_logic && in_array('do',$addition_logic))
+                        alert(auth_msg);
+                    @else
+                        if(document.getElementById('form-wish').checkValidity()){ 
+                            console.log('handling :: form-wish | validity passed');
+                            let name = $('[name="wish_name"]').val();
+                            let message = $('[name="wish_message"]').val();
+                            $.ajax({
+                                url: 'send-wish',
+                                headers: {
+                                    'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
+                                },
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    sender_name: name,
+                                    message: message
+                                }),
+                                contentType: 'application/json; charset=utf-8',
+                                success: (function (data) {
+                                    console.log(data);
+                                    if(data.status){
+                                        seeWishes();
+                                        alert(data.message+'\nthankyou!');
+                                    }else{
+                                        alert('error','',data.message);
+                                    }
+                                }),error:function(xhr,status,error) {
+                                    alert('error [sys]','',xhr.responseText);
                                 }
-                            }),error:function(xhr,status,error) {
-                                alert('error [sys]','',xhr.responseText);
-                            }
-                        });
-                    }else{
-                        console.log('handling :: form-wish | validity 0');
-                    }
+                            });
+                        }else{
+                            console.log('handling :: form-wish | validity 0');
+                        }
+                    @endif
                 });
 
                 function seeRSVP(){
