@@ -28,6 +28,9 @@
                 <a href="#wishes">Ucapan</a>
             </li>
             <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+            <li>
                 <a href="#health-protocol">Protokol Kesehatan</a>
             </li>
         </ul>
@@ -51,6 +54,9 @@
         </li>
         <li>
             <a href="#wishes">Ucapan</a>
+        </li>
+        <li>
+            <a href="#gallery">Gallery</a>
         </li>
         <li>
             <a href="#health-protocol">Protokol Kesehatan</a>

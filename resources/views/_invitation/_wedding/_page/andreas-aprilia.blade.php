@@ -72,7 +72,7 @@
                         <span class="fix-montserrat-m-b">Andreas & Aprilia</span><br><br>
                     </p>
                     <p style="height:5vh;margin-bottom:5vh" id="gla_after_loader_gif"></p>
-                    <span class="fix-montserrat-m"><br><br>
+                    <span class="fix-montserrat-s"><br><br>
                         @if($invite)
                             <strong class="fix-montserrat-s-b text-choco-1">Dear, {{$invite}}</strong><br>
                         @endif
@@ -324,9 +324,34 @@
                             </form>
                         </div>
                     </section>
+                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
+                                data-image="{{asset($cdn_link.'images/white-bg.jpg')}}">
+                        <div class="container text-center"><br>
+                            <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
+                            <div class="gla_slider_carousel">
+                                <?php
+                                    $gallery_items = array('2','5','6','21','18','19','20','15','13','11','10','9','12','16'); 
+                                ?>
+                                @foreach($gallery_items as $item)
+                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.jpg')}}">
+                                    <div class="gla_over" data-color="#000" data-opacity="0"></div>
+                                    <a href="{{asset($cdn_link.'images/'.$item.'.jpg')}}" class="lightbox">
+                                        <div class="container">
+                                            <div class="stick-bottom">
+                                                <div class="gla_slide_midtitle"></div>
+                                                <div class="gla_slide_subtitle no-margin-top">~</div>
+                                                <!-- <p><a href="#" class="btn"></a></p> -->
+                                            </div>
+                                        </div>
+                                    </a>    
+                                </div>
+                                @endforeach
+                            </div>
+                        </div><br><br><br>
+                    </section>
                     <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
                         <div class="container text-center pd-md">
-                            <span class="fix-montserrat-m">Health Protocol</span>
+                            <span class="fix-montserrat-m">Health Protocol</span><br><br>
                             <p class="fix-montserrat-s-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p><br>
                             <div class="row text-center fix-montserrat-s-b">
                                 <div class="col-sm-3 col-xs-12 gla_round_block">
@@ -349,7 +374,7 @@
                         </div>
                     </section>
                     <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4-scretch.jpg')}}">
-                        <div class="gla_over" data-color="#ffff" data-opacity="0.4"></div>
+                        <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div>
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-choco-1"><i>
                                 <sup>4</sup> <span class="ft-shadow">Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud.</span> 
@@ -363,7 +388,7 @@
                     <section    id="thank-you" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/17-mini.jpg')}}">
                         <div class="container text-center">
                             <p style="height:100vh"><img src="{{asset('asset-wedding-1/images/animations/thanks_gold_wh.gif')}}" 
-                                    data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thanks_gold_wh.gif')}}" height="150" alt=""></p>
+                                    data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thanks_gold_wh.gif')}}" height="120" alt=""></p>
                         </div>
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
