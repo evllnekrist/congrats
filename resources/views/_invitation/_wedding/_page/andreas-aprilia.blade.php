@@ -74,7 +74,7 @@
                     <p style="height:5vh;margin-bottom:5vh" id="gla_after_loader_gif"></p>
                     <span class="fix-montserrat-s"><br><br>
                         @if($invite)
-                            <strong class="fix-montserrat-s-b text-choco-1">Dear, {{$invite}}</strong><br>
+                            <strong class="fix-montserrat-s-b text-choco-1">Dear {{$invite}}</strong><br>
                         @endif
                         you are invited!
                     </span><br><br>
@@ -92,8 +92,8 @@
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/gamaliel_ isyana__a_whole_new_world_from_aladdin.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/gamaliel_ isyana__a_whole_new_world_from_aladdin.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/sam_ock__can_I_have_the_day_with_you_ft_michelle.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/sam_ock__can_I_have_the_day_with_you_ft_michelle.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -127,7 +127,7 @@
                 <section id="gla_content" class="gla_content">
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
                                 data-image="{{asset($cdn_link.'images/7.jpg')}}">  
-                        <div class="gla_over" data-color="#282828" data-opacity="0.9"></div>
+                        <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
                                 <span class="fix-montserrat-m">We are tying the knot!</span><br><span class="fix-montserrat-m-b">Saturday, 11 December 2021</span><br><br>
@@ -142,9 +142,9 @@
                                         <span class="gla_news_title text-maroon-1 pd-md"><strong>Andreas Budi<br>Kurniawan</strong></span>
                                         <p>
                                             son of<br>
-                                            <b>Mr. Yohanes Purdjono<br>(Kwee Kim Liong)</b>
+                                            <span class="fix-montserrat-s-b"><img src="{{asset($cdn_link.'images/cross2.png')}}" style="height:12px;width:8px;margin-right:8px"> Mr. Yohanes Purdjono<br>(Kwee Kim Liong)</span>
                                             <br>&<br>
-                                            <b>Mrs. Susiana<br>(Ho Soe Tjin)</b><br><br><br>
+                                            <span class="fix-montserrat-s-b">Mrs. Susiana<br>(Ho Soe Tjin)</span><br><br><br>
                                         </p>
                                     </div>
                                 </div>
@@ -157,9 +157,9 @@
                                         <span class="gla_news_title text-maroon-1 pd-md"><strong>Anastasia Aprilia<br>Paskah</strong></span>
                                         <p>
                                             daughter of<br>
-                                            <b>Mr. Souw Antonius Sonny Ananto<br>(Siow Siong Kiat)</b>
+                                            <span class="fix-montserrat-s-b">Mr. Souw Antonius Sonny Ananto<br>(Souw Siong Kiat)</span>
                                             <br>&<br>
-                                            <b>Mrs. Yosephine Laurentia Ratna Susianawaty<br>(Lauw May Siang)</b>
+                                            <span class="fix-montserrat-s-b">Mrs. Yosephine Laurentia Ratna Susianawaty<br>(Lauw May Siang)</span>
                                         </p>
                                     </div>
                                 </div>
@@ -184,7 +184,7 @@
                                             <span class="gla_news_title">Private Holy Matrimony</span>
                                             <p>
                                                 <span class="fix-montserrat-sm-b text-success">Santa Odilia Citra Raya Church</span><br>
-                                                Jl. Citra Raya Utama Timur <br>Blok L2 Kav. 31<br>Tangerang<br><br><br>
+                                                Jl. Citra Raya Utama Timur <br>Blok L2 Kav. 31, Tangerang<br><br><br>
                                                 <span class="fix-montserrat-s-b text-success">Saturday, 11 December 2021</span><br><br>
                                                 <span class="label label-success">at 13:00 (1 PM)</span>
                                             </p>
@@ -199,7 +199,7 @@
                                             <span class="gla_news_title">Wedding Reception</span>
                                             <p>
                                                 <span class="fix-montserrat-sm-b text-info">Menara Top Food - Alam Sutera</span><br>
-                                                Jl. Jalur Sutera Bar. <br>No. 3<br>Tangerang<br><br><br>
+                                                Jl. Jalur Sutera Bar. No. 3,<br>Tangerang<br><br><br>
                                                 <span class="fix-montserrat-s-b text-info">Saturday, 11 December 2021</span><br><br>
                                                 <span class="label label-info">at 18:00 (6 PM)</span>
                                             </p>
@@ -232,7 +232,7 @@
                                 <div class="col-sm-4 col-xs-12 gla_image_bck" data-color="#fff">
                                     <div class="gla_simple_block">
                                         <h2>MISA PEMBERKATAN ANDREAS & APRILIA</h2>
-                                        <p class="text-muted"> | SABTU 11 DESEMBER 2021, PUKUL 13.00</p>
+                                        <p class="text-muted">SABTU, 11 DESEMBER 2021, PUKUL 13.00</p>
                                         <a href="https://www.youtube.com/watch?v=LCDEbiOboiI">live at <i class="ti ti-youtube gla_icon_box"></i></a>
                                     </div>
                                 </div>
@@ -240,6 +240,7 @@
                             </div>
                         </div>
                     </section>
+                    @if($addition_logic && in_array('wedding',$addition_logic))
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.jpg')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-right">
@@ -291,6 +292,7 @@
                             </form>
                         </div>
                     </section>
+                    @endif
                     <section    id="wishes" class="gla_section">
                         <div class="row text-left pd-md">
                             <table class="table table-sm table-borderless table-striped fix-montserrat-s text-choco-1" style="width:80%" id="table-wish">
@@ -308,7 +310,7 @@
                         <div class="container">
                             <form id="form-wish" onsubmit="return false;">
                                 <div class="row pd-md-h">
-                                    <p class="fix-montserrat-s">Leave us<br>your beautiful wishes and most sincere prayers here<br>as we are so excited to embark on this new journey together</p>
+                                    <p class="fix-montserrat-s">Leave us<br>your beautiful wishes and most sincere prayers here<br>as we are so excited to embark on this new journey together.</p>
                                     <div class="col-md-12">
                                         <span class="fix-montserrat-s-b">Sender</span>
                                         <input type="text" name="wish_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
@@ -330,7 +332,7 @@
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('2','5','6','21','18','19','20','15','13','11','10','9','12','16'); 
+                                    $gallery_items = array('23','22','2-mini','5','21','18','19','20','15','13','11','10','9','12','16','24'); 
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.jpg')}}">
@@ -349,6 +351,7 @@
                             </div>
                         </div><br><br><br>
                     </section>
+                    @if($addition_logic && in_array('wedding',$addition_logic))
                     <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
                         <div class="container text-center pd-md">
                             <span class="fix-montserrat-m">Health Protocol</span><br><br>
@@ -373,8 +376,9 @@
                             </div>
                         </div>
                     </section>
+                    @endif
                     <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4-scretch.jpg')}}">
-                        <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div>
+                        <div class="gla_over" data-color="#ffff" data-opacity="0.5"></div>
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-choco-1"><i>
                                 <sup>4</sup> <span class="ft-shadow">Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud.</span> 
@@ -386,9 +390,10 @@
                         </div>
                     </section>
                     <section    id="thank-you" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/17-mini.jpg')}}">
+                        <div class="gla_over" data-color="#282828" data-opacity="0.2"></div>
                         <div class="container text-center">
-                            <p style="height:100vh"><img src="{{asset('asset-wedding-1/images/animations/thanks_gold_wh.gif')}}" 
-                                    data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thanks_gold_wh.gif')}}" height="120" alt=""></p>
+                            <p style="height:100vh"><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" 
+                                    data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" height="120" alt=""></p>
                         </div>
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
