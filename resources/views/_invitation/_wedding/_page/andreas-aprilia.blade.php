@@ -136,7 +136,7 @@
                             <div class="gla_icon_boxes row">
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
-                                        <a href="{{asset($cdn_link.'images/18.jpg')}}" class="lightbox">
+                                        <a href="{{asset($cdn_link.'images/18.jpg')}}">
                                             <img src="{{asset($cdn_link.'images/bio-m.jpg')}}" alt="">
                                         </a>
                                         <span class="gla_news_title text-maroon-1 pd-md"><strong>Andreas Budi<br>Kurniawan</strong></span>
@@ -151,7 +151,7 @@
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
-                                        <a href="{{asset($cdn_link.'images/15.jpg')}}" class="lightbox">
+                                        <a href="{{asset($cdn_link.'images/15.jpg')}}">
                                             <img src="{{asset($cdn_link.'images/bio-f.jpg')}}" alt="">
                                         </a>
                                         <span class="gla_news_title text-maroon-1 pd-md"><strong>Anastasia Aprilia<br>Paskah</strong></span>
@@ -217,7 +217,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <a href="{{asset($cdn_link.'images/inv.jpg')}}" class="lightbox">
+                                    <a href="{{asset($cdn_link.'images/inv.jpg')}}">
                                         <img src="{{asset($cdn_link.'images/inv.jpg')}}" width="100%">
                                     </a>
                                 </div>
