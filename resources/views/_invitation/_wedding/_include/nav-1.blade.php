@@ -29,7 +29,7 @@
             </li>
         </ul>
         <br><br>
-        <a href='{{env("APP_URL", "beritabaik.co")}}' target="_blank" class="ft-m">© beritabaik.co</a>
+        <a href='{{url(env("APP_URL", "beritabaik.co"))}}' target="_blank" class="ft-m">© beritabaik.co</a>
     </div>
 </div>
 <div class="gla_default_menu">
