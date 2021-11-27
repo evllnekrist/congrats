@@ -299,7 +299,7 @@
                                 <thead>
                                     <tr>
                                         <th width="25%">Sender</th>                              
-                                        <th width="75%">Whishes</th>
+                                        <th width="75%">Wishes</th>
                                     </tr>
                                 </thead>
                             </table>
