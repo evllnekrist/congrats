@@ -59,6 +59,11 @@ class WeddingController extends Controller
     // ----------------------------------------------A.J.A.X--------------------------------------------
     public function ajax_send_rsvp(Request $request, $code){
         if($request->ajax()) {
+            $subject_name = explode("-",$code);
+            if(sizeof($subject_name) < 2){
+                return array('status'=>false, 'message'=>'Code broken');
+            }
+            $code = $subject_name[0]."-".$subject_name[1];
             try{
                 $item = $request->all();
                 $item['code'] = $code;
@@ -75,6 +80,11 @@ class WeddingController extends Controller
         return $output;
     }
     public function ajax_send_wish(Request $request, $code){
+        $subject_name = explode("-",$code);
+        if(sizeof($subject_name) < 2){
+            return array('status'=>false, 'message'=>'Code broken');
+        }
+        $code = $subject_name[0]."-".$subject_name[1];
         if($request->ajax()) {
             try{
                 $item = $request->all();
