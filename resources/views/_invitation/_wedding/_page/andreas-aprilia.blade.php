@@ -522,13 +522,9 @@
                                 render: function(data, type, full, meta) {
                                     let temp_class = '';
                                     if(data){
-                                        if(data.attend == 1){
-                                            return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';
-                                        }else{
-                                            return  '<center><span><i class="ti ti-close text-danger"></i></span></center>';
-                                        }
+                                        return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';
                                     }else{
-                                        return  '<center><span>-</span></center>';
+                                        return  '<center><span><i class="ti ti-close text-danger"></i></span></center>';
                                     }
                                 },
                             },
