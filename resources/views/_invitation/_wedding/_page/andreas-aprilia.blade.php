@@ -522,9 +522,11 @@
                                 render: function(data, type, full, meta) {
                                     let temp_class = '';
                                     console.log(data, full);
-                                    if(data){
+                                    if(data == 1){
+                                        console.log('check');
                                         return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';
                                     }else{
+                                        console.log('close');
                                         return  '<center><span><i class="ti ti-close text-danger"></i></span></center>';
                                     }
                                 },
