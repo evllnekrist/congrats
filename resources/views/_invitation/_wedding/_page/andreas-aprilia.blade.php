@@ -523,12 +523,12 @@
                                     let temp_class = '';
                                     if(data){
                                         if(data.attend == 1){
-                                            return  '<span><i class="ti ti-check"></i></span>';
+                                            return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';
                                         }else{
-                                            return  '<span><i class="ti ti-close"></i></span>';
+                                            return  '<center><span><i class="ti ti-close text-danger"></i></span></center>';
                                         }
                                     }else{
-                                        return  '<span>-</span>';
+                                        return  '<center><span>-</span></center>';
                                     }
                                 },
                             },
