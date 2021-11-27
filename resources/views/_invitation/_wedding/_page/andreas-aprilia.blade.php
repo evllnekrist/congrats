@@ -521,6 +521,7 @@
                                 targets: 2,
                                 render: function(data, type, full, meta) {
                                     let temp_class = '';
+                                    console.log(data, full);
                                     if(data){
                                         return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';
                                     }else{
