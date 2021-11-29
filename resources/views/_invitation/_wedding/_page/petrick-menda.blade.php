@@ -430,7 +430,7 @@
                     </section>
                     <section class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
-                            <a href='{{url(env("APP_URL", "beritabaik.co"))}}' target="_blank">© beritabaik.co</a>
+                            <a href='{{url("/"))}}' target="_blank">© beritabaik.co</a>
                         </div>
                     </section>
                 </section>
