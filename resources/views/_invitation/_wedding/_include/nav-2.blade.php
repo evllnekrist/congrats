@@ -35,7 +35,7 @@
             </li>
         </ul>
         <br><br>
-        <a href='{{url("/"))}}' target="_blank" class="ft-m">© beritabaik.co</a>
+        <a href='{{url("/")}}' target="_blank" class="ft-m">© beritabaik.co</a>
     </div>
 </div>
 <div class="gla_default_menu">
