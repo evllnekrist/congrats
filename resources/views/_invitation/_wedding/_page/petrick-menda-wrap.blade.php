@@ -5,6 +5,7 @@
         <?php
             $version = "?var=".date("Ymd")."007";
         ?>
+        <link rel="icon" href="{{asset('https://beritabaik.co/asset-wedding-bg/petrick-menda/images/card-bg-3.jpg')}}" type="image/jpg">
         <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/css/glanz_style.css').$version}}" rel="stylesheet">

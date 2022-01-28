@@ -8,7 +8,7 @@
         ?>
         <meta name="description" content="We are tying the knot!"/>
         <meta property="og:image" content="{{asset($cdn_link.'images/9.jpg')}}">
-        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:type" content="image/jpg">
         <meta property="og:image:width" content="250">
         <meta property="og:image:height" content="200">
         <link rel="image_src" href="{{asset($cdn_link.'images/9.jpg')}}">
