@@ -3,8 +3,11 @@
     <head>
         @include('_invitation._wedding._include.head-1')
         <?php
+            $cdn_link   = "asset-wedding-bg/".$code."/";
             $version = "?var=".date("Ymd")."001";
         ?>
+        <meta name="description" content="We are tying the knot!"/>
+        <link rel="image_src" href="{{asset($cdn_link.'images/9.jpg')}}">
         <link href="{{asset('asset-wedding-1/css/custom.css').$version}}" rel="stylesheet">
     </head>
     <body class="bg-navy">
