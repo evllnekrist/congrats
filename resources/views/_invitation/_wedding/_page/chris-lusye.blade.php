@@ -105,14 +105,14 @@
                         <span class="fix-montserrat-m-b">Chris & Lusye</span><br><br>
                     </p>
                     <!-- <p style="height:5vh;margin-bottom:5vh" id="gla_after_loader_gif"></p> -->
-                    <span class=""><br><br>
+                    <span class="">
                         @if($invite)
                             <h6 class="gla_wht_txt">Dear {{$invite}},</h6>
                         @endif
                         <span class="fix-montserrat-s-b text-choco-1">we would like to invite you to be part of <br>our happy day !</span>
                     </span>
                     <div class="row">
-                        <button type="button" class="btn btn-white-light text-choco-1" style="bottom:3vh;position:absolute;margin-left:-10vh;" onclick="executeInv()">Open Invitation</button> 
+                        <button type="button" class="btn btn-white-light text-choco-1" style="bottom:3vh;position:absolute;margin-left:-15vh;" onclick="executeInv()">Open Invitation</button> 
                     </div>
                 </div>
             </div>
