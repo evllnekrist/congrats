@@ -104,16 +104,14 @@
                         <span class="fix-montserrat-m">The Wedding of</span><br>
                         <span class="fix-montserrat-m-b">Chris & Lusye</span><br><br>
                     </p>
-                    <!-- <p style="height:5vh;margin-bottom:5vh" id="gla_after_loader_gif"></p> -->
-                    <span class="">
+                    <div class="row">
                         @if($invite)
                             <h6 class="gla_wht_txt">Dear {{$invite}},</h6>
                         @endif
                         <span class="fix-montserrat-s-b text-choco-1">we would like to invite you to be part of <br>our happy day !</span>
-                    </span>
-                    <div class="row">
-                        <button type="button" class="btn btn-white-light text-choco-1" style="bottom:3vh;position:absolute;margin-left:-15vh;" onclick="executeInv()">Open Invitation</button> 
                     </div>
+                    <p style="height:5vh;margin-bottom:30vh"></p>
+                    <button type="button" class="btn btn-white-light text-choco-1" onclick="executeInv()">Open Invitation</button> 
                 </div>
             </div>
         <!-- OPEN End -->
