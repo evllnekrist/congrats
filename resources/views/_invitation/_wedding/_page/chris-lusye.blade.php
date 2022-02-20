@@ -375,7 +375,7 @@
                                     <p class="text-choco-1">wear mask</p>
                                 </div>
                                 <div class="col-sm-6 col-xs-12 gla_round_block">
-                                    <img src="http://localhost:8000/asset-wedding-bg/chris-lusye/images/hp-2.png">
+                                    <img src="http://localhost:8000/asset-wedding-bg/chris-lusye/images/hp-2.png" style="max-width:300px">
                                 </div>
                                 <div class="col-sm-3 col-xs-12 gla_round_block">
                                     <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3-a.png')}}"></div>
