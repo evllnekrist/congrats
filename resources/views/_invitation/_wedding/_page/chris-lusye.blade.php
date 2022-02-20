@@ -127,8 +127,8 @@
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/sam_ock__can_I_have_the_day_with_you_ft_michelle.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/sam_ock__can_I_have_the_day_with_you_ft_michelle.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/sam_ock__choose_2_love.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/sam_ock__choose_2_love.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
