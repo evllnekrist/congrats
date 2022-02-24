@@ -661,11 +661,13 @@
 
 		/* Block Autheight */
 		if( !device.tablet() && !device.mobile() ) {
-			$('.gla_auto_height').each(function(){
-				setEqualHeight($(this).find('> div[class^="col"]'));
-			});
+			console.log('block auto 1');
+			// $('.gla_auto_height').each(function(){
+			// 	setEqualHeight($(this).find('> div[class^="col"]'));
+			// });
 		}
 		if( device.tablet() && device.landscape() ) {
+			console.log('block auto 2');
 			$('.gla_auto_height').each(function(){
 				setEqualHeight($(this).find('> div[class^="col"]'));
 			});
@@ -673,16 +675,19 @@
 
 		$(window).resize(function() {
 			if( !device.tablet() && !device.mobile() ) {
+				console.log('resize  1');
 				$('.gla_auto_height').each(function(){
 					setEqualHeight($(this).find('> div[class^="col"]'));
 				});
 			}
 			if( device.tablet() && device.landscape() ) {
+				console.log('resize  2');
 				$('.gla_auto_height').each(function(){
 					setEqualHeight($(this).find('> div[class^="col"]'));
 				});
 			}
 			if( device.tablet() && device.portrait() ) {
+				console.log('resize  3');
 				$('.gla_auto_height').each(function(){
 					$(this).find('> div[class^="col"]').height('auto');
 				});

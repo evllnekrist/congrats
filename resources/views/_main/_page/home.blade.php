@@ -3,6 +3,15 @@
     <head>
         @include('_main._include.head')
         @include('_main._include.asset-top')
+        <style>
+            .ft-shadow-soft{
+                color: white;
+                text-shadow: 2px 2px 4px #737373;
+            }
+            smaller{
+                font-size:65%;
+            }
+        </style>
     </head>
     <body class="gla_middle_titles" id="home">
         <div class="gla_page" id="gla_page">
@@ -11,10 +20,10 @@
             <!-- Slider -->
             <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset('asset-main/images/bg/couple-1.jpg')}}" data-stellar-background-ratio="0.8">
 
-                <div class="gla_over" data-color="#282828" data-opacity="0.15"></div>
+                <!-- <div class="gla_over" data-color="#282828" data-opacity="0.15"></div> -->
                 <div class="container">
                     <div class="gla_slide_txt gla_slide_center_middle text-center">
-                        <div class="gla_slide_midtitle">bagikan kebahagianmu lewat berita baik</div>
+                        <div class="gla_slide_midtitle ft-shadow-soft"><smaller>bagikan kebahagianmu<br>lewat berita baik</smaller></div>
                     </div>
                 </div>
                 <a class="gla_scroll_down gla_go" href="#gla_content">

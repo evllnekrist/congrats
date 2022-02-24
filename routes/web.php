@@ -16,6 +16,9 @@ Route::get('/','Main\HomeController@index');
 /*--------------------------------------------------------------------------START--*/ 
     Route::group(['prefix' => 'w'], function()
     {
+        Route::get('',function(){
+            return view('_main._page.error',['lost'=>true]);
+        });
         Route::get('{code}','Invitation\WeddingController@outer_index');
         Route::get('{code}/inner','Invitation\WeddingController@inner_index');
         Route::post('{code}/send-rsvp','Invitation\WeddingController@ajax_send_rsvp');
