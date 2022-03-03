@@ -37,6 +37,14 @@
                 padding: 5px 30px;
                 line-height: 2;
             }
+            .highlight-2-light{
+                background: rgba(255,255,255,0.8) !important;
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%);
+                color: #956c5a;
+                padding: 5px 30px;
+                line-height: 2;
+                border-radius: 10px; 
+            }
             .text-subtitle-highlight-1{
                 background-color: white;
                 color: black;
@@ -45,6 +53,11 @@
             .text-subtitle-highlight-2{
                 background-color: black;
                 color: white;
+                padding: 5px 30px;
+            }
+            .text-subtitle-highlight-rose{
+                background-color: #ff6699;
+                color: #6c4331;
                 padding: 5px 30px;
             }
             .shadow_block{
@@ -76,8 +89,8 @@
                 color: #a1c260
             }
             .text-rose-sh{
-                color: #4d0026;
-                text-shadow: 1.2px 2px #e60073;
+                color: #ff6699;
+                text-shadow: 1px 1px #ffe6ee;
             }
             .pd-md-2-downer{
                 padding-top: 55vh;
@@ -144,6 +157,14 @@
                 </div>
             </div>
         <!-- Preloader End-->
+        <!-- Preloader -->
+            <div class="gla_page_loader_light gla_image_bck text-choco-3" data-color="#181d23" style="display:none">
+                <div class="gla_loader_light">
+                    <p><img src="{{asset($cdn_link.'images/loading6.gif')}}" height="150" alt=""></p>
+                    <p class="fix-montserrat-xs-b"><i>Processing your feedback ...</i></p>
+                </div>
+            </div>
+        <!-- Preloader End-->
         <!-- OPEN -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
                 <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/31_b.jpg')}}"> 
@@ -207,21 +228,21 @@
                 
                 <section id="gla_content" class="gla_content">
                     <section class="gla_section gla_image_bck" data-image="{{asset($cdn_link.'images/timeline-bg.jpg')}}">
-                        <div class="container text-center" style="padding-bottom:20vh!important">
-                            <p><img src="{{asset('asset-wedding-1/images/animations/flowers.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/flowers.gif')}}" height="150" alt=""></p>
-                            <span class="fix-montserrat-m">United in love and grace</span><br>
-                            <span class="fix-montserrat-m-b">Groom & Bride</span><br>
-                            <div class="row gla_auto_height shadow_block" style="margin-top:8vh;background-color:rgb(238, 238, 238)!important;">
+                        <div class="container text-center" style="padding-bottom:10vh!important">
+                            <p><img src="{{asset('asset-wedding-1/images/animations/flowers.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/flowers.gif')}}" height="100" alt=""></p>
+                            <span class="fix-montserrat-s">United in love and grace</span><br>
+                            <span class="fix-montserrat-m-b">Groom & Bride</span>
+                            <div class="row gla_auto_height shadow_block" style="margin-top:4vh;background-color:rgb(238, 238, 238)!important;">
                                 <div class="col-xs-6" >
-                                    <div class="gla_simple_block">
-                                        <h2 class="text-lime boldme">Glenn Adhi<br>Ekaputra</h2><br><br>
+                                    <div class="gla_simple_block_compact">
+                                        <h2 class="text-lime boldme">Glenn Adhi<br>Ekaputra</h2><br>
                                         <p>
-                                            1st son of<br><br>
-                                            <span class="fix-montserrat-s-b"><img src="{{asset($cdn_link.'images/cross1.png')}}" style="height:16px;margin-right:8px"> Bpk Andreas Setijadi</span>
+                                            1st son of<br>
+                                            <span class="fix-montserrat-s-b"><b>&#10013;</b> Bpk Andreas Setijadi</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Ibu Jeane Windarti</span><br><br>
+                                            <span class="fix-montserrat-s-b">Ibu Jeane Windarti</span><br>
                                         </p>
-                                        <a href="https://www.instagram.com/glenn_adhi" target="_blank"><i class="ti ti-instagram gla_icon_box"></i></a>
+                                        <a href="https://www.instagram.com/glenn_adhi" target="_blank"><i class="ti ti-instagram gla_icon_box text-rose-sh"></i></a>
                                     </div>
                                 </div>
                                 <div class="col-xs-6 gla_image_bck" data-image="{{asset($cdn_link.'images/groom.jpg')}}"></div>
@@ -229,15 +250,15 @@
                             <div class="row gla_auto_height shadow_block" style="background-color:rgb(238, 238, 238)!important;">
                                 <div class="col-xs-6 gla_image_bck" data-image="{{asset($cdn_link.'images/bride.jpg')}}"></div>
                                 <div class="col-xs-6">
-                                    <div class="gla_simple_block">
-                                        <h2 class="text-lime boldme">Dewi<br>Kumalasari</h2><br><br>
+                                    <div class="gla_simple_block_compact">
+                                        <h2 class="text-lime boldme">Dewi<br>Kumalasari</h2><br>
                                         <p>
-                                            3rd daughter of<br><br>
+                                            3rd daughter of<br>
                                             <span class="fix-montserrat-s-b">Bpk Suwarno YS</span>
                                             <br>&<br>
                                             <span class="fix-montserrat-s-b">Ibu Sutiyah</span><br>
                                         </p>
-                                        <a href="https://www.instagram.com/kumalasari510" target="_blank"><i class="ti ti-instagram gla_icon_box"></i></a>
+                                        <a href="https://www.instagram.com/kumalasari510" target="_blank"><i class="ti ti-instagram gla_icon_box text-rose-sh"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -328,7 +349,7 @@
                                         <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity" value="{{$invite}}" required>
                                     </div>
                                     <div class="col-sm-6"><br>
-                                        <span class="fix-montserrat-s-b">Address</span>
+                                        <span class="fix-montserrat-s-b">City</span>
                                         <input type="text" name="rsvp_address" maxlength="50" spellcheck="false" class="form-control form-opacity" required>
                                     </div>
                                     <div class="col-md-12"><br>
@@ -337,6 +358,10 @@
                                         <small>Yes, of course!</small><br>
                                         <input type="radio" name="rsvp_attend" value="0">
                                         <small>Sorry, I cant be there.</small>
+                                    </div>
+                                    <div class="col-sm-12" id="rsvp_address_for_shipping_wrap" style="display:none"><br><br>
+                                        <span class="fix-montserrat-s">Can't come? <br>Kindly enter <span class="fix-montserrat-s-b">your address</span> <br>so we can send you a souvenir instead :</span>
+                                        <textarea name="rsvp_address_for_shipping" maxlength="1000" spellcheck="false" class="form-control form-opacity"></textarea>
                                     </div>
                                     <div class="col-md-12" style="padding-top:50px">
                                         <input type="submit" class="btn submit" id="form-rsvp-send" value="save">
@@ -353,9 +378,10 @@
                                                 <table class="table table-sm table-borderless table-striped ft-dark" id="table-rsvp" width="100%">
                                                     <thead>
                                                         <tr>
-                                                            <th width="40%">Sender</th>
-                                                            <th width="40%">Address</th>                              
-                                                            <th width="20%">Presence Status</th>
+                                                            <th width="30%">Sender</th>
+                                                            <th width="10%">City</th>                              
+                                                            <th width="20%">Presence<br>Status</th>
+                                                            <th width="40%">Shipping<br>Address</th>
                                                         </tr>
                                                     </thead>
                                                 </table>
@@ -404,6 +430,27 @@
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </section>
+                    <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/30.jpg')}}" data-stellar-background-ratio="0.8">
+                        <div class="container text-center">     
+                            <div class="gla_over" data-color="#ffffff" data-opacity="0.7"></div>   
+                            <div class="container text-center">                
+                                <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
+                                <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
+                                <div class="gla_icon_boxes row justify-content-center">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <a href="#" class="gla_news_block">
+                                            <span class="gla_news_img" style="height:auto!important">
+                                                <img src="{{asset($cdn_link.'images/qrcode.jpeg')}}" width="400" height="300">
+                                            </span>
+                                            <p>
+                                                <span class="fix-montserrat-s-b text-success">BCA - 8705176228<br>a/n Glenn Adhi Ekaputra</span><br><br>
+                                            </p>
+                                        </a>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
@@ -498,8 +545,10 @@
                     @else
                         if(document.getElementById('form-rsvp').checkValidity()){ 
                             console.log('handling :: form-rsvp | validity passed');
+                            $('.gla_page_loader_light').show();
                             let name = $('[name="rsvp_name"]').val();
                             let address = $('[name="rsvp_address"]').val();
+                            let address_shipping = $('[name="rsvp_address_for_shipping"]').val();
                             let attend = $('input[name="rsvp_attend"]:checked').val();
                             $.ajax({
                                 url: 'send-rsvp',
@@ -510,6 +559,7 @@
                                 data: JSON.stringify({
                                     sender_name: name,
                                     sender_address: address,
+                                    shipping_address: address_shipping,
                                     attend: attend
                                 }),
                                 contentType: 'application/json; charset=utf-8',
@@ -522,8 +572,10 @@
                                     }else{
                                         alert('error','',data.message);
                                     }
+                                    $('.gla_page_loader_light').hide();
                                 }),error:function(xhr,status,error) {
                                     alert('error [sys]','',xhr.responseText);
+                                    $('.gla_page_loader_light').hide();
                                 }
                             });
                         }else{
@@ -538,6 +590,7 @@
                     @else
                         if(document.getElementById('form-wish').checkValidity()){ 
                             console.log('handling :: form-wish | validity passed');
+                            $('.gla_page_loader_light').show();
                             let name = $('[name="wish_name"]').val();
                             let message = $('[name="wish_message"]').val();
                             $.ajax({
@@ -559,8 +612,10 @@
                                     }else{
                                         alert('error','',data.message);
                                     }
+                                    $('.gla_page_loader_light').hide();
                                 }),error:function(xhr,status,error) {
                                     alert('error [sys]','',xhr.responseText);
+                                    $('.gla_page_loader_light').hide();
                                 }
                             });
                         }else{
@@ -574,12 +629,13 @@
                     $('#table-rsvp').DataTable({
                         processing: true,
                         serverSide: true,
-                        paging: false,
+                        paging: true,
                         ajax: '{{url("/w/".$code."/get-rsvp")}}',
                         columns: [
                             {data: 'sender_name', name: 'sender_name'},
                             {data: 'sender_address', name: 'sender_address'},
                             {data: 'attend', name: 'attend'},
+                            {data: 'shipping_address', name: 'shipping_address'},
                         ],
                         columnDefs: [
                             {
@@ -615,6 +671,17 @@
                         sDom: '<"top"flp>rt<"bottom"i><"clear">'
                     });
                 }
+
+                $('[name="rsvp_attend"]').change(function(){
+                    if ($(this).is(':checked') && $(this).val() == "0") {
+                        $('#rsvp_address_for_shipping_wrap').show();
+                        $('[name="rsvp_address_for_shipping"]').prop('required', true);
+                    }else{
+                        $('#rsvp_address_for_shipping_wrap').hide();
+                        $('[name="rsvp_address_for_shipping"]').val('');
+                        $('[name="rsvp_address_for_shipping"]').removeAttr('required');
+                    }
+                });
             });
         </script>
     </body>
