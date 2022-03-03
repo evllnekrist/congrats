@@ -41,6 +41,12 @@
     font-size:13px;
     margin-bottom: 50px;
 }
+.fix-montserrat-xs-b{
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
+    font-weight:700;
+    font-size:11px;
+    margin-bottom: 50px;
+}
 .fix-montserrat-l{
     font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;;
     font-weight:300;

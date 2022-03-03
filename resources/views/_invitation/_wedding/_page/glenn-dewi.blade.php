@@ -28,12 +28,14 @@
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 80%);
                 color: #956c5a;
                 padding: 5px 30px;
+                line-height: 2;
             }
             .highlight-2-bold{
                 background: rgba(255,255,255,1) !important;
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%);
                 color: #956c5a;
                 padding: 5px 30px;
+                line-height: 2;
             }
             .text-subtitle-highlight-1{
                 background-color: white;
@@ -108,6 +110,11 @@
                 background-color: white !important;
                 font-weight: 600;
             }
+            .btn-brown-light-transp{
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
+                background: rgba(108,67,49,0.4) !important;
+                font-weight: 600;
+            }
             .in-focus-white-light{
                 background: rgba(255,255,255,0.5) !important;
                 color: #6c4331 !important;
@@ -138,9 +145,9 @@
             </div>
         <!-- Preloader End-->
         <!-- OPEN -->
-            <div class="gla_invitation_container" id="gla_welcome">
-                <div class="gla_invitation_i gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/31_b.jpg')}}"> 
-                    <p style="margin-top:22vh;margin-bottom:2vh" class="ft-shadow-soft">               
+            <div class="gla_invitation_container_longer" id="gla_welcome">
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/31_b.jpg')}}"> 
+                    <p style="margin-top:18vh;margin-bottom:2vh" class="ft-shadow-soft">               
                         <span class="fix-montserrat-m">The Wedding of</span><br>
                         <span class="fix-montserrat-m-b">Glenn & Dewi</span><br><br>
                     </p>
@@ -148,13 +155,12 @@
                         @if($invite)
                             <h6 class="gla_wht_txt">Dear {{$invite}},</h6>
                         @endif
-                        <span class="fix-montserrat-s-b highlight-2">we would like to invite you to be part of</span><br>
-                        <span class="fix-montserrat-s-b highlight-2">our happy day !</span>
+                        <span class="fix-montserrat-xs-b highlight-2">we would like to invite you to be part of</span><br>
+                        <span class="fix-montserrat-xs-b highlight-2">our happy day !</span>
                     </div>
-                    <p style="height:5vh;margin-bottom:22vh"></p>
-                    <button type="button" class="btn btn-white-light text-choco-1" onclick="executeInv()">Open Invitation</button> 
                 </div>
             </div>
+            <button type="button" class="btn btn-brown-light-transp text-choco-1 gla_invitation_open_btn_longer" onclick="executeInv()">Open Invitation</button> 
         <!-- OPEN End -->
         <!-- CONTENT -->
             <div class="gla_page" id="gla_page" style="display:none">
