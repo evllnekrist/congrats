@@ -303,6 +303,7 @@
                                             </p>
                                         </a>
                                     </div> 
+                                    @if($addition_logic && in_array('wedding',$addition_logic))
                                     <div class="col-sm-6 col-xs-12">
                                         <a href="#" class="gla_news_block">
                                             <span class="gla_news_img">
@@ -318,6 +319,7 @@
                                             </p>
                                         </a>
                                     </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -337,6 +339,7 @@
                             </div>
                         </div>
                     </section>
+                    @if($addition_logic && in_array('wedding',$addition_logic))
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.jpg')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-right">
@@ -393,6 +396,7 @@
                             </form>
                         </div>
                     </section>
+                    @endif
                     <section    id="wishes" class="gla_section">
                         <div class="row text-left pd-md">
                             <table class="table table-sm table-borderless table-striped fix-montserrat-s" style="width:80%" id="table-wish">
