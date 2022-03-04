@@ -482,6 +482,7 @@
                             </div>
                         </div><br><br><br>
                     </section>
+                    @if($addition_logic && in_array('wedding',$addition_logic))
                     <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
                         <div class="container text-center pd-md">
                             <span class="fix-montserrat-m">Health Protocol</span><br><br>
@@ -501,6 +502,7 @@
                             </div>
                         </div>
                     </section>
+                    @endif
                     <section    id="quote" class="gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/2.jpg')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
