@@ -86,6 +86,10 @@
             .text-blue-baby{
                 color: #5a8ebf;
             }
+            .text-blue-baby-sh{
+                color: #5a8ebf;
+                text-shadow: 2px 2px 4px #ffffff;
+            }
             .text-blue-sh{
                 color: #1b3146;
                 text-shadow: 1.2px 2px #939fab;
@@ -149,14 +153,14 @@
         <!-- Preloader End-->
         <!-- OPEN -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/3.jpg')}}"> 
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/3_expand.jpg')}}"> 
                     <p style="margin-top:-2vh;margin-bottom:4vh" class="">               
-                        <span class="fix-montserrat-s-b text-choco-2">The Wedding of</span><br><br>
-                        <span class="gla_slide_midtitle_m2 text-blue-baby mt-5">Chris & Lusye</span>
+                        <span class="fix-montserrat-s-b gla_wht_txt">The Wedding of</span><br><br>
+                        <span class="gla_slide_midtitle_m2 text-blue-baby-sh mt-5">Chris & Lusye</span>
                     </p>
                     <div class="row">
                         @if($invite)
-                            <h6 class="gla_wht_txt">Dear <a class="boldme">{{$invite}}</a>,</h6>
+                            <h6 class="gla_wht_txt">Dear, <a class="boldme">{{$invite}}</a></h6>
                         @endif
                         <span class="fix-montserrat-xs-b highlight-2">we would like to invite you to be part of</span><br>
                         <span class="fix-montserrat-xs-b highlight-2">our happy day !</span>
@@ -214,7 +218,7 @@
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
                                 <span class="fix-montserrat-m">United in love and grace</span><br>
-                                <span class="fix-montserrat-m-b">Wednesday, 18 May 2022</span><br><br>
+                                <span class="fix-montserrat-m-b text-blue-baby-sh">Wednesday, 18 May 2022</span><br><br>
                                 <div class="gla_countdown" data-year="2022" data-month="5" data-day="18"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
@@ -223,7 +227,7 @@
                                         <a href="{{asset($cdn_link.'images/groom_2.jpg')}}">
                                             <img src="{{asset($cdn_link.'images/groom_2.jpg')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m text-blue-sh pd-md"><strong>dr. Christian<br>Jorhans Peters<br>Manoe</strong></span><br><br>
+                                        <span class="gla_news_title-m text-blue-sh pd-md"><strong>dr. Christian<br>Jorhans Peters<br>Manoe</strong></span>
                                         <p>
                                             son of<br>
                                             <span class="fix-montserrat-s-b">Mr. Habel. Manoe, S.Pt</span>
@@ -238,7 +242,7 @@
                                         <a href="{{asset($cdn_link.'images/bride_2.jpg')}}">
                                             <img src="{{asset($cdn_link.'images/bride_2.jpg')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m text-blue-sh pd-md"><strong>dr. Lusye<br>Diana<br>Jacob</strong></span><br><br>
+                                        <span class="gla_news_title-m text-blue-sh pd-md"><strong>dr. Lusye<br>Diana Jacob</strong></span><br>
                                         <p>
                                             daughter of<br>
                                             <span class="fix-montserrat-s-b">Pdt. Hendrik Maximilian Jacob, M.Div</span>

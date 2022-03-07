@@ -5520,8 +5520,7 @@ footer {
 
 	}
 	.gla_shop_item:hover .gla_shop_item_title:before,
-	.gla_news_block:hover .gla_news_title:before,
-	.gla_news_block:hover .gla_news_title-m {
+	.gla_news_block:hover .gla_news_title:before{
 		height: 30px;
 	}
 .gla_shop_item_title:hover {
