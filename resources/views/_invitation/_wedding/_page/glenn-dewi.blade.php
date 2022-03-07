@@ -167,14 +167,15 @@
         <!-- Preloader End-->
         <!-- OPEN -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/31_b.jpg')}}"> 
-                    <p style="margin-top:18vh;margin-bottom:2vh" class="ft-shadow-soft">               
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/35.jpg')}}"> 
+                    <!-- 31_b -->
+                    <p style="margin-top:22vh;margin-bottom:2vh" class="ft-shadow-soft">               
                         <span class="fix-montserrat-m">The Wedding of</span><br>
                         <span class="fix-montserrat-m-b">Glenn & Dewi</span><br><br>
                     </p>
                     <div class="row">
                         @if($invite)
-                            <h6 class="gla_wht_txt">Dear {{$invite}},</h6>
+                            <h6 class="gla_wht_txt">Dear<br>{{$invite}},</h6>
                         @endif
                         <span class="fix-montserrat-xs-b highlight-2">we would like to invite you to be part of</span><br>
                         <span class="fix-montserrat-xs-b highlight-2">our happy day !</span>
@@ -212,7 +213,8 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/3.jpg')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/36.jpg')}}" data-stellar-background-ratio="0.8">
+                    <!-- 3 -->
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
@@ -438,7 +440,7 @@
                     </section>
                     <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/30.jpg')}}" data-stellar-background-ratio="0.8">
                         <div class="container text-center">     
-                            <div class="gla_over" data-color="#ffffff" data-opacity="0.7"></div>   
+                            <div class="gla_over" data-color="#ffffff" data-opacity="0.6"></div>   
                             <div class="container text-center">                
                                 <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
                                 <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
@@ -463,7 +465,7 @@
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('1','2','3','4','5','6','7','8','10','11','12','13','14','16','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34'); 
+                                    $gallery_items = array('31','1','2','3','4','7','6','5','8','13','14','16','10','11','15','9','12','17','18','33','19','20','21','22','24','25','26','27','28','29','30','35','37','38'); 
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.jpg')}}">
