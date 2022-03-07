@@ -17,7 +17,34 @@
         <?php 
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
-        <style>
+        <style>.highlight-1{
+                background-color: black;
+                color: white;
+                padding: 15px 30px;
+            }
+            .highlight-2{
+                background: rgba(255,255,255,0.8) !important;
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
+                /* color: #956c5a; */
+                color: #5a8ebf;
+                padding: 5px 30px;
+                line-height: 2;
+            }
+            .highlight-2-bold{
+                background: rgba(255,255,255,1) !important;
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%);
+                color: #956c5a;
+                padding: 5px 30px;
+                line-height: 2;
+            }
+            .highlight-2-light{
+                background: rgba(255,255,255,0.8) !important;
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%);
+                color: #956c5a;
+                padding: 5px 30px;
+                line-height: 2;
+                border-radius: 10px; 
+            }
             .text-subtitle-highlight-1{
                 background-color: white;
                 color: black;
@@ -56,6 +83,9 @@
             .text-blue{
                 color: #0073e6 !important;
             }
+            .text-blue-baby{
+                color: #5a8ebf;
+            }
             .text-blue-sh{
                 color: #1b3146;
                 text-shadow: 1.2px 2px #939fab;
@@ -79,12 +109,24 @@
                 background-color: white !important;
                 font-weight: 600;
             }
+            .btn-blue-light-transp{
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
+                background: rgba(90, 142, 191,0.4) !important;
+                font-weight: 600;
+            }
             .in-focus-white-light{
                 background: rgba(255,255,255,0.5) !important;
                 color: #6c4331 !important;
             }
             .in-focus-white-light:hover, .in-focus-white-light:active, .in-focus-white-light:after{
                 background: rgba(255,255,255,0.9) !important;
+            }
+            .ft-shadow-soft{
+                text-shadow: 2px 2px 4px #333333;
+                /* #737373; */
+            }
+            .boldme{
+                font-weight: 700;
             }
         </style>
     </head>
@@ -97,23 +139,31 @@
                 </div>
             </div>
         <!-- Preloader End-->
+        <!-- Preloader -->
+            <div class="gla_page_loader_light gla_image_bck text-choco-3" data-color="#181d23" style="display:none">
+                <div class="gla_loader_light">
+                    <p><img src="{{asset($cdn_link.'images/loading6.gif')}}" height="150" alt=""></p>
+                    <p class="fix-montserrat-xs-b"><i>Processing your feedback ...</i></p>
+                </div>
+            </div>
+        <!-- Preloader End-->
         <!-- OPEN -->
-            <div class="gla_invitation_container" id="gla_welcome">
-                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/10.jpg')}}"> 
-                    <p style="margin-top:5vh;margin-bottom:5vh">               
-                        <span class="fix-montserrat-m">The Wedding of</span><br>
-                        <span class="fix-montserrat-m-b">Chris & Lusye</span><br><br>
+            <div class="gla_invitation_container_longer" id="gla_welcome">
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/3.jpg')}}"> 
+                    <p style="margin-top:-2vh;margin-bottom:4vh" class="">               
+                        <span class="fix-montserrat-s-b text-choco-2">The Wedding of</span><br><br>
+                        <span class="gla_slide_midtitle_m2 text-blue-baby mt-5">Chris & Lusye</span>
                     </p>
                     <div class="row">
                         @if($invite)
-                            <h6 class="gla_wht_txt">Dear {{$invite}},</h6>
+                            <h6 class="gla_wht_txt">Dear <a class="boldme">{{$invite}}</a>,</h6>
                         @endif
-                        <span class="fix-montserrat-s-b text-choco-1">we would like to invite you to be part of <br>our happy day !</span>
+                        <span class="fix-montserrat-xs-b highlight-2">we would like to invite you to be part of</span><br>
+                        <span class="fix-montserrat-xs-b highlight-2">our happy day !</span>
                     </div>
-                    <p style="height:5vh;margin-bottom:30vh"></p>
-                    <button type="button" class="btn btn-white-light text-choco-1" onclick="executeInv()">Open Invitation</button> 
                 </div>
             </div>
+            <button type="button" class="btn btn-blue-light-transp gla_wht_txt gla_invitation_open_btn_longer" onclick="executeInv()">Open Invitation</button> 
         <!-- OPEN End -->
         <!-- CONTENT -->
             <div class="gla_page" id="gla_page" style="display:none">
@@ -125,8 +175,8 @@
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/sam_ock__choose_2_love.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/sam_ock__choose_2_love.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/pj_morton_ft_alex_isley__how_deep_is_your_love.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/pj_morton_ft_alex_isley__how_deep_is_your_love.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -173,12 +223,12 @@
                                         <a href="{{asset($cdn_link.'images/groom_2.jpg')}}">
                                             <img src="{{asset($cdn_link.'images/groom_2.jpg')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title text-blue-sh pd-md"><strong>Chris</strong></span>
+                                        <span class="gla_news_title-m text-blue-sh pd-md"><strong>dr. Christian<br>Jorhans Peters<br>Manoe</strong></span><br><br>
                                         <p>
                                             son of<br>
-                                            <span class="fix-montserrat-s-b">Mr. Yohanes Purdjono<br>(Kwee Kim Liong)</span>
+                                            <span class="fix-montserrat-s-b">Mr. Habel. Manoe, S.Pt</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Mrs. Susiana<br>(Ho Soe Tjin)</span><br><br><br>
+                                            <span class="fix-montserrat-s-b">Mrs. Caroline ESD Tagudedo. S.Pd</span>
                                         </p>
                                     </div>
                                 </div>
@@ -188,12 +238,12 @@
                                         <a href="{{asset($cdn_link.'images/bride_2.jpg')}}">
                                             <img src="{{asset($cdn_link.'images/bride_2.jpg')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title text-blue-sh pd-md"><strong>Lusye</strong></span>
+                                        <span class="gla_news_title-m text-blue-sh pd-md"><strong>dr. Lusye<br>Diana<br>Jacob</strong></span><br><br>
                                         <p>
                                             daughter of<br>
-                                            <span class="fix-montserrat-s-b">Mr. Souw Antonius Sonny Ananto<br>(Souw Siong Kiat)</span>
+                                            <span class="fix-montserrat-s-b">Pdt. Hendrik Maximilian Jacob, M.Div</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Mrs. Yosephine Laurentia Ratna Susianawaty<br>(Lauw May Siang)</span>
+                                            <span class="fix-montserrat-s-b">Pdt. Ni Made Christine Sadang</span>
                                         </p>
                                     </div>
                                 </div>
@@ -210,14 +260,14 @@
                                     <div class="col-sm-6 col-xs-12">
                                         <a href="#" class="gla_news_block">
                                             <span class="gla_news_img">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.6898299186314!2d140.64716371419368!3d-2.606718698100726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5255aec362d%3A0xb60e7c638678e9e9!2sHotel%20Horison%20Abepura!5e0!3m2!1sen!2sid!4v1644842170886!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7022552706044!2d140.62943801475606!3d-2.60279239810358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf51e8057ba41%3A0x3f55caf8f63477db!2sGereja%20GKII%20Jemaat%20Anugrah%20Yoka!5e0!3m2!1sid!2sid!4v1646636958387!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                             </span>
                                             <span class="gla_news_title">Holy Matrimony</span>
                                             <p>
-                                                <span class="fix-montserrat-sm-b text-success">GKII Anugerah Church</span><br>
+                                                <span class="fix-montserrat-sm-b text-success">GKII Anugrah Yoka</span><br>
                                                 Jl. Raya Abepura - Sentani,<br>Hedam, Heram, Jayapura<br><br><br>
                                                 <span class="fix-montserrat-s-b text-success">Wednesday, 18 May 2022</span><br><br>
-                                                <span class="label label-success">at 00:00 (0 PM)</span>
+                                                <span class="label label-success">at 13:00 WIT</span>
                                             </p>
                                         </a>
                                     </div> 
@@ -231,7 +281,7 @@
                                                 <span class="fix-montserrat-sm-b text-info">Hotel Horizon Abepura Ka</span><br>
                                                 Jl. Raya Abepura - Sentani,<br>Hedam, Heram, Jayapura<br><br><br>
                                                 <span class="fix-montserrat-s-b text-info">Wednesday, 18 May 2022</span><br><br>
-                                                <span class="label label-info">at 00:00 (0 PM)</span>
+                                                <span class="label label-info">at 17:00 WIT</span>
                                             </p>
                                         </a>
                                     </div>
@@ -239,7 +289,7 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="live-streaming" class="gla_section gla_image_bck" data-color="#ecf2f0">
+                    <section    id="live-streaming" class="gla_section gla_image_bck" data-color="#ecf2f0" hidden>
                         <div class="container">
                             <div class="row">
                                 <span class="fix-montserrat-m">Live Streaming</span><br><br>
@@ -254,20 +304,39 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.jpg')}}">
-                        <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
+                    <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
+                        <div class="container text-center pd-md">
+                            <span class="fix-montserrat-m">Health Protocol</span><br><br>
+                            <p class="fix-montserrat-s-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p><br>
+                            <div class="row text-center fix-montserrat-s-b">
+                                <div class="col-sm-3 col-xs-12 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.png')}}"></div>
+                                    <p class="text-choco-1">wear mask</p>
+                                </div>
+                                <div class="col-sm-6 col-xs-12 gla_round_block">
+                                    <img src="{{asset($cdn_link.'images/hp-2.png')}}" style="max-width:300px">
+                                </div>
+                                <div class="col-sm-3 col-xs-12 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3-a.png')}}"></div>
+                                    <p class="text-choco-1">wash hands & use hand sanitizer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/15.jpg')}}">
+                        
                         <div class="container text-right">
                             <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>         
-                            <p class="fix-montserrat-s">Can't wait to welcome our happy day with you. <br>At below you can confirm your attendance, thank you.</p>
+                            <p class="fix-montserrat-xs-b">Can't wait to welcome our happy day with you. <br>At below you can confirm your attendance, thank you.</p>
                             <form id="form-rsvp" onsubmit="return false;">
                                 <div class="row">
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Name</span>
-                                        <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity" value="{{$invite}}" required>
+                                        <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
                                     </div>
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Address</span>
-                                        <input type="text" name="rsvp_address" maxlength="50" spellcheck="false" class="form-control form-opacity" required>
+                                        <input type="text" name="rsvp_address" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" required>
                                     </div>
                                     <div class="col-md-12"><br>
                                         <span class="fix-montserrat-s-b">Will you come?</span><br>
@@ -321,7 +390,7 @@
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.65"></div> -->
                         <div class="container text-left text-info">
                             <form id="form-wish" onsubmit="return false;">
-                                <p class="fix-montserrat-s">Leave us your beautiful wishes <br>and most sincere prayers here<br>as we are so excited to embark <br>on this new journey together ~</p>    
+                                <p class="fix-montserrat-xs-b"><b>Leave us your beautiful wishes <br>and most sincere prayers here<br>as we are so excited to embark <br>on this new journey together ~</b></p>    
                                 <div class="row">
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Sender</span>
@@ -338,6 +407,41 @@
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </section>
+                    
+                    <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/14.jpg')}}" data-stellar-background-ratio="0.8">
+                        <div class="container text-center">     
+                            <div class="gla_over" data-color="#ffffff" data-opacity="0.6"></div>   
+                            <div class="container text-center">                
+                                <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
+                                <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
+                                <div class="gla_icon_boxes row justify-content-center">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <a href="#" class="gla_news_block">
+                                            <span class="gla_news_img" style="height:auto!important">
+                                                <img src="{{asset($cdn_link.'images/qrcode-lusye.jpeg')}}" width="400" height="300">
+                                            </span>
+                                            <p>
+                                                <span class="fix-montserrat-s-b text-success">BCA - 60110007011<br>a/n Lusye Diana Jacob</span><br><br>
+                                            </p>
+                                        </a>
+                                    </div> 
+                                </div>
+                                or ..<br><br>
+                                <div class="gla_icon_boxes row justify-content-center">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <a href="#" class="gla_news_block">
+                                            <span class="gla_news_img" style="height:auto!important">
+                                                <img src="{{asset($cdn_link.'images/qrcode-chris.jpeg')}}" width="400" height="300">
+                                            </span>
+                                            <p>
+                                                <span class="fix-montserrat-s-b text-success">QRIS<br>a/n Christian Jorhans Peters Manoe</span><br><br>
+                                            </p>
+                                        </a>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
@@ -364,25 +468,6 @@
                                 @endforeach
                             </div>
                         </div><br><br><br>
-                    </section>
-                    <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
-                        <div class="container text-center pd-md">
-                            <span class="fix-montserrat-m">Health Protocol</span><br><br>
-                            <p class="fix-montserrat-s-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p><br>
-                            <div class="row text-center fix-montserrat-s-b">
-                                <div class="col-sm-3 col-xs-12 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.png')}}"></div>
-                                    <p class="text-choco-1">wear mask</p>
-                                </div>
-                                <div class="col-sm-6 col-xs-12 gla_round_block">
-                                    <img src="{{asset($cdn_link.'images/hp-2.png')}}" style="max-width:300px">
-                                </div>
-                                <div class="col-sm-3 col-xs-12 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3-a.png')}}"></div>
-                                    <p class="text-choco-1">wash hands & use hand sanitizer</p>
-                                </div>
-                            </div>
-                        </div>
                     </section>
                     <section    id="quote" class="gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/2.jpg')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
@@ -432,6 +517,7 @@
                     @else
                         if(document.getElementById('form-rsvp').checkValidity()){ 
                             console.log('handling :: form-rsvp | validity passed');
+                            $('.gla_page_loader_light').show();
                             let name = $('[name="rsvp_name"]').val();
                             let address = $('[name="rsvp_address"]').val();
                             let attend = $('input[name="rsvp_attend"]:checked').val();
@@ -456,8 +542,10 @@
                                     }else{
                                         alert('error','',data.message);
                                     }
+                                    $('.gla_page_loader_light').hide();
                                 }),error:function(xhr,status,error) {
                                     alert('error [sys]','',xhr.responseText);
+                                    $('.gla_page_loader_light').hide();
                                 }
                             });
                         }else{
@@ -472,6 +560,7 @@
                     @else
                         if(document.getElementById('form-wish').checkValidity()){ 
                             console.log('handling :: form-wish | validity passed');
+                            $('.gla_page_loader_light').show();
                             let name = $('[name="wish_name"]').val();
                             let message = $('[name="wish_message"]').val();
                             $.ajax({
@@ -493,8 +582,10 @@
                                     }else{
                                         alert('error','',data.message);
                                     }
+                                    $('.gla_page_loader_light').hide();
                                 }),error:function(xhr,status,error) {
                                     alert('error [sys]','',xhr.responseText);
+                                    $('.gla_page_loader_light').hide();
                                 }
                             });
                         }else{
