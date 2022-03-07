@@ -10,8 +10,9 @@
     <div class="container text-center">
         
 
-        <h2 class="n-font b-box-white" data-toggle="tooltip" data-placement="bottom" title="kamu tidak harus bayar mahal untuk dapatkan layanan premium yang tidak pasaran">Our Services</h2>
-
+        <h2 class="n-font b-box-white" data-toggle="tooltip" data-placement="bottom">Our Services</h2>
+        <h4>1. Personalized Invitation</h4>
+        <p class="highlight-2">Kamu tidak harus bayar mahal untuk dapatkan layanan premium yang tidak pasaran. Semua undangan yang dibuat dipersonalisasi berdasarkan permintaan client.</p>
         <!-- icon boxes -->
         <div class="gla_icon_boxes row" style="margin-top:-30px">
             
@@ -207,6 +208,17 @@
                                 <tr>
                                     <td colspan="2">Prosedur Covid-19 >> <br>
                                                     <b>+ 50.000,-</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Logika Tambahan >> <br>
+                                                    <b>+ 50.000,-</b><br>
+                                                    <small>* apa itu logika tambahan? Contohya hanya menampilkan acara resepsi untuk undangan tertentu, dsb.</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Request Lain? <br>
+                                                    <a href="" class="link_wa" target="_blank" style="color:green;font-weight:600">diskusikan disini</a><br>
                                     </td>
                                 </tr>
                             </tbody>
