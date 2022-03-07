@@ -134,7 +134,7 @@
         <!-- Preloader -->
             <div class="gla_page_loader gla_image_bck gla_wht_txt" data-color="#181d23">
                 <div class="gla_loader">
-                    <p><img src="{{asset($cdn_link.'images/loading.gif')}}" height="150" alt=""></p>
+                    <p><img src="{{asset($cdn_link.'images/loading6.gif')}}" height="150" alt=""></p>
                     <p>Loading ...</p>
                 </div>
             </div>
