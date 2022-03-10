@@ -173,7 +173,7 @@
             <div class="gla_invitation_container_longer" id="gla_welcome">
                 <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/35.jpg')}}"> 
                     <!-- 31_b -->
-                    <p style="margin-top:22vh;margin-bottom:2vh" class="gla_wht_txt ft-shadow-soft-reverse">               
+                    <p style="margin-top:14vh;margin-bottom:2vh" class="gla_wht_txt ft-shadow-soft-reverse">               
                         <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
                         <span class="gla_slide_midtitle_m2">Glenn & Dewi</span><br><br>
                     </p>
@@ -181,12 +181,13 @@
                         @if($invite)
                             <h6 class="gla_wht_txt ft-shadow-soft-reverse">Dear<br><span class="fix-montserrat-s-b">{{$invite}}</span>,</h6>
                             @if(isset($_GET['qty']))
-                            <h6 class="btn btn-white-light text-lime fix-montserrat-s mb-5">
-                                This invitation is limited to <span class="fix-montserrat-s-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
+                                <span class="highlight-2-bold fix-montserrat-xs text-lime">
+                                    This invitation is limited to <span class="fix-montserrat-xs-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
+                                </span>    
                                 @if(isset($_GET['seat']))
-                                <br>Your seat{{$_GET['qty']>1?"'s are":" is"}} number <span class="fix-montserrat-s-b">{{$_GET['seat']}}</span>
+                                    <br><span class="highlight-2-bold fix-montserrat-xs text-lime"> Your seat{{$_GET['qty']>1?"'s are":" is"}} number <span class="fix-montserrat-xs-b">{{$_GET['seat']}}</span></span>
                                 @endif
-                            </h6>
+                                <br><br>
                             @endif
                         @endif
                         <span class="fix-montserrat-xs-b highlight-2">we would like to invite you to be part of</span><br>
