@@ -125,7 +125,8 @@
             }
             .btn-brown-light-transp{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(108,67,49,0.4) !important;
+                /* background: rgba(108,67,49,0.6) !important; */
+                background: rgba(0,0,0,0.6) !important; 
                 font-weight: 600;
             }
             .in-focus-white-light{
@@ -139,6 +140,9 @@
                 color: white;
                 text-shadow: 2px 2px 4px #333333;
                 /* #737373; */
+            }
+            .ft-shadow-soft-reverse{
+                text-shadow: 2px 2px 4px black;
             }
             .boldme{
                 font-weight: 700;
@@ -169,13 +173,21 @@
             <div class="gla_invitation_container_longer" id="gla_welcome">
                 <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/35.jpg')}}"> 
                     <!-- 31_b -->
-                    <p style="margin-top:22vh;margin-bottom:2vh" class="ft-shadow-soft">               
-                        <span class="fix-montserrat-m">The Wedding of</span><br>
-                        <span class="fix-montserrat-m-b">Glenn & Dewi</span><br><br>
+                    <p style="margin-top:22vh;margin-bottom:2vh" class="gla_wht_txt ft-shadow-soft-reverse">               
+                        <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
+                        <span class="gla_slide_midtitle_m2">Glenn & Dewi</span><br><br>
                     </p>
                     <div class="row">
                         @if($invite)
-                            <h6 class="gla_wht_txt">Dear<br>{{$invite}},</h6>
+                            <h6 class="gla_wht_txt ft-shadow-soft-reverse">Dear<br><span class="fix-montserrat-s-b">{{$invite}}</span>,</h6>
+                            @if(isset($_GET['qty']))
+                            <h6 class="btn btn-white-light text-lime fix-montserrat-s mb-5">
+                                This invitation is limited to <span class="fix-montserrat-s-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
+                                @if(isset($_GET['seat']))
+                                <br>Your seat{{$_GET['qty']>1?"'s are":" is"}} number <span class="fix-montserrat-s-b">{{$_GET['seat']}}</span>
+                                @endif
+                            </h6>
+                            @endif
                         @endif
                         <span class="fix-montserrat-xs-b highlight-2">we would like to invite you to be part of</span><br>
                         <span class="fix-montserrat-xs-b highlight-2">our happy day !</span>
@@ -213,12 +225,12 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/36.jpg')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/n30.jpg')}}" data-stellar-background-ratio="0.8">
                     <!-- 3 -->
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
-                            <!-- <div class="gla_slide_midtitle">G & D</div> -->
+                            <div class="gla_slide_midtitle ft-shadow-soft-reverse">G & D</div>
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
@@ -291,23 +303,23 @@
                                 <span class="fix-montserrat-s-b"><i>we are pleased to announce our wedding to you,<br>our family and friends</i><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-sm-6 col-xs-12">
-                                        <a href="#" class="gla_news_block">
+                                        <div class="gla_news_block">
                                             <span class="gla_news_img">
                                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.77290498242!2d106.91047731429933!3d-6.161161662098781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698acd2c003f5d%3A0xf12fc79030493250!2sGKI%20Gading%20Indah%2C%20Jl.%20Gading%20Indah%20III%2C%20RT.11%2FRW.12%2C%20Pegangsaan%20Dua%2C%20Kelapa%20Gading%2C%20North%20Jakarta%20City%2C%20Jakarta%2014250!5e0!3m2!1sen!2sid!4v1645706517816!5m2!1sen!2sid" 
                                                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                             </span>
                                             <span class="gla_news_title">Holy Matrimony</span>
                                             <p>
-                                                <span class="fix-montserrat-sm-b text-success">GKI Gading Indah </span><br><br><br>
+                                                <span class="fix-montserrat-sm-b text-success">GKI Gading Indah </span><br>(via <a href="#live-streaming"><b class="text-rose-sh">live streaming</b></a> only)<br><br>
                                                 Jl. Gading Indah III Blok NF1 No. 20, <br>RT.11/RW.12, Pegangsaan Dua, <br>North Jakarta City, Jakarta<br><br><br>
                                                 <span class="fix-montserrat-s-b text-success">Saturday, 26 March 2022</span><br><br>
                                                 <span class="label label-success">at 09:00 AM</span>
                                             </p>
-                                        </a>
+                                        </div>
                                     </div> 
                                     @if($addition_logic && in_array('wedding',$addition_logic))
                                     <div class="col-sm-6 col-xs-12">
-                                        <a href="#" class="gla_news_block">
+                                        <div class="gla_news_block">
                                             <span class="gla_news_img">
                                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.836431449461!2d106.89038911429931!3d-6.152655762019448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f540eb816041%3A0xfefb8647c5efc73a!2sAngke%20Restaurant%20-%20Kelapa%20Gading!5e0!3m2!1sen!2sid!4v1645708753298!5m2!1sen!2sid" 
                                                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -319,7 +331,7 @@
                                                 <span class="fix-montserrat-s-b text-info">Saturday, 26 March 2022</span><br><br>
                                                 <span class="label label-info">at 12:00 AM</span>
                                             </p>
-                                        </a>
+                                        </div>
                                     </div>
                                     @endif
                                 </div>
@@ -334,15 +346,15 @@
                                     <div class="gla_simple_block">
                                         <h2>PEMBERKATAN <br>GLENN & DEWI</h2>
                                         <p class="text-muted">Sabtu, 26 Maret 2022, <br>PUKUL 09.00</p><br><br><br>
-                                        <a href="https://www.youtube.com/watch?v=y81yIo1_3o8">live at <i class="ti ti-youtube gla_icon_box"></i></a>
+                                        <a href="https://www.youtube.com/channel/UCGiRZSMeCFsvbHPF4uWCD1A" target="_blank">live at <i class="ti ti-youtube gla_icon_box"></i></a>
                                     </div>
                                 </div>
-                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/y81yIo1_3o8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/channel/UCGiRZSMeCFsvbHPF4uWCD1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </section>
                     @if($addition_logic && in_array('wedding',$addition_logic))
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.jpg')}}">
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/n14.jpg')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-right">
                             <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>         
@@ -411,7 +423,7 @@
                             </table>
                         </div>
                     </section>
-                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/22.jpg')}}">
+                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/n21.jpg')}}">
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.65"></div> -->
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
@@ -438,9 +450,9 @@
                             </form>
                         </div>
                     </section>
-                    <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/30.jpg')}}" data-stellar-background-ratio="0.8">
+                    <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/n23.jpg')}}" data-stellar-background-ratio="0.8">
                         <div class="container text-center">     
-                            <div class="gla_over" data-color="#ffffff" data-opacity="0.6"></div>   
+                            <div class="gla_over" data-color="#ffffff" data-opacity="0.8"></div>   
                             <div class="container text-center">                
                                 <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
                                 <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
@@ -465,7 +477,7 @@
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('31','1','2','3','4','7','6','5','8','13','14','16','10','11','15','9','12','17','18','33','19','20','21','22','24','25','26','27','28','29','30','35','37','38'); 
+                                    $gallery_items = array('n1','n2','n3','n4','n5','n6','n7','n8','n9','n10','n11','n12','n13','n14','n15','n16','n17','n18','n19','n20','n21','n22','n23','n24','n25','n26','n27','n28','n29','n30','n31','n32'); 
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.jpg')}}">

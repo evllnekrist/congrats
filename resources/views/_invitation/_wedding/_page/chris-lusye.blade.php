@@ -113,6 +113,12 @@
                 background-color: white !important;
                 font-weight: 600;
             }
+            .btn-brown-light-transp{
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
+                background: rgba(0,0,0,0.6) !important; 
+                /* 108,67,49 */
+                font-weight: 600;
+            }
             .btn-blue-light-transp{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
                 background: rgba(90, 142, 191,0.4) !important;
@@ -129,6 +135,9 @@
                 text-shadow: 2px 2px 4px #333333;
                 /* #737373; */
             }
+            .ft-shadow-soft-reverse{
+                text-shadow: 2px 2px 4px black;
+            }
             .boldme{
                 font-weight: 700;
             }
@@ -138,36 +147,53 @@
         <!-- Preloader -->
             <div class="gla_page_loader gla_image_bck gla_wht_txt" data-color="#181d23">
                 <div class="gla_loader">
-                    <p><img src="{{asset($cdn_link.'images/loading6.gif')}}" height="150" alt=""></p>
+                    <p><img src="{{asset($cdn_link.'images/loading.gif')}}" height="150" alt=""></p>
                     <p>Loading ...</p>
                 </div>
             </div>
         <!-- Preloader End-->
         <!-- Preloader -->
-            <div class="gla_page_loader_light gla_image_bck text-choco-3" data-color="#181d23" style="display:none">
+            <div class="gla_page_loader_light gla_image_bck gla_wht_txt" data-color="#181d23" style="display:none">
                 <div class="gla_loader_light">
-                    <p><img src="{{asset($cdn_link.'images/loading6.gif')}}" height="150" alt=""></p>
+                    <p><img src="{{asset($cdn_link.'images/loading.gif')}}" height="150" alt=""></p>
                     <p class="fix-montserrat-xs-b"><i>Processing your feedback ...</i></p>
                 </div>
             </div>
         <!-- Preloader End-->
         <!-- OPEN -->
+        <!-- #GOLD VERSION -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/3_expand.jpg')}}"> 
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/10.jpg')}}"> 
+                    <p style="margin-top:5vh;margin-bottom:5vh" class="ft-shadow-soft-reverse">               
+                        <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
+                        <span class="gla_slide_midtitle_m2">Chris & Lusye</span><br><br>
+                    </p>
+                    <div class="row">
+                        @if($invite)
+                            <h6 class="gla_wht_txt">Dear<br><span class="fix-montserrat-s-b">{{$invite}}</span>,</h6>
+                        @endif
+                        <h6 class="fix-montserrat-s-b text-choco-1">we would like to invite you to be part of<br>our happy day !</h6>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-brown-light-transp text-choco-1 gla_invitation_open_btn_longer" onclick="executeInv()">Open Invitation</button> 
+        <!-- #BLUE VERSION -->
+            <!-- <div class="gla_invitation_container_longer" id="gla_welcome">
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{--asset($cdn_link.'images/3_expand.jpg')--}}"> 
                     <p style="margin-top:-2vh;margin-bottom:4vh" class="">               
                         <span class="fix-montserrat-s-b gla_wht_txt">The Wedding of</span><br><br>
                         <span class="gla_slide_midtitle_m2 text-blue-baby-sh mt-5">Chris & Lusye</span>
                     </p>
                     <div class="row">
                         @if($invite)
-                            <h6 class="gla_wht_txt">Dear, <a class="boldme">{{$invite}}</a></h6>
+                            <h6 class="gla_wht_txt">Dear, <a class="boldme">{{--$invite--}}</a></h6>
                         @endif
                         <span class="fix-montserrat-xs-b highlight-2">we would like to invite you to be part of</span><br>
                         <span class="fix-montserrat-xs-b highlight-2">our happy day !</span>
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-blue-light-transp gla_wht_txt gla_invitation_open_btn_longer" onclick="executeInv()">Open Invitation</button> 
+            <button type="button" class="btn btn-blue-light-transp gla_wht_txt gla_invitation_open_btn_longer" onclick="executeInv()">Open Invitation</button>  -->
         <!-- OPEN End -->
         <!-- CONTENT -->
             <div class="gla_page" id="gla_page" style="display:none">
@@ -305,25 +331,6 @@
                                     </div>
                                 </div>
                                 <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/y81yIo1_3o8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </section>
-                    <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
-                        <div class="container text-center pd-md">
-                            <span class="fix-montserrat-m">Health Protocol</span><br><br>
-                            <p class="fix-montserrat-s-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p><br>
-                            <div class="row text-center fix-montserrat-s-b">
-                                <div class="col-sm-3 col-xs-12 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.png')}}"></div>
-                                    <p class="text-choco-1">wear mask</p>
-                                </div>
-                                <div class="col-sm-6 col-xs-12 gla_round_block">
-                                    <img src="{{asset($cdn_link.'images/hp-2.png')}}" style="max-width:300px">
-                                </div>
-                                <div class="col-sm-3 col-xs-12 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3-a.png')}}"></div>
-                                    <p class="text-choco-1">wash hands & use hand sanitizer</p>
-                                </div>
                             </div>
                         </div>
                     </section>
@@ -472,6 +479,25 @@
                                 @endforeach
                             </div>
                         </div><br><br><br>
+                    </section>
+                    <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
+                        <div class="container text-center pd-md">
+                            <span class="fix-montserrat-m">Health Protocol</span><br><br>
+                            <p class="fix-montserrat-s-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p><br>
+                            <div class="row text-center fix-montserrat-s-b">
+                                <div class="col-sm-3 col-xs-12 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.png')}}"></div>
+                                    <p class="text-choco-1">wear mask</p>
+                                </div>
+                                <div class="col-sm-6 col-xs-12 gla_round_block">
+                                    <img src="{{asset($cdn_link.'images/hp-2.png')}}" style="max-width:300px">
+                                </div>
+                                <div class="col-sm-3 col-xs-12 gla_round_block">
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3-a.png')}}"></div>
+                                    <p class="text-choco-1">wash hands & use hand sanitizer</p>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <section    id="quote" class="gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/2.jpg')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
