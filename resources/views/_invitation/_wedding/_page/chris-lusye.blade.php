@@ -205,8 +205,8 @@
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/pj_morton_ft_alex_isley__how_deep_is_your_love.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/pj_morton_ft_alex_isley__how_deep_is_your_love.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/sam_ock__choose_2_love.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/sam_ock__choose_2_love.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -244,7 +244,7 @@
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
                                 <span class="fix-montserrat-m">United in love and grace</span><br>
-                                <span class="fix-montserrat-m-b text-blue-baby-sh">Wednesday, 18 May 2022</span><br><br>
+                                <span class="fix-montserrat-m-b ft-shadow-soft-reverse">Wednesday, 18 May 2022</span><br><br>
                                 <div class="gla_countdown" data-year="2022" data-month="5" data-day="18"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
