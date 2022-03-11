@@ -46,10 +46,10 @@
             <div class="col-md-4 col-sm-4">
                 <h4>Latest Portfolio</h4>
                 <ul class="list-unstyled">
-                    <li><a href="{{url('/w/glenn-dewi-do')}}" target="_blank">Glenn & Dewi's Wedding</a></li>
-                    <li><a href="{{url('/w/chris-lusye-do')}}" target="_blank">Chris & Lusye's Wedding</a></li>
-                    <li><a href="{{url('/w/andreas-aprilia-do')}}" target="_blank">Andreas & Aprilia's Wedding</a></li>
-                    <li><a href="{{url('/w/petrick-menda-do')}}" target="_blank">Petrick & Menda's Wedding</a></li>
+                    <li><a href="{{url('/w/glenn-dewi-wedding-do?i=Mr./Ms.')}}" target="_blank">Glenn & Dewi's Wedding</a></li>
+                    <li><a href="{{url('/w/chris-lusye-do?i=Mr./Ms.')}}" target="_blank">Chris & Lusye's Wedding</a></li>
+                    <li><a href="{{url('/w/andreas-aprilia-wedding-do?i=Mr./Ms.')}}" target="_blank">Andreas & Aprilia's Wedding</a></li>
+                    <li><a href="{{url('/w/petrick-menda-do?i=Mr./Ms.')}}" target="_blank">Petrick & Menda's Wedding</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4">

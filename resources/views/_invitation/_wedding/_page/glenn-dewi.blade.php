@@ -452,13 +452,13 @@
                         </div>
                     </section>
                     <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/n23.jpg')}}" data-stellar-background-ratio="0.8">
-                        <div class="container text-center">     
-                            <div class="gla_over" data-color="#ffffff" data-opacity="0.8"></div>   
-                            <div class="container text-center">                
-                                <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
-                                <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
-                                <div class="gla_icon_boxes row justify-content-center">
-                                    <div class="col-sm-6 col-xs-12">
+                        <div class="gla_over" data-color="#ffffff" data-opacity="0.8"></div>   
+                        <div class="container d-flex justify-content-center">                
+                            <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
+                            <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, <br>for invited guests who are willing to give a sign of love for us, <br>can go through:<br><br><br><br>
+                            <center>
+                                <div class="gla_icon_boxes row">
+                                    <div class="p-2 col-sm-6 col-xs-12">
                                         <a href="#" class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important">
                                                 <img src="{{asset($cdn_link.'images/qrcode.jpeg')}}" width="400" height="300">
@@ -469,7 +469,7 @@
                                         </a>
                                     </div> 
                                 </div>
-                            </div>
+                            </center>
                         </div>
                     </section>
                     <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
