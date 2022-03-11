@@ -308,7 +308,7 @@
                                             </span>
                                             <span class="gla_news_title">Wedding Reception</span>
                                             <p>
-                                                <span class="fix-montserrat-sm-b text-info">Hotel Horizon Abepura Ka</span><br>
+                                                <span class="fix-montserrat-sm-b text-info">Hotel Horizon Abepura</span><br>
                                                 Jl. Raya Abepura - Sentani,<br>Hedam, Heram, Jayapura<br><br><br>
                                                 <span class="fix-montserrat-s-b text-info">Wednesday, 18 May 2022</span><br><br>
                                                 <span class="label label-info">at 17:00 WIT</span>
