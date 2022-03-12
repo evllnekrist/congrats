@@ -347,14 +347,29 @@
                                     <div class="gla_simple_block">
                                         <h2>PEMBERKATAN <br>GLENN & DEWI</h2>
                                         <p class="text-muted">Sabtu, 26 Maret 2022, <br>PUKUL 09.00</p><br><br><br>
-                                        <a href="https://www.youtube.com/channel/UCGiRZSMeCFsvbHPF4uWCD1A" target="_blank">live at <i class="ti ti-youtube gla_icon_box"></i></a>
+                                        <a href="https://youtu.be/O4qLYzhSrOE" target="_blank">live at <i class="ti ti-youtube gla_icon_box"></i></a>
                                     </div>
                                 </div>
-                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/channel/UCGiRZSMeCFsvbHPF4uWCD1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/O4qLYzhSrOE" title="Glenn & Dewi's Holy Matrimony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </section>
                     @if($addition_logic && in_array('wedding',$addition_logic))
+                    <section    id="live-streaming2" class="gla_section gla_image_bck" data-color="#ecf2f0">
+                        <div class="container">
+                            <div class="row">
+                                <!-- <span class="fix-montserrat-m">Live Streaming</span><br><br> -->
+                                <div class="col-sm-4 col-xs-12 gla_image_bck" data-color="#fff">
+                                    <div class="gla_simple_block">
+                                        <h2>RESEPSI <br>GLENN & DEWI</h2>
+                                        <p class="text-muted">Sabtu, 26 Maret 2022, <br>PUKUL 12.00</p><br><br><br>
+                                        <a href="https://youtu.be/J7Y0OD1nMAo" target="_blank">live at <i class="ti ti-youtube gla_icon_box"></i></a>
+                                    </div>
+                                </div>
+                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/J7Y0OD1nMAo" title="Glenn & Dewi's Wedding Reception" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </section>
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/n14.jpg')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-right">
