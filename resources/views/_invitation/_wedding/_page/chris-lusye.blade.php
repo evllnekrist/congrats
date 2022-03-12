@@ -273,7 +273,7 @@
                                             daughter of<br>
                                             <span class="fix-montserrat-s-b">Pdt. Hendrik Maximilian Jacob, M.Div</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Pdt. Ni Made Christine Sadang</span>
+                                            <span class="fix-montserrat-s-b">Pdt. Ni Made Christine Sadang, M.CE</span>
                                         </p>
                                     </div>
                                 </div>
