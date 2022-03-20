@@ -22,12 +22,12 @@
             <div class="container text-left">
                 <div class="row">
                 <div class="col-md-6">
-                    <h4 class="gla_h4_title">Preparation</h4>
+                    <h4 class="gla_h4_title">Link<br>Creation</h4>
                     <small></small>
                 </div>
                 <div class="col-md-6">
                     <div class="breadcrumbs">
-                        <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>Self Service</span>
+                        <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>Create Link</span>
                     </div>
                 </div>
                 

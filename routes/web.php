@@ -31,7 +31,9 @@ Route::get('/','Main\HomeController@index');
         Route::get('',function(){
             return view('_main._page.error',['lost'=>true]);
         });
-        Route::get('{code}/ss','Invitation\WeddingManagementController@display_self_service');
+        Route::get('create-link','Invitation\WeddingManagementController@create_link_index');
+        Route::post('create-link/add-new','Invitation\WeddingManagementController@ajax_create_link');
+        Route::get('{code}/ss-pre','Invitation\WeddingManagementController@self_service_pre_index');
     });
     Route::group(['prefix' => 'co-solution'], function()
     {

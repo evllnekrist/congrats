@@ -6,7 +6,7 @@
             <div class="gla_logo_container clearfix">
                 <img src="{{asset('asset-main/images/logo/logo-gold.png')}}" alt="" class="gla_logo_rev">
                 <div class="gla_logo_txt">
-                    <a href="/" class="gla_logo">beritabaik.co</a>
+                    <a href="/" class="gla_logo"><b>beritabaik.co</b></a>
                     <div class="gla_logo_und">digital solution</div>
                 </div>
             </div>

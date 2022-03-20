@@ -209,6 +209,12 @@ h1.gla_h1_title {
 	line-height: 1.125;
 	margin-top: 0;
 }
+h4.gla_h4_title {
+	font:900 30px Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+	/* text-transform: uppercase; */
+	line-height: 1.125;
+	margin-top: 0;
+}
 h2 {
 	font:400 24px Dosis, Arial;
 	line-height: 1.125;
@@ -1200,6 +1206,48 @@ h5 .label, h6 .label {
 }
 
 
+/*02.9_2 Preloader Light*/
+.gla_page_loader_light{
+	display:block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100000;	
+	background-color: rgba(255, 255, 255,0.8) !important;;
+ }
+ 
+ .gla_loader_light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100001;
+  text-align: center;
+  transform:translateX(-50%) translateY(-50%);
+  text-align: center;
+ }
+ @media (max-width:500px){
+	.gla_loader_light img {
+		max-width: 100%;
+		height: auto;
+	}
+	.gla_slider_light img {
+		max-width: 100%;
+		height: auto;
+	}
+ }
+ @media (max-width:800px){
+	.gla_loader_light img {
+		max-width: 200px;
+		height: auto;
+	}
+	.gla_slider_light img {
+		max-width: 200px!important;
+		height: auto;
+	}
+ }
+ 
 
 /*Calendar*/
 label.error{
@@ -4986,7 +5034,7 @@ footer {
 
 /*08.3 Breadcrumbs*/
 .breadcrumbs {
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-size: 13px;
 	text-align: right;
 }

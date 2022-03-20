@@ -211,6 +211,12 @@ h1.gla_h1_title {
 	line-height: 1.125;
 	margin-top: 0;
 }
+h4.gla_h4_title {
+	font:700 26px Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	line-height: 1.125;
+	margin-top: 0;
+}
 h2 {
 	font:400 24px Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 	line-height: 1.125;
@@ -1864,7 +1870,7 @@ ul.mega-menu {
 			}
 		.gla_logo b {
 			display: block;
-			font:500 12px/18px Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+			font:700 14px/14px Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 			position: relative;
 			-webkit-transition: all 0.2s;
 			-o-transition: all 0.2s;
@@ -2087,7 +2093,7 @@ ul.mega-menu {
 				opacity: 1;
 				text-transform: none;
 				font-weight:bold;
-				font: italic 400 14px/24px Playfair Display, Arial;
+				font:400 10px/24px Playfair Display, Arial;
 				top: 18px;
 			}
 			.gla_second_step .gla_logo_und {
