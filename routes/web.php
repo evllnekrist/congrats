@@ -26,6 +26,13 @@ Route::get('/','Main\HomeController@index');
         Route::get('{code}/get-rsvp','Invitation\WeddingController@ajax_get_rsvp');
         Route::get('{code}/get-wish','Invitation\WeddingController@ajax_get_wish');
     });
+    Route::group(['prefix' => 'wm'], function()
+    {
+        Route::get('',function(){
+            return view('_main._page.error',['lost'=>true]);
+        });
+        Route::get('{code}/ss','Invitation\WeddingManagementController@display_self_service');
+    });
     Route::group(['prefix' => 'co-solution'], function()
     {
         Route::get('/','Main\CoSoController@index');

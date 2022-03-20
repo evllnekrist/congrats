@@ -18,7 +18,8 @@
         <center>
             <img    src="{{asset('asset-main/images/ani/walk'.$photo_col[$random_pick_key].'.gif')}}" data-bottom-top="@src:{{asset('asset-main/images/ani/walk'.$photo_col[$random_pick_key].'.gif')}}; opacity:1" 
                     class="gla_animated_flower" height="100" alt=""><br><br><br>
-            Hello there, looks like you're lost. 
+            <h4>Hello there,</h4> 
+            <br>looks like you're lost. 
             <br>Current link is incomplete, 
             <br>you may visit our main page 
             <a href="{{url('/')}}" style="color:green;font-weight:900">here</a>
