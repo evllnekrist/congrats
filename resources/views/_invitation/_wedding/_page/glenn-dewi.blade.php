@@ -370,6 +370,7 @@
                             </div>
                         </div>
                     </section>
+                    @if(!in_array('n',$addition_logic))
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/n14.jpg')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-right">
@@ -427,6 +428,7 @@
                         </div>
                     </section>
                     @endif
+                    @endif
                     <section    id="wishes" class="gla_section">
                         <div class="row text-left pd-md">
                             <table class="table table-sm table-borderless table-striped fix-montserrat-s" style="width:80%" id="table-wish">
@@ -466,6 +468,7 @@
                             </form>
                         </div>
                     </section>
+                    @if($addition_logic && !in_array('n',$addition_logic))
                     <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/n23.jpg')}}" data-stellar-background-ratio="0.8">
                         <div class="gla_over" data-color="#ffffff" data-opacity="0.8"></div>   
                         <div class="container d-flex justify-content-center">                
@@ -487,6 +490,7 @@
                             </center>
                         </div>
                     </section>
+                    @endif
                     <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
                                 data-image="{{asset($cdn_link.'images/white-bg.jpg')}}">
                         <div class="container text-center"><br>
