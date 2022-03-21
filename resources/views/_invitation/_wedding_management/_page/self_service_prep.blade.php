@@ -48,49 +48,49 @@
             <!-- Content -->
             <section id="gla_content" class="gla_content">
                 <section class="gla_section gla_image_bck" data-color="#fafafd">
-                    <div class="container-mini" style="padding-top:10%">
+                    <div class="container-mini">
+                        <div style="padding:40px 0">
+                            <h6 class="gla_h6_title">Hello, {{ucfirst(@$selected->groom_name)}} and {{ucfirst(@$selected->bride_name)}}</h6>
+                            Terima kasih telah memilih berbagi kabar bahagiamu lewat berita baik. Berikut ini data yang perlu kami ketahui untuk pembuatan E-Invitation. Silahkan dilengkapi ya!
+                        </div>
                         <div class="alert alert-danger" id="form-ss-prep-error-info-wrap" style="display:none">
                             <span aria-hidden="true" class="alert-icon icon_blocked"></span><strong>Ooppsss!</strong><br><span id="form-ss-prep-error-info"></span>
                         </div>
                         <form id="form-ss-prep" onsubmit="return false;">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <b>Pilihan Bahasa</b><br><small>* yang digunakan untuk <i>wording</i> undangan</small>
+                                    <b>Pilihan Bahasa <red>*</red></b><br><small>yang digunakan untuk <i>wording</i> undangan</small>
                                     <select name="lang" class="form-control form-opacity" required>
                                         <option value="eng">English</option>
                                         <option value="indo">Bahasa Indonesia</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-12">
-                                    <b>Link Foto & Video</b><br><small>* drive, dropbox, dll</small>
+                                    <b>Link Foto & Video <red>*</red></b><br><small>drive, dropbox, dll</small>
                                     <input type="text" name="asset_link" value="-" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
                                 </div>
                                 <div class="col-sm-12">
-                                    <b>Detail Acara</b>
+                                    <b>Detail Acara <red>*</red></b>
                                     <div class="gla_icon_boxes row justify-content-center" id="the-events" data-index="{{$event_index_start}}" style="margin-top:10px !important">
                                         <div class="col-sm-12" id="event-{{$event_index_start}}-wrap">
                                             <div class="gla_news_block row">
-                                                <div class="text-right" style="padding:2px 2px">
-                                                    <button type="button" class="btn btn-danger" id="btn-remove-event" data-index="{{$event_index_start}}">
-                                                        <i class="fa fa-times" aria-hidden="true"></i>
-                                                    </button>
-                                                </div>
                                                 <div class="col-sm-1"></div>
                                                 <div class="col-sm-10" style="padding-top:10px">
-                                                    {{$event_index_start+1}}-1. Judul Acara
-                                                    <input type="text" name="event['title'][]" value="-" placeholder="{!!@$sample['title']!!}" 
-                                                    maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
-                                                    {{$event_index_start+1}}-2. Nama Tempat
-                                                    <input type="text" name="event['place_name'][]" value="-" placeholder="{!!@$sample['placename']!!}" 
-                                                    maxlength="100" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
-                                                    {{$event_index_start+1}}-3. Alamat Tempat
-                                                    <textarea name="event['place_address'][]" value="-" placeholder="{!!@$sample['place_address']!!}" 
-                                                    maxlength="1000" spellcheck="false" class="form-control form-opacity" required></textarea>
-                                                    {{$event_index_start+1}}-4. Tanggal & Waktu
-                                                    <input name="event['datetime'][]" class="form-control flatpickr flatpickr-input active" type="text" placeholder="Pilih tanggal & waktu ..." data-id="datetime" id="event-{{$event_index_start}}-datetime" readonly="readonly">
-                                                    {{$event_index_start+1}}-5. Link <i>live streaming</i> <small>(opsional)</small>
+                                                    <strong class="text-info">Acara - <span id="event-{{$event_index_start}}-numbering">{{$event_index_start+1}}</span></strong><br><br>
+                                                    a. Judul Acara
+                                                    <input type="text" name="event[]['title']" value="-" placeholder="{!!@$sample['title']!!}" 
+                                                    maxlength="50" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" required>
+                                                    b. Nama Tempat
+                                                    <input type="text" name="event[]['place_name']" value="-" placeholder="{!!@$sample['placename']!!}" 
+                                                    maxlength="100" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" required>
+                                                    c. Alamat Tempat
+                                                    <textarea name="event[]['place_address']" value="-" placeholder="{!!@$sample['place_address']!!}" 
+                                                    maxlength="1000" spellcheck="false" class="form-control form-opacity in-event" required></textarea>
+                                                    d. Tanggal & Waktu
+                                                    <input name="event[]['datetime']" class="form-control flatpickr flatpickr-input active" type="text" placeholder="Pilih tanggal & waktu ..." data-id="datetime" id="event-{{$event_index_start}}-datetime" readonly="readonly">
+                                                    e. Link <i>live streaming</i> <small>(opsional)</small>
                                                     <input type="text" name="event['live_stream']" value="-" placeholder="{!!@$sample['link']!!}" 
-                                                    maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
+                                                    maxlength="1000" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only">
                                                 </div>
                                                 <div class="col-sm-1"></div>
                                             </div>
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-12"  style="padding-bottom:20px">
-                                    <b>Tampilkan:</b><br><small>* berikan check untuk bagian yang ingin Anda tampilkan, uncheck jika tidak ingin gunakan</small>
+                                    <b>Tampilkan:</b><br> <small>berikan check untuk bagian yang ingin Anda tampilkan, uncheck jika tidak ingin gunakan</small>
                                     <label style="display:inline-block;">
                                         <input type="checkbox" name="is_display_wishes" value="true" checked> Ucapan/<i>Wishes</i>
                                     </label><br>
@@ -123,7 +123,7 @@
                                     <input type="text" name="theme" value="-" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-12">
-                                    <b>Musik</b> <small>(opsional)</small><small><br>* dapat berupa link atau judul-penyanyi</small>
+                                    <b>Musik</b> <small>(opsional)</small><small><br>dapat berupa link atau judul-penyanyi</small>
                                     <input type="text" name="audio" value="-" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-12">
@@ -132,7 +132,7 @@
                                     maxlength="1000" spellcheck="false" class="form-control form-opacity"></textarea>
                                 </div>
                                 <div class="col-sm-12">
-                                    <b>Catatan</b> <small>(opsional)</small><br>* apa yang kami perlu tahu?</small>
+                                    <b>Catatan</b> <small>(opsional)</small><br>apa yang kami perlu tahu?</small>
                                     <textarea name="client_note" value="-" 
                                     maxlength="1000" spellcheck="false" class="form-control form-opacity"></textarea>
                                 </div>
@@ -181,20 +181,37 @@
                 $('#form-ss-prep-error-info').html('');
                 $('.gla_page_loader_light').show();
                 $('#created-link').html('');
-                let name_1  = $('[name="groom_name"]').val();
-                let name_2  = $('[name="bride_name"]').val();
-                let pass    = $('[name="password"]').val();
-                let url     = 'ss-prep/add-new';
+                let data        = [];
+                data['lang']        = $('[name="lang"]').val();
+                data['asset_link']  = $('[name="asset_link"]').val();
+                data['theme']       = $('[name="theme"]').val();
+                data['audio']       = $('[name="audio"]').val();
+                data['quotes']      = $('[name="quotes"]').val();
+                data['client_note'] = $('[name="client_note"]').val();
+                // data['event']       = 
+
+                $('[name="event[][]"]').each(function(idx,val) {
+                    console.log('index-'+idx,val);
+                });
+                $('.in-event').each(function(idx,val) {
+                    console.log('index2-'+idx,val);
+                });
+                data['is_display_wishes']           = $('[name="is_display_wishes"]').is(':checked') ? true : false;
+                data['is_display_rsvp']             = $('[name="is_display_rsvp"]').is(':checked') ? true : false;
+                data['is_display_qris']             = $('[name="is_display_qris"]').is(':checked') ? true : false;
+                data['is_display_covid_protocols']  = $('[name="is_display_covid_protocols"]').is(':checked') ? true : false;
+                data['is_display_timeline']         = $('[name="is_display_timeline"]').is(':checked') ? true : false;
+                let url     = 'ss/store-draft/{{$code}}';
+                console.log('data',data);
+                $('.gla_page_loader_light').hide();
+                return 1;
                 $.ajax({
                     url: url,
                     headers: {
                         'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
                     },
                     type: 'POST',
-                    data: JSON.stringify({
-                        name: {'groom':name_1,'bride':name_2},
-                        pass: pass
-                    }),
+                    data: JSON.stringify(data),
                     contentType: 'application/json; charset=utf-8',
                     success: (function (data) {
                         console.log('---->> '+url,data);
@@ -227,26 +244,27 @@
                 <div class="col-sm-12" id="event-`+new_index+`-wrap">
                     <div class="gla_news_block row">
                         <div class="text-right" style="padding:2px 2px">
-                            <button type="button" class="btn btn-danger" id="btn-remove-event" data-index="`+new_index+`">
+                            <button type="button" class="btn btn-danger btn-remove-event" id="btn-remove-event-`+new_index+`" data-index="`+new_index+`">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </button>
                         </div>
                         <div class="col-sm-1"></div>
                         <div class="col-sm-10" style="padding-top:10px">
-                            `+(new_index+1)+`-1. Judul Acara
-                            <input type="text" name="event['title'][]" placeholder="{!!@$sample['title']!!}" 
-                            maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
-                            `+(new_index+1)+`-2. Nama Tempat
-                            <input type="text" name="event['place_name'][]" placeholder="{!!@$sample['placename']!!}" 
-                            maxlength="100" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
-                            `+(new_index+1)+`-3. Alamat Tempat
-                            <textarea name="event['place_address'][]"  placeholder="{!!@$sample['place_address']!!}" 
-                            maxlength="1000" spellcheck="false" class="form-control form-opacity" required></textarea>
-                            `+(new_index+1)+`-4. Tanggal & Waktu
-                            <input name="event['datetime'][]" class="form-control flatpickr flatpickr-input active" type="text" placeholder="Pilih tanggal & waktu ..." data-id="datetime" id="event-`+new_index+`-datetime" readonly="readonly">
-                            `+(new_index+1)+`-5. Link <i>live streaming</i> <small>(opsional)</small>
-                            <input type="text" name="event['live_stream'][]"  placeholder="{!!@$sample['link']!!}" 
-                            maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
+                            <strong class="text-info">Acara - <span id="event-`+new_index+`-numbering">`+(new_index+1)+`</span></strong><br><br>
+                            a. Judul Acara
+                            <input type="text" name="event[]['title']" placeholder="{!!@$sample['title']!!}" 
+                            maxlength="50" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" required>
+                            b. Nama Tempat
+                            <input type="text" name="event[]['place_name']" placeholder="{!!@$sample['placename']!!}" 
+                            maxlength="100" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" required>
+                            c. Alamat Tempat
+                            <textarea name="event[]['place_address']"  placeholder="{!!@$sample['place_address']!!}" 
+                            maxlength="1000" spellcheck="false" class="form-control form-opacity in-event" required></textarea>
+                            d. Tanggal & Waktu
+                            <input name="event[]['datetime']" class="form-control flatpickr flatpickr-input active in-event" type="text" placeholder="Pilih tanggal & waktu ..." data-id="datetime" id="event-`+new_index+`-datetime" readonly="readonly">
+                            e. Link <i>live streaming</i> <small>(opsional)</small>
+                            <input type="text" name="event[]['live_stream']"  placeholder="{!!@$sample['link']!!}" 
+                            maxlength="1000" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only">
                         </div>
                         <div class="col-sm-1"></div>
                     </div>
@@ -257,9 +275,31 @@
                 enableTime: true,
                 allowInput: true
             });
-        }).on("click","#btn-remove-event", function(){
-            let current_index = $(this).data('index');
-            $('#event-'+current_index+'-wrap').remove();
+        }).on("click",".btn-remove-event", function(){
+            let text = "Apakah Anda yakin? Detail acara yang dihapus tidak dapat dikembalikan lagi. Klik OK untuk konfirmasi:";
+            if (confirm(text) == true) {
+                text = "Memproses penghapusan item";
+                $('.gla_page_loader_light').show();
+                let current_index = $(this).data('index');
+                $('#event-'+current_index+'-wrap').remove();
+                let i = current_index+1;
+                console.log('begin :: '+i+' __________________ after delete idx '+current_index);
+                while ($('#event-'+i+'-wrap').length) {
+                    // ---------------------------------------------------------------------- reset ID
+                    $('#event-'+i+'-wrap').attr('id','event-'+(i-1)+'-wrap');
+                    $('#event-'+i+'-datetime').attr('id','event-'+(i-1)+'-datetime');
+                    $('#event-'+i+'-numbering').attr('id','event-'+(i-1)+'-numbering');
+                    $('#btn-remove-event-'+i).attr('id','btn-remove-event-'+(i-1));
+                    // ---------------------------------------------------------------------- change value
+                    $('#event-'+(i-1)+'-numbering').html(i);
+                    $('#btn-remove-event-'+(i-1)).data('index',(i-1));
+                    i++;
+                }
+                $('#the-events').data('index',(i-2));
+                $('.gla_page_loader_light').hide();
+            } else {
+                text = "Batal menghapus...";
+            }
         });
     });
     

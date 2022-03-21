@@ -217,6 +217,11 @@ h4.gla_h4_title {
 	line-height: 1.125;
 	margin-top: 0;
 }
+h6.gla_h6_title {
+	font:600 18px Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+	line-height: 1.125;
+	margin-top: 0;
+}
 h2 {
 	font:400 24px Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 	line-height: 1.125;

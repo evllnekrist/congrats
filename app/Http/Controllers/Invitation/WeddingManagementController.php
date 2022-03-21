@@ -28,7 +28,7 @@ class WeddingManagementController extends Controller
             if(!$selected){
                 return view('_main._page.error',['broken'=>true, 'detail'=>'no data']);
             }else{
-                return view('_invitation._wedding_management._page.'.'self_service_prep');
+                return view('_invitation._wedding_management._page.'.'self_service_prep',['code' => $code, 'selected' => $selected]);
             }
         }catch(\Exception $e){
             return view('_main._page.error',['broken'=>true, 'detail'=>'payload is invalid']);
@@ -38,6 +38,37 @@ class WeddingManagementController extends Controller
     
     // ----------------------------------------------A.J.A.X--------------------------------------------
     public function ajax_create_link(Request $request){
+        if($request->ajax()) {
+            $code   = implode('-',$request->get('name'));
+            $msg    = 'store new code ['.$code.']';
+            $exist  = Wedding::where('code',$code)->first();
+            if($exist != null){
+                return array('status'=>false, 'message'=>'Same wedding code [<strong>'.$code.'</strong>] exist. Please define unique groom & bride name combination',
+                            'detail'=>array(
+                                'link' => url('/wm/ss/'.Crypt::encryptString($exist->id).'/prep'),
+                                'code' => $code
+                            ));
+            }
+            try{
+                $item['password']   = sha1(@$request->get('password').env('salt_secret'));
+                $item['groom_name'] = @$request->get('name')['groom'];
+                $item['bride_name'] = @$request->get('name')['bride'];
+                $item['code'] = $code;
+                
+                $id = Wedding::insertGetId($item);
+                $output = array('status'=>true, 'message'=>'Success '.$msg, 'detail'=>array(
+                    'link' => url('/wm/ss/'.Crypt::encryptString($id).'/prep'),
+                    'code' => $code
+                ));
+            }catch(\Exception $e){
+                $output = array('status'=>false, 'message'=>'Failed '.$msg, 'detail'=>$e);
+            }
+        }else{
+            $output = array('status'=>false, 'message'=>' Request invalid');
+        }
+        return $output;
+    }
+    public function ajax_store_draft(Request $request){
         if($request->ajax()) {
             $code   = implode('-',$request->get('name'));
             $msg    = 'store new code ['.$code.']';
