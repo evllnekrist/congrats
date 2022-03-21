@@ -21,14 +21,14 @@ class WeddingManagementController extends Controller
     public function create_link_index(){
         return view('_invitation._wedding_management._page.'.'create_link');
     }
-    public function self_service_pre_index($code){
+    public function self_service_prep_index($code){
         try{
             $id = Crypt::decryptString($code);
             $selected = Wedding::where('id',$id)->first();
             if(!$selected){
                 return view('_main._page.error',['broken'=>true, 'detail'=>'no data']);
             }else{
-                return view('_invitation._wedding_management._page.'.'self_service_pre');
+                return view('_invitation._wedding_management._page.'.'self_service_prep');
             }
         }catch(\Exception $e){
             return view('_main._page.error',['broken'=>true, 'detail'=>'payload is invalid']);
@@ -45,7 +45,7 @@ class WeddingManagementController extends Controller
             if($exist != null){
                 return array('status'=>false, 'message'=>'Same wedding code [<strong>'.$code.'</strong>] exist. Please define unique groom & bride name combination',
                             'detail'=>array(
-                                'link' => url('/wm/'.Crypt::encryptString($exist->id).'/ss-pre'),
+                                'link' => url('/wm/ss/'.Crypt::encryptString($exist->id).'/prep'),
                                 'code' => $code
                             ));
             }
@@ -57,7 +57,7 @@ class WeddingManagementController extends Controller
                 
                 $id = Wedding::insertGetId($item);
                 $output = array('status'=>true, 'message'=>'Success '.$msg, 'detail'=>array(
-                    'link' => url('/wm/'.Crypt::encryptString($id).'/ss-pre'),
+                    'link' => url('/wm/ss/'.Crypt::encryptString($id).'/prep'),
                     'code' => $code
                 ));
             }catch(\Exception $e){

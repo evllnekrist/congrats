@@ -3,4 +3,5 @@
     <script src="{{asset('asset-wedding-1/js/glanz_script.js')}}"></script>
     <script src="{{asset('asset-main/js/toastr.js') }}"></script>
     <script src="{{asset('asset-main/js/universal.js')}}"></script>
+    <script src="{{asset('asset-main/js/flatpickr.min.js')}}"></script>
 <!-- Asset BOTTOM End -->
