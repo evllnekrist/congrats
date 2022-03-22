@@ -468,7 +468,7 @@
                             </form>
                         </div>
                     </section>
-                    @if($addition_logic && !in_array('n',$addition_logic))
+                    @if(!in_array('n',$addition_logic))
                     <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/n23.jpg')}}" data-stellar-background-ratio="0.8">
                         <div class="gla_over" data-color="#ffffff" data-opacity="0.8"></div>   
                         <div class="container d-flex justify-content-center">                
