@@ -94,6 +94,10 @@
                 color: #1b3146;
                 text-shadow: 1.2px 2px #939fab;
             }
+            .pd-sd{
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
             .pd-md{
                 padding-top: 20px;
                 padding-bottom: 20px;
@@ -131,9 +135,11 @@
             .in-focus-white-light:hover, .in-focus-white-light:active, .in-focus-white-light:after{
                 background: rgba(255,255,255,0.9) !important;
             }
+            .ft-shadow-soft-white{
+                text-shadow: 2px 2px 4px #ffffff;
+            }
             .ft-shadow-soft{
-                text-shadow: 2px 2px 4px #333333;
-                /* #737373; */
+                text-shadow: 2px 2px 4px #333333;/* #737373; */
             }
             .ft-shadow-soft-reverse{
                 text-shadow: 2px 2px 4px black;
@@ -238,13 +244,24 @@
                 <!-- Slider End -->
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
+                    <section    id="quote2" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/water2r.gif')}}">
+                        <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
+                        <div class="container text-right pd-md-h">
+                            <span class="fix-montserrat-s-b text-info"><i>
+                                <sup>3</sup> <span class="ft-shadow">The Lord appeared to us in the past 
+                                <br>“I have loved you with an everlasting love; 
+                                <br>I have drawn you with unfailing kindness.</span></i>
+                            </span><br><br><br><br><br>
+                            <p class="gla_subtitle ft-shadow">— Jeremiah 31:3 (NIV)</p>
+                        </div>
+                    </section>
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
                                 data-image="{{asset($cdn_link.'images/13_2.jpg')}}">  
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.6"></div> -->
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
                                 <span class="fix-montserrat-m">United in love and grace</span><br>
-                                <span class="fix-montserrat-m-b ft-shadow-soft-reverse">Wednesday, 18 May 2022</span><br><br>
+                                <span class="fix-montserrat-m-sb text-info ft-shadow-soft-white">Wednesday, 18 May 2022</span><br><br>
                                 <div class="gla_countdown" data-year="2022" data-month="5" data-day="18"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
@@ -253,9 +270,10 @@
                                         <a href="{{asset($cdn_link.'images/groom_2.jpg')}}">
                                             <img src="{{asset($cdn_link.'images/groom_2.jpg')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m text-blue-sh pd-md"><strong>dr. Christian<br>Jorhans Peters<br>Manoe</strong></span>
+                                        <span class="gla_news_title-m text-blue-sh pd-sd"><strong>dr. Christian<br>Jorhans Peters<br>Manoe</strong></span>
+                                        <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:50px!important;"><br><br>
                                         <p>
-                                            son of<br>
+                                            <b class="gla_wht_txt ft-shadow-soft-reverse">son of</b><br>
                                             <span class="fix-montserrat-s-b">Mr. Habel. Manoe, S.Pt</span>
                                             <br>&<br>
                                             <span class="fix-montserrat-s-b">Mrs. Caroline ESD Tagudedo. S.Pd</span>
@@ -268,9 +286,10 @@
                                         <a href="{{asset($cdn_link.'images/bride_2.jpg')}}">
                                             <img src="{{asset($cdn_link.'images/bride_2.jpg')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m text-blue-sh pd-md"><strong>dr. Lusye<br>Diana Jacob</strong></span><br>
+                                        <span class="gla_news_title-m text-blue-sh pd-sd"><strong>dr. Lusye<br>Diana Jacob</strong></span>
+                                        <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:50px!important;"><br><br>
                                         <p>
-                                            daughter of<br>
+                                            <b class="gla_wht_txt ft-shadow-soft-reverse">daughter of</b><br>
                                             <span class="fix-montserrat-s-b">Pdt. Hendrik Maximilian Jacob, M.Div</span>
                                             <br>&<br>
                                             <span class="fix-montserrat-s-b">Pdt. Ni Made Christine Sadang, M.CE</span>
@@ -389,7 +408,7 @@
                         <div class="row text-left pd-md">
                             <table class="table table-sm table-borderless table-striped fix-montserrat-s" style="width:80%" id="table-wish">
                                 <thead>
-                                    <tr class="text-blue">
+                                    <tr class="text-choco-2">
                                         <th width="25%">Sender</th>                              
                                         <th width="75%">Wishes</th>
                                     </tr>
@@ -461,7 +480,7 @@
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('4','5','6','7','8','0','11','12','1','2','3','13','14','16','15','bride','groom'); 
+                                    $gallery_items = array('4','5','6','7','8','0','11','12','1','2','3','13','14','16','15','17','bride','groom'); 
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.jpg')}}">
@@ -502,7 +521,7 @@
                     <section    id="quote" class="gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/2.jpg')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
-                            <span class="fix-montserrat-s-b text-choco-1"><i>
+                            <span class="fix-montserrat-s-b text-info"><i>
                                 <sup>18</sup> <span class="ft-shadow">There is no fear in love. 
                                 <br>But perfect love drives out fear <br>because fear has to do with punishment. 
                                 <br>The one who fears is not made perfect in love.</span> 
