@@ -68,7 +68,9 @@ class WeddingManagementController extends Controller
         }
         return $output;
     }
-    public function ajax_store_draft(Request $request){
+    public function ajax_store_draft(Request $request){\
+        dump('__________________________dewuifhw euwk');
+        dd($request->all());
         if($request->ajax()) {
             $code   = implode('-',$request->get('name'));
             $msg    = 'store new code ['.$code.']';

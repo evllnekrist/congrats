@@ -14,4 +14,7 @@ class Wedding extends Model
     public function wishes(){
         return $this->hasMany('App\Http\Models\Invitation\WeddingWishes','code','code');
     }
+    public function event(){
+        return $this->hasMany('App\Http\Models\Invitation\WeddingEvents','code','code');
+    }
 }

@@ -14,6 +14,9 @@
             Jl. Gading Indah III Blok NF1 No. 20,
             RT.11/RW.12, Pegangsaan Dua,
             North Jakarta City, Jakarta';
+            $sample['note']             = 'contoh:
+            saya ingin ada dua jenis undangan, 
+            dengan dan tanpa resepsi';
         ?>
         <!-- Preloader -->
             <div class="gla_page_loader_light gla_image_bck text-choco-3" data-color="#181d23">
@@ -87,9 +90,9 @@
                                                     <textarea name="event[]['place_address']" value="-" placeholder="{!!@$sample['place_address']!!}" 
                                                     maxlength="1000" spellcheck="false" class="form-control form-opacity in-event" required></textarea>
                                                     d. Tanggal & Waktu
-                                                    <input name="event[]['datetime']" class="form-control flatpickr flatpickr-input active" type="text" placeholder="Pilih tanggal & waktu ..." data-id="datetime" id="event-{{$event_index_start}}-datetime" readonly="readonly">
+                                                    <input name="event[]['datetime']" class="form-control flatpickr flatpickr-input active in-event" type="text" placeholder="Pilih tanggal & waktu ..." data-id="datetime" id="event-{{$event_index_start}}-datetime" readonly="readonly">
                                                     e. Link <i>live streaming</i> <small>(opsional)</small>
-                                                    <input type="text" name="event['live_stream']" value="-" placeholder="{!!@$sample['link']!!}" 
+                                                    <input type="text" name="event[]['live_stream']" value="-" placeholder="{!!@$sample['link']!!}" 
                                                     maxlength="1000" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only">
                                                 </div>
                                                 <div class="col-sm-1"></div>
@@ -112,7 +115,7 @@
                                         <input type="checkbox" name="is_display_qris" value="true" checked> QRIS
                                     </label><br>
                                     <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_covid_protocols" value="true" checked> Prosedur Covid
+                                        <input type="checkbox" name="is_display_covid_protocol" value="true" checked> Prosedur Covid
                                     </label><br>
                                     <label style="display:inline-block;">
                                         <input type="checkbox" name="is_display_timeline" value="true"> Timeline
@@ -133,7 +136,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Catatan</b> <small>(opsional)</small><br>apa yang kami perlu tahu?</small>
-                                    <textarea name="client_note" value="-" 
+                                    <textarea name="client_note" value="-"  placeholder="{!!@$sample['note']!!}"
                                     maxlength="1000" spellcheck="false" class="form-control form-opacity"></textarea>
                                 </div>
                                 <div class="col-md-12 text-right">
@@ -181,52 +184,51 @@
                 $('#form-ss-prep-error-info').html('');
                 $('.gla_page_loader_light').show();
                 $('#created-link').html('');
-                let data        = [];
-                data['lang']        = $('[name="lang"]').val();
-                data['asset_link']  = $('[name="asset_link"]').val();
-                data['theme']       = $('[name="theme"]').val();
-                data['audio']       = $('[name="audio"]').val();
-                data['quotes']      = $('[name="quotes"]').val();
-                data['client_note'] = $('[name="client_note"]').val();
-                // data['event']       = 
-
-                $('[name="event[][]"]').each(function(idx,val) {
-                    console.log('index-'+idx,val);
-                });
+                
+                let events          = {};
+                let temp_ass_idx    = '';
+                let runnin_idx      = {title:0,place_name:0,place_address:0,datetime:0,live_stream:0};
                 $('.in-event').each(function(idx,val) {
-                    console.log('index2-'+idx,val);
+                    temp_ass_idx    = this.name.split("['").pop().split("']").shift();
+                    if (typeof events[runnin_idx[temp_ass_idx]] == "undefined" ) { // due to js need
+                        events[runnin_idx[temp_ass_idx]] = {};
+                    }
+                    events[runnin_idx[temp_ass_idx]][temp_ass_idx] = $(val).val();
+                    runnin_idx[temp_ass_idx]++;
                 });
-                data['is_display_wishes']           = $('[name="is_display_wishes"]').is(':checked') ? true : false;
-                data['is_display_rsvp']             = $('[name="is_display_rsvp"]').is(':checked') ? true : false;
-                data['is_display_qris']             = $('[name="is_display_qris"]').is(':checked') ? true : false;
-                data['is_display_covid_protocols']  = $('[name="is_display_covid_protocols"]').is(':checked') ? true : false;
-                data['is_display_timeline']         = $('[name="is_display_timeline"]').is(':checked') ? true : false;
-                let url     = 'ss/store-draft/{{$code}}';
-                console.log('data',data);
+                console.log('event-1',events);
+
+                let url     = "{{url('/')}}/wm/ss/store-draft/{{$code}}";
                 $('.gla_page_loader_light').hide();
-                return 1;
+                
                 $.ajax({
                     url: url,
                     headers: {
                         'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
                     },
                     type: 'POST',
-                    data: JSON.stringify(data),
+                    data: JSON.stringify({
+                        lang                        : $('[name="lang"]').val(),
+                        asset_link                  : $('[name="asset_link"]').val(),
+                        theme                       : $('[name="theme"]').val(),
+                        audio                       : $('[name="audio"]').val(),
+                        quotes                      : $('[name="quotes"]').val(),
+                        client_note                 : $('[name="client_note"]').val(),
+                        is_display_wishes           : $('[name="is_display_wishes"]').is(':checked') ? true : false,
+                        is_display_rsvp             : $('[name="is_display_rsvp"]').is(':checked') ? true : false,
+                        is_display_qris             : $('[name="is_display_qris"]').is(':checked') ? true : false,
+                        is_display_covid_protocols  : $('[name="is_display_covid_protocols"]').is(':checked') ? true : false,
+                        is_display_timeline         : $('[name="is_display_timeline"]').is(':checked') ? true : false,
+                        events                      : events
+                    }),
                     contentType: 'application/json; charset=utf-8',
                     success: (function (data) {
                         console.log('---->> '+url,data);
                         if(data.status){
                             toastr.success(data.message, 'Success');
-                            $('.form-in').prop('disabled',true)
-                            let template = `<a href="#" class="copy-to-clipboard text-success" data-to_copy="`+data.detail.link+`">copy the new link of <b><i>`+data.detail.code+`</i></b> here <i class="fa fa-clone" aria-hidden="true"></i></a>`;
-                            $('#created-link').append(template);
                         }else{
                             $('#form-ss-prep-error-info-wrap').show();
                             $('#form-ss-prep-error-info').html(data.message);
-                            if(data.detail.code){
-                                let template = `<a href="#" class="copy-to-clipboard text-warning" data-to_copy="`+data.detail.link+`">copy the exist link of <b><i>`+data.detail.code+`</i></b> here <i class="fa fa-clone" aria-hidden="true"></i></a>`;
-                                $('#created-link').append(template);
-                            }
                         }
                         $('.gla_page_loader_light').hide();
                     }),error:function(xhr,status,error) {
