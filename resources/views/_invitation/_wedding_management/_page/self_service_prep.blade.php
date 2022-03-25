@@ -64,8 +64,9 @@
                                 <div class="col-sm-12">
                                     <b>Pilihan Bahasa <red>*</red></b><br><small>yang digunakan untuk <i>wording</i> undangan</small>
                                     <select name="lang" class="form-control form-opacity" required>
-                                        <option value="eng">English</option>
-                                        <option value="indo">Bahasa Indonesia</option>
+                                        @foreach(@$langs as $index => $item)
+                                            <option value="{{$item->value}}">{{$item->name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="col-sm-12">
@@ -139,6 +140,15 @@
                                     <textarea name="client_note" value="-"  placeholder="{!!@$sample['note']!!}"
                                     maxlength="1000" spellcheck="false" class="form-control form-opacity"></textarea>
                                 </div>
+                                <div class="col-sm-12">
+                                    <b>Pilihan Paket<red>*</red></b>
+                                    </small><br><a data-toggle="collapse" href="#collapsePackage">tampilkan detail >> </a></small>
+                                    <select name="package" class="form-control form-opacity" required>
+                                        @foreach(@$packages as $index => $item)
+                                            <option value="{{$item->value}}">{{$item->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <div class="col-md-12 text-right">
                                     <hr>
                                     <input type="submit" class="btn btn-info submit" id="form-ss-prep-store" value="SIMPAN DRAFT">
@@ -148,6 +158,17 @@
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div class="container">
+                        <div id="collapsePackage" class="panel-collapse collapse">
+                            <div class="gla_icon_boxes row" style="margin-top:-30px">
+                                <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
+                                    @foreach(@$packages as $index => $item)
+                                        {!!$item->desc!!}
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </section>
@@ -217,7 +238,7 @@
                         is_display_wishes           : $('[name="is_display_wishes"]').is(':checked') ? true : false,
                         is_display_rsvp             : $('[name="is_display_rsvp"]').is(':checked') ? true : false,
                         is_display_qris             : $('[name="is_display_qris"]').is(':checked') ? true : false,
-                        is_display_covid_protocols  : $('[name="is_display_covid_protocols"]').is(':checked') ? true : false,
+                        is_display_covid_protocol   : $('[name="is_display_covid_protocol"]').is(':checked') ? true : false,
                         is_display_timeline         : $('[name="is_display_timeline"]').is(':checked') ? true : false,
                         events                      : events
                     }),

@@ -1312,44 +1312,46 @@
     },
     {
         "name": "nesbot/carbon",
-        "version": "2.44.0",
-        "version_normalized": "2.44.0.0",
+        "version": "2.57.0",
+        "version_normalized": "2.57.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/briannesbitt/Carbon.git",
-            "reference": "e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd"
+            "reference": "4a54375c21eea4811dbd1149fe6b246517554e78"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd",
-            "reference": "e6ef33cb1f67a4bed831ed6d0f7e156739a5d8cd",
+            "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4a54375c21eea4811dbd1149fe6b246517554e78",
+            "reference": "4a54375c21eea4811dbd1149fe6b246517554e78",
             "shasum": ""
         },
         "require": {
             "ext-json": "*",
             "php": "^7.1.8 || ^8.0",
             "symfony/polyfill-mbstring": "^1.0",
-            "symfony/translation": "^3.4 || ^4.0 || ^5.0"
+            "symfony/polyfill-php80": "^1.16",
+            "symfony/translation": "^3.4 || ^4.0 || ^5.0 || ^6.0"
         },
         "require-dev": {
+            "doctrine/dbal": "^2.0 || ^3.0",
             "doctrine/orm": "^2.7",
-            "friendsofphp/php-cs-fixer": "^2.14 || ^3.0",
+            "friendsofphp/php-cs-fixer": "^3.0",
             "kylekatarnls/multi-tester": "^2.0",
             "phpmd/phpmd": "^2.9",
             "phpstan/extension-installer": "^1.0",
-            "phpstan/phpstan": "^0.12.54",
+            "phpstan/phpstan": "^0.12.54 || ^1.0",
             "phpunit/phpunit": "^7.5.20 || ^8.5.14",
             "squizlabs/php_codesniffer": "^3.4"
         },
-        "time": "2021-01-26T20:46:41+00:00",
+        "time": "2022-02-13T18:13:33+00:00",
         "bin": [
             "bin/carbon"
         ],
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "2.x-dev",
-                "dev-3.x": "3.x-dev"
+                "dev-3.x": "3.x-dev",
+                "dev-master": "2.x-dev"
             },
             "laravel": {
                 "providers": [
@@ -1376,15 +1378,15 @@
             {
                 "name": "Brian Nesbitt",
                 "email": "brian@nesbot.com",
-                "homepage": "http://nesbot.com"
+                "homepage": "https://markido.com"
             },
             {
                 "name": "kylekatarnls",
-                "homepage": "http://github.com/kylekatarnls"
+                "homepage": "https://github.com/kylekatarnls"
             }
         ],
         "description": "An API extension for DateTime that supports 281 different languages.",
-        "homepage": "http://carbon.nesbot.com",
+        "homepage": "https://carbon.nesbot.com",
         "keywords": [
             "date",
             "datetime",
@@ -3312,7 +3314,8 @@
             "email",
             "mail",
             "mailer"
-        ]
+        ],
+        "abandoned": "symfony/mailer"
     },
     {
         "name": "symfony/console",
@@ -5134,12 +5137,12 @@
         "version_normalized": "1.9.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/webmozart/assert.git",
+            "url": "https://github.com/webmozarts/assert.git",
             "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+            "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
             "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
             "shasum": ""
         },
