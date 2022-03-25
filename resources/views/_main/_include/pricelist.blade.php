@@ -191,12 +191,12 @@
                                 </tr>
                             </thead>
                             <tbody class="tbody-white">
-                                <tr>
-                                    <td colspan="2">Subdomain URL >> <br>
-                                                    <small><b>groomname-bridename.beritabaik.co</b></small><br>
-                                                    <b>+ 60.000,-</b>
-                                    </td>
-                                </tr>
+                                <!-- <tr> -->
+                                    <!-- <td colspan="2">Subdomain URL >> <br> -->
+                                                    <!-- <small><b>groomname-bridename.beritabaik.co</b></small><br> -->
+                                                    <!-- <b>+ 60.000,-</b> -->
+                                    <!-- </td> -->
+                                <!-- </tr> -->
                                 <tr>
                                     <td colspan="2">Prosedur Covid-19 >> <br>
                                                     <b>+ 50.000,-</b>

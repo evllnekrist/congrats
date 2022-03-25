@@ -1,23 +1,8 @@
 <!-- Footer -->
-<script>
-    // if(typeof jQuery!=='undefined'){ console.log('jQuery Loaded'); }else{ console.log('not loaded yet'); }
-    $( document ).ready(function() {
-        let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (isMobile) {
-            console.log('%c\nrunnin` on MOBILE\n', 'background: #222; color: #cce6ff');
-            $(".link_wa").each(function() {
-                $(this).attr("href", 'https://wa.me/{{env("WA_PHONE")}}/?text={{env("WA_GREET")}}');
-            });
-        }else{
-            console.log('%c\nrunnin` on DESKTOP\n', 'background: #222; color: #ffcce0');
-            $(".link_wa").each(function() {
-                $(this).attr("href", 'https://web.whatsapp.com/send?phone={{env("WA_PHONE")}}&text={{env("WA_GREET")}}');
-            });
-        }
-    });
-</script>
 <!-- <section id="grey" class="gla_section gla_image_bck gla_wht_txt" data-color="#292929"> -->
 <section id="white" class="gla_section gla_image_bck" data-color="#fff">
+    <input id="wa_phone" value='{{env("WA_PHONE")}}' hidden>
+    <input id="wa_greet" value='{{env("WA_GREET")}}' hidden>
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-4">

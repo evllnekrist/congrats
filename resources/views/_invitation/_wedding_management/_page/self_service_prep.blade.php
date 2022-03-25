@@ -32,23 +32,25 @@
             <a href="#gla_page" class="gla_top ti ti-angle-up gla_go"></a>
             @include('_invitation._wedding_management._include.nav')
             <div class="gla_page_title gla_image_bck gla_wht_txt" data-color="#282828">
-            <div class="container text-left">
-                <div class="row">
-                <div class="col-md-6">
-                    <h4 class="gla_h4_title">Preparation</h4>
-                    <small></small>
-                </div>
-                <div class="col-md-6">
-                    <div class="breadcrumbs">
-                        <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>Self Service</span>
+                <div class="container text-left">
+                    <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="gla_h4_title">Preparation</h4>
+                        <small></small>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="breadcrumbs">
+                            <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>Self Service</span>
+                        </div>
+                    </div>
+                    
                     </div>
                 </div>
-                
-                </div>
-            </div>
             </div>
 
             <!-- Content -->
+            <input id="wa_phone" value='{{env("WA_PHONE")}}' hidden>
+            <input id="wa_greet" value='{{env("WA_GREET")}}' hidden>
             <section id="gla_content" class="gla_content">
                 <section class="gla_section gla_image_bck" data-color="#fafafd">
                     <div class="container-mini">
@@ -145,26 +147,33 @@
                                     </small><br><a data-toggle="collapse" href="#collapsePackage">tampilkan detail >> </a></small>
                                     <select name="package" class="form-control form-opacity" required>
                                         @foreach(@$packages as $index => $item)
-                                            <option value="{{$item->value}}">{{$item->name}}</option>
+                                            <option value="{{$item->value}}" {{$item->value=='class_1st'?'selected':''}}>{{$item->name}}</option>
                                         @endforeach
                                     </select>
+                                </div>
+                                <div class="col-sm-12">
+                                    <b>Referensi<red>*</red></b><br>dapatkah kami ketahui dari mana kamu dan dia kenal Berita Baik?</small>
+                                    <select name="ref_type" class="form-control form-opacity" id="run_logic_ref_type" required>
+                                        @foreach(@$ref_types as $index => $item)
+                                            <option value="{{$item->value}}" data-logic="ref_type_{{$item->logic}}">{{$item->name}}</option>
+                                        @endforeach
+                                    </select>
+                                    <input type="text" name="ref_name" value="-" placeholder="Nama pemberi referensi" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-md-12 text-right">
                                     <hr>
                                     <input type="submit" class="btn btn-info submit" id="form-ss-prep-store" value="SIMPAN DRAFT">
                                 </div>
-                                <div class="col-md-12 text-right" style="padding-top:10%">
-                                    <div id="created-link"></div>
-                                </div>
                             </div>
                         </form>
                     </div>
                     <div class="container">
-                        <div id="collapsePackage" class="panel-collapse collapse">
-                            <div class="gla_icon_boxes row" style="margin-top:-30px">
+                        <div id="collapsePackage" class="panel-collapse collapse" aria-expanded="false">
+                            <div class="gla_icon_boxes row  gla_news_block" style="margin-top:-30px;padding:40px">
+                                <h4 class="gla_h4_title text-success">Pricelist</h4>
                                 <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
                                     @foreach(@$packages as $index => $item)
-                                        {!!$item->desc!!}
+                                        {!! $item->desc !!}
                                     @endforeach
                                 </div>
                             </div>
@@ -204,7 +213,6 @@
                 $('#form-ss-prep-error-info-wrap').hide();
                 $('#form-ss-prep-error-info').html('');
                 $('.gla_page_loader_light').show();
-                $('#created-link').html('');
                 
                 let events          = {};
                 let temp_ass_idx    = '';
@@ -235,6 +243,9 @@
                         audio                       : $('[name="audio"]').val(),
                         quotes                      : $('[name="quotes"]').val(),
                         client_note                 : $('[name="client_note"]').val(),
+                        package                     : $('[name="package"]').val(),
+                        ref_type                    : $('[name="ref_type"]').val(),
+                        ref_name                    : $('[name="ref_name"]').val(),
                         is_display_wishes           : $('[name="is_display_wishes"]').is(':checked') ? true : false,
                         is_display_rsvp             : $('[name="is_display_rsvp"]').is(':checked') ? true : false,
                         is_display_qris             : $('[name="is_display_qris"]').is(':checked') ? true : false,
@@ -322,6 +333,22 @@
                 $('.gla_page_loader_light').hide();
             } else {
                 text = "Batal menghapus...";
+            }
+        }).on("change","#run_logic_ref_type", function(){
+            let logic = $('#run_logic_ref_type :selected').data('logic');
+            console.log('run logic -->>>> '+logic);
+            if(logic == 'ref_type_askname'){
+                $('[name="ref_name"]').show();
+                $('[name="ref_name"]').attr('placeholder','Nama pemberi referensi');
+            }else if(logic == 'ref_type_askname2'){
+                $('[name="ref_name"]').show();
+                $('[name="ref_name"]').attr('placeholder','Nama mempelai');
+            }else if(logic == 'ref_type_askdetail'){
+                $('[name="ref_name"]').show();
+                $('[name="ref_name"]').attr('placeholder','Tulis sesuatu...');
+            }else if(logic == 'ref_type_'){
+                $('[name="ref_name"]').hide();
+                $('[name="ref_name"]').attr('placeholder','');
             }
         });
     });

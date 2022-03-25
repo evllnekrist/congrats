@@ -48,3 +48,22 @@
         toastr.success('Copied!', 'Success');
     });
 })(window);
+
+
+// if(typeof jQuery!=='undefined'){ console.log('jQuery Loaded'); }else{ console.log('not loaded yet'); }
+$( document ).ready(function() {
+    let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    let wa_phone = $('#wa_phone').val();
+    let wa_greet = $('#wa_greet').val();
+    if (isMobile) {
+        console.log('%c\nrunnin` on MOBILE\n', 'background: #222; color: #cce6ff');
+        $(".link_wa").each(function() {
+            $(this).attr("href", 'https://wa.me/'+wa_phone+'/?text='+wa_greet+'');
+        });
+    }else{
+        console.log('%c\nrunnin` on DESKTOP\n', 'background: #222; color: #ffcce0');
+        $(".link_wa").each(function() {
+            $(this).attr("href", 'https://web.whatsapp.com/send?phone='+wa_phone+'&text='+wa_greet+'');
+        });
+    }
+});
