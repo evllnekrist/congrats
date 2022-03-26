@@ -5099,6 +5099,18 @@ footer {
 	padding-bottom: 58px;
     padding-top: 147px;
 }
+.gla_page_title_xsm {
+	padding-bottom: 30px;
+    padding-top: 130px;
+}
+.gla_page_title_xsm_x {
+	padding-bottom: 0px;
+    padding-top: 0px;
+}
+.gla_page_title_sm_x_item{
+	padding-bottom: 20px;
+    padding-top: 20px;
+}
 .gla_page_title_white {
 	background: #fff;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -6024,9 +6036,9 @@ footer {
 		background-attachment:scroll!important;
 	}
 
-	.gla_section {
+	/* .gla_section {
 		text-align: center;
-	}
+	} */
 	.gla_icon_box i {
 		position: relative;
 		margin-left: 0;

@@ -38,6 +38,7 @@ class WeddingManagementController extends Controller
                 $ref_types  = SelectionList::where('type','WEDDING_REF_TYPE')->where('is_enabled',true)->get();
                 $packages   = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
                 $langs      = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
+                $wm_menus   = SelectionList::where('type','WEDDING_MANAGEMENT_SS_MENU')->where('is_enabled',true)->get();
                 return view('_invitation._wedding_management._page.'.'self_service_prep',[
                     'code'          => $code, 
                     'selected'      => $selected,
@@ -46,7 +47,39 @@ class WeddingManagementController extends Controller
                     'logs'          => $logs,
                     'ref_types'     => $ref_types,
                     'packages'      => $packages,
-                    'langs'         => $langs
+                    'langs'         => $langs,
+                    'wm_menus'      => $wm_menus
+                ]);
+            }
+        }catch(\Exception $e){
+            return view('_main._page.error',['broken'=>true, 'detail'=>'payload is invalid']);
+        }
+    }
+    public function self_service_current_index($code){
+        try{
+            $id = Crypt::decryptString($code);
+            $selected = Wedding::where('id',$id)->first();
+            if(!$selected){
+                return view('_main._page.error',['broken'=>true, 'detail'=>'no data']);
+            }else{
+                $events     = WeddingEvents::where('wedding_id',$id)->orderBy('id','ASC')->where('is_enabled',true)->get();
+                $events_len = sizeof($events->toArray());
+                $logs       = WeddingLogs::where('wedding_id',$id)->orderBy('id','DESC')->skip(0)->take(10)->get();
+                $ref_types  = SelectionList::where('type','WEDDING_REF_TYPE')->where('is_enabled',true)->get();
+                $packages   = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
+                $langs      = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
+                $wm_menus   = SelectionList::where('type','WEDDING_MANAGEMENT_SS_MENU')->where('is_enabled',true)->get();
+                return view('_invitation._wedding_management._page.'.'self_service_current',[
+                    'code'          => $code, 
+                    'code_str'      => $selected->code, 
+                    'selected'      => $selected,
+                    'events'        => $events,
+                    'event_count'   => $events_len,
+                    'logs'          => $logs,
+                    'ref_types'     => $ref_types,
+                    'packages'      => $packages,
+                    'langs'         => $langs,
+                    'wm_menus'      => $wm_menus
                 ]);
             }
         }catch(\Exception $e){
@@ -97,8 +130,8 @@ class WeddingManagementController extends Controller
             if($exist == null){
                 return array('status'=>false, 'message'=>'ID pengguna wedding management tidak terdaftar');
             }
-            // try{
-            //     \DB::beginTransaction();
+            try{
+                \DB::beginTransaction();
                 $msg                = '['.$exist->code.'] simpan draft persiapan undangan';
                 $edit_count         = (@$exist->edit_count?($exist->edit_count+1):0);
                 $save_header_param  = array(
@@ -174,11 +207,11 @@ class WeddingManagementController extends Controller
                 
                 $save_log   = $this->addLog('wm_store_draft',$id,$request->all(),null,'<b>'.$exist->code.'</b> menyimpan draft ke <b>'.$edit_count.'</b>');
                 $output     = array('status'=>true, 'message'=>'Success '.$msg);
-            //     \DB::commit();
-            // }catch(\Exception $e){
-            //     $output = array('status'=>false, 'message'=>'Failed '.$msg, 'detail'=>$e);
-            //     \DB::rollback();
-            // }
+                \DB::commit();
+            }catch(\Exception $e){
+                $output = array('status'=>false, 'message'=>'Failed '.$msg, 'detail'=>$e);
+                \DB::rollback();
+            }
         }else{
             $output = array('status'=>false, 'message'=>' Request invalid');
         }

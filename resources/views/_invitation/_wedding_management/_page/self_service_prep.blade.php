@@ -34,20 +34,32 @@
 
             <a href="#gla_page" class="gla_top ti ti-angle-up gla_go"></a>
             @include('_invitation._wedding_management._include.nav')
-            <div class="gla_page_title gla_image_bck gla_wht_txt" data-color="#282828">
+            <div class="gla_page_title_xsm gla_image_bck gla_wht_txt" data-color="#282828" id="top_of_the_page">
                 <div class="container text-left">
                     <div class="row">
                     <div class="col-md-6">
                         <h4 class="gla_h4_title">Preparation</h4>
-                        <small></small>
+                        <small>Persiapkan menjadi jelas dan dapat diubah kapan saja</small>
                     </div>
                     <div class="col-md-6">
                         <div class="breadcrumbs">
-                            <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>Self Service</span>
+                            <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>Prep</span>
                         </div>
                     </div>
                     
                     </div>
+                </div>
+            </div>
+            <div class="gla_page_title_xsm_x gla_image_bck text-black" data-color="#282828" id="top_of_the_page">
+                <div class="row text-center">
+                    @foreach(@$wm_menus as $index => $item)
+                        <?php
+                            $rewrite_url = '/wm'.str_replace("{code}",$code,$item->logic);
+                        ?>
+                        <a class="col-md-6 gla_page_title_sm_x_item {{$item->value=='1'?'btn-success':'btn-default'}}" href="{{$item->value=='1'?'#':url($rewrite_url)}}">
+                            {{$item->name}}
+                        </a>
+                    @endforeach
                 </div>
             </div>
 
@@ -170,7 +182,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-12"  style="padding-bottom:20px">
-                                    <b>Tampilkan:</b><br> <small>berikan check untuk bagian yang ingin Anda tampilkan, uncheck jika tidak ingin gunakan</small>
+                                    <b>Tampilkan:</b><br> <small>berikan check untuk bagian yang ingin Anda tampilkan, uncheck jika tidak ingin gunakan</small><br>
                                     <label style="display:inline-block;">
                                         <input type="checkbox" name="is_display_wishes" value="true" 
                                         {{$selected->is_display_wishes == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Ucapan/<i>Wishes</i>
@@ -235,8 +247,8 @@
                                 </div>
                                 <div class="col-md-12 text-secondary">
                                     <hr>
-                                    <small>Histori perubahan [max 10 data terbaru]:</small>
-                                    <table class="table table-hover text-left">
+                                    <small><a data-toggle="collapse" href="#collapseHistory">Histori perubahan [max 10 data terbaru] >></a></small>
+                                    <table class="table table-hover text-left panel-collapse collapse"  id="collapseHistory" aria-expanded="false">
                                         <thead>
                                             <tr class="text-info">
                                                 <th>No.</th>
@@ -360,6 +372,7 @@
                         }else{
                             $('#form-ss-prep-error-info-wrap').show();
                             $('#form-ss-prep-error-info').html(data.message);
+                            document.getElementById("top_of_the_page").scrollIntoView({ behavior: "smooth" });
                             $('.gla_page_loader_light').hide();
                         }
                     }),error:function(xhr,status,error) {
