@@ -4,6 +4,7 @@
         @include('_invitation._wedding_management._include.head')
         @include('_invitation._wedding_management._include.asset-top')
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
+        <link href="{{asset('asset-main/css/buttons.dataTables.min.css')}}" rel="stylesheet">
     </head>
     <body class="gla_middle_titles" id="home">
         <?php
@@ -44,7 +45,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="breadcrumbs">
-                            <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>Current</span>
+                            <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>SS</span>
                         </div>
                     </div>
                     
@@ -84,9 +85,7 @@
                             <div class="panel-heading">
                                 <div class="panel-title row">
                                     <a class="col-xs-6" data-toggle="collapse" href="#table-rsvp-wrap"><b class="text-info">RSVP (Daftar Reservasi)</b></a>
-                                    <div class="col-xs-6 text-right">
-                                        <a title="download dalam format Excel" class="text-success">Download <i class="fa fa-file-excel-o" aria-hidden="true"></i></a>
-                                    </div>
+                                    <div class="col-xs-6 text-right"></div>
                                 </div>
                             </div>
                             <div id="table-rsvp-wrap" class="panel-collapse collapse">
@@ -110,9 +109,7 @@
                             <div class="panel-heading">
                                 <div class="panel-title row">
                                     <a class="col-xs-6" data-toggle="collapse" href="#table-wish-wrap"><b class="text-info">Wishes (Ucapan)</b></a>
-                                    <div class="col-xs-6 text-right">
-                                        <a title="download dalam format Excel" class="text-success">Download <i class="fa fa-file-excel-o" aria-hidden="true"></i></a>
-                                    </div>
+                                    <div class="col-xs-6 text-right"></div>
                                 </div>
                             </div>
                             <div id="table-wish-wrap" class="panel-collapse collapse">
@@ -139,6 +136,12 @@
         <!-- Page End -->
         @include('_invitation._wedding_management._include.asset-bottom')
         <script src="{{asset('asset-main/js/jquery.dataTables.min.js')}}"></script>
+        <script src="{{asset('asset-main/js/dataTables.buttons.min.js')}}"></script>
+        <script src="{{asset('asset-main/js/jszip.min.js')}}"></script>
+        <script src="{{asset('asset-main/js/pdfmake.min.js')}}"></script>
+        <script src="{{asset('asset-main/js/vfs_fonts.js')}}"></script>
+        <script src="{{asset('asset-main/js/buttons.html5.min.js')}}"></script>
+        <script src="{{asset('asset-main/js/buttons.print.min.js')}}"></script>
     </body>
 </html>
 
@@ -157,6 +160,11 @@
                 processing: true,
                 serverSide: true,
                 paging: true,
+                dom: 'Bfrtlip',
+                buttons: [
+                    'excel','csv','copy','pdf','print'
+                ],
+                lengthMenu : [[10, 50, 100, -1], [10, 50, 100, "All"]],
                 ajax: '{{url("/w/".$code_str."/get-rsvp")}}',
                 columns: [
                     {data: 'sender_name', name: 'sender_name'},
@@ -190,12 +198,16 @@
                 processing: true,
                 serverSide: true,
                 paging: true,
+                dom: 'Bfrtlip',
+                buttons: [
+                    'excel','csv','copy','pdf','print'
+                ],
+                lengthMenu : [[10, 50, 100, -1], [10, 50, 100, "All"]],
                 ajax: '{{url("/w/".$code_str."/get-wish")}}',
                 columns: [
                     {data: 'sender_name', name: 'sender_name'},
                     {data: 'message', name: 'message'},
                 ],
-                sDom: '<"top"flp>rt<"bottom"i><"clear">'
             });
         }
     });

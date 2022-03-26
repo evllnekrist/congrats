@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="breadcrumbs">
-                            <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>Prep</span>
+                            <a href="{{url('/')}}">Home</a><a href="{{url('/')}}">Wedding Management</a><span>SS</span>
                         </div>
                     </div>
                     
