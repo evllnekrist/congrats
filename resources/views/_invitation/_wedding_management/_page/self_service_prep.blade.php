@@ -57,9 +57,9 @@
             <section id="gla_content" class="gla_content">
                 <section class="gla_section gla_image_bck" data-color="#fafafd">
                     <div class="container-mini">
-                        <div style="padding:40px 0">
+                        <div class="text-success" style="padding:60px 0">
                             <h6 class="gla_h6_title">Hello, {{ucfirst(@$selected->groom_name)}} and {{ucfirst(@$selected->bride_name)}}</h6>
-                            Terima kasih telah memilih berbagi kabar bahagiamu lewat berita baik. Berikut ini data yang perlu kami ketahui untuk pembuatan E-Invitation. Silahkan dilengkapi ya!
+                            <span>Terima kasih telah memilih berbagi kabar bahagiamu lewat berita baik. Berikut ini data yang perlu kami ketahui untuk pembuatan E-Invitation. Silahkan dilengkapi ya!</span>
                         </div>
                         <div class="alert alert-danger" id="form-ss-prep-error-info-wrap" style="display:none">
                             <span aria-hidden="true" class="alert-icon icon_blocked"></span><strong>Ooppsss!</strong><br><span id="form-ss-prep-error-info"></span>
@@ -115,7 +115,7 @@
                                         <div class="col-sm-12" id="event-{{$index}}-wrap">
                                             <div class="gla_news_block row">
                                                 <div class="text-right" style="padding:2px 2px">
-                                                    <button type="button" class="btn btn-danger btn-remove-event" id="btn-remove-event-`+new_index+`" data-index="`+new_index+`">
+                                                    <button type="button" class="btn btn-danger btn-remove-event" id="btn-remove-event-{{$index}}" data-index="{{$index}}">
                                                         <i class="fa fa-times" aria-hidden="true"></i>
                                                     </button>
                                                 </div>
@@ -126,7 +126,8 @@
                                                     <br><br>
                                                     a. Judul Acara
                                                     <input type="text" name="event[]['title']" value="{{$item->title}}" placeholder="{!!@$sample['title']!!}" 
-                                                    maxlength="50" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" required>
+                                                    maxlength="50" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" 
+                                                    data-event_id="{{$item->id}}" required>
                                                     b. Nama Tempat
                                                     <input type="text" name="event[]['place_name']" value="{{$item->place_name}}" placeholder="{!!@$sample['placename']!!}" 
                                                     maxlength="100" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" required>
@@ -188,12 +189,12 @@
                                     </label><br>
                                     <label style="display:inline-block;">
                                         <input type="checkbox" name="is_display_timeline" value="true"
-                                        {{$selected->is_display_timeline == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Timeline
+                                        {{$selected->is_display_timeline == 1?'checked':(!$selected->edit_count > 0?'':'')}}> Timeline
                                     </label><br>
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Preferensi Tema/Warna Dasar</b> <small>(opsional)</small>
-                                    <input type="text" name="theme" value="{{@$selected->theme??'-'}}" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
+                                    <input type="text" name="theme" value="{{@$selected->pref_theme??'-'}}" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Musik</b> <small>(opsional)</small><small><br>dapat berupa link atau judul-penyanyi</small>
@@ -201,8 +202,8 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Quotes</b> <small>(opsional)</small>
-                                    <textarea name="quotes" value="{{@$selected->quotes??'-'}}" 
-                                    maxlength="1000" spellcheck="false" class="form-control form-opacity"></textarea>
+                                    <textarea name="quotes" value="-" 
+                                    maxlength="1000" spellcheck="false" class="form-control form-opacity">{{@$selected->quotes??'-'}}</textarea>
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Catatan</b> <small>(opsional)</small><br>apa yang kami perlu tahu?</small>
@@ -228,16 +229,38 @@
                                     <input type="text" name="ref_name"  value="{{@$selected->ref_name??''}}" placeholder="Nama pemberi referensi" 
                                     maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
-                                <div class="col-md-12 text-right">
+                                <div class="col-md-12 text-center">
                                     <hr>
-                                    <input type="submit" class="btn btn-info submit" id="form-ss-prep-store" value="{{@$selected->edit_count > 0?'UPDATE [Draft ke '.(@$selected->edit_count+1).']':'SIMPAN SEBAGAI DRAFT 1'}}">
+                                    <input type="submit" class="btn btn-info btn-lg submit" id="form-ss-prep-store" value="{{@$selected->edit_count > 0?'UPDATE [Draft ke '.(@$selected->edit_count+1).']':'SIMPAN SEBAGAI DRAFT KE-1'}}">
+                                </div>
+                                <div class="col-md-12 text-secondary">
+                                    <hr>
+                                    <small>Histori perubahan [max 10 data terbaru]:</small>
+                                    <table class="table table-hover text-left">
+                                        <thead>
+                                            <tr class="text-info">
+                                                <th>No.</th>
+                                                <th>Aktivitas</th>
+                                                <th>Waktu</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach(@$logs as $index => $item)
+                                            <tr class="text-info">
+                                                <td>{{$index+1}}</td>
+                                                <td>{!!$item->desc!!}</td>
+                                                <td>{{$item->created_at}}</td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="container">
                         <div id="collapsePackage" class="panel-collapse collapse" aria-expanded="false">
-                            <div class="gla_icon_boxes row  gla_news_block" style="margin-top:-30px;padding:40px">
+                            <div class="gla_icon_boxes row gla_news_block" style="margin-top:-30px;padding:40px">
                                 <h4 class="gla_h4_title text-success">Pricelist</h4>
                                 <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
                                     @foreach(@$packages as $index => $item)
@@ -286,17 +309,22 @@
                 
                 let events          = {};
                 let temp_ass_idx    = '';
-                let runnin_idx      = {title:0,place_name:0,place_address:0,datetime:0,live_stream:0};
+                let runnin_idx      = {title:0,place_name:0,place_address:0,datetime:0,live_stream:0,id:0};
                 $('.in-event').each(function(idx,val) {
                     temp_ass_idx    = this.name.split("['").pop().split("']").shift();
                     if (typeof events[runnin_idx[temp_ass_idx]] == "undefined" ) { // due to js need
                         events[runnin_idx[temp_ass_idx]] = {};
                     }
+                    if(temp_ass_idx == 'title' && $(val).data('event_id') != undefined){
+                        // console.log('MASHOOK ',runnin_idx['id'],$(val).data('event_id'));
+                        events[runnin_idx['id']]['id'] = $(val).data('event_id');
+                        runnin_idx['id']++;
+                    }
                     events[runnin_idx[temp_ass_idx]][temp_ass_idx] = $(val).val();
                     runnin_idx[temp_ass_idx]++;
                 });
                 console.log('event-1',events);
-
+                // $('.gla_page_loader_light').hide(); return; 
                 let url     = "{{url('/')}}/wm/ss/store-draft/{{$code}}";
                 $('.gla_page_loader_light').hide();
                 
@@ -328,11 +356,12 @@
                         console.log('---->> '+url,data);
                         if(data.status){
                             toastr.success(data.message, 'Success');
+                            location.reload(true);
                         }else{
                             $('#form-ss-prep-error-info-wrap').show();
                             $('#form-ss-prep-error-info').html(data.message);
+                            $('.gla_page_loader_light').hide();
                         }
-                        $('.gla_page_loader_light').hide();
                     }),error:function(xhr,status,error) {
                         alert('error [sys]','',xhr.responseText);
                         $('.gla_page_loader_light').hide();

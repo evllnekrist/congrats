@@ -32,19 +32,21 @@ class WeddingManagementController extends Controller
             if(!$selected){
                 return view('_main._page.error',['broken'=>true, 'detail'=>'no data']);
             }else{
-                $events     = WeddingEvents::where('wedding_id',$id)->get();
+                $events     = WeddingEvents::where('wedding_id',$id)->orderBy('id','ASC')->where('is_enabled',true)->get();
                 $events_len = sizeof($events->toArray());
+                $logs       = WeddingLogs::where('wedding_id',$id)->orderBy('id','DESC')->skip(0)->take(10)->get();
                 $ref_types  = SelectionList::where('type','WEDDING_REF_TYPE')->where('is_enabled',true)->get();
                 $packages   = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
                 $langs      = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
                 return view('_invitation._wedding_management._page.'.'self_service_prep',[
-                    'code' => $code, 
-                    'selected' => $selected,
-                    'events' => $events,
-                    'event_count' => $events_len,
-                    'ref_types' => $ref_types,
-                    'packages' => $packages,
-                    'langs' => $langs
+                    'code'          => $code, 
+                    'selected'      => $selected,
+                    'events'        => $events,
+                    'event_count'   => $events_len,
+                    'logs'          => $logs,
+                    'ref_types'     => $ref_types,
+                    'packages'      => $packages,
+                    'langs'         => $langs
                 ]);
             }
         }catch(\Exception $e){
@@ -98,6 +100,7 @@ class WeddingManagementController extends Controller
             // try{
             //     \DB::beginTransaction();
                 $msg                = '['.$exist->code.'] simpan draft persiapan undangan';
+                $edit_count         = (@$exist->edit_count?($exist->edit_count+1):0);
                 $save_header_param  = array(
                     'lang'                          => @$request->get('lang'),
                     'asset_link'                    => @$request->get('asset_link'),
@@ -113,7 +116,7 @@ class WeddingManagementController extends Controller
                     'is_display_qris'               => @$request->get('is_display_qris'),
                     'is_display_covid_protocol'     => @$request->get('is_display_covid_protocol'),
                     'is_display_timeline'           => @$request->get('is_display_timeline'),
-                    'edit_count'                    => (@$exist->edit_count?($exist->edit_count+1):0),
+                    'edit_count'                    => $edit_count,
                 );
                 if(@$request->get('publish_status')){
                     $save_header_param['publish_status'] = @$request->get('publish_status');
@@ -122,6 +125,19 @@ class WeddingManagementController extends Controller
                 if($save_header && @$request->get('events') && sizeof(@$request->get('events')) > 0){
                     $save_detail_events         = array();
                     $save_detail_events_param   = array();
+                    $prev_all_event             = WeddingEvents::select('id')->where('wedding_id',$id)->where('is_enabled',true)->get()->toArray();
+                    $prev_all_event_id          = array_column(@$prev_all_event?@$prev_all_event:array(),'id');
+                    $current_active_event_id    = array_column(@$request->get('events')?@$request->get('events'):array(),'id');
+                    $current_inactive_event_id  = array_diff($prev_all_event_id,$current_active_event_id);
+                    // dump($prev_all_event_id);
+                    // dump($current_active_event_id);
+                    // dump($current_inactive_event_id);
+                    // die();
+                    foreach (@$current_inactive_event_id as $index2 => $item2){
+                        $save_detail_events_to_inactive[$index2] = WeddingEvents::where('id',@$item2)->update(array(
+                            'is_enabled'    => false,
+                        ));
+                    }
                     foreach (@$request->get('events') as $index => $item){
                         if(@$item['id']){ // update
                             $save_detail_events_param[$index]   = array(
@@ -131,6 +147,7 @@ class WeddingManagementController extends Controller
                                 'date'          => Carbon::parse(@$item['datetime'])->format('Y-m-d'),
                                 'time'          => Carbon::parse(@$item['datetime'])->format('H:i:s'),
                                 'live_stream'   => @$item['live_stream'],
+                                'is_enabled'    => true,
                             );
                             if(@$item->place_gmap_target){
                                 $save_detail_events_param[$index]['place_gmap_target'] = @$item->place_gmap_target;
@@ -149,12 +166,13 @@ class WeddingManagementController extends Controller
                             $save_detail_events[$index]['date']         = Carbon::parse(@$item['datetime'])->format('Y-m-d');
                             $save_detail_events[$index]['time']         = Carbon::parse(@$item['datetime'])->format('H:i:s');
                             $save_detail_events[$index]['live_stream']  = @$item['live_stream'];
+                            $save_detail_events[$index]['is_enabled']   = true;
                             $save_detail_events[$index]->save();
                         }
                     }
                 }
                 
-                $save_log   = $this->addLog('wm_store_draft',$id,$request->all(),null);
+                $save_log   = $this->addLog('wm_store_draft',$id,$request->all(),null,'<b>'.$exist->code.'</b> menyimpan draft ke <b>'.$edit_count.'</b>');
                 $output     = array('status'=>true, 'message'=>'Success '.$msg);
             //     \DB::commit();
             // }catch(\Exception $e){
@@ -167,11 +185,12 @@ class WeddingManagementController extends Controller
         return $output;
     }
 
-    public function addLog($activity,$id,$req=null,$resp=null){
+    public function addLog($activity,$id,$req=null,$resp=null,$desc=''){
         $exist              = Wedding::where('id',$id)->first();
         $save               = new WeddingLogs;
         $save->wedding_id   = $id;
         $save->code         = $exist->code;
+        $save->desc         = $desc;
         $save->activity     = $activity;
         $save->request      = $req?json_encode($req):null;
         $save->response     = $resp?json_encode($resp):null;
