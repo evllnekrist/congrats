@@ -46,6 +46,15 @@
         document.execCommand('copy'); 
         document.body.removeChild(el); // Remove temporary element
         toastr.success('Copied!', 'Success');
+    }).on("change", '.check-link-to-btn', function() {
+        let link = $(this).val();
+        let target_el = $(this).data('target_el');
+        if(!link){
+            $(target_el).hide();
+        }else{
+            $(target_el).show();
+            $(target_el).attr('href',link);
+        }
     });
 })(window);
 

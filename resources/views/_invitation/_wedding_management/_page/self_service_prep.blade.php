@@ -7,6 +7,7 @@
     <body class="gla_middle_titles" id="home">
         <?php
             $event_index_start  = 0;
+            $event_index_stored_length = $event_count?$event_count-1:0;
             $sample['link']     = 'https://';
             $sample['title']    = 'resepsi, pemberkatan, ijab qabul, acara adat, dll';
             $sample['place_name']       = '';
@@ -17,6 +18,8 @@
             $sample['note']             = 'contoh:
             saya ingin ada dua jenis undangan, 
             dengan dan tanpa resepsi';
+            // dump($selected);
+            // dump($events);
         ?>
         <!-- Preloader -->
             <div class="gla_page_loader_light gla_image_bck text-choco-3" data-color="#181d23">
@@ -67,17 +70,23 @@
                                     <b>Pilihan Bahasa <red>*</red></b><br><small>yang digunakan untuk <i>wording</i> undangan</small>
                                     <select name="lang" class="form-control form-opacity" required>
                                         @foreach(@$langs as $index => $item)
-                                            <option value="{{$item->value}}">{{$item->name}}</option>
+                                            <option value="{{$item->value}}" {{$item->value==@$selected->lang?'selected':''}}>{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-sm-12">
-                                    <b>Link Foto & Video <red>*</red></b><br><small>drive, dropbox, dll</small>
-                                    <input type="text" name="asset_link" value="-" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                    <b>Link Penyimpanan Foto & Video <red>*</red></b><br><small>drive, dropbox, dll</small>
+                                    <input type="text" name="asset_link" data-target_el="#check_link_of_asset_link" value="{{@$selected->asset_link??'-'}}" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in check-link-to-btn" autocomplete="new-value-only" required>
+                                    <div class="text-right">
+                                        <a style="{{@$selected->asset_link?'':'display:none'}}" id="check_link_of_asset_link" href="{{@$selected->asset_link??''}}" target="_blank" class="btn medium yellow btn_border">
+                                            check link <i class="fa fa-external-link"></i>
+                                        </a>
+                                    </div><br>
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Detail Acara <red>*</red></b>
-                                    <div class="gla_icon_boxes row justify-content-center" id="the-events" data-index="{{$event_index_start}}" style="margin-top:10px !important">
+                                    <div class="gla_icon_boxes row justify-content-center" id="the-events" data-index="{{$event_index_stored_length}}" style="margin-top:10px !important">
+                                    @if(!$event_count)
                                         <div class="col-sm-12" id="event-{{$event_index_start}}-wrap">
                                             <div class="gla_news_block row">
                                                 <div class="col-sm-1"></div>
@@ -100,7 +109,60 @@
                                                 </div>
                                                 <div class="col-sm-1"></div>
                                             </div>
+                                        </div>
+                                    @else 
+                                        @foreach($events as $index => $item)
+                                        <div class="col-sm-12" id="event-{{$index}}-wrap">
+                                            <div class="gla_news_block row">
+                                                <div class="text-right" style="padding:2px 2px">
+                                                    <button type="button" class="btn btn-danger btn-remove-event" id="btn-remove-event-`+new_index+`" data-index="`+new_index+`">
+                                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="col-sm-1"></div>
+                                                <div class="col-sm-10" style="padding-top:10px">
+                                                    <strong class="text-success">Acara - <span id="event-{{$index}}-numbering">{{$index+1}}</span></strong>
+                                                    <span class="label label-success" style="margin-left:20px">Telah Tersimpan</span>
+                                                    <br><br>
+                                                    a. Judul Acara
+                                                    <input type="text" name="event[]['title']" value="{{$item->title}}" placeholder="{!!@$sample['title']!!}" 
+                                                    maxlength="50" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" required>
+                                                    b. Nama Tempat
+                                                    <input type="text" name="event[]['place_name']" value="{{$item->place_name}}" placeholder="{!!@$sample['placename']!!}" 
+                                                    maxlength="100" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only" required>
+                                                    c. Alamat Tempat
+                                                    <textarea name="event[]['place_address']" placeholder="{!!@$sample['place_address']!!}" 
+                                                    maxlength="1000" spellcheck="false" class="form-control form-opacity in-event" required>{{$item->place_address}}</textarea>
+                                                    d. Tanggal & Waktu
+                                                    <input name="event[]['datetime']" value="{{$item->date}} {{$item->time}}" class="form-control flatpickr flatpickr-input active in-event" type="text" placeholder="Pilih tanggal & waktu ..." data-id="datetime" id="event-{{$index}}-datetime" readonly="readonly">
+                                                    e. Link <i>live streaming</i> <small>(opsional = isi jika ada versi </i>live stream</i>)</small>
+                                                    <input type="text" name="event[]['live_stream']" value="{{$item->live_stream}}" placeholder="{!!@$sample['link']!!}" 
+                                                    maxlength="1000" spellcheck="false" class="form-control form-in in-event" autocomplete="new-value-only">
+                                                    <br><br>
+                                                    <a data-toggle="collapse" href="#collapseEvent{{$index}}DetailMore" class="text-success"><b>lihat lebih banyak >></b></a>
+                                                    <br><br>
+                                                    <div id="collapseEvent{{$index}}DetailMore" class="panel-collapse collapse">
+                                                        <br>
+                                                        f. Link <i>Google Map</i>
+                                                        <input type="text" value="{{$item->place_gmap_target}}" placeholder="field ini diisi Team Berita Baik" spellcheck="false" class="form-control">
+                                                        <div class="text-right">
+                                                            <a style="{{@$item->place_gmap_target?'':'display:none'}}" id="check_link_of_gmap_target" href="{{@$item->place_gmap_target??''}}" target="_blank" class="btn medium green btn_border">
+                                                                check link <i class="fa fa-external-link"></i>
+                                                            </a>
+                                                        </div>
+                                                        g. Link <i>Google Map (Embed)</i>
+                                                        <input type="text" value="{{$item->place_gmap_embed}}" placeholder="field ini diisi Team Berita Baik" spellcheck="false" class="form-control">
+                                                        <div class="text-right">
+                                                            <iframe style="{{@$item->place_gmap_embed?'':'display:none'}}" id="check_link_of_gmap_embed" src="{{@$item->place_gmap_embed??''}}" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                                        </div>
+                                                        <br><br>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-1"></div>
+                                            </div>
                                         </div> 
+                                        @endforeach
+                                    @endif
                                     </div>
                                     <div class="text-right" style="padding:20px 0">
                                         <button type="button" class="btn btn-warning" id="btn-add-new-event"><i class="fa fa-plus" aria-hidden="true"></i> acara baru</button>
@@ -109,38 +171,43 @@
                                 <div class="col-sm-12"  style="padding-bottom:20px">
                                     <b>Tampilkan:</b><br> <small>berikan check untuk bagian yang ingin Anda tampilkan, uncheck jika tidak ingin gunakan</small>
                                     <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_wishes" value="true" checked> Ucapan/<i>Wishes</i>
+                                        <input type="checkbox" name="is_display_wishes" value="true" 
+                                        {{$selected->is_display_wishes == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Ucapan/<i>Wishes</i>
                                     </label><br>
                                     <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_rsvp" value="true" checked> RSVP
+                                        <input type="checkbox" name="is_display_rsvp" value="true" 
+                                        {{$selected->is_display_rsvp == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> RSVP
                                     </label><br>
                                     <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_qris" value="true" checked> QRIS
+                                        <input type="checkbox" name="is_display_qris" value="true" 
+                                        {{$selected->is_display_qri == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> QRIS
                                     </label><br>
                                     <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_covid_protocol" value="true" checked> Prosedur Covid
+                                        <input type="checkbox" name="is_display_covid_protocol" value="true"
+                                        {{$selected->is_display_covid_protocol == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Prosedur Covid
                                     </label><br>
                                     <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_timeline" value="true"> Timeline
+                                        <input type="checkbox" name="is_display_timeline" value="true"
+                                        {{$selected->is_display_timeline == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Timeline
                                     </label><br>
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Preferensi Tema/Warna Dasar</b> <small>(opsional)</small>
-                                    <input type="text" name="theme" value="-" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
+                                    <input type="text" name="theme" value="{{@$selected->theme??'-'}}" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Musik</b> <small>(opsional)</small><small><br>dapat berupa link atau judul-penyanyi</small>
-                                    <input type="text" name="audio" value="-" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
+                                    <input type="text" name="audio" value="{{@$selected->audio??'-'}}" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Quotes</b> <small>(opsional)</small>
-                                    <textarea name="quotes" value="-" 
+                                    <textarea name="quotes" value="{{@$selected->quotes??'-'}}" 
                                     maxlength="1000" spellcheck="false" class="form-control form-opacity"></textarea>
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Catatan</b> <small>(opsional)</small><br>apa yang kami perlu tahu?</small>
                                     <textarea name="client_note" value="-"  placeholder="{!!@$sample['note']!!}"
-                                    maxlength="1000" spellcheck="false" class="form-control form-opacity"></textarea>
+                                    maxlength="1000" spellcheck="false" class="form-control form-opacity">{{@$selected->client_note??''}}</textarea>
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Pilihan Paket<red>*</red></b>
@@ -155,14 +222,15 @@
                                     <b>Referensi<red>*</red></b><br>dapatkah kami ketahui dari mana kamu dan dia kenal Berita Baik?</small>
                                     <select name="ref_type" class="form-control form-opacity" id="run_logic_ref_type" required>
                                         @foreach(@$ref_types as $index => $item)
-                                            <option value="{{$item->value}}" data-logic="ref_type_{{$item->logic}}">{{$item->name}}</option>
+                                            <option value="{{$item->value}}" data-logic="ref_type_{{$item->logic}}" {{$item->value==@$selected->ref_type?'selected':''}}>{{$item->name}}</option>
                                         @endforeach
                                     </select>
-                                    <input type="text" name="ref_name" value="-" placeholder="Nama pemberi referensi" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
+                                    <input type="text" name="ref_name"  value="{{@$selected->ref_name??''}}" placeholder="Nama pemberi referensi" 
+                                    maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-md-12 text-right">
                                     <hr>
-                                    <input type="submit" class="btn btn-info submit" id="form-ss-prep-store" value="SIMPAN DRAFT">
+                                    <input type="submit" class="btn btn-info submit" id="form-ss-prep-store" value="{{@$selected->edit_count > 0?'UPDATE [Draft ke '.(@$selected->edit_count+1).']':'SIMPAN SEBAGAI DRAFT 1'}}">
                                 </div>
                             </div>
                         </form>
@@ -197,7 +265,9 @@
             });
         }
         setTimeout(function() {
-            preventAutocomplete(); // since autocomple=off rarely work, we do it manually
+            @if(!$selected->edit_count > 0)
+                preventAutocomplete(); // since autocomple=off rarely work, we do it manually
+            @endif
             $('.gla_page_loader_light').hide();
         },2000);
 

@@ -32,12 +32,16 @@ class WeddingManagementController extends Controller
             if(!$selected){
                 return view('_main._page.error',['broken'=>true, 'detail'=>'no data']);
             }else{
+                $events     = WeddingEvents::where('wedding_id',$id)->get();
+                $events_len = sizeof($events->toArray());
                 $ref_types  = SelectionList::where('type','WEDDING_REF_TYPE')->where('is_enabled',true)->get();
                 $packages   = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
                 $langs      = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
                 return view('_invitation._wedding_management._page.'.'self_service_prep',[
                     'code' => $code, 
                     'selected' => $selected,
+                    'events' => $events,
+                    'event_count' => $events_len,
                     'ref_types' => $ref_types,
                     'packages' => $packages,
                     'langs' => $langs
