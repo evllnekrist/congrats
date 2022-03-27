@@ -26,7 +26,7 @@ class WeddingManagementController extends Controller
         return view('_invitation._wedding_management._page.'.'create_link');
     }
     public function self_service_prep_index($code){
-        try{
+        // try{
             $id = Crypt::decryptString($code);
             $selected = Wedding::where('id',$id)->first();
             if(!$selected){
@@ -39,9 +39,15 @@ class WeddingManagementController extends Controller
                 $packages   = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
                 $langs      = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
                 $wm_menus   = SelectionList::where('type','WEDDING_MANAGEMENT_SS_MENU')->where('is_enabled',true)->get();
-                return view('_invitation._wedding_management._page.'.'self_service_prep',[
+                if(@$selected->client_edit_expired_at && Carbon::now() > Carbon::parse($selected->client_edit_expired_at)){
+                    $is_expired = true;
+                }else{
+                    $is_expired = false;
+                }
+                $data    = [
                     'code'          => $code, 
                     'selected'      => $selected,
+                    'is_expired'    => $is_expired,
                     'events'        => $events,
                     'event_count'   => $events_len,
                     'logs'          => $logs,
@@ -49,11 +55,13 @@ class WeddingManagementController extends Controller
                     'packages'      => $packages,
                     'langs'         => $langs,
                     'wm_menus'      => $wm_menus
-                ]);
+                ];
+                // dd($data);
+                return view('_invitation._wedding_management._page.'.'self_service_prep',$data);
             }
-        }catch(\Exception $e){
-            return view('_main._page.error',['broken'=>true, 'detail'=>'payload is invalid']);
-        }
+        // }catch(\Exception $e){
+        //     return view('_main._page.error',['broken'=>true, 'detail'=>'payload is invalid']);
+        // }
     }
     public function self_service_current_index($code){
         try{
