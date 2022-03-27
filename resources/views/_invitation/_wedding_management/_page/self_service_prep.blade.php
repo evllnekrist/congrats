@@ -70,13 +70,21 @@
                 <section class="gla_section gla_image_bck" data-color="#fafafd">
                     <div class="container-mini">
                         <div class="text-success" style="padding:60px 0">
-                            <h6 class="gla_h6_title">Hello, {{ucfirst(@$selected->groom_name)}} and {{ucfirst(@$selected->bride_name)}}</h6>
+                            <h6 class="gla_h6_title">Hello, {{ucfirst(@$selected->groom_name_short)}} and {{ucfirst(@$selected->bride_name_short)}}</h6>
                             <span>Terima kasih telah memilih berbagi kabar bahagiamu lewat berita baik. Berikut ini data yang perlu kami ketahui untuk pembuatan E-Invitation. Silahkan dilengkapi ya!</span>
                         </div>
                         <div class="alert alert-danger" id="form-ss-prep-error-info-wrap" style="display:none">
                             <span aria-hidden="true" class="alert-icon icon_blocked"></span><strong>Ooppsss!</strong><br><span id="form-ss-prep-error-info"></span>
                         </div>
-                        <form id="form-ss-prep" onsubmit="return false;">
+                    </div>
+                    <form id="form-ss-prep" onsubmit="return false;">
+                    
+                        <div class="line_separator_left">
+                            <span class="line_separator_inside gla_h6_title text-secondary">
+                                1 dari 3&nbsp;&nbsp;&nbsp;&nbsp;Pengaturan Umum
+                            </span>
+                        </div>
+                        <div class="container-mini">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <b>Pilihan Bahasa <red>*</red></b><br><small>yang digunakan untuk <i>wording</i> undangan</small>
@@ -93,8 +101,86 @@
                                         <a style="{{@$selected->asset_link?'':'display:none'}}" id="check_link_of_asset_link" href="{{@$selected->asset_link??''}}" target="_blank" class="btn medium yellow btn_border">
                                             check link <i class="fa fa-external-link"></i>
                                         </a>
-                                    </div><br>
+                                    </div>
                                 </div>
+                                <div class="col-sm-12">
+                                    <b>Nama Lengkap Mempelai Pria <i>(Groom)</i> <red>*</red></b><br><small>bisa disertakan dengan gelar jika diinginkan</small>
+                                    <input type="text" name="groom_name_full" value="{{@$selected->groom_name_full??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <span><i class="fa fa-male text-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Nama Ayah Mempelai Pria </span>
+                                    <input type="text" name="groom_father_name" value="{{@$selected->groom_father_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <span><i class="fa fa-female text-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Nama Ibu Mempelai Pria </span>
+                                    <input type="text" name="groom_mother_name" value="{{@$selected->groom_mother_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                </div>
+                                <div class="col-sm-12">
+                                    <b>Nama Lengkap Mempelai Wanita <i>(Bride)</i> <red>*</red></b><br><small>bisa disertakan dengan gelar jika diinginkan</small>
+                                    <input type="text" name="bride_name_full" value="{{@$selected->bride_name_full??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <span><span><i class="fa fa-male text-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Nama Ayah Mempelai Wanita </span>
+                                    <input type="text" name="bride_father_name" value="{{@$selected->bride_father_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <span><i class="fa fa-female text-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Nama Ibu Mempelai Wanita </span>
+                                    <input type="text" name="bride_mother_name" value="{{@$selected->bride_mother_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                </div>
+                                <div class="col-sm-12"  style="padding-bottom:20px">
+                                    <b>Tampilkan:</b><br> <small>berikan check untuk bagian yang ingin Anda tampilkan, uncheck jika tidak ingin gunakan</small><br>
+                                    <label style="display:inline-block;">
+                                        <input type="checkbox" name="is_display_wishes" value="true" 
+                                        {{$selected->is_display_wishes == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Ucapan/<i>Wishes</i>
+                                    </label><br>
+                                    <label style="display:inline-block;">
+                                        <input type="checkbox" name="is_display_rsvp" value="true" 
+                                        {{$selected->is_display_rsvp == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> RSVP
+                                    </label><br>
+                                    <label style="display:inline-block;">
+                                        <input type="checkbox" name="is_display_qris" value="true" 
+                                        {{$selected->is_display_qri == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> QRIS
+                                    </label><br>
+                                    <label style="display:inline-block;">
+                                        <input type="checkbox" name="is_display_covid_protocol" value="true"
+                                        {{$selected->is_display_covid_protocol == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Prosedur Covid
+                                    </label><br>
+                                    <label style="display:inline-block;">
+                                        <input type="checkbox" name="is_display_timeline" value="true"
+                                        {{$selected->is_display_timeline == 1?'checked':(!$selected->edit_count > 0?'':'')}}> Timeline
+                                    </label><br>
+                                </div>
+                                <div class="col-sm-12">
+                                    <b>Preferensi Tema/Warna Dasar</b> <small>(opsional)</small>
+                                    <input type="text" name="theme" value="{{@$selected->pref_theme??'-'}}" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
+                                </div>
+                                <div class="col-sm-12">
+                                    <b>Musik</b> <small>(opsional)</small><small><br>dapat berupa link atau judul-penyanyi</small>
+                                    <input type="text" name="audio" value="{{@$selected->audio??'-'}}" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
+                                </div>
+                                <div class="col-sm-12">
+                                    <b>Quotes</b> <small>(opsional)</small>
+                                    <textarea name="quotes" value="-" 
+                                    maxlength="1000" spellcheck="false" class="form-control form-opacity">{{@$selected->quotes??'-'}}</textarea>
+                                </div>
+                                <div class="col-sm-12">
+                                    <b>Catatan</b> <small>(opsional)</small><br>apa yang kami perlu tahu?</small>
+                                    <textarea name="client_note" value="-"  placeholder="{!!@$sample['note']!!}"
+                                    maxlength="1000" spellcheck="false" class="form-control form-opacity">{{@$selected->client_note??''}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line_separator_left">
+                            <span class="line_separator_inside gla_h6_title text-secondary">
+                                2 dari 3&nbsp;&nbsp;&nbsp;&nbsp;Acara
+                            </span>
+                        </div>
+                        <div class="container-mini">
+                            <div class="row">
                                 <div class="col-sm-12">
                                     <b>Detail Acara <red>*</red></b>
                                     <div class="gla_icon_boxes row justify-content-center" id="the-events" data-index="{{$event_index_stored_length}}" style="margin-top:10px !important">
@@ -181,49 +267,17 @@
                                         <button type="button" class="btn btn-warning" id="btn-add-new-event"><i class="fa fa-plus" aria-hidden="true"></i> acara baru</button>
                                     </div>
                                 </div>
-                                <div class="col-sm-12"  style="padding-bottom:20px">
-                                    <b>Tampilkan:</b><br> <small>berikan check untuk bagian yang ingin Anda tampilkan, uncheck jika tidak ingin gunakan</small><br>
-                                    <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_wishes" value="true" 
-                                        {{$selected->is_display_wishes == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Ucapan/<i>Wishes</i>
-                                    </label><br>
-                                    <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_rsvp" value="true" 
-                                        {{$selected->is_display_rsvp == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> RSVP
-                                    </label><br>
-                                    <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_qris" value="true" 
-                                        {{$selected->is_display_qri == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> QRIS
-                                    </label><br>
-                                    <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_covid_protocol" value="true"
-                                        {{$selected->is_display_covid_protocol == 1?'checked':(!$selected->edit_count > 0?'checked':'')}}> Prosedur Covid
-                                    </label><br>
-                                    <label style="display:inline-block;">
-                                        <input type="checkbox" name="is_display_timeline" value="true"
-                                        {{$selected->is_display_timeline == 1?'checked':(!$selected->edit_count > 0?'':'')}}> Timeline
-                                    </label><br>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="line_separator_left">
+                            <span class="line_separator_inside gla_h6_title text-secondary">
+                                3 dari 3&nbsp;&nbsp;&nbsp;&nbsp;Paket & Pereferensi
+                            </span>
+                        </div>
+                        <div class="container-mini">
+                            <div class="row">
                                 <div class="col-sm-12">
-                                    <b>Preferensi Tema/Warna Dasar</b> <small>(opsional)</small>
-                                    <input type="text" name="theme" value="{{@$selected->pref_theme??'-'}}" maxlength="50" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
-                                </div>
-                                <div class="col-sm-12">
-                                    <b>Musik</b> <small>(opsional)</small><small><br>dapat berupa link atau judul-penyanyi</small>
-                                    <input type="text" name="audio" value="{{@$selected->audio??'-'}}" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
-                                </div>
-                                <div class="col-sm-12">
-                                    <b>Quotes</b> <small>(opsional)</small>
-                                    <textarea name="quotes" value="-" 
-                                    maxlength="1000" spellcheck="false" class="form-control form-opacity">{{@$selected->quotes??'-'}}</textarea>
-                                </div>
-                                <div class="col-sm-12">
-                                    <b>Catatan</b> <small>(opsional)</small><br>apa yang kami perlu tahu?</small>
-                                    <textarea name="client_note" value="-"  placeholder="{!!@$sample['note']!!}"
-                                    maxlength="1000" spellcheck="false" class="form-control form-opacity">{{@$selected->client_note??''}}</textarea>
-                                </div>
-                                <div class="col-sm-12">
-                                    <b>Pilihan Paket<red>*</red></b>
+                                    <b>Pilihan Paket <red>*</red></b>
                                     </small><br><a data-toggle="collapse" href="#collapsePackage">tampilkan detail >> </a></small>
                                     <select name="package" class="form-control form-opacity" required>
                                         @foreach(@$packages as $index => $item)
@@ -231,8 +285,22 @@
                                         @endforeach
                                     </select>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="container panel-collapse collapse" aria-expanded="false" id="collapsePackage">
+                            <div class="gla_icon_boxes row gla_news_block" style="margin-top:-30px;padding:40px">
+                                <h4 class="gla_h4_title text-success">Pricelist</h4>
+                                <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
+                                    @foreach(@$packages as $index => $item)
+                                        {!! $item->desc !!}
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-mini">
+                            <div class="row">
                                 <div class="col-sm-12">
-                                    <b>Referensi<red>*</red></b><br>dapatkah kami ketahui dari mana kamu dan dia kenal Berita Baik?</small>
+                                    <b>Referensi <red>*</red></b><br>dapatkah kami ketahui dari mana kamu dan dia kenal Berita Baik?</small>
                                     <select name="ref_type" class="form-control form-opacity" id="run_logic_ref_type" required>
                                         @foreach(@$ref_types as $index => $item)
                                             <option value="{{$item->value}}" data-logic="ref_type_{{$item->logic}}" {{$item->value==@$selected->ref_type?'selected':''}}>{{$item->name}}</option>
@@ -268,20 +336,8 @@
                                     </table>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                    <div class="container">
-                        <div id="collapsePackage" class="panel-collapse collapse" aria-expanded="false">
-                            <div class="gla_icon_boxes row gla_news_block" style="margin-top:-30px;padding:40px">
-                                <h4 class="gla_h4_title text-success">Pricelist</h4>
-                                <div data-animation="animation_blocks" data-bottom="@class:noactive" data--100-bottom="@class:active">
-                                    @foreach(@$packages as $index => $item)
-                                        {!! $item->desc !!}
-                                    @endforeach
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                    </form>
                 </section>
             </section>
             <!-- Content End -->
@@ -356,6 +412,12 @@
                         package                     : $('[name="package"]').val(),
                         ref_type                    : $('[name="ref_type"]').val(),
                         ref_name                    : $('[name="ref_name"]').val(),
+                        groom_name_full             : $('[name="groom_name_full"]').val(),
+                        bride_name_full             : $('[name="bride_name_full"]').val(),
+                        groom_father_name           : $('[name="groom_father_name"]').val(),
+                        groom_mother_name           : $('[name="groom_mother_name"]').val(),
+                        bride_father_name           : $('[name="bride_father_name"]').val(),
+                        bride_mother_name           : $('[name="bride_mother_name"]').val(),
                         is_display_wishes           : $('[name="is_display_wishes"]').is(':checked') ? true : false,
                         is_display_rsvp             : $('[name="is_display_rsvp"]').is(':checked') ? true : false,
                         is_display_qris             : $('[name="is_display_qris"]').is(':checked') ? true : false,

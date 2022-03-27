@@ -250,7 +250,7 @@
                             <span class="fix-montserrat-s-b text-info"><i>
                                 <sup>3</sup> <span class="ft-shadow">The Lord appeared to us in the past 
                                 <br>“I have loved you with an everlasting love; 
-                                <br>I have drawn you with unfailing kindness.</span></i>
+                                <br>I have drawn you with unfailing kindness."</span></i>
                             </span><br><br><br><br><br>
                             <p class="gla_subtitle ft-shadow">— Jeremiah 31:3 (NIV)</p>
                         </div>

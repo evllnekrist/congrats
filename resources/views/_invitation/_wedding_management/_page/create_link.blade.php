@@ -45,10 +45,10 @@
                         <form id="form-create-link" onsubmit="return false;">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <input type="text" name="groom_name" maxlength="50" spellcheck="false" class="form-control form-in no-space lower" value="Groom Name" placeholder="Groom Name" autocomplete="new-value-only" required>
+                                    <input type="text" name="groom_name_short" maxlength="50" spellcheck="false" class="form-control form-in no-space lower" value="Groom Name" placeholder="Groom Name" autocomplete="new-value-only" required>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" name="bride_name" maxlength="50" spellcheck="false" class="form-control form-in no-space lower" value="Bride Name" placeholder="Bride Name" autocomplete="new-value-only" required>
+                                    <input type="text" name="bride_name_short" maxlength="50" spellcheck="false" class="form-control form-in no-space lower" value="Bride Name" placeholder="Bride Name" autocomplete="new-value-only" required>
                                 </div>
                                 <div class="col-sm-12">
                                     <input type="password" name="password" maxlength="50" spellcheck="false" class="form-control form-in" value="123" placeholder="Password" autocomplete="new-value-only" required>
@@ -91,8 +91,8 @@
                 $('#form-create-link-error-info').html('');
                 $('.gla_page_loader_light').show();
                 $('#created-link').html('');
-                let name_1  = $('[name="groom_name"]').val();
-                let name_2  = $('[name="bride_name"]').val();
+                let name_1  = $('[name="groom_name_short"]').val();
+                let name_2  = $('[name="bride_name_short"]').val();
                 let pass    = $('[name="password"]').val();
                 let url     = 'create-link/add-new';
                 $.ajax({

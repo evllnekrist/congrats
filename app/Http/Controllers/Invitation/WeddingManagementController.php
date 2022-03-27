@@ -103,9 +103,9 @@ class WeddingManagementController extends Controller
             }
             try{
                 \DB::beginTransaction();
-                $item['password']   = sha1(@$request->get('password').env('salt_secret'));
-                $item['groom_name'] = @$request->get('name')['groom'];
-                $item['bride_name'] = @$request->get('name')['bride'];
+                $item['password']   = Crypt::encryptString(@$request->get('password').env('salt_secret'));
+                $item['groom_name_short'] = @$request->get('name')['groom'];
+                $item['bride_name_short'] = @$request->get('name')['bride'];
                 $item['code'] = $code;
                 
                 $id = Wedding::insertGetId($item);
@@ -144,6 +144,12 @@ class WeddingManagementController extends Controller
                     'package'                       => @$request->get('package'),
                     'ref_type'                      => @$request->get('ref_type'),
                     'ref_name'                      => @$request->get('ref_name'),
+                    'groom_name_full'               => @$request->get('groom_name_full'),
+                    'bride_name_full'               => @$request->get('bride_name_full'),
+                    'groom_father_name'             => @$request->get('groom_father_name'),
+                    'groom_mother_name'             => @$request->get('groom_mother_name'),
+                    'bride_father_name'             => @$request->get('bride_father_name'),
+                    'bride_mother_name'             => @$request->get('bride_mother_name'),
                     'is_display_wishes'             => @$request->get('is_display_wishes'),
                     'is_display_rsvp'               => @$request->get('is_display_rsvp'),
                     'is_display_qris'               => @$request->get('is_display_qris'),

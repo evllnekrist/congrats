@@ -72,7 +72,7 @@
                 <section class="gla_section gla_image_bck" data-color="#fafafd">
                     <div class="container-mini">
                         <div class="text-success" style="padding-top:60px">
-                            <h6 class="gla_h6_title">Data Invitasi - {{ucfirst(@$selected->groom_name)}} dan {{ucfirst(@$selected->bride_name)}}</h6>
+                            <h6 class="gla_h6_title">Data Invitasi - {{ucfirst(@$selected->groom_name_short)}} dan {{ucfirst(@$selected->bride_name_short)}}</h6>
                         </div>
                         <div class="alert alert-danger" id="form-ss-prep-error-info-wrap" style="display:none">
                             <span aria-hidden="true" class="alert-icon icon_blocked"></span><strong>Ooppsss!</strong><br><span id="form-ss-prep-error-info"></span>
@@ -178,9 +178,9 @@
                         targets: 2,
                         render: function(data, type, full, meta) {
                             let temp_class = '';
-                            console.log(data, full);
+                            // console.log(data, full);
                             if(data == 1){
-                                console.log('check');
+                                // console.log('check');
                                 return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';
                             }else{
                                 console.log('close');
