@@ -79,3 +79,25 @@ red{
 .line_separator_inside{
     font-size: 14px; background-color:#ffffff; color: grey; padding: 20px 10px;
 }
+textarea.form-control-compact{
+    height: 40px !important;
+    padding: 5px 10px !important;
+    margin-bottom: 1px;
+    font-size: 1rem;
+}
+input[type="text"].form-control-compact{
+    height: 40px !important;
+    padding: 5px 10px !important;
+    margin-bottom: 1px;
+}
+input[type="number"].form-control-compact{
+    height: 40px !important;
+    padding: 5px 10px !important;
+    margin-bottom: 1px;
+}
+smaller{
+    font-size: 0.65rem;
+}
+.ml-x-percent{
+    margin-left: 10%;
+}

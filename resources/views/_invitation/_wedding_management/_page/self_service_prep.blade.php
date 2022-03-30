@@ -7,6 +7,7 @@
     <body class="gla_middle_titles" id="home">
         <?php
             $event_index_start  = 0;
+            $event_index_limit  = 3; // real int equal to 4
             $event_index_stored_length = $event_count?$event_count-1:0;
             $sample['link']     = 'https://';
             $sample['title']    = 'resepsi, pemberkatan, ijab qabul, acara adat, dll';
@@ -460,6 +461,11 @@
         }).on("click","#btn-add-new-event", function(){
             @if(!$is_expired)
             let new_index = $('#the-events').data('index')+1;
+            console.log('suka kali',new_index,{{$event_index_limit+1}},new_index > {{$event_index_limit+1}});
+            if(new_index > {{$event_index_limit+1}}){
+                alert('Tidak dapat menambahkan acara baru. Maksimal acara 4');
+                return;
+            }
             $('#the-events').data('index', new_index);
             let template = `
                 <div class="col-sm-12" id="event-`+new_index+`-wrap">

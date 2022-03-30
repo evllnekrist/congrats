@@ -18,7 +18,7 @@
 
             <a href="#gla_page" class="gla_top ti ti-angle-up gla_go"></a>
             @include('_invitation._wedding_management._include.nav')
-            <div class="gla_page_title gla_image_bck gla_wht_txt" data-color="#282828">
+            <div class="gla_page_title_xsm gla_image_bck gla_wht_txt" data-color="#282828">
             <div class="container text-left">
                 <div class="row">
                 <div class="col-md-6">

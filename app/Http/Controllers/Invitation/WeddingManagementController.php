@@ -8,6 +8,7 @@ use App\Http\Models\Invitation\Wedding;
 use App\Http\Models\Invitation\WeddingRSVP;
 use App\Http\Models\Invitation\WeddingWishes;
 use App\Http\Models\Invitation\WeddingEvents;
+use App\Http\Models\Invitation\WeddingInvites;
 use App\Http\Models\Invitation\WeddingLogs;
 use App\Http\Models\SelectionList;
 use Illuminate\Support\Facades\Crypt;
@@ -25,6 +26,13 @@ class WeddingManagementController extends Controller
     public function create_link_index(){
         return view('_invitation._wedding_management._page.'.'create_link');
     }
+    public function check_client_is_expired($selected){
+        if(@$selected->client_edit_expired_at && Carbon::now() > Carbon::parse(@$selected->client_edit_expired_at)){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function self_service_prep_index($code){
         // try{
             $id = Crypt::decryptString($code);
@@ -39,15 +47,11 @@ class WeddingManagementController extends Controller
                 $packages   = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
                 $langs      = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
                 $wm_menus   = SelectionList::where('type','WEDDING_MANAGEMENT_SS_MENU')->where('is_enabled',true)->get();
-                if(@$selected->client_edit_expired_at && Carbon::now() > Carbon::parse($selected->client_edit_expired_at)){
-                    $is_expired = true;
-                }else{
-                    $is_expired = false;
-                }
+                
                 $data    = [
                     'code'          => $code, 
                     'selected'      => $selected,
-                    'is_expired'    => $is_expired,
+                    'is_expired'    => $this->check_client_is_expired($selected),
                     'events'        => $events,
                     'event_count'   => $events_len,
                     'logs'          => $logs,
@@ -70,23 +74,24 @@ class WeddingManagementController extends Controller
             if(!$selected){
                 return view('_main._page.error',['broken'=>true, 'detail'=>'no data']);
             }else{
-                $events     = WeddingEvents::where('wedding_id',$id)->orderBy('id','ASC')->where('is_enabled',true)->get();
-                $events_len = sizeof($events->toArray());
-                $logs       = WeddingLogs::where('wedding_id',$id)->orderBy('id','DESC')->skip(0)->take(10)->get();
-                $ref_types  = SelectionList::where('type','WEDDING_REF_TYPE')->where('is_enabled',true)->get();
-                $packages   = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
-                $langs      = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
-                $wm_menus   = SelectionList::where('type','WEDDING_MANAGEMENT_SS_MENU')->where('is_enabled',true)->get();
+                $events         = WeddingEvents::where('wedding_id',$id)->orderBy('id','ASC')->where('is_enabled',true)->get();
+                $events_len     = sizeof($events->toArray());
+                $invites        = WeddingInvites::where('wedding_id',$id)->orderBy('id','ASC')->where('is_enabled',true)->get();
+                $invites_len    = sizeof($invites->toArray());
+                $logs           = WeddingLogs::where('wedding_id',$id)->orderBy('id','DESC')->skip(0)->take(10)->get();
+                $ref_types      = SelectionList::where('type','WEDDING_REF_TYPE')->where('is_enabled',true)->get();
+                $packages       = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
+                $langs          = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
+                $wm_menus       = SelectionList::where('type','WEDDING_MANAGEMENT_SS_MENU')->where('is_enabled',true)->get();
                 return view('_invitation._wedding_management._page.'.'self_service_current',[
                     'code'          => $code, 
                     'code_str'      => $selected->code, 
                     'selected'      => $selected,
+                    'is_expired'    => $this->check_client_is_expired($selected),
                     'events'        => $events,
                     'event_count'   => $events_len,
-                    'logs'          => $logs,
-                    'ref_types'     => $ref_types,
-                    'packages'      => $packages,
-                    'langs'         => $langs,
+                    'invites'       => $invites,
+                    'invite_count'  => $invites_len,
                     'wm_menus'      => $wm_menus
                 ]);
             }

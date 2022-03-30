@@ -1,6 +1,6 @@
 <section    class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.2" 
-            data-image="{{asset('asset-main/images/bg/flower-3.jpg')}}" id="pricelist">    
-    <div class="gla_over" data-color="#282828" data-opacity="0.5"></div>
+            data-image="{{asset('asset-main/images/bg/bride-1.png')}}" id="pricelist">    
+    <div class="gla_over" data-color="#282828" data-opacity="0.2"></div>
     <div class="container text-center">
         <h2 class="n-font b-box-white" data-toggle="tooltip" data-placement="bottom">Our Services</h2>
         <!-- #1::begin -->

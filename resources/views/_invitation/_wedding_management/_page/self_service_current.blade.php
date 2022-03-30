@@ -8,20 +8,14 @@
     </head>
     <body class="gla_middle_titles" id="home">
         <?php
-            $event_index_start  = 0;
-            $event_index_stored_length = $event_count?$event_count-1:0;
-            $sample['link']     = 'https://';
-            $sample['title']    = 'resepsi, pemberkatan, ijab qabul, acara adat, dll';
-            $sample['place_name']       = '';
-            $sample['place_address']    = 'contoh:
-            Jl. Gading Indah III Blok NF1 No. 20,
-            RT.11/RW.12, Pegangsaan Dua,
-            North Jakarta City, Jakarta';
-            $sample['note']             = 'contoh:
-            saya ingin ada dua jenis undangan, 
-            dengan dan tanpa resepsi';
-            // dump($selected);
-            // dump($events);
+            $invite_index_start  = 0;
+            $invite_index_stored_length = $invite_count?$invite_count-1:0;
+            $event_width_percent_all    = 30;
+            if($event_count){
+                $event_width_percent_item   = $event_width_percent_all/$event_count;
+            }else{
+                $event_width_percent_item   = $event_width_percent_all;
+            }
         ?>
         <!-- Preloader -->
             <div class="gla_page_loader_light gla_image_bck text-choco-3" data-color="#181d23">
@@ -41,7 +35,7 @@
                     <div class="row">
                     <div class="col-md-6">
                         <h4 class="gla_h4_title">My Current Data</h4>
-                        <small>Dapatkan detail data reservasi, ucapan maupun format sebaran sosial media disini</small>
+                        <small>{{ucfirst(@$selected->groom_name_short)}} dan {{ucfirst(@$selected->bride_name_short)}} bisa dapatkan detail data reservasi, ucapan maupun format sebaran sosial media disini</small>
                     </div>
                     <div class="col-md-6">
                         <div class="breadcrumbs">
@@ -71,20 +65,80 @@
             <section id="gla_content" class="gla_content">
                 <section class="gla_section gla_image_bck" data-color="#fafafd">
                     <div class="container-mini">
-                        <div class="text-success" style="padding-top:60px">
-                            <h6 class="gla_h6_title">Data Invitasi - {{ucfirst(@$selected->groom_name_short)}} dan {{ucfirst(@$selected->bride_name_short)}}</h6>
-                        </div>
                         <div class="alert alert-danger" id="form-ss-prep-error-info-wrap" style="display:none">
                             <span aria-hidden="true" class="alert-icon icon_blocked"></span><strong>Ooppsss!</strong><br><span id="form-ss-prep-error-info"></span>
                         </div>
                     </div>
-                    <div class="container">
-
-                        <!-- RSVP :: begin -->
-                        <div class="panel panel-default" style="margin-top:-50px">
+                    <div class="container" style="margin-top:-50px">
+                    
+                        <!-- Daftar Undangan :: begin -->
+                        <div class="panel panel-default">
                             <div class="panel-heading">
                                 <div class="panel-title row">
-                                    <a class="col-xs-6" data-toggle="collapse" href="#table-rsvp-wrap"><b class="text-info">RSVP (Daftar Reservasi)</b></a>
+                                    <a class="col-xs-6" data-toggle="collapse" href="#table-invite-list-wrap"><b class="text-info">Daftar Undangan</b></a>
+                                    <div class="col-xs-6 text-right"></div>
+                                </div>
+                            </div>
+                            <div id="table-invite-list-wrap" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <table class="table table-sm table-borderless table-striped ft-dark" id="table-invite-list" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th width="5%" class="text-center">#</th>
+                                                <th width="20%" class="text-center">Nama</th>
+                                                <th width="15%" class="text-center">Telp</th>
+                                                <th width="10%" class="text-center">Qty</th>
+                                                @foreach($events as $index => $item)
+                                                <th width="{{$event_width_percent_item}}%" class="text-center">
+                                                    <small>Acara {{$index+1}}</small><br><smaller>{{$item->title}}</small>
+                                                </th>  
+                                                @endforeach                          
+                                                <th width="20%" class="text-center">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="the-invites" data-index="{{$invite_index_stored_length}}">
+                                            <tr id="invite-{{$invite_index_start}}-wrap">
+                                                <td width="5%"><b><span id="invite-{{$invite_index_start}}-numbering" class="text-info">{{$invite_index_start+1}}</span></b></td>
+                                                <td width="20%">
+                                                    <textarea name="invite[]['name']" maxlength="100" spellcheck="false" class="form-control form-control-compact"></textarea>
+                                                </td>
+                                                <td width="15%">
+                                                    <input type="text" name="invite[]['wa_number']" maxlength="14" spellcheck="false" class="form-control form-control-compact no-space only-numerik" placeholder="08**********" autocomplete="new-value-only">
+                                                </td>
+                                                <td width="5%" class="text-center">
+                                                    <input type="number" name="invite[]['qty']" value="1" class="form-control form-control-compact">
+                                                </td>
+                                                @foreach($events as $index => $item)
+                                                <td width="{{$event_width_percent_item}}%" class="text-center">
+                                                    <input type="checkbox" name="invite[]['event'][{{$item->id}}]" value="true" checked>
+                                                </td>  
+                                                @endforeach                                                   
+                                                <td width="20%" class="text-center">
+                                                    <a class="copy-to-clipboard" data-to_copy="">
+                                                        <i class="fa fa-code text-success" aria-hidden="true" title="copy link saja"></i>
+                                                    </a>
+                                                    <a class="copy-to-clipboard" data-to_copy="">
+                                                        <i class="fa fa-clipboard text-success ml-x-percent" aria-hidden="true" title="copy template kirim WA"></i>
+                                                    </a>
+                                                    <a class="btn-remove-invite" id="btn-remove-invite-{{$invite_index_start}}" data-index="{{$invite_index_start}}">
+                                                        <i class="fa fa-times text-danger ml-x-percent" aria-hidden="true"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-right" style="padding:20px 0">
+                                        <button type="button" class="btn btn-warning" id="btn-add-new-invite"><i class="fa fa-plus" aria-hidden="true"></i> undangan baru</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Daftar Undangan :: end -->
+                        <!-- RSVP :: begin -->
+                        <div class="panel panel-default" style="margin-top:50px">
+                            <div class="panel-heading">
+                                <div class="panel-title row">
+                                    <a class="col-xs-6" data-toggle="collapse" href="#table-rsvp-wrap"><b class="text-info">Konfirmasi Kedatangan</b></a>
                                     <div class="col-xs-6 text-right"></div>
                                 </div>
                             </div>
@@ -108,7 +162,7 @@
                         <div class="panel panel-default" style="margin-top:50px">
                             <div class="panel-heading">
                                 <div class="panel-title row">
-                                    <a class="col-xs-6" data-toggle="collapse" href="#table-wish-wrap"><b class="text-info">Wishes (Ucapan)</b></a>
+                                    <a class="col-xs-6" data-toggle="collapse" href="#table-wish-wrap"><b class="text-info">Ucapan</b></a>
                                     <div class="col-xs-6 text-right"></div>
                                 </div>
                             </div>
@@ -178,12 +232,9 @@
                         targets: 2,
                         render: function(data, type, full, meta) {
                             let temp_class = '';
-                            // console.log(data, full);
                             if(data == 1){
-                                // console.log('check');
                                 return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';
                             }else{
-                                console.log('close');
                                 return  '<center><span><i class="ti ti-close text-danger"></i></span></center>';
                             }
                         },
@@ -210,6 +261,149 @@
                 ],
             });
         }
+
+        $(document).on("click","#form-ss-invite-prep-store",function(){
+            @if(!$is_expired)
+            if(document.getElementById('form-ss-prep').checkValidity()){ 
+                console.log('handling :: form-ss-prep | validity passed');
+                $('#form-ss-prep-error-info-wrap').hide();
+                $('#form-ss-prep-error-info').html('');
+                $('.gla_page_loader_light').show();
+                
+                let events          = {};
+                let temp_ass_idx    = '';
+                let runnin_idx      = {title:0,place_name:0,place_address:0,datetime:0,live_stream:0,id:0};
+                $('.in-event').each(function(idx,val) {
+                    temp_ass_idx    = this.name.split("['").pop().split("']").shift();
+                    if (typeof events[runnin_idx[temp_ass_idx]] == "undefined" ) { // due to js need
+                        events[runnin_idx[temp_ass_idx]] = {};
+                    }
+                    if(temp_ass_idx == 'title' && $(val).data('event_id') != undefined){
+                        events[runnin_idx['id']]['id'] = $(val).data('event_id');
+                        runnin_idx['id']++;
+                    }
+                    events[runnin_idx[temp_ass_idx]][temp_ass_idx] = $(val).val();
+                    runnin_idx[temp_ass_idx]++;
+                });
+                // $('.gla_page_loader_light').hide(); return; 
+                let url     = "{{url('/')}}/wm/ss/store-draft/{{$code}}";
+                $('.gla_page_loader_light').hide();
+                
+                $.ajax({
+                    url: url,
+                    headers: {
+                        'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
+                    },
+                    type: 'POST',
+                    data: JSON.stringify({
+                        lang                        : $('[name="lang"]').val(),
+                        asset_link                  : $('[name="asset_link"]').val(),
+                        theme                       : $('[name="theme"]').val(),
+                        audio                       : $('[name="audio"]').val(),
+                        quotes                      : $('[name="quotes"]').val(),
+                        client_note                 : $('[name="client_note"]').val(),
+                        package                     : $('[name="package"]').val(),
+                        ref_type                    : $('[name="ref_type"]').val(),
+                        ref_name                    : $('[name="ref_name"]').val(),
+                        groom_name_full             : $('[name="groom_name_full"]').val(),
+                        bride_name_full             : $('[name="bride_name_full"]').val(),
+                        groom_father_name           : $('[name="groom_father_name"]').val(),
+                        groom_mother_name           : $('[name="groom_mother_name"]').val(),
+                        bride_father_name           : $('[name="bride_father_name"]').val(),
+                        bride_mother_name           : $('[name="bride_mother_name"]').val(),
+                        is_display_wishes           : $('[name="is_display_wishes"]').is(':checked') ? true : false,
+                        is_display_rsvp             : $('[name="is_display_rsvp"]').is(':checked') ? true : false,
+                        is_display_qris             : $('[name="is_display_qris"]').is(':checked') ? true : false,
+                        is_display_covid_protocol   : $('[name="is_display_covid_protocol"]').is(':checked') ? true : false,
+                        is_display_timeline         : $('[name="is_display_timeline"]').is(':checked') ? true : false,
+                        events                      : events
+                    }),
+                    contentType: 'application/json; charset=utf-8',
+                    success: (function (data) {
+                        console.log('---->> '+url,data);
+                        if(data.status){
+                            toastr.success(data.message, 'Success');
+                            location.reload(true);
+                        }else{
+                            $('#form-ss-prep-error-info-wrap').show();
+                            $('#form-ss-prep-error-info').html(data.message);
+                            document.getElementById("top_of_the_page").scrollIntoView({ behavior: "smooth" });
+                            $('.gla_page_loader_light').hide();
+                        }
+                    }),error:function(xhr,status,error) {
+                        alert('error [sys]','',xhr.responseText);
+                        $('.gla_page_loader_light').hide();
+                    }
+                });
+            }else{
+                console.log('handling :: form-ss-prep | validity 0');
+            }
+            @endif
+        }).on("click","#btn-add-new-invite", function(){
+            @if(!$is_expired)
+            let new_index = $('#the-invites').data('index')+1;
+            $('#the-invites').data('index', new_index);
+            let template = `
+                <tr id="invite-`+new_index+`-wrap" class="tr-compact">
+                    <td width="5%"><b><span id="invite-`+new_index+`-numbering" class="text-info">`+(new_index+1)+`</span></b></td>
+                    <td width="20%">
+                        <textarea name="invite[]['name']" maxlength="100" spellcheck="false" class="form-control form-control-compact"></textarea>
+                    </td>
+                    <td width="15%">
+                        <input type="text" name="invite[]['wa_number']" maxlength="14" spellcheck="false" class="form-control form-control-compact no-space only-numerik" placeholder="08**********" autocomplete="new-value-only">
+                    </td>
+                    <td width="5%" class="text-center">
+                        <input type="number" name="invite[]['qty']" value="1" class="form-control form-control-compact">
+                    </td>`;
+                @foreach($events as $index => $item)
+                template += `
+                    <td width="{{$event_width_percent_item}}%" class="text-center">
+                        <input type="checkbox" name="invite[]['event'][`+{{$item->id}}+`]" value="true" checked>
+                    </td>`; 
+                @endforeach   
+                template += `                                                
+                    <td width="20%" class="text-center">
+                        <a class="copy-to-clipboard" data-to_copy="">
+                            <i class="fa fa-code text-success" aria-hidden="true" title="copy link saja"></i>
+                        </a>
+                        <a class="copy-to-clipboard" data-to_copy="">
+                            <i class="fa fa-clipboard text-success ml-x-percent" aria-hidden="true" title="copy template kirim WA"></i>
+                        </a>
+                        <a class="btn-remove-invite" id="btn-remove-invite-`+new_index+`" data-index="`+new_index+`">
+                            <i class="fa fa-times text-danger ml-x-percent" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+            `;
+            $('#the-invites').append(template);
+            @endif
+        }).on("click",".btn-remove-invite", function(){
+            @if(!$is_expired)
+            let text = "Apakah Anda yakin? Data undangan yang dihapus tidak dapat dikembalikan lagi. Klik OK untuk konfirmasi:";
+            if (confirm(text) == true) {
+                text = "Memproses penghapusan item";
+                $('.gla_page_loader_light').show();
+                let current_index = $(this).data('index');
+                $('#invite-'+current_index+'-wrap').remove();
+                let i = current_index+1;
+                console.log('begin :: '+i+' __________________ after delete idx '+current_index);
+                while ($('#invite-'+i+'-wrap').length) {
+                    // ---------------------------------------------------------------------- reset ID
+                    $('#invite-'+i+'-wrap').attr('id','invite-'+(i-1)+'-wrap');
+                    $('#invite-'+i+'-numbering').attr('id','invite-'+(i-1)+'-numbering');
+                    $('#btn-remove-invite-'+i).attr('id','btn-remove-invite-'+(i-1));
+                    // ---------------------------------------------------------------------- change value
+                    $('#invite-'+(i-1)+'-numbering').html(i);
+                    $('#btn-remove-invite-'+(i-1)).data('index',(i-1));
+                    i++;
+                }
+                $('#the-invites').data('index',(i-2));
+                $('.gla_page_loader_light').hide();
+            } else {
+                text = "Batal menghapus...";
+            }
+            @endif
+        });
     });
     
 </script>
