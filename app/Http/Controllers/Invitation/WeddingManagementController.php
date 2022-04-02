@@ -10,6 +10,7 @@ use App\Http\Models\Invitation\WeddingWishes;
 use App\Http\Models\Invitation\WeddingEvents;
 use App\Http\Models\Invitation\WeddingInvites;
 use App\Http\Models\Invitation\WeddingLogs;
+use App\Http\Models\Invitation\WeddingMapInviteEvent;
 use App\Http\Models\SelectionList;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\View;
@@ -68,22 +69,23 @@ class WeddingManagementController extends Controller
         // }
     }
     public function self_service_current_index($code){
-        try{
+        // try{
             $id = Crypt::decryptString($code);
             $selected = Wedding::where('id',$id)->first();
             if(!$selected){
                 return view('_main._page.error',['broken'=>true, 'detail'=>'no data']);
             }else{
+                $logs           = WeddingLogs::where('wedding_id',$id)->orderBy('id','DESC')->skip(0)->take(10)->get();
                 $events         = WeddingEvents::where('wedding_id',$id)->orderBy('id','ASC')->where('is_enabled',true)->get();
                 $events_len     = sizeof($events->toArray());
-                $invites        = WeddingInvites::where('wedding_id',$id)->orderBy('id','ASC')->where('is_enabled',true)->get();
+                $invites        = WeddingInvites::where('wedding_id',$id)->orderBy('id','ASC')->where('is_enabled',true)->with('event_map')->get();
                 $invites_len    = sizeof($invites->toArray());
-                $logs           = WeddingLogs::where('wedding_id',$id)->orderBy('id','DESC')->skip(0)->take(10)->get();
+                $invites_vars   = SelectionList::where('type','WEDDING_INVITE_VAR')->where('is_enabled',true)->get();
                 $ref_types      = SelectionList::where('type','WEDDING_REF_TYPE')->where('is_enabled',true)->get();
                 $packages       = SelectionList::where('type','WEDDING_PACK')->where('is_enabled',true)->get();
                 $langs          = SelectionList::where('type','WEDDING_LANG')->where('is_enabled',true)->get();
                 $wm_menus       = SelectionList::where('type','WEDDING_MANAGEMENT_SS_MENU')->where('is_enabled',true)->get();
-                return view('_invitation._wedding_management._page.'.'self_service_current',[
+                $data           = array(
                     'code'          => $code, 
                     'code_str'      => $selected->code, 
                     'selected'      => $selected,
@@ -92,12 +94,14 @@ class WeddingManagementController extends Controller
                     'event_count'   => $events_len,
                     'invites'       => $invites,
                     'invite_count'  => $invites_len,
+                    'invite_vars'   => $invites_vars,
                     'wm_menus'      => $wm_menus
-                ]);
+                );
+                return view('_invitation._wedding_management._page.'.'self_service_current',$data);
             }
-        }catch(\Exception $e){
-            return view('_main._page.error',['broken'=>true, 'detail'=>'payload is invalid']);
-        }
+        // }catch(\Exception $e){
+        //     return view('_main._page.error',['broken'=>true, 'detail'=>'payload is invalid']);
+        // }
     }
     
     
@@ -136,6 +140,7 @@ class WeddingManagementController extends Controller
         }
         return $output;
     }
+
     public function ajax_store_draft(Request $request,$hash_id){
         if($request->ajax()) {
             $id     = Crypt::decryptString($hash_id);
@@ -225,6 +230,112 @@ class WeddingManagementController extends Controller
                 }
                 
                 $save_log   = $this->addLog('wm_store_draft',$id,$request->all(),null,'<b>'.$exist->code.'</b> menyimpan draft ke <b>'.$edit_count.'</b>');
+                $output     = array('status'=>true, 'message'=>'Success '.$msg);
+                \DB::commit();
+            }catch(\Exception $e){
+                $output = array('status'=>false, 'message'=>'Failed '.$msg, 'detail'=>$e);
+                \DB::rollback();
+            }
+        }else{
+            $output = array('status'=>false, 'message'=>' Request invalid');
+        }
+        return $output;
+    }
+
+    public function ajax_store_invite(Request $request,$hash_id){
+        if($request->ajax()) {
+            $id     = Crypt::decryptString($hash_id);
+            $exist  = Wedding::where('id',$id)->first();
+            if($exist == null){
+                return array('status'=>false, 'message'=>'ID pengguna wedding management tidak terdaftar');
+            }
+            try{
+                \DB::beginTransaction();
+                $msg                        = '['.$exist->code.'] simpan daftar undangan';
+                $prev_all_invite            = WeddingInvites::select('id')->where('wedding_id',$id)->where('is_enabled',true)->get()->toArray();
+                $prev_all_invite_id         = array_column(@$prev_all_invite?@$prev_all_invite:array(),'id');
+                $current_active_invite_id   = array_column(@$request->get('invites')?@$request->get('invites'):array(),'id');
+                $current_inactive_invite_id = array_diff($prev_all_invite_id,$current_active_invite_id);
+                // dump('_________________________________________________________INVITE>>');
+                // dump(
+                //     'ALL INVITE:',
+                //     $prev_all_invite_id,
+                //     'Active INVITE:',
+                //     $current_active_invite_id,
+                //     'INActive INVITE:',
+                //     $current_inactive_invite_id);
+                // dump('_________________________________________________________>>');
+                foreach (@$current_inactive_invite_id as $index2 => $item2){
+                    $save_detail_invites_to_inactive[$index2] = WeddingInvites::where('id',$item2)->update(array(
+                        'is_enabled'    => false,
+                    ));
+                }
+                foreach (@$request->get('invites') as $index => $item){
+                    if(@$item['id']){ // update
+                        $save_param[$index]             = array(
+                            'name'                      => @$item['name'],
+                            'wa_number'                 => @$item['wa_number'],
+                            'qty'                       => @$item['qty'],
+                            'is_enabled'                => true
+                        );
+                        $save[$index]                   = WeddingInvites::where('id',@$item['id'])->update($save_param[$index]);
+
+                        
+                        $prev_all_invite_event[$index]             = WeddingMapInviteEvent::select('event_id')->where('invite_id',$item['id'])->get()->toArray();
+                        $prev_all_invite_event_id[$index]          = array_column(@$prev_all_invite_event[$index]?@$prev_all_invite_event[$index]:array(),'event_id');
+                        $current_active_invite_event_id[$index]    = array_column(@$item['event_detail']?@$item['event_detail']:array(),'event_id');
+                        $current_inactive_invite_event_id[$index]  = array_diff($prev_all_invite_event_id[$index],$current_active_invite_event_id[$index]);
+                        // dump('_________________________________________________________EVENT>>');
+                        // dump(
+                        //     'ALL INVITE-EVENT MAP:',
+                        //     $prev_all_invite_event_id,
+                        //     'Active MAP:',
+                        //     $current_active_invite_event_id,
+                        //     'INActive MAP:',
+                        //     $current_inactive_invite_event_id);
+                        // dump('_________________________________________________________>>');
+                        foreach (@$current_inactive_invite_event_id[$index] as $index3 => $item3){
+                            $save_detail_invites_to_inactive[$index3] = WeddingMapInviteEvent::where('invite_id',@$item['id'])->where('event_id',@$item3['event_id'])->update(array(
+                                'presence_flag'    => false,
+                            ));
+                        }
+                        foreach (@$item['event_detail'] as $index4 => $item4){
+                            if(in_array($item4['event_id'],$prev_all_invite_event_id[$index])){
+                                $save_map_invite_event_param[$index4]   = array(
+                                    'invite_id'     => $item['id'],
+                                    'event_id'      => @$item4['event_id'],
+                                    'presence_flag' => @$item4['flag'],
+                                );
+                                $save_map_invite_event[$index4]                     = WeddingMapInviteEvent::where('invite_id',@$item['id'])->where('event_id',@$item4['event_id'])->update($save_map_invite_event_param[$index4]);
+                            }else{
+                                $save_map_invite_event[$index4]                     = new WeddingMapInviteEvent;
+                                $save_map_invite_event[$index4]['invite_id']        = $item['id'];
+                                $save_map_invite_event[$index4]['event_id']         = @$item4['event_id'];
+                                $save_map_invite_event[$index4]['presence_flag']    = @$item4['flag'];
+                                $save_map_invite_event[$index4]->save();
+                            }
+                        }
+                    }else{
+                        $save[$index]                   = new WeddingInvites;
+                        $save[$index]['wedding_id']     = $id;
+                        $save[$index]['code']           = $exist->code;
+                        $save[$index]['name']           = @$item['name'];
+                        $save[$index]['wa_number']      = @$item['wa_number'];
+                        $save[$index]['qty']            = @$item['qty'];
+                        $save[$index]['is_enabled']     = true;
+                        $save[$index]->save();
+
+                        foreach (@$item['event_detail'] as $index4 => $item4){
+                            $save_map_invite_event[$index4]                     = new WeddingMapInviteEvent;
+                            $save_map_invite_event[$index4]['invite_id']        = $save[$index]->id;
+                            $save_map_invite_event[$index4]['event_id']         = @$item4['event_id'];
+                            $save_map_invite_event[$index4]['presence_flag']    = @$item4['flag'];
+                            $save_map_invite_event[$index4]->save();
+                        }
+                    }
+                }
+
+                $save_log   = $this->addLog('wm_store_invite',$id,$request->all(),null,'<b>'.$exist->code.'</b> mengubah daftar undangan');
                 $output     = array('status'=>true, 'message'=>'Success '.$msg);
                 \DB::commit();
             }catch(\Exception $e){

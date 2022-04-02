@@ -36,6 +36,7 @@ Route::get('/','Main\HomeController@index');
         Route::get('ss/{code}/prep','Invitation\WeddingManagementController@self_service_prep_index');
         Route::post('ss/store-draft/{code}','Invitation\WeddingManagementController@ajax_store_draft');
         Route::get('ss/{code}/current','Invitation\WeddingManagementController@self_service_current_index');
+        Route::post('ss/store-invite/{code}','Invitation\WeddingManagementController@ajax_store_invite');
     });
     Route::group(['prefix' => 'co-solution'], function()
     {

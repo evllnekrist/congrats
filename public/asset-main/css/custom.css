@@ -101,3 +101,7 @@ smaller{
 .ml-x-percent{
     margin-left: 10%;
 }
+.editor{
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}

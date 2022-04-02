@@ -13,4 +13,8 @@ class WeddingInvites extends Model
     public function wedding(){
         return $this->belongsTo('App\Http\Models\Invitation\Wedding', 'code');
     }
+
+    public function event_map(){
+        return $this->hasMany('App\Http\Models\Invitation\WeddingMapInviteEvent', 'invite_id');
+    }
 }
