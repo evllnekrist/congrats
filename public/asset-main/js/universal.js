@@ -36,16 +36,7 @@
 
     }).on("click", '.copy-to-clipboard', function() {
         let str = $(this).data('to_copy');
-        console.log('>> copy to clipboard :: '+str);
-        var el = document.createElement('textarea'); // Create new element
-        el.value = str; // Set value (string to be copied)
-        el.setAttribute('readonly', ''); // Set non-editable to avoid focus and move outside of view
-        el.style = {position: 'absolute', left: '-9999px'};
-        document.body.appendChild(el); // Select text inside element
-        el.select(); // Copy text to clipboard
-        document.execCommand('copy'); 
-        document.body.removeChild(el); // Remove temporary element
-        toastr.success('Copied!', 'Success');
+        copy_to_clipboard(str);
     }).on("change", '.check-link-to-btn', function() {
         let link = $(this).val();
         let target_el = $(this).data('target_el');
@@ -56,6 +47,7 @@
             $(target_el).attr('href',link);
         }
     });
+
 })(window);
 
 
@@ -76,3 +68,18 @@ $( document ).ready(function() {
         });
     }
 });
+
+
+function copy_to_clipboard(str){
+    console.log('%c>> copy to clipboard :: ','background: #222; color: #cce6ff');
+    console.log(str);
+    var el = document.createElement('textarea'); // Create new element
+    el.value = str; // Set value (string to be copied)
+    el.setAttribute('readonly', ''); // Set non-editable to avoid focus and move outside of view
+    el.style = {position: 'absolute', left: '-9999px'};
+    document.body.appendChild(el); // Select text inside element
+    el.select(); // Copy text to clipboard
+    document.execCommand('copy'); 
+    document.body.removeChild(el); // Remove temporary element
+    toastr.success('Copied!', 'Success');
+}
