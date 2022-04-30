@@ -26,6 +26,11 @@ Route::get('/','Main\HomeController@index');
         Route::get('{code}/get-rsvp','Invitation\WeddingController@ajax_get_rsvp');
         Route::get('{code}/get-wish','Invitation\WeddingController@ajax_get_wish');
     });
+    Route::group(['prefix' => 'ws'], function()
+    {
+        Route::get('temp/{parent_temp_id}/{child_temp_id}','Main\HomeController@display_invitation_sample_page');
+        Route::get('temp-in/{parent_temp_id}/{child_temp_id}','Main\HomeController@display_invitation_sample_page_in');
+    });
     Route::group(['prefix' => 'wm'], function()
     {
         Route::get('',function(){
