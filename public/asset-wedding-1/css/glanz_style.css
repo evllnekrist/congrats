@@ -4440,6 +4440,21 @@ video#video_background  {
 	transition: all 0.3s;
 	margin-bottom: 30px;
 }
+.gla_card{
+	text-align: left;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    /* -webkit-box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%); */
+    /* -moz-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2); */
+    /* box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%); */
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 30px;
+}
+
 .gla_wht_txt .gla_news_block:hover,
 .gla_wht_txt .gla_shop_item:hover {
 	-webkit-box-shadow: 0px 9px 32px -1px rgba(0,0,0,0.5);
