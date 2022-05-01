@@ -26,6 +26,11 @@ Route::get('/','Main\HomeController@index');
         Route::get('{code}/get-rsvp','Invitation\WeddingController@ajax_get_rsvp');
         Route::get('{code}/get-wish','Invitation\WeddingController@ajax_get_wish');
     });
+    Route::group(['prefix' => 'ws'], function()
+    {
+        Route::get('temp/{parent_temp_id}/{child_temp_id}','Main\HomeController@display_invitation_sample_page');
+        Route::get('temp-in/{parent_temp_id}/{child_temp_id}','Main\HomeController@display_invitation_sample_page_in');
+    });
     Route::group(['prefix' => 'wm'], function()
     {
         Route::get('',function(){
@@ -36,6 +41,7 @@ Route::get('/','Main\HomeController@index');
         Route::get('ss/{code}/prep','Invitation\WeddingManagementController@self_service_prep_index');
         Route::post('ss/store-draft/{code}','Invitation\WeddingManagementController@ajax_store_draft');
         Route::get('ss/{code}/current','Invitation\WeddingManagementController@self_service_current_index');
+        Route::post('ss/store-invite/{code}','Invitation\WeddingManagementController@ajax_store_invite');
     });
     Route::group(['prefix' => 'co-solution'], function()
     {

@@ -3217,8 +3217,26 @@ ul.mega-menu {
 	transform:translateY(-50%);
 	margin-left: 80px;
 }
+.gla_flower2_name_l {
+	position: absolute;
+	font:400 50px/50px marsha;
+	right: 100%;
+	top: 50%;
+	transform:translateY(-50%);
+	margin-right: 40px;
+}
+.gla_flower2_name_r {
+	position: absolute;
+	font:400 50px/50px marsha;
+	left: 100%;
+	top: 50%;
+	transform:translateY(-50%);
+	margin-left: 40px;
+}
 .gla_flower2_name_l b,
-.gla_flower2_name_r b {
+.gla_flower2_name_r b,
+.gla_flower2_name_l_m b,
+.gla_flower2_name_r_m b {
 	font:400 20px/20px Dosis;
 	position: relative;
 	display: block;
