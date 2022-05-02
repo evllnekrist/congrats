@@ -46,7 +46,7 @@
                         <div class="gla_flower gla_flower2">
                             <div class="gla_flower2_name_l">Groom <b>Save The Date</b></div>
                             <div class="gla_flower2_name_r">Bride <b>{{date("F d")}}, {{date("Y")}}</b></div>
-                            <img src="http://placehold.it/600x600" alt="">
+                            <img src="https://via.placeholder.com/600x600" alt="">
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                         
                     </div>
                 </section>
-                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="http://placehold.it/1400x800">
+                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="https://via.placeholder.com/1400x800">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.4"></div>
                     
                     <div class="container text-center">
@@ -93,7 +93,7 @@
                         <p>Our ceremony and reception will be held at the Liberty House. Located on the Hudson River, it has a beautiful, unobstructed view of the World Trade One building and a convenient ferry that runs between it and Manhattan.</p>
                         <div class="row text-center">
                             <div class="col-md-4 gla_round_block">
-                                <div class="gla_round_im gla_image_bck" data-image="http://placehold.it/600x600"></div>
+                                <div class="gla_round_im gla_image_bck" data-image="https://via.placeholder.com/600x600"></div>
                                 <h3>The Reception</h3>
                                 <p>4:00 PM – 5:30 PM<br>
                                 St. Thomas's Church,<br>
@@ -103,7 +103,7 @@
                                 <a href="#" class="btn">View Map</a>
                             </div>
                             <div class="col-md-4 gla_round_block">
-                                <div class="gla_round_im gla_image_bck" data-image="http://placehold.it/600x600"></div>
+                                <div class="gla_round_im gla_image_bck" data-image="https://via.placeholder.com/600x600"></div>
                                 <h3>The Ceremony</h3>
                                 <p>4:00 PM – 5:30 PM<br>
                                 St. Thomas's Church,<br>
@@ -113,7 +113,7 @@
                                 <a href="#" class="btn">View Map</a>
                             </div>
                             <div class="col-md-4 gla_round_block">
-                                <div class="gla_round_im gla_image_bck" data-image="http://placehold.it/600x600"></div>
+                                <div class="gla_round_im gla_image_bck" data-image="https://via.placeholder.com/600x600"></div>
                                 <h3>The Afterparty</h3>
                                 <p>4:00 PM – 5:30 PM<br>
                                 St. Thomas's Church,<br>
@@ -127,7 +127,7 @@
                         
                     </div>
                 </section>
-                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.2" data-image="http://placehold.it/1400x800">
+                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.2" data-image="https://via.placeholder.com/1400x800">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.4"></div>
                     
                     <div class="container text-center">
@@ -191,134 +191,134 @@
                         <div class="gla_portfolio_no_padding grid">
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="http://placehold.it/1400x800">
+                <section class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="https://via.placeholder.com/1400x800">
 
                     <!-- Over -->
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.4"></div>
@@ -335,52 +335,52 @@
                                 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
                             <!-- item -->
                             <div class="gla_partner_box">
-                                <a href="#"><img src="http://placehold.it/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
                             </div>
 
 
@@ -400,8 +400,8 @@
                         <div class="gla_portfolio_no_padding grid">
                             <div class="col-sm-4 gla_anim_box grid-item bridesmaids">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                     <a href="#" class="gla_shop_item_title">
                                         Andrew & Joanna
@@ -410,8 +410,8 @@
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item bridesmaids">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                     <a href="#" class="gla_shop_item_title">
                                         Stewart & Ann
@@ -420,8 +420,8 @@
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item bridesmaids">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                     <a href="#" class="gla_shop_item_title">
                                         Mark & Jenny
@@ -430,8 +430,8 @@
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item broombridesmaidssmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                     <a href="#" class="gla_shop_item_title">
                                         Izzy & Katy
@@ -440,8 +440,8 @@
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item groomsmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                     <a href="#" class="gla_shop_item_title">
                                         Bob
@@ -450,8 +450,8 @@
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item groomsmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                     <a href="#" class="gla_shop_item_title">
                                         Mark
@@ -460,50 +460,50 @@
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item groomsmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item groomsmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item groomsmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item groomsmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>                        
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item groomsmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item groomsmen">
                                 <div class="gla_shop_item">
-                                    <a href="http://placehold.it/1400x800" class="lightbox">
-                                        <img src="http://placehold.it/600x600" alt="">
+                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
+                                        <img src="https://via.placeholder.com/600x600" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="http://placehold.it/1400x800">
+                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="https://via.placeholder.com/1400x800">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.4"></div>
                     <div class="container text-center">
                         <p><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" alt="" height="200" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}"></p>  

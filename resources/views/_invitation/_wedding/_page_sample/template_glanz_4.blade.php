@@ -37,7 +37,7 @@
                     </div>
                 </nav>
             </header>
-            <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.2" data-image="http://placehold.it/1400x800">
+            <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.2" data-image="https://via.placeholder.com/1400x800">
                 <div class="gla_slider_flower">
                     <div class="gla_slider_flower_c1 gla_slider_flower_ii gla_slider_flower_item" data-start="top:0px; left:0px" data-200-start="top:-300px; left:-300px"></div>
                     <div class="gla_slider_flower_c2 gla_slider_flower_ii gla_slider_flower_item" data-start="top:0px; right:0px" data-200-start="top:-300px; right:-300px"></div>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <section id="gla_content" class="gla_content">
-                <section class="gla_section gla_lg_padding gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.2" data-image="http://placehold.it/1400x800">
+                <section class="gla_section gla_lg_padding gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.2" data-image="https://via.placeholder.com/1400x800">
                     <div class="gla_slider_flower" data-bottom-top="@class:gla_slider_flower active" data--200-bottom="@class:gla_slider_flower no_active">
                         <div class="gla_slider_flower_c1 gla_slider_flower_ii gla_slider_flower_item"></div>
                         <div class="gla_slider_flower_c2 gla_slider_flower_ii gla_slider_flower_item"></div>
@@ -71,7 +71,7 @@
                         <div class="gla_countdown" data-year="2017" data-month="08" data-day="10"></div>
                     </div>
                 </section>
-                <section class="gla_section gla_lg_padding gla_image_bck gla_fixed" data-stellar-background-ratio="0.2" data-image="http://placehold.it/1400x800">
+                <section class="gla_section gla_lg_padding gla_image_bck gla_fixed" data-stellar-background-ratio="0.2" data-image="https://via.placeholder.com/1400x800">
                     <div class="gla_slider_flower" data-bottom-top="@class:gla_slider_flower active" data--200-bottom="@class:gla_slider_flower no_active">
                         <div class="gla_slider_flower_c1 gla_slider_flower_ii gla_slider_flower_item"></div>
                         <div class="gla_slider_flower_c2 gla_slider_flower_ii gla_slider_flower_item"></div>

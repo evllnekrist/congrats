@@ -69,14 +69,14 @@
                         <div class="gla_slider_flower_c6 gla_slider_flower_item"></div>
                     </div>
                     <div class="container text-center">
-                        <p><img src="images/animations/ourwedding_wh.gif" data-bottom-top="@src:images/animations/ourwedding_wh.gif" height="150" alt=""></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/ourwedding_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/ourwedding_wh.gif')}}" height="150" alt=""></p>
                         <h2>We’re Getting Married!</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nisi earum nihil perspiciatis magnam facilis, error explicabo obcaecati maiores sunt exercitationem doloribus tempora, sit voluptate autem quibusdam velit alias. Reprehenderit.</p>
                     </div>
                 </section>
                 <section class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.2" data-color="#fff">
                     <div class="container text-center">
-                        <p><img src="images/animations/savethedate.gif" data-bottom-top="@src:images/animations/savethedate.gif" height="150" alt=""></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/savethedate.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/savethedate.gif')}}" height="150" alt=""></p>
                         <h2>August 10th, 2017</h2>
                         <h3 class="gla_subtitle">St. Thomas's Church,<br>Bristol, U.K.</h3>
                         <div class="gla_countdown" data-year="2017" data-month="08" data-day="10"></div>
@@ -93,7 +93,7 @@
                         <div class="gla_slider_flower_c6 gla_slider_flower_item"></div>
                     </div>
                     <div class="container text-center">
-                        <p><img src="images/animations/just_st.gif" data-bottom-top="@src:images/animations/just.gif" height="150" alt=""></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/just_st.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/just.gif')}}" height="150" alt=""></p>
                         <div class="gla_slide_midtitle">See you at the wedding!</div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum pariatur vel rerum qui nesciunt eaque, suscipit delectus sunt, dolore facilis! Dignissimos fugit facere veniam ad nisi, eveniet pariatur maiores laborum!</p>
                         <p><a href="#" class="btn">RSVP</a></p>
@@ -280,7 +280,7 @@
                 <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.2" data-image="https://via.placeholder.com/1400x800">
                     <div class="gla_over" data-color="#000" data-opacity="0.4"></div>
                     <div class="container text-center">
-                        <p><img src="images/animations/thnyou_wh.gif" alt="" height="200" data-bottom-top="@src:images/animations/thnyou_wh.gif"></p>
+                        <p><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" alt="" height="200" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}"></p>
                     </div>
                 </section>
             </section>
