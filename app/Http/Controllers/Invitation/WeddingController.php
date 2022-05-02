@@ -26,7 +26,7 @@ class WeddingController extends Controller
 
         if(sizeof($subject_name) > 1){
             return view('_invitation._wedding._page.'.$subject_name[0]."-".$subject_name[1].'-wrap',[
-                "thumbnail_icon"=> 'asset-wedding-bg/'.$subject_name[0]."-".$subject_name[1].'/images/thumbnail.jpg',
+                "thumbnail_icon"=> 'asset-wedding-bg/'.$subject_name[0]."-".$subject_name[1].'/images/thumbnail.webp',
                 "event"         => ucfirst($subject_name[0])." & ".ucfirst($subject_name[1])."'s ".$event." | ".env("APP_NAME", "BeritaBaik"),
                 "code"          => $subject_name[0]."-".$subject_name[1],
                 "url"           => url('/w/'.$code.'/inner?i='.$invited_name.'&rsvp='.$display_rsvp),
@@ -49,7 +49,7 @@ class WeddingController extends Controller
 
         if(sizeof($subject_name) > 1){
             return view('_invitation._wedding._page.'.$subject_name[0]."-".$subject_name[1],[
-                "thumbnail_icon"=> 'asset-wedding-bg/'.$subject_name[0]."-".$subject_name[1].'/images/thumbnail.jpg',
+                "thumbnail_icon"=> 'asset-wedding-bg/'.$subject_name[0]."-".$subject_name[1].'/images/thumbnail.webp',
                 "event"     => ucfirst($subject_name[0])." & ".ucfirst($subject_name[1])."'s ".$event." | ".env("APP_NAME", "BeritaBaik"),
                 "code"      => $subject_name[0]."-".$subject_name[1],
                 "invite"    => $invited_name,

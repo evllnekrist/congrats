@@ -5,4 +5,4 @@
 <meta name="author" content="beritabaik.co">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>{{ isset($event)? $event:'Berita Baik' }}</title>
-<link rel="icon" href="{{@$thumbnail_icon?asset($thumbnail_icon):asset('asset-main/images/logo/logo-gold.png')}}" type="image/png">
+<link rel="icon" href="{{@$thumbnail_icon?asset($thumbnail_icon):asset('asset-main/images/logo/logo-v2-fill.png')}}" type="image/png">

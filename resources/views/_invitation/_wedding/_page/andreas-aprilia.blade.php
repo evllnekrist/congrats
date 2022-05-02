@@ -66,7 +66,7 @@
         <!-- Preloader End-->
         <!-- OPEN -->
             <div class="gla_invitation_container" id="gla_welcome">
-                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3_inv_ver3.jpg')}}"> 
+                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3_inv_ver3.webp')}}"> 
                     <p style="margin-top:15vh;margin-bottom:5vh">               
                         <span class="fix-montserrat-m">The Wedding of</span><br>
                         <span class="fix-montserrat-m-b">Andreas & Aprilia</span><br><br>
@@ -111,7 +111,7 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/20.jpg')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/20.webp')}}" data-stellar-background-ratio="0.8">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div>
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
@@ -126,7 +126,7 @@
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/7.jpg')}}">  
+                                data-image="{{asset($cdn_link.'images/7.webp')}}">  
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
@@ -136,8 +136,8 @@
                             <div class="gla_icon_boxes row">
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
-                                        <a href="{{asset($cdn_link.'images/18.jpg')}}">
-                                            <img src="{{asset($cdn_link.'images/bio-m.jpg')}}" alt="">
+                                        <a href="{{asset($cdn_link.'images/18.webp')}}">
+                                            <img src="{{asset($cdn_link.'images/bio-m.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title text-maroon-1 pd-md"><strong>Andreas Budi<br>Kurniawan</strong></span>
                                         <p>
@@ -151,8 +151,8 @@
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
-                                        <a href="{{asset($cdn_link.'images/15.jpg')}}">
-                                            <img src="{{asset($cdn_link.'images/bio-f.jpg')}}" alt="">
+                                        <a href="{{asset($cdn_link.'images/15.webp')}}">
+                                            <img src="{{asset($cdn_link.'images/bio-f.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title text-maroon-1 pd-md"><strong>Anastasia Aprilia<br>Paskah</strong></span>
                                         <p>
@@ -166,7 +166,7 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/21.jpg')}}" data-stellar-background-ratio="0.8">
+                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/21.webp')}}" data-stellar-background-ratio="0.8">
                         <div class="container text-center">     
                             <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>   
                             <div class="container text-center">                
@@ -217,8 +217,8 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <a href="{{asset($cdn_link.'images/inv.jpg')}}">
-                                        <img src="{{asset($cdn_link.'images/inv.jpg')}}" width="100%">
+                                    <a href="{{asset($cdn_link.'images/inv.webp')}}">
+                                        <img src="{{asset($cdn_link.'images/inv.webp')}}" width="100%">
                                     </a>
                                 </div>
                             </div>
@@ -241,7 +241,7 @@
                         </div>
                     </section>
                     @if($addition_logic && in_array('wedding',$addition_logic))
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.jpg')}}">
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-right">
                             <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>         
@@ -305,7 +305,7 @@
                             </table>
                         </div>
                     </section>
-                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/1.jpg')}}">
+                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/1.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.65"></div>
                         <div class="container">
                             <form id="form-wish" onsubmit="return false;">
@@ -327,7 +327,7 @@
                         </div>
                     </section>
                     <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
-                                data-image="{{asset($cdn_link.'images/white-bg.jpg')}}">
+                                data-image="{{asset($cdn_link.'images/white-bg.webp')}}">
                         <div class="container text-center"><br>
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
@@ -335,9 +335,9 @@
                                     $gallery_items = array('23','22','2-mini','5','21','18','19','20','15','13','11','10','9','12','16','24'); 
                                 ?>
                                 @foreach($gallery_items as $item)
-                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.jpg')}}">
+                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
-                                    <a href="{{asset($cdn_link.'images/'.$item.'.jpg')}}" class="lightbox">
+                                    <a href="{{asset($cdn_link.'images/'.$item.'.webp')}}" class="lightbox">
                                         <div class="container">
                                             <div class="stick-bottom">
                                                 <div class="gla_slide_midtitle"></div>
@@ -358,26 +358,26 @@
                             <p class="fix-montserrat-s-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p><br>
                             <div class="row text-center fix-montserrat-s-b">
                                 <div class="col-sm-3 col-xs-12 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.jpg')}}"></div>
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.webp')}}"></div>
                                     <p class="text-choco-1">wash hands & use hand sanitizer</p>
                                 </div>
                                 <div class="col-sm-3 col-xs-4 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-2.jpg')}}"></div>
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-2.webp')}}"></div>
                                     <p class="text-choco-1">use mask</p>
                                 </div>
                                 <div class="col-sm-3 col-xs-4 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3.jpg')}}"></div>
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3.webp')}}"></div>
                                     <p class="text-choco-1">don't shake hands</p>
                                 </div>
                                 <div class="col-sm-3 col-xs-4 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-4.jpg')}}"></div>
+                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-4.webp')}}"></div>
                                     <p class="text-choco-1">don't crowd</p>
                                 </div>
                             </div>
                         </div>
                     </section>
                     @endif
-                    <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4-scretch.jpg')}}">
+                    <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4-scretch.webp')}}">
                         <div class="gla_over" data-color="#ffff" data-opacity="0.5"></div>
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-choco-1"><i>
@@ -389,7 +389,7 @@
                             <p class="gla_subtitle">— 1 Corinthians 13:4-7 (NIV)</p>
                         </div>
                     </section>
-                    <section    id="thank-you" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/17-mini.jpg')}}">
+                    <section    id="thank-you" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/17-mini.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.2"></div>
                         <div class="container text-center">
                             <p style="height:100vh"><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" 

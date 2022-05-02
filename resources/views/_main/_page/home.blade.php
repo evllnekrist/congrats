@@ -18,7 +18,7 @@
             <a href="#gla_page" class="gla_top ti ti-angle-up gla_go"></a>
             @include('_main._include.nav')
             <!-- Slider -->
-            <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset('asset-main/images/bg/couple-1.jpg')}}" data-stellar-background-ratio="0.8">
+            <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset('asset-main/images/bg/couple-1.webp')}}" data-stellar-background-ratio="0.8">
 
                 <!-- <div class="gla_over" data-color="#282828" data-opacity="0.15"></div> -->
                 <div class="container">

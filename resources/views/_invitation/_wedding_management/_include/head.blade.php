@@ -4,4 +4,4 @@
 <meta name="author" content="beritabaik.co">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <title>{{ env("APP_NAME", "BeritaBaik") }}</title>
-<link rel="icon" href="{{asset('asset-main/images/logo/logo-gold.png')}}" type="image/png">
+<link rel="icon" href="{{asset('asset-main/images/logo/logo-v2-fill.png')}}" type="image/png">

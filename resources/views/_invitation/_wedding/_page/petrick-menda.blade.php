@@ -18,7 +18,7 @@
         <!-- Preloader End-->
         <!-- OPEN -->
             <div class="gla_invitation_container" id="gla_welcome">
-                <div class="gla_invitation_i gla_invitation_ii gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/card-bg-3.jpg')}}">
+                <div class="gla_invitation_i gla_invitation_ii gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/card-bg-3.webp')}}">
                     <p><img src="{{asset('asset-wedding-1/images/invitations/inv_i/save_the_date.gif')}}" style="height:20vh;margin-bottom:20vh"></p>
                     <span class="gla_wht_txt fix-dosis-m-b">
                         @if($invite)
@@ -61,7 +61,7 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/top.jpg')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/top.webp')}}" data-stellar-background-ratio="0.8">
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div>
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
@@ -75,14 +75,14 @@
                 <!-- Slider End -->
                 <!-- Content -->
                 <section id="gla_content" class="gla_content">
-                    <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/quote-bg.jpg')}}">
+                    <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/quote-bg.webp')}}">
                         <div class="container text-center">
                             <h3>"No one has ever seen God; but if we love one another, God lives in us and his love is made complete in us."</h3>
                             <p class="gla_subtitle">— 1 John 4:12</p>
                         </div>
                     </section>
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.9" 
-                                data-image="{{asset($cdn_link.'images/profile-bg-mask.jpg')}}">  
+                                data-image="{{asset($cdn_link.'images/profile-bg-mask.webp')}}">  
                         <div class="row text-center">
                             <div class="col gla_round_block">    
                                 <span class="fix-dosis-l-b gla_wht_txt">Are getting married<br>20 February, 2021</span>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="row text-center" style="margin-top:-80px;margin-bottom:80px">
                             <div class="col-xs-6 gla_round_block">
-                                <div class="gla_round_im gla_image_bck border-wh" data-image="{{asset($cdn_link.'images/profile-groom.jpg')}}"></div><br>
+                                <div class="gla_round_im gla_image_bck border-wh" data-image="{{asset($cdn_link.'images/profile-groom.webp')}}"></div><br>
                                 <center>    
                                     <div class="bio-card-m-top">
                                         <span class="fix-dosis-m-b">dr. Petrick <br>Aqrasvawinata</span>
@@ -104,7 +104,7 @@
                                 </center>
                             </div>
                             <div class="col-xs-6 gla_round_block">
-                                <div class="gla_round_im gla_image_bck border-wh" data-image="{{asset($cdn_link.'images/profile-bride.jpg')}}"></div><br>
+                                <div class="gla_round_im gla_image_bck border-wh" data-image="{{asset($cdn_link.'images/profile-bride.webp')}}"></div><br>
                                 <center>
                                     <div class="bio-card-f-top">
                                         <span class="fix-dosis-m-b">dr. Rimenda <br>Dwirana Barus</span>
@@ -118,7 +118,7 @@
                         </div>
                     </section>
                     <section    id="timeline" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.9" 
-                                data-image="{{asset($cdn_link.'images/timeline-bg.jpg')}}">
+                                data-image="{{asset($cdn_link.'images/timeline-bg.webp')}}">
                         <div class="container text-center">
                             <h4>Cerita Tentang Kami</h4><br>
                             <div class="row"> 
@@ -132,12 +132,12 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-7 col-md-4 align-middle">
-                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-1.jpg')}}">
+                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-1.webp')}}">
                                 </div>
                             </div>
                             <div class="row"> 
                                 <div class="col-xs-7 col-md-4">
-                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-2.jpg')}}">
+                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-2.webp')}}">
                                 </div>
                                 <div class="col-xs-5 col-md-8">
                                     <div class="txt_block text-left"><br>
@@ -159,7 +159,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-7 col-md-4"><br><br>
-                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-3.jpg')}}">
+                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-3.webp')}}">
                                 </div>
                             </div>
                             <div class="row"> 
@@ -173,9 +173,9 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 no-margin-top wrap-vertical-img-fix"> 
-                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-4.jpg')}}">
-                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-5.jpg')}}">
-                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-6.jpg')}}">
+                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-4.webp')}}">
+                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-5.webp')}}">
+                                    <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-6.webp')}}">
                                 </div> 
                             </div>
                             <div class="row"> 
@@ -188,17 +188,17 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 no-margin-top-2">
-                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-7.jpg')}}">
+                                    <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-7.webp')}}">
                                 </div>
                             </div>
                         </div>
                     </section>
                     <section    id="timeline-2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
-                                data-image="{{asset($cdn_link.'images/timeline-bg-3.jpg')}}">
+                                data-image="{{asset($cdn_link.'images/timeline-bg-3.webp')}}">
                         <div class="container text-center"><br>
                             <h4>Pre Wedding</h4>
                             <div class="gla_slider_carousel" style="margin-top:50px">
-                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-1.jpg')}}">
+                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-1.webp')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
                                     <div class="container">
                                         <div class="stick-bottom">
@@ -208,7 +208,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-2.jpg')}}">
+                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-2.webp')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
                                     <div class="container">
                                         <div class="stick-bottom">
@@ -218,7 +218,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gla_slider gla_slider_md gla_image_bck" data-image="{{asset($cdn_link.'images/prewed-3.jpg')}}">
+                                <div class="gla_slider gla_slider_md gla_image_bck" data-image="{{asset($cdn_link.'images/prewed-3.webp')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
                                     <div class="container">
                                         <div class="stick-bottom">
@@ -228,7 +228,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-4.jpg')}}">
+                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-4.webp')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
                                     <div class="container">
                                         <div class="stick-bottom">
@@ -238,7 +238,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-5.jpg')}}">
+                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-5.webp')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
                                     <div class="container">
                                         <div class="stick-bottom">
@@ -248,7 +248,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-6.jpg')}}">
+                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/prewed-6.webp')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
                                     <div class="container">
                                         <div class="stick-bottom">
@@ -307,7 +307,7 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/rsvp-bg.jpg')}}">
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/rsvp-bg.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-center">
                             <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>         
@@ -421,7 +421,7 @@
                             </div>
                         </div>
                     </section>
-                    <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/bottom.jpg')}}">
+                    <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/bottom.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.4"></div>
                         <div class="container text-center">
                             <p><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" 
