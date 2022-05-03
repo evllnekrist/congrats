@@ -31,7 +31,7 @@
                 line-height: 2;
             }
             .highlight-2-bold{
-                background: rgba(255,255,255,1) !important;
+                background: rgba(0,0,0,0.35) !important;
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%);
                 color: #956c5a;
                 padding: 5px 30px;
@@ -177,6 +177,15 @@
                     <div class="row">
                         @if($invite)
                             <h6 class="gla_wht_txt">Dear<br><span class="fix-montserrat-s-b">{{$invite}}</span>,</h6>
+                            @if(isset($_GET['qty']))
+                                <span class="highlight-2-bold fix-montserrat-xs text-blue-baby">
+                                    This invitation is limited to <span class="fix-montserrat-xs-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
+                                </span>    
+                                @if(isset($_GET['seat']))
+                                    <br><span class="highlight-2-bold fix-montserrat-xs text-blue-baby"> Your seat{{$_GET['qty']>1?"'s are":" is"}} number <span class="fix-montserrat-xs-b">{{$_GET['seat']}}</span></span>
+                                @endif
+                                <br><br>
+                            @endif
                         @endif
                         <h6 class="fix-montserrat-s-b text-choco-1">we would like to invite you to be part of<br>our happy day !</h6>
                     </div>
