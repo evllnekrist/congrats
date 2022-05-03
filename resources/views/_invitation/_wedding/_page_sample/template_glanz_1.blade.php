@@ -38,7 +38,7 @@
                     </div>
                 </nav>
             </header>
-            <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="https://via.placeholder.com/1400x800" data-stellar-background-ratio="0.8">
+            <div class="gla_slider gla_image_bck  gla_wht_txt gla_fixed"  data-image="{{asset('asset-wedding-1/images/demo/1/banner.webp')}}" data-stellar-background-ratio="0.8">
                 <div class="gla_over" data-color="#9abab6" data-opacity="0.2"></div>
                 <div class="container">
                     <div class="gla_slide_txt gla_slide_center_bottom text-center">
@@ -59,7 +59,7 @@
                         <p>My fiancé proposed on the Fourth of July. My mother asked us to go to the backyard to get some chairs and he took me by the shed where we could see all of the fireworks. He kissed me, then he took the ring box out of his pocket and asked me to be his wife. He was shaking a little. The proposal was a little silly but perfect, just like him." — Jeska Cords</p>
                     </div>
                 </section>
-                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="https://via.placeholder.com/1400x800">
+                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset('asset-wedding-1/images/demo/1/timer.webp')}}">
                     <div class="gla_over" data-color="#282828" data-opacity="0.4"></div>
                     <div class="container text-center">
                         <p><img src="{{asset('asset-wedding-1/images/animations/savethedate_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/savethedate_wh.gif')}}" height="150" alt=""></p>
@@ -79,7 +79,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <a href="#" class="gla_news_block">
                                     <span class="gla_news_img">
-                                        <span class="gla_over" data-image="https://via.placeholder.com/600x600"></span>    
+                                        <span class="gla_over" data-image="{{asset('asset-wedding-1/images/demo/1/when-n-where-1.webp')}}"></span>    
                                     </span>
                                     <span class="gla_news_title">The Venue</span>
                                     <p><strong>St. Thomas's Church,</strong><br>Bristol, U.K.</p>
@@ -88,7 +88,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <a href="#" class="gla_news_block">
                                     <span class="gla_news_img">
-                                        <span class="gla_over" data-image="https://via.placeholder.com/600x600"></span>  
+                                        <span class="gla_over" data-image="{{asset('asset-wedding-1/images/demo/1/when-n-where-2.webp')}}"></span>  
                                     </span>
                                     <span class="gla_news_title">What to Wear</span>
                                     <p><strong>Keep it classy</strong>. <br>No jeans or cowboy hats please.</p>
@@ -97,7 +97,7 @@
                             <div class="col-md-4 col-sm-6">
                                 <a href="#" class="gla_news_block">
                                     <span class="gla_news_img">
-                                        <span class="gla_over" data-image="https://via.placeholder.com/600x600"></span>  
+                                        <span class="gla_over" data-image="{{asset('asset-wedding-1/images/demo/1/when-n-where-3.webp')}}"></span>  
                                     </span>
                                     <span class="gla_news_title">Parking</span>
                                     <p>There is a parking lot on premises as well as down the street <strong>near the candy store</strong>.</p>
@@ -106,7 +106,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="https://via.placeholder.com/1400x800">
+                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset('asset-wedding-1/images/demo/1/quote.webp')}}">
                     <div class="gla_over" data-color="#282828" data-opacity="0.4"></div>
                     <div class="container text-center">
                         <p><img src="{{asset('asset-wedding-1/images/animations/just_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/just_wh.gif')}}" height="150" alt=""></p>
@@ -130,127 +130,127 @@
                         <div class="gla_portfolio_no_padding grid">
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-1-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-1-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-2-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-2-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-3-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-3-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-4-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-4-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-5-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-5-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-6-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-6-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-7-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-7-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-8-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-8-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-9-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-9-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-10-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-10-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-11-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-11-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-12-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-12-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-13-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-13-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-14-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-14-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item ceremony">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-15-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-15-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-16-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-16-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-sm-4 gla_anim_box grid-item engagement">
                                 <div class="gla_shop_item">
-                                    <a href="https://via.placeholder.com/1400x800" class="lightbox">
-                                        <img src="https://via.placeholder.com/600x600" alt="">
+                                    <a href="{{asset('asset-wedding-1/images/demo/1/gallery-17-big.webp')}}" class="lightbox">
+                                        <img src="{{asset('asset-wedding-1/images/demo/1/gallery-17-small.webp')}}" alt="">
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="https://via.placeholder.com/1400x800">
+                <section class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset('asset-wedding-1/images/demo/1/registry-bg.webp')}}">
                     <div class="gla_over" data-color="#282828" data-opacity="0.4"></div>
                     <div class="container text-center">
                         <h2>Registry</h2>
@@ -260,35 +260,23 @@
                             If you would like to give us something to update our home, we’ve compiled a short registry as well.</p>
                         <div class="gla_icon_boxes gla_partners row">
                             <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="{{asset('asset-wedding-1/images/demo/1/registry-1.png')}}" height="80" alt=""></a>
                             </div>
                             <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="{{asset('asset-wedding-1/images/demo/1/registry-2.png')}}" height="80" alt=""></a>
                             </div>
                             <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="{{asset('asset-wedding-1/images/demo/1/registry-3.png')}}" height="80" alt=""></a>
                             </div>
                             <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="{{asset('asset-wedding-1/images/demo/1/registry-4.png')}}" height="80" alt=""></a>
                             </div>
                             <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
+                                <a href="#"><img src="{{asset('asset-wedding-1/images/demo/1/registry-5.png')}}" height="80" alt=""></a>
                             </div>
                             <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
-                            </div>
-                            <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
-                            </div>
-                            <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
-                            </div>
-                            <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
-                            </div>
-                            <div class="gla_partner_box">
-                                <a href="#"><img src="https://via.placeholder.com/250x100" height="80" alt=""></a>
-                            </div>  
+                                <a href="#"><img src="{{asset('asset-wedding-1/images/demo/1/registry-6.png')}}" height="80" alt=""></a>
+                            </div> 
                         </div>
                     </div>
                 </section>
@@ -336,7 +324,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="https://via.placeholder.com/1400x800">
+                <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset('asset-wedding-1/images/demo/1/thank-you.webp')}}">
                     <div class="gla_over" data-color="#282828" data-opacity="0.4"></div>
                     <div class="container text-center">
                         <p><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" alt="" height="200" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}"></p>

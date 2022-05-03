@@ -1421,8 +1421,8 @@ header {
 		.gla_second_step .gla_default_menu ul ul {
 			margin-top: 1px;
 		}
-		.gla_default_menu ul ul li {
-			
+		.gla_default_menu ul li a{
+			color: #333 !important;
 		}
 		nav .gla_default_menu ul ul a {
 			-webkit-transition: all 0.3s;
