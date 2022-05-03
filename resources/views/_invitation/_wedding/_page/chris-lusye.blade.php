@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
+        <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
         <?php 
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
@@ -580,13 +581,13 @@
                 }
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
-                    let auth_msg = `Hello! Thankyou for trying this page, 
-                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom. 
-                    Even so, please feel free to contact our admin by select order menu at beritabaik.co main page`;
+                    let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page, 
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.<br><br> 
+                    Even so, please feel free to contact our admin by select order menu <a href='{{url("/")}}'>at beritabaik.co main page</a>`;
                 @endif
                 $(document).on("click","#form-rsvp-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
-                        alert(auth_msg);
+                        toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
                         if(document.getElementById('form-rsvp').checkValidity()){ 
                             console.log('handling :: form-rsvp | validity passed');
@@ -611,13 +612,13 @@
                                         if("{{$display['rsvp']}}"  == 1){
                                             seeRSVP();
                                         }
-                                        alert(data.message+'\nthankyou!');
+                                        toastr.success(data.message, 'Thankyou!', {timeOut: 3000});
                                     }else{
-                                        alert('error','',data.message);
+                                        toastr.error(data.message, 'Ooops..', {timeOut: 5000});
                                     }
                                     $('.gla_page_loader_light').hide();
                                 }),error:function(xhr,status,error) {
-                                    alert('error [sys]','',xhr.responseText);
+                                    toastr.error(xhr.responseText, 'error [sys]', {timeOut: 5000});
                                     $('.gla_page_loader_light').hide();
                                 }
                             });
@@ -629,7 +630,7 @@
 
                 $(document).on("click","#form-wish-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
-                        alert(auth_msg);
+                        toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
                         if(document.getElementById('form-wish').checkValidity()){ 
                             console.log('handling :: form-wish | validity passed');
@@ -651,13 +652,13 @@
                                     console.log(data);
                                     if(data.status){
                                         seeWishes();
-                                        alert(data.message+'\nthankyou!');
+                                        toastr.success(data.message, 'Thankyou!', {timeOut: 3000});
                                     }else{
-                                        alert('error','',data.message);
+                                        toastr.error(data.message, 'Ooops..', {timeOut: 5000});
                                     }
                                     $('.gla_page_loader_light').hide();
                                 }),error:function(xhr,status,error) {
-                                    alert('error [sys]','',xhr.responseText);
+                                    toastr.error(xhr.responseText, 'error [sys]', {timeOut: 5000});
                                     $('.gla_page_loader_light').hide();
                                 }
                             });
