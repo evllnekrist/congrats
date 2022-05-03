@@ -29,5 +29,11 @@
                 font-size: 13px;
                 font-weight: 700;
             }
+        .bg-wood{
+            background: #4b2b24 !important;
+        }
+        .ft-wood{
+            color: #4b2b24 !important;
+        }
     </style>
 <!-- Asset TOP End -->

@@ -13,7 +13,9 @@
             <!-- Menu -->
             <div class="gla_main_menu gla_main_menu_mobile">
                 <div class="gla_main_menu_icon">
-                    <i></i><i></i><i></i><i></i>
+                    @for($i=0;$i<3;$i++)
+                        <i></i>
+                    @endfor
                     <b>Menu</b>
                     <b class="gla_main_menu_icon_b">Back</b>
                 </div>
