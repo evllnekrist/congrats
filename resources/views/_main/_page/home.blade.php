@@ -22,8 +22,8 @@
 
                 <!-- <div class="gla_over" data-color="#282828" data-opacity="0.15"></div> -->
                 <div class="container">
-                    <div class="gla_slide_txt gla_slide_center_middle text-center">
-                        <div class="gla_slide_midtitle"><smaller>bagikan kebahagiaanmu<br>lewat berita baik</smaller></div>
+                    <div class="gla_slide_txt gla_slide_center_middle_m text-center">
+                        <div class="gla_slide_midtitle" style="color:#54342f"><smaller>bagikan kebahagiaanmu<br>lewat berita baik</smaller></div>
                     </div>
                 </div>
                 <a class="gla_scroll_down gla_go" href="#gla_content">

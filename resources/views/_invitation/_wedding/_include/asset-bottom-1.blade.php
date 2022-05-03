@@ -5,3 +5,4 @@
 <script src="{{asset('asset-wedding-1/js/glanz_library.js')}}"></script> 
 <script src="{{asset('asset-wedding-1/js/glanz_script.js').$version_js}}"></script>
 <script src="{{asset('asset-main/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('asset-main/js/jquery-lazy/jquery.lazy.min.js')}}"></script>
