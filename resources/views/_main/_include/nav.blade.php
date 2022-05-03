@@ -81,22 +81,22 @@
             <!-- Top Menu -->
             <div class="gla_default_menu">
                 <ul>
-                    <li><a href="{{url('/#home')}}">Home</a></li>
-                    <li><a href="{{url('/#catalog-template')}}">Catalog Template</a></li>
-                    <li><a href="{{url('/#pricelist')}}">Pricelist</a></li>
-                    <li><a href="" class="link_wa" target="_blank">Order</a></li>
-                    <li class="gla_parent"><a href="#">More</a>
+                    <li><a href="{{url('/#home')}}" style="color:#333">Home</a></li>
+                    <li><a href="{{url('/#catalog-template')}}" style="color:#333">Catalog Template</a></li>
+                    <li><a href="{{url('/#pricelist')}}" style="color:#333">Pricelist</a></li>
+                    <li><a href="" class="link_wa" target="_blank" style="color:#333">Order</a></li>
+                    <li class="gla_parent"><a href="#" style="color:#333">More</a>
                         <ul class="mega-menu">
                             <li class="mega-menu-col">
                                 <ul>
-                                    <li class="mega-menu-col-header">Apps Development</li>
-                                    <li><a href="{{url('/co-solution')}}"><b>Company Solution</b></a></li>
+                                    <li class="mega-menu-col-header" style="color:#333">Apps Development</li>
+                                    <li><a href="{{url('/co-solution')}}" style="color:#333"><b>Company Solution</b></a></li>
                                 </ul>
                             </li>
                             <li class="mega-menu-col">
                                 <ul>
-                                    <li class="mega-menu-col-header">Commerce</li>
-                                    <li><a href="{{url('/jastip')}}"><b>Jasa Titip</b></a></li>
+                                    <li class="mega-menu-col-header" style="color:#333">Commerce</li>
+                                    <li><a href="{{url('/jastip')}}" style="color:#333"><b>Jasa Titip</b></a></li>
                                 </ul>
                             </li>
                         </ul>
