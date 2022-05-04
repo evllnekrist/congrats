@@ -45,7 +45,7 @@
                         <span class="gla_news_title">Rp. 340.000,-</span>
                         <ul>
                             <li>Tujuan undangan unlimited</li>
-                            <li>Max 8 foto</li>
+                            <li>Max 20 foto</li>
                             <li>Musik pilihan (bisa request)</li>
                             <li>Kolom ucapan (guest book)</li>
                             <li>Detail event</li>
@@ -70,7 +70,7 @@
                         <span class="gla_news_title">Rp. 500.000,-</span>
                         <ul>
                             <li>Tujuan undangan unlimited</li>
-                            <li>Max 8 foto</li>
+                            <li>Max 50 foto</li>
                             <li>Musik pilihan (bisa request)</li>
                             <li>Kolom ucapan (guest book)</li>
                             <li>Detail event</li>

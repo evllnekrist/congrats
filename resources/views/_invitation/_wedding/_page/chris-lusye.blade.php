@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
+        <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
         <?php 
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
@@ -31,7 +32,7 @@
                 line-height: 2;
             }
             .highlight-2-bold{
-                background: rgba(255,255,255,1) !important;
+                background: rgba(0,0,0,0.35) !important;
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%);
                 color: #956c5a;
                 padding: 5px 30px;
@@ -177,6 +178,15 @@
                     <div class="row">
                         @if($invite)
                             <h6 class="gla_wht_txt">Dear<br><span class="fix-montserrat-s-b">{{$invite}}</span>,</h6>
+                            @if(isset($_GET['qty']))
+                                <span class="highlight-2-bold fix-montserrat-xs text-blue-baby">
+                                    This invitation is limited to <span class="fix-montserrat-xs-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
+                                </span>    
+                                @if(isset($_GET['seat']))
+                                    <br><span class="highlight-2-bold fix-montserrat-xs text-blue-baby"> Your seat{{$_GET['qty']>1?"'s are":" is"}} number <span class="fix-montserrat-xs-b">{{$_GET['seat']}}</span></span>
+                                @endif
+                                <br><br>
+                            @endif
                         @endif
                         <h6 class="fix-montserrat-s-b text-choco-1">we would like to invite you to be part of<br>our happy day !</h6>
                     </div>
@@ -268,7 +278,7 @@
                                 <div class="col-sm-5">
                                     <div class="gla_news_block" style="background-color:transparent!important">
                                         <a href="{{asset($cdn_link.'images/groom_2.webp')}}">
-                                            <img src="{{asset($cdn_link.'images/groom_2.webp')}}" alt="">
+                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/groom_2.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title-m text-blue-sh pd-sd"><strong>dr. Christian<br>Jorhans Peters<br>Manoe</strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:50px!important;"><br><br>
@@ -284,7 +294,7 @@
                                 <div class="col-sm-5">
                                     <div class="gla_news_block" style="background-color:transparent!important">
                                         <a href="{{asset($cdn_link.'images/bride_2.webp')}}">
-                                            <img src="{{asset($cdn_link.'images/bride_2.webp')}}" alt="">
+                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride_2.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title-m text-blue-sh pd-sd"><strong>dr. Lusye<br>Diana Jacob</strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:50px!important;"><br><br>
@@ -450,7 +460,7 @@
                                     <div class="col-sm-6 col-xs-12">
                                         <a href="#" class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important">
-                                                <img src="{{asset($cdn_link.'images/qrcode-lusye.webp')}}" width="400" height="300">
+                                                <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/qrcode-lusye.webp')}}" width="400" height="300">
                                             </span>
                                             <p>
                                                 <span class="fix-montserrat-s-b text-success">BCA - 60110007011<br>a/n Lusye Diana Jacob</span><br><br>
@@ -463,7 +473,7 @@
                                     <div class="col-sm-6 col-xs-12">
                                         <a href="#" class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important">
-                                                <img src="{{asset($cdn_link.'images/qrcode-chris.webp')}}" width="400" height="300">
+                                                <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/qrcode-chris.webp')}}" width="400" height="300">
                                             </span>
                                             <p>
                                                 <span class="fix-montserrat-s-b text-success">QRIS<br>a/n Christian Jorhans Peters Manoe</span><br><br>
@@ -509,7 +519,7 @@
                                     <p class="text-choco-1">wear mask</p>
                                 </div>
                                 <div class="col-sm-6 col-xs-12 gla_round_block">
-                                    <img src="{{asset($cdn_link.'images/hp-2.png')}}" style="max-width:300px">
+                                    <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/hp-2.png')}}" style="max-width:300px">
                                 </div>
                                 <div class="col-sm-3 col-xs-12 gla_round_block">
                                     <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3-a.png')}}"></div>
@@ -551,18 +561,33 @@
 
             $( document ).ready(function() {
 
+                $('.lazy').lazy({
+                    // your configuration goes here
+                    scrollDirection: 'vertical',
+                    effect: 'fadeIn',
+                    visibleOnly: true,
+                    beforeLoad: function(element) {},
+                    afterLoad: function(element) {},
+                    onError: function(element) {
+                        console.log('\033[42m\033[37m lazy :: \033[41m error loading ' + element.data('src') + ' ');
+                    },
+                    onFinishedAll: function() {
+                        console.log('\033[42m\033[37m lazy :: \033[0m loaded all ');
+                    }
+                });
+
                 if("{{$display['rsvp']}}"  == 1){
                     seeRSVP();
                 }
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
-                    let auth_msg = `Hello! Thankyou for trying this page, 
-                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom. 
-                    Even so, please feel free to contact our admin by select order menu at beritabaik.co main page`;
+                    let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page, 
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.<br><br> 
+                    Even so, please feel free to contact our admin by select order menu <a href='{{url("/")}}'>at beritabaik.co main page</a>`;
                 @endif
                 $(document).on("click","#form-rsvp-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
-                        alert(auth_msg);
+                        toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
                         if(document.getElementById('form-rsvp').checkValidity()){ 
                             console.log('handling :: form-rsvp | validity passed');
@@ -587,13 +612,13 @@
                                         if("{{$display['rsvp']}}"  == 1){
                                             seeRSVP();
                                         }
-                                        alert(data.message+'\nthankyou!');
+                                        toastr.success(data.message, 'Thankyou!', {timeOut: 3000});
                                     }else{
-                                        alert('error','',data.message);
+                                        toastr.error(data.message, 'Ooops..', {timeOut: 5000});
                                     }
                                     $('.gla_page_loader_light').hide();
                                 }),error:function(xhr,status,error) {
-                                    alert('error [sys]','',xhr.responseText);
+                                    toastr.error(xhr.responseText, 'error [sys]', {timeOut: 5000});
                                     $('.gla_page_loader_light').hide();
                                 }
                             });
@@ -605,7 +630,7 @@
 
                 $(document).on("click","#form-wish-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
-                        alert(auth_msg);
+                        toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
                         if(document.getElementById('form-wish').checkValidity()){ 
                             console.log('handling :: form-wish | validity passed');
@@ -627,13 +652,13 @@
                                     console.log(data);
                                     if(data.status){
                                         seeWishes();
-                                        alert(data.message+'\nthankyou!');
+                                        toastr.success(data.message, 'Thankyou!', {timeOut: 3000});
                                     }else{
-                                        alert('error','',data.message);
+                                        toastr.error(data.message, 'Ooops..', {timeOut: 5000});
                                     }
                                     $('.gla_page_loader_light').hide();
                                 }),error:function(xhr,status,error) {
-                                    alert('error [sys]','',xhr.responseText);
+                                    toastr.error(xhr.responseText, 'error [sys]', {timeOut: 5000});
                                     $('.gla_page_loader_light').hide();
                                 }
                             });

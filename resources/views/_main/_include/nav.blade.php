@@ -4,7 +4,7 @@
 
         <div class="container">
             <div class="gla_logo_container clearfix">
-                <img src="{{asset('asset-main/images/logo/logo-v2-fill.png')}}" alt="" class="gla_logo_rev">
+                <img src="{{asset('asset-main/images/logo/logo-v2-fill-darker.png')}}" alt="" class="gla_logo_rev">
                 <div class="gla_logo_txt">
                     <a href="/" class="gla_logo" style="color:#333">beritabaik.co</a>
                     <div class="gla_logo_und">digital solution</div>
@@ -13,7 +13,9 @@
             <!-- Menu -->
             <div class="gla_main_menu gla_main_menu_mobile">
                 <div class="gla_main_menu_icon">
-                    <i></i><i></i><i></i><i></i>
+                    @for($i=0;$i<3;$i++)
+                        <i></i>
+                    @endfor
                     <b>Menu</b>
                     <b class="gla_main_menu_icon_b">Back</b>
                 </div>
