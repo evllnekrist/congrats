@@ -123,6 +123,14 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'api_wa' => [
+        'base_url' => env('API_WA_BASE_URL'),
+        'username' => env('API_WA_USERNAME'),
+        'password' =>env('API_WA_PASSWORD')
+    ],
+
+    'app_url' => env('APP_URL'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

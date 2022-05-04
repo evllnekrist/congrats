@@ -11,7 +11,7 @@ class WeddingInvites extends Model
     const UPDATED_AT = 'updated_at';
 
     public function wedding(){
-        return $this->belongsTo('App\Http\Models\Invitation\Wedding', 'code');
+        return $this->belongsTo('App\Http\Models\Invitation\Wedding', 'code','code');
     }
 
     public function event_map(){
