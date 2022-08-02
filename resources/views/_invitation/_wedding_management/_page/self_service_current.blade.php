@@ -423,10 +423,8 @@
                         console.log('.in-invite-'+$invite_index);
                         $('.in-invite-'+$invite_index).each(function(idx2,val2) {
                             if (typeof invites[runnin_idx[temp_ass_idx]]['event_detail'] == "undefined" ) {
-                                console.log('here');
                                 invites[runnin_idx[temp_ass_idx]]['event_detail'] = {};
                             }
-                                console.log('hour');
                             invites[runnin_idx[temp_ass_idx]]['event_detail'][idx2] = {};
                             invites[runnin_idx[temp_ass_idx]]['event_detail'][idx2]['event_id'] = $(val2).data('event_id');
                             invites[runnin_idx[temp_ass_idx]]['event_detail'][idx2]['flag']     = $(val2).is(':checked');
@@ -448,8 +446,8 @@
                         'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
                     },
                     type: 'POST',
-                    data: JSON.strify({
-                        invites                      : invites
+                    data: JSON.stringify({
+                        invites: invites
                     }),
                     contentType: 'application/json; charset=utf-8',
                     success: (function (data) {

@@ -105,7 +105,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Link Penyimpanan Foto & Video <red>*</red></b><br><small>drive, dropbox, dll</small>
-                                    <input {{$in_addition_attr}} type="text" name="asset_link" data-target_el="#check_link_of_asset_link" value="{{@$selected->asset_link??'-'}}" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in check-link-to-btn" autocomplete="new-value-only" required>
+                                    <input {{$in_addition_attr}} type="text" name="asset_link" data-target_el="#check_link_of_asset_link" value="{{@$selected->asset_link??'-'}}" placeholder="{!!@$sample['link']!!}" maxlength="1000" spellcheck="false" class="form-control form-in check-link-to-btn" autocomplete="new-value-only">
                                     <div class="text-right">
                                         <a style="{{@$selected->asset_link?'':'display:none'}}" id="check_link_of_asset_link" href="{{@$selected->asset_link??''}}" target="_blank" class="btn medium yellow btn_border">
                                             check link <i class="fa fa-external-link"></i>
@@ -114,31 +114,31 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Nama Lengkap Mempelai Pria <i>(Groom)</i> <red>*</red></b><br><small>bisa disertakan dengan gelar jika diinginkan</small>
-                                    <input {{$in_addition_attr}} type="text" name="groom_name_full" value="{{@$selected->groom_name_full??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                    <input {{$in_addition_attr}} type="text" name="groom_name_full" value="{{@$selected->groom_name_full??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-10">
                                     <span><i class="fa fa-male text-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Nama Ayah Mempelai Pria </span>
-                                    <input  {{$in_addition_attr}} type="text" name="groom_father_name" value="{{@$selected->groom_father_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                    <input  {{$in_addition_attr}} type="text" name="groom_father_name" value="{{@$selected->groom_father_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-10">
                                     <span><i class="fa fa-female text-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Nama Ibu Mempelai Pria </span>
-                                    <input  {{$in_addition_attr}} type="text" name="groom_mother_name" value="{{@$selected->groom_mother_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                    <input  {{$in_addition_attr}} type="text" name="groom_mother_name" value="{{@$selected->groom_mother_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-12">
                                     <b>Nama Lengkap Mempelai Wanita <i>(Bride)</i> <red>*</red></b><br><small>bisa disertakan dengan gelar jika diinginkan</small>
-                                    <input  {{$in_addition_attr}} type="text" name="bride_name_full" value="{{@$selected->bride_name_full??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                    <input  {{$in_addition_attr}} type="text" name="bride_name_full" value="{{@$selected->bride_name_full??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-10">
                                     <span><span><i class="fa fa-male text-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Nama Ayah Mempelai Wanita </span>
-                                    <input  {{$in_addition_attr}} type="text" name="bride_father_name" value="{{@$selected->bride_father_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                    <input  {{$in_addition_attr}} type="text" name="bride_father_name" value="{{@$selected->bride_father_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-10">
                                     <span><i class="fa fa-female text-info" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Nama Ibu Mempelai Wanita </span>
-                                    <input  {{$in_addition_attr}} type="text" name="bride_mother_name" value="{{@$selected->bride_mother_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only" required>
+                                    <input  {{$in_addition_attr}} type="text" name="bride_mother_name" value="{{@$selected->bride_mother_name??'-'}}" maxlength="150" spellcheck="false" class="form-control form-in" autocomplete="new-value-only">
                                 </div>
                                 <div class="col-sm-12"  style="padding-bottom:20px">
                                     <b>Tampilkan:</b><br> <small>berikan check untuk bagian yang ingin Anda tampilkan, uncheck jika tidak ingin gunakan</small><br>
