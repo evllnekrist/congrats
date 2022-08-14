@@ -76,7 +76,7 @@
                             @if($is_expired)
                             <div class="text-center alert-warning text-danger">
                                 <b>Batas waktu mengedit data adalah hingga {{@$selected->client_edit_expired_at}}</b><br>
-                                <span>Input perubaham dinonaktifkan</span>
+                                <span>Input perubahan dinonaktifkan</span>
                             </div>
                             @else
                             <span>Terima kasih telah memilih berbagi kabar bahagiamu lewat berita baik. Berikut ini data yang perlu kami ketahui untuk pembuatan E-Invitation. Silahkan dilengkapi ya!</span>
