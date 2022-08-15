@@ -54,13 +54,6 @@
                 background: rgba(0,0,0,0.7) !important; 
                 font-weight: 600;
             }
-            .in-focus-white-light{
-                background: rgba(255,255,255,0.5) !important;
-                color: #6c4331 !important;
-            }
-            .in-focus-white-light:hover, .in-focus-white-light:active, .in-focus-white-light:after{
-                background: rgba(255,255,255,0.9) !important;
-            }
             .ft-shadow-soft-reverse{
                 text-shadow: 2px 2px 4px green;
             }
@@ -322,11 +315,11 @@
                                 <div class="row">
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Name</span>
-                                        <input type="text" name="rsvp_name" maxlength="50" class="form-control in-focus-white-light" value="{{$invite}}" required>
+                                        <input type="text" name="rsvp_name" maxlength="50" class="form-control" value="{{$invite}}" required>
                                     </div>
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Address</span>
-                                        <input type="text" name="rsvp_address" maxlength="50" class="form-control in-focus-white-light" required>
+                                        <input type="text" name="rsvp_address" maxlength="50" class="form-control" required>
                                     </div>
                                     <div class="col-md-12"><br>
                                         <span class="fix-montserrat-s-b">Will you come?</span><br>
@@ -405,6 +398,7 @@
                             <div class="container text-center">                
                                 <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
                                 <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
+                                <p style="height:30vh"></p>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-sm-6 col-xs-6">
                                         <div class="gla_news_block">
@@ -415,16 +409,14 @@
                                                 </a>
                                             </span>
                                             <p onclick="copy_to_clipboard('{{$qrcode1}}')">
-                                                <span class="fix-montserrat-s-b text-success">
-                                                    BCA - {{$qrcode1}}<br>a/n Bismo Wirayuda
-                                                    <i class="fa fa-clipboard" aria-hidden="true" title="copy qrcode"><br><small>[copy]<small></i>
+                                                <span class="fix-montserrat-s-b">
+                                                    <label class="text-success">BCA - {{$qrcode1}}<br>a/n Bismo Wirayuda</label>
+                                                    <i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i>
+                                                    <br><small>[copy]<small>
                                                 </span>
                                             </p>
                                         </div>
                                     </div> 
-                                </div>
-                                or ..<br><br>
-                                <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-sm-6 col-xs-6">
                                         <div class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important">
@@ -434,9 +426,10 @@
                                                 </a>
                                             </span>
                                             <p onclick="copy_to_clipboard('{{$qrcode2}}')">
-                                                <span class="fix-montserrat-s-b text-success">
-                                                    QRIS - {{$qrcode2}}<br>a/n Lisa Melyani
-                                                    <i class="fa fa-clipboard" aria-hidden="true" title="copy qrcode"><br><small>[copy]<small></i>
+                                                <span class="fix-montserrat-s-b">
+                                                    <label class="text-success">QRIS - {{$qrcode2}}<br>a/n Lisa Melyani</label>
+                                                    <i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i>
+                                                    <br><small>[copy]<small>
                                                 </span>
                                             </p>
                                         </div>
@@ -494,6 +487,12 @@
                     <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/12.webp')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.5"></div> -->
                         <div class="container pd-md-h">
+                            <p style="height:30vh"></p>
+                        </div>
+                    </section>
+                    <section    id="quote2" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/bg-2.webp')}}">
+                        <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.5"></div> -->
+                        <div class="container pd-md-h text-right">
                             <p style="height:5vh">
                                 <span class="fix-montserrat-s-b text-choco-1">
                                     <sup>"</sup> 
@@ -502,7 +501,7 @@
                                         <br>all that you have been
                                         <br>and all that you will be
                                     </span> 
-                                    <sup>..."</sup>
+                                    <sup>.... &hearts; "</sup>
                                 </span>
                             </p>
                             <p style="height:25vh"></p>
