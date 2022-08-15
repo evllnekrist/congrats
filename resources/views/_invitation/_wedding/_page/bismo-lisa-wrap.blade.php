@@ -6,7 +6,7 @@
             $cdn_link   = "asset-wedding-bg/".$code."/";
             $version = "?var=".date("Ymd")."001";
         ?>
-        <meta name="description" content="We are tying the knot!"/>
+        <meta name="description" content="Are getting married!"/>
         <link href="{{asset('asset-wedding-1/css/custom.css').$version}}" rel="stylesheet">
     </head>
     <body class="bg-navy">
