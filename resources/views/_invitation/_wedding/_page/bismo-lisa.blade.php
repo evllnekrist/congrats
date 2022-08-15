@@ -4,6 +4,8 @@
         @include('_invitation._wedding._include.head-1')
         <?php
             $version = "?var=".date("Ymd")."009";
+            $qrcode1 = '***********1';
+            $qrcode2 = '***********2';
         ?>
         <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
@@ -14,16 +16,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
+        <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
         <?php 
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
         <style>
-            
-            .highlight-1{
-                background-color: black;
-                color: white;
-                padding: 15px 30px;
-            }
             .highlight-2{
                 background: rgba(255,255,255,0.8) !important;
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 80%);
@@ -64,16 +61,14 @@
             .in-focus-white-light:hover, .in-focus-white-light:active, .in-focus-white-light:after{
                 background: rgba(255,255,255,0.9) !important;
             }
-            .ft-shadow-soft{
-                color: white;
-                text-shadow: 2px 2px 4px #333333;
-                /* #737373; */
-            }
             .ft-shadow-soft-reverse{
+                text-shadow: 2px 2px 4px green;
+            }
+            .ft-shadow-soft-reverse-black{
                 text-shadow: 2px 2px 4px black;
             }
-            .ft-shadow-soft-reverse-white{
-                text-shadow: 2px 2px 4px white;
+            .ft-shadow-soft-reverse-light-gold{
+                text-shadow: 2px 2px 4px #ecd5ac;
             }
             .text-gold{
                 color: #d39d3d;
@@ -142,12 +137,12 @@
                 <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{asset($cdn_link.'images/sp-cover.webp')}}"> 
                     <!-- 31_b -->
                     <p style="margin-top:1vh;margin-bottom:1vh" class="gla_wht_txt ft-shadow-soft-reverse">               
-                        <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
-                        <span class="gla_slide_midtitle_m2">Bismo & Lisa</span><br><br>
+                        <span class="fix-montserrat-s-b">The Wedding of</span><br>
+                        <span class="gla_slide_midtitle_m2">Bismo & Lisa</span><br>
                     </p>
                     <div class="row">
                         @if($invite)
-                            <h6 class="gla_wht_txt ft-shadow-soft-reverse">Dear<br><span class="fix-montserrat-s-b">{{$invite}}</span></h6>
+                            <h6 class="gla_wht_txt ft-shadow-soft-reverse">Dear, <span class="fix-montserrat-s-b">{{$invite}}</span></h6>
                             @if(isset($_GET['qty']))
                                 <span class="highlight-2-bold fix-montserrat-xs text-lime">
                                     This invitation is limited to <span class="fix-montserrat-xs-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
@@ -204,7 +199,7 @@
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div>
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
-                            <div class="gla_slide_midtitle">B & L</div>
+                            <div class="gla_slide_midtitle ft-shadow-soft-reverse-black">B & L</div>
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
@@ -219,16 +214,17 @@
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.6"></div> -->
                         <div class="container text-center">
                             <div class="col gla_round_block text-gold">
-                                <span class="fix-montserrat-m">Getting Married</span><br><span class="fix-montserrat-m-b">Saturday, 01 October 2022</span><br><br>
+                                <span class="fix-montserrat-m">Getting Married</span><br>
+                                <span class="fix-montserrat-m-b ft-shadow-soft-reverse-light-gold">Saturday, 01 October 2022</span><br><br>
                                 <div class="gla_countdown" data-year="2022" data-month="10" data-day="01"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
-                                        <a target="_blank" href="{{asset($cdn_link.'images/sp-groom-full.webp')}}">
+                                        <a href="{{asset($cdn_link.'images/sp-groom-full.webp')}}" class="lightbox" data-lightbox="profile">
                                             <img src="{{asset($cdn_link.'images/sp-groom-square.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title text-maroon-1 pd-md"><strong>Bismo<br>Wirayuda</strong></span>
+                                        <span class="gla_news_title text-maroon-1 ft-shadow-soft-reverse-light-gold pd-md"><strong>Bismo<br>Wirayuda</strong></span>
                                         <p>
                                             son of<br>
                                             <span class="fix-montserrat-s-b"><img src="{{asset($cdn_link.'images/cross2.png')}}" style="height:12px;width:8px;margin-right:8px"> Mr. Hendra Janto</span>
@@ -240,10 +236,10 @@
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
-                                        <a target="_blank" href="{{asset($cdn_link.'images/sp-bride-full.webp')}}">
+                                        <a href="{{asset($cdn_link.'images/sp-bride-full.webp')}}" class="lightbox" data-lightbox="profile">
                                             <img src="{{asset($cdn_link.'images/sp-bride-square.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title text-maroon-1 pd-md"><strong>Lisa<br>Melyani</strong></span>
+                                        <span class="gla_news_title text-maroon-1 ft-shadow-soft-reverse-light-gold pd-md"><strong>Lisa<br>Melyani</strong></span>
                                         <p>
                                             daughter of<br>
                                             <span class="fix-montserrat-s-b">Mr. Andreas Aten</span>
@@ -266,7 +262,7 @@
                                     <div class="col-sm-3 col-xs-12"></div>
                                     @endif
                                     <div class="col-sm-6 col-xs-12">
-                                        <a href="#" class="gla_news_block">
+                                        <a target="_blank" href="https://goo.gl/maps/8dGeWrdDuoS1AEcQ8" class="gla_news_block">
                                             <span class="gla_news_img">
                                                 <img src="{{asset($cdn_link.'images/sp-place1.jpg')}}" alt="">
                                             </span>
@@ -281,7 +277,7 @@
                                     </div> 
                                     @if($addition_logic && in_array('wedding',$addition_logic))
                                     <div class="col-sm-6 col-xs-12">
-                                        <a href="#" class="gla_news_block">
+                                        <a target="_blank" href="https://g.page/gskrestaurant?share" class="gla_news_block">
                                             <span class="gla_news_img">
                                                 <img src="{{asset($cdn_link.'images/sp-place2.jpg')}}" alt="">
                                             </span>
@@ -326,11 +322,11 @@
                                 <div class="row">
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Name</span>
-                                        <input type="text" name="rsvp_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
+                                        <input type="text" name="rsvp_name" maxlength="50" class="form-control in-focus-white-light" value="{{$invite}}" required>
                                     </div>
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Address</span>
-                                        <input type="text" name="rsvp_address" maxlength="50" class="form-control form-opacity" required>
+                                        <input type="text" name="rsvp_address" maxlength="50" class="form-control in-focus-white-light" required>
                                     </div>
                                     <div class="col-md-12"><br>
                                         <span class="fix-montserrat-s-b">Will you come?</span><br>
@@ -411,27 +407,39 @@
                                 <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-sm-6 col-xs-6">
-                                        <a href="#" class="gla_news_block">
+                                        <div class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important">
-                                                <img src="{{asset($cdn_link.'images/qrcode-bismo.webp')}}" style="height:15vh;width:15vh">
+                                                <a href="{{asset($cdn_link.'images/qrcode-bismo.webp')}}" class="lightbox" data-lightbox="qrcode"> 
+                                                    <img src="{{asset($cdn_link.'images/qrcode-bismo.webp')}}" download="qrcode-bismo.webp" 
+                                                    style="height:15vh;width:15vh">
+                                                </a>
                                             </span>
-                                            <p>
-                                                <span class="fix-montserrat-s-b text-success">BCA - ***********<br>a/n Bismo Wirayuda</span>
+                                            <p onclick="copy_to_clipboard('{{$qrcode1}}')">
+                                                <span class="fix-montserrat-s-b text-success">
+                                                    BCA - {{$qrcode1}}<br>a/n Bismo Wirayuda
+                                                    <i class="fa fa-clipboard" aria-hidden="true" title="copy qrcode"><br><small>[copy]<small></i>
+                                                </span>
                                             </p>
-                                        </a>
+                                        </div>
                                     </div> 
                                 </div>
                                 or ..<br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-sm-6 col-xs-6">
-                                        <a href="#" class="gla_news_block">
+                                        <div class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important">
-                                                <img src="{{asset($cdn_link.'images/qrcode-lisa.webp')}}" style="height:15vh;width:15vh">
+                                                <a href="{{asset($cdn_link.'images/qrcode-lisa.webp')}}" class="lightbox" data-lightbox="qrcode"> 
+                                                    <img src="{{asset($cdn_link.'images/qrcode-lisa.webp')}}" download="qrcode-lisa.webp" 
+                                                    style="height:15vh;width:15vh">
+                                                </a>
                                             </span>
-                                            <p>
-                                                <span class="fix-montserrat-s-b text-success">QRIS<br>a/n Lisa Melyani</span>
+                                            <p onclick="copy_to_clipboard('{{$qrcode2}}')">
+                                                <span class="fix-montserrat-s-b text-success">
+                                                    QRIS - {{$qrcode2}}<br>a/n Lisa Melyani
+                                                    <i class="fa fa-clipboard" aria-hidden="true" title="copy qrcode"><br><small>[copy]<small></i>
+                                                </span>
                                             </p>
-                                        </a>
+                                        </div>
                                     </div> 
                                 </div>
                             </div>
@@ -448,7 +456,7 @@
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
-                                    <a href="{{asset($cdn_link.'images/'.$item.'.webp')}}" class="lightbox">
+                                    <a href="{{asset($cdn_link.'images/'.$item.'.webp')}}" class="lightbox" data-lightbox="gallery">
                                         <div class="container">
                                             <div class="stick-bottom">
                                                 <div class="gla_slide_midtitle"></div>
