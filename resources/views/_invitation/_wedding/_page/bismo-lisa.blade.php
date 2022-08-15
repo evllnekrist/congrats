@@ -199,7 +199,7 @@
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div>
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
-                            <div class="gla_slide_midtitle ft-shadow-soft-reverse-black">B & L</div>
+                            <div class="gla_slide_midtitle ft-shadow-soft-reverse-light-gold">B & L</div>
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
