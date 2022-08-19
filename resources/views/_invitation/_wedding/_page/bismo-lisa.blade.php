@@ -4,8 +4,8 @@
         @include('_invitation._wedding._include.head-1')
         <?php
             $version = "?var=".date("Ymd")."009";
-            $qrcode1 = '***********1';
-            $qrcode2 = '***********2';
+            $qrcode1 = "5315111274";
+            $qrcode2 = "0041XXXXXX31";
         ?>
         <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
@@ -87,12 +87,19 @@
             .text-creme-1{
                 color: #d6b08c
             }
+            .pd-lg{
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }  
             .pd-md{
                 padding-top: 20px;
                 padding-bottom: 20px;
-            }  
+            }   
             .pd-md-h{
                 padding: 20px 20px 20px 20px;
+            } 
+            .pd-sm{
+                padding: 5px 20px 10px 20px;
             }
             .gla_round_block{
                 margin-top: 0px !important;
@@ -105,6 +112,9 @@
                 @if(($addition_logic && in_array('wedding',$addition_logic)))
                     padding-top: 140px!important;
                 @endif
+            }
+            .gla_first_step header nav.gla_transp_nav{
+                display: none;
             }
         </style>
     </head>
@@ -131,7 +141,7 @@
                     <!-- 31_b -->
                     <p style="margin-top:1vh;margin-bottom:1vh" class="gla_wht_txt ft-shadow-soft-reverse">               
                         <span class="fix-montserrat-s-b">The Wedding of</span><br>
-                        <span class="gla_slide_midtitle_m2">Bismo & Lisa</span><br>
+                        <span class="gla_slide_midtitle_m2">Bismo & Lisa</span><br><br>
                     </p>
                     <div class="row">
                         @if($invite)
@@ -147,8 +157,8 @@
                             @endif
                         @endif
                         <div class="for-mobile" style="display:none">
-                            <span class="fix-montserrat-xs-b highlight-2-light">we would like to invite you to be part of</span><br>
-                            <span class="fix-montserrat-xs-b highlight-2-light">our happy day !</span>
+                            <span class="fix-montserrat-sxs-b highlight-2-light">we would like to invite you to be part of</span><br>
+                            <span class="fix-montserrat-sxs-b highlight-2-light">our happy day !</span>
                         </div>
                     </div>
                 </div>
@@ -192,7 +202,7 @@
                     <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div>
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
-                            <div class="gla_slide_midtitle ft-shadow-soft-reverse-light-gold">B & L</div>
+                            <div class="gla_slide_midtitle">B & L</div>
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
@@ -290,21 +300,6 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="live-streaming" class="gla_section gla_image_bck" data-color="#ecf2f0">
-                        <div class="container">
-                            <div class="row">
-                                <span class="fix-montserrat-m">Live Streaming</span><br><br>
-                                <div class="col-sm-4 col-xs-12 gla_image_bck" data-color="#fff">
-                                    <div class="gla_simple_block">
-                                        <h2>HOLY MATRIMONY<br>BISMO & LISA</h2>
-                                        <p class="text-muted">SATURDAY, 01 OCTOBER 2022, 10.00 O'CLOCK</p>
-                                        <a href="https://www.youtube.com/watch?v=LCDEbiOboiI">live at <i class="ti ti-youtube gla_icon_box"></i></a>
-                                    </div>
-                                </div>
-                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/LCDEbiOboiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </section>
                     @if($addition_logic && in_array('wedding',$addition_logic))
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
@@ -315,11 +310,11 @@
                                 <div class="row">
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Name</span>
-                                        <input type="text" name="rsvp_name" maxlength="50" class="form-control" value="{{$invite}}" required>
+                                        <input type="text" name="rsvp_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
                                     </div>
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Address</span>
-                                        <input type="text" name="rsvp_address" maxlength="50" class="form-control" required>
+                                        <input type="text" name="rsvp_address" maxlength="50" class="form-control form-opacity" required>
                                     </div>
                                     <div class="col-md-12"><br>
                                         <span class="fix-montserrat-s-b">Will you come?</span><br>
@@ -359,10 +354,10 @@
                     </section>
                     @endif
                     <section    id="wishes" class="gla_section">
-                        <div class="row text-left pd-md">
-                            <table class="table table-sm table-borderless table-striped fix-montserrat-s text-info" style="width:80%" id="table-wish">
+                        <div class="row text-left pd-lg">
+                            <table class="table table-sm table-borderless table-striped fix-montserrat-s" style="width:80%" id="table-wish">
                                 <thead>
-                                    <tr>
+                                    <tr class="text-info">
                                         <th width="25%">Sender</th>                              
                                         <th width="75%">Wishes</th>
                                     </tr>
@@ -394,15 +389,15 @@
                     </section>
                     <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/10.webp')}}" data-stellar-background-ratio="0.8">
                         <div class="container-fluid text-center">     
-                            <div class="gla_over" data-color="#ffffff" data-opacity="0.4"></div>   
+                            <div class="gla_over" data-color="#ffffff" data-opacity="0.6"></div>   
                             <div class="container text-center">                
                                 <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
-                                <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
-                                <p style="height:30vh"></p>
+                                <span class="fix-montserrat-s-b text-choco-1">Without reducing respect,<br>for invited guests who are willing to give a sign of love for us, can go through:
+                                <p style="height:20vh"></p>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-sm-6 col-xs-6">
                                         <div class="gla_news_block">
-                                            <span class="gla_news_img" style="height:auto!important">
+                                            <span class="gla_news_img" style="height:auto!important"><br>
                                                 <a href="{{asset($cdn_link.'images/qrcode-bismo.webp')}}" class="lightbox" data-lightbox="qrcode"> 
                                                     <img src="{{asset($cdn_link.'images/qrcode-bismo.webp')}}" download="qrcode-bismo.webp" 
                                                     style="height:15vh;width:15vh">
@@ -419,7 +414,7 @@
                                     </div> 
                                     <div class="col-sm-6 col-xs-6">
                                         <div class="gla_news_block">
-                                            <span class="gla_news_img" style="height:auto!important">
+                                            <span class="gla_news_img" style="height:auto!important"><br>
                                                 <a href="{{asset($cdn_link.'images/qrcode-lisa.webp')}}" class="lightbox" data-lightbox="qrcode"> 
                                                     <img src="{{asset($cdn_link.'images/qrcode-lisa.webp')}}" download="qrcode-lisa.webp" 
                                                     style="height:15vh;width:15vh">
@@ -427,7 +422,7 @@
                                             </span>
                                             <p onclick="copy_to_clipboard('{{$qrcode2}}')">
                                                 <span class="fix-montserrat-s-b">
-                                                    <label class="text-success">QRIS - {{$qrcode2}}<br>a/n Lisa Melyani</label>
+                                                    <label class="text-success">Permata - {{$qrcode2}}<br>a/n Lisa Melyani</label>
                                                     <i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i>
                                                     <br><small>[copy]<small>
                                                 </span>
@@ -444,7 +439,7 @@
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('1','2','3','4','5','6','7','8','9','10','11','12'); 
+                                    $gallery_items = array('1','2','3','4','6','6a','sp-closing','7','11b','11','9','10'); 
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
@@ -461,13 +456,13 @@
                                 </div>
                                 @endforeach
                             </div>
-                        </div><br><br><br>
+                        </div>
                     </section>
                     @if($addition_logic && in_array('wedding',$addition_logic))
                     <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
-                        <div class="container text-center pd-md">
-                            <span class="fix-montserrat-m">Health Protocol</span><br><br>
-                            <p class="fix-montserrat-s-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p><br>
+                        <div class="container text-center pd-sm">
+                            <span class="fix-montserrat-m">Health Protocol</span><br><br><br>
+                            <p class="fix-montserrat-xs-b text-choco-2">So that we are all comfortable and safe in the effort to prevent covid-19, invited guests who are willing to attend the event are requested to comply with the following health protocols: </p>
                             <div class="row text-center fix-montserrat-s-b">
                                 <div class="col-sm-3 col-xs-12 gla_round_block">
                                     <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.png')}}"></div>
@@ -484,41 +479,22 @@
                         </div>
                     </section>
                     @endif
-                    <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/12.webp')}}">
+                    <section    id="quote" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/sp-footer.webp')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.5"></div> -->
                         <div class="container pd-md-h">
-                            <p style="height:30vh"></p>
-                        </div>
-                    </section>
-                    <section    id="quote2" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/bg-2.webp')}}">
-                        <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.5"></div> -->
-                        <div class="container pd-md-h text-right">
                             <p style="height:5vh">
-                                <span class="fix-montserrat-s-b text-choco-1">
+                                <span class="fix-montserrat-s-b text-choco-1 text-right">
                                     <sup>"</sup> 
                                     <span class="ft-shadow">
-                                        I love you for all that you are
-                                        <br>all that you have been
-                                        <br>and all that you will be
+                                        I love you 
+                                        <br>&nbsp;&nbsp;for all that you are
+                                        <br>&nbsp;&nbsp;all that you have been
+                                        <br>&nbsp;&nbsp;and all that you will be
                                     </span> 
-                                    <sup>.... &hearts; "</sup>
+                                    <sup> .... <b style="color:#ff614b;font-size:20px">&hearts;</b> "</sup>
                                 </span>
                             </p>
-                            <p style="height:25vh"></p>
-                        </div>
-                    </section>
-                    <section    id="thank-you" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/sp-closing.webp')}}">
-                        <div class="gla_over" data-color="#282828" data-opacity="0.2"></div>
-                        <div class="container text-center">
-                            <p style="height:25vh">
-                                <!-- <img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" 
-                                    data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" height="120" alt=""> -->
-                            </p>
-                        </div>
-                    </section>
-                    <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
-                        <div class="container">
-                            <a href='{{url("/")}}' target="_blank">© beritabaik.co</a>
+                            <p style="height:30vh"></p>
                         </div>
                     </section>
                 </section>
