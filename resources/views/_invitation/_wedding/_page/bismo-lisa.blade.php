@@ -5,7 +5,7 @@
         <?php
             $version = "?var=".date("Ymd")."009";
             $qrcode1 = "5315111274";
-            $qrcode2 = "0041XXXXXX31";
+            $qrcode2 = "004138626631";
         ?>
         <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
@@ -303,9 +303,11 @@
                     @if($addition_logic && in_array('wedding',$addition_logic))
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
-                        <div class="container text-right">
-                            <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="150" alt="">     
-                            <p class="fix-montserrat-s">Can't wait to welcome our happy day with you. <br>At below you can confirm your attendance, thank you.</p>
+                        <div class="container">
+                            <div class="text-right">
+                                <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">     
+                            </div>
+                            <p class="fix-montserrat-s-b">Can't wait to welcome our happy day with you.<br>At below, please confirm your attendance.<br>Thank you.</p>
                             <form id="form-rsvp" onsubmit="return false;">
                                 <div class="row">
                                     <div class="col-sm-6"><br>
