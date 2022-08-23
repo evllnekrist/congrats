@@ -60,6 +60,9 @@
             .ft-shadow-soft-reverse-black{
                 text-shadow: 2px 2px 4px black;
             }
+            .ft-shadow-soft-reverse-gold{
+                text-shadow: 2px 2px 2px #bb862a;
+            }
             .ft-shadow-soft-reverse-light-gold{
                 text-shadow: 2px 2px 4px #ecd5ac;
             }
@@ -145,7 +148,7 @@
                     </p>
                     <div class="row">
                         @if($invite)
-                            <h6 class="gla_wht_txt ft-shadow-soft-reverse">Dear, <span class="fix-montserrat-s-b">{{$invite}}</span></h6>
+                            <h6 class="gla_wht_txt ft-shadow-soft-reverse-gold">Dear, <span class="fix-montserrat-s-b-extra">{{$invite}}</span></h6>
                             @if(isset($_GET['qty']))
                                 <span class="highlight-2-bold fix-montserrat-xs text-lime">
                                     This invitation is limited to <span class="fix-montserrat-xs-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
@@ -224,7 +227,8 @@
                             <div class="gla_icon_boxes row">
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
-                                        <a href="{{asset($cdn_link.'images/sp-groom-full.webp')}}" class="lightbox" data-lightbox="profile">
+                                        <a href="{{asset($cdn_link.'images/sp-groom-full.webp')}}" target="_blank">
+                                            <!-- class="lightbox" data-lightbox="profile"> -->
                                             <img src="{{asset($cdn_link.'images/sp-groom-square.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title text-maroon-1 ft-shadow-soft-reverse-light-gold pd-md"><strong>Bismo<br>Wirayuda</strong></span>
@@ -239,7 +243,8 @@
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-5">
                                     <div class="gla_news_block">
-                                        <a href="{{asset($cdn_link.'images/sp-bride-full.webp')}}" class="lightbox" data-lightbox="profile">
+                                        <a href="{{asset($cdn_link.'images/sp-bride-full.webp')}}" target="_blank">
+                                            <!-- class="lightbox" data-lightbox="profile"> -->
                                             <img src="{{asset($cdn_link.'images/sp-bride-square.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title text-maroon-1 ft-shadow-soft-reverse-light-gold pd-md"><strong>Lisa<br>Melyani</strong></span>
@@ -310,13 +315,13 @@
                             <p class="fix-montserrat-s-b">Can't wait to welcome our happy day with you.<br>At below, please confirm your attendance.<br>Thank you.</p>
                             <form id="form-rsvp" onsubmit="return false;">
                                 <div class="row">
-                                    <div class="col-sm-6"><br>
+                                    <div class="col-md-8"><br>
                                         <span class="fix-montserrat-s-b">Name</span>
                                         <input type="text" name="rsvp_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
                                     </div>
-                                    <div class="col-sm-6"><br>
-                                        <span class="fix-montserrat-s-b">Address</span>
-                                        <input type="text" name="rsvp_address" maxlength="50" class="form-control form-opacity" required>
+                                    <div class="col-md-4"><br>
+                                        <span class="fix-montserrat-s-b" title="Guest quantity">Jumlah tamu undangan</span>
+                                        <input type="number" name="rsvp_address" class="form-control form-opacity" required>
                                     </div>
                                     <div class="col-md-12"><br>
                                         <span class="fix-montserrat-s-b">Will you come?</span><br>
@@ -341,7 +346,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th width="40%">Sender</th>
-                                                            <th width="40%">Address</th>                              
+                                                            <th width="40%">Guest Qty</th>                              
                                                             <th width="20%">Presence Status</th>
                                                         </tr>
                                                     </thead>
@@ -400,7 +405,8 @@
                                     <div class="col-sm-6 col-xs-6">
                                         <div class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important"><br>
-                                                <a href="{{asset($cdn_link.'images/qrcode-bismo.webp')}}" class="lightbox" data-lightbox="qrcode"> 
+                                                <a href="{{asset($cdn_link.'images/qrcode-bismo.webp')}}" target="_blank">
+                                                    <!-- class="lightbox" data-lightbox="qrcode">  -->
                                                     <img src="{{asset($cdn_link.'images/qrcode-bismo.webp')}}" download="qrcode-bismo.webp" 
                                                     style="height:15vh;width:15vh">
                                                 </a>
@@ -417,7 +423,8 @@
                                     <div class="col-sm-6 col-xs-6">
                                         <div class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important"><br>
-                                                <a href="{{asset($cdn_link.'images/qrcode-lisa.webp')}}" class="lightbox" data-lightbox="qrcode"> 
+                                                <a href="{{asset($cdn_link.'images/qrcode-lisa.webp')}}" target="_blank"> 
+                                                    <!-- class="lightbox" data-lightbox="qrcode">  -->
                                                     <img src="{{asset($cdn_link.'images/qrcode-lisa.webp')}}" download="qrcode-lisa.webp" 
                                                     style="height:15vh;width:15vh">
                                                 </a>
@@ -441,7 +448,7 @@
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('1','2','3','4','6','6a','sp-closing','7','11b','11','9','10'); 
+                                    $gallery_items = array('1','2','3','4','6','6a','sp-closing','7','11b','11'); 
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
@@ -499,6 +506,11 @@
                             <p style="height:30vh"></p>
                         </div>
                     </section>
+                    <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
+                        <div class="container">
+                            <a href='{{url("/")}}' target="_blank">© beritabaik.co</a>
+                        </div>
+                    </section>
                 </section>
                 <!-- Main End -->
             </div>
@@ -543,7 +555,7 @@
                             console.log('handling :: form-rsvp | validity passed');
                             $('.gla_page_loader_light').show();
                             let name = $('[name="rsvp_name"]').val();
-                            let address = $('[name="rsvp_address"]').val();
+                            let address = ($('[name="rsvp_address"]').val()).toString();
                             let attend = $('input[name="rsvp_attend"]:checked').val();
                             $.ajax({
                                 url: 'send-rsvp',
