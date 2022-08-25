@@ -661,13 +661,13 @@
 
 		/* Block Autheight */
 		if( !device.tablet() && !device.mobile() ) {
-			console.log('block auto 1');
+			console.log('block autoheight [1]');
 			// $('.gla_auto_height').each(function(){
 			// 	setEqualHeight($(this).find('> div[class^="col"]'));
 			// });
 		}
 		if( device.tablet() && device.landscape() ) {
-			console.log('block auto 2');
+			console.log('block autoheight [2]');
 			$('.gla_auto_height').each(function(){
 				setEqualHeight($(this).find('> div[class^="col"]'));
 			});

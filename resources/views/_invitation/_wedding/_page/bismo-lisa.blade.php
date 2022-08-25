@@ -196,7 +196,7 @@
                                     <div class="gla_logo_und">October 1st, 2022</div>
                                 </div>
                             </div>
-                            @include('_invitation._wedding._include.nav-2')
+                            @include('_invitation._wedding._include.nav-2-eng')
                         </div>
                     </nav>
                 </header>
@@ -320,7 +320,7 @@
                                         <input type="text" name="rsvp_name" maxlength="50" class="form-control form-opacity" value="{{$invite}}" required>
                                     </div>
                                     <div class="col-md-4"><br>
-                                        <span class="fix-montserrat-s-b" title="Guest quantity">Jumlah tamu undangan</span>
+                                        <span class="fix-montserrat-s-b" title="Jumlah Tamu Undangan">Number of Guest</span>
                                         <input type="number" name="rsvp_address" class="form-control form-opacity" required>
                                     </div>
                                     <div class="col-md-12"><br>
@@ -346,7 +346,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th width="40%">Sender</th>
-                                                            <th width="40%">Guest Qty</th>                              
+                                                            <th width="40%">Num of Guest</th>                              
                                                             <th width="20%">Presence Status</th>
                                                         </tr>
                                                     </thead>
@@ -442,8 +442,7 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
-                                data-image="{{asset($cdn_link.'images/white-bg.webp')}}">
+                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt">
                         <div class="container text-center"><br>
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
