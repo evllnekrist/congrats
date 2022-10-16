@@ -185,7 +185,7 @@
                     </p>
                 </div>
             </div>
-            <div class="row gla_wht_txt gla_invitation_open_btn_longer__before_before">
+            <div class="row gla_wht_txt gla_invitation_open_btn_longer__before_before" id="gla_welcome2">
                 @if($invite)
                     <h6 class="gla_wht_txt">Dear <span class="fix-montserrat-s-b">{{$invite}}</span>,</h6>
                     @if(isset($_GET['qty']))
@@ -551,6 +551,7 @@
                 document.getElementById('myaudio').play(); 
                 document.getElementById('myaudio').volume = .35;
                 $('#gla_welcome').remove();
+                $('#gla_welcome2').remove();
                 $('#gla_page').show();
             }
 
