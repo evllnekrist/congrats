@@ -197,7 +197,7 @@
                 @endif
                 <h6 class="fix-montserrat-s-b text-choco-1 ft-shadow-soft-dark">Mengundang Anda untuk menjadi<br>bagian dari hari bahagia kami !</h6>
             </div>
-            <button type="button" class="btn btn-brown-light-transp gla_wht_txt gla_invitation_open_btn_longer__before" onclick="executeInv()">Open Invitation</button> 
+            <button type="button" class="btn btn-brown-light-transp gla_wht_txt gla_invitation_open_btn_longer__before" id="gla_welcome3" onclick="executeInv()">Open Invitation</button> 
         <!-- OPEN End -->
         <!-- CONTENT -->
             <div class="gla_page" id="gla_page" style="display:none">
@@ -552,6 +552,7 @@
                 document.getElementById('myaudio').volume = .35;
                 $('#gla_welcome').remove();
                 $('#gla_welcome2').remove();
+                $('#gla_welcome3').remove();
                 $('#gla_page').show();
             }
 
