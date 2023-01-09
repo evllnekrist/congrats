@@ -1,5 +1,5 @@
 
-<div class="gla_main_menu gla_main_menu_mobile">
+<div class="gla_main_menu gla_main_menu_mobile hideontop">
     <div class="gla_main_menu_icon">
         <i></i><i></i><i></i><i></i>
         <b>Menu</b>

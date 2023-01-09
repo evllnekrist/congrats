@@ -1,6 +1,41 @@
 .bg-navy{
     background-color:#181d23;
 }
+.bg-black{
+  background-color:#000000;
+}
+
+.bg-video-square{
+  height:55vh;
+  width:55vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	margin: 0;
+	position: absolute;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 50%;
+	transform: translateY(0) translateX(-50%);
+	border-radius: 10px;
+	overflow: hidden;
+	text-align: center;
+	padding: 40px 40px; /* 120px 140px */
+	color: #000;
+	-webkit-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.bottom_el{
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, -20%);
+  margin: 0 auto;
+}
 .fix-dosis-l-b{
     font:900 30px/30px Dosis, Arial;
     margin-bottom: 50px;

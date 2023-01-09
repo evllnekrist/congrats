@@ -1644,6 +1644,9 @@ ul.mega-menu {
 .gla_transp_nav .gla_main_menu {
 	color: #fff;
 }
+/* .gla_transp_nav .gla_main_menu.hideontop {
+	display: none;
+} */
 .gla_main_menu.active {
 	top: 17px!important;
 }
@@ -1970,6 +1973,9 @@ ul.mega-menu {
 			header nav.gla_transp_nav a {
 				color: #fff;
 			}
+			header nav.gla_transp_nav a.hideontop {
+        display: none;
+      }
 			.gla_first_step header nav.gla_transp_nav {
 				background-color: rgba(255,255,255,0.9);
 				-webkit-box-shadow: 0 0 7px rgba(0,0,0,0.1);
@@ -1979,6 +1985,9 @@ ul.mega-menu {
 			.gla_first_step header nav.gla_transp_nav a {
 				color: #333;
 			}
+			.gla_first_step header nav.gla_transp_nav a.hideontop {
+        display: block;
+      }
 
 
 		

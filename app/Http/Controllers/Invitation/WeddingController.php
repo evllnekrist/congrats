@@ -31,6 +31,8 @@ class WeddingController extends Controller
                 "code"          => $subject_name[0]."-".$subject_name[1],
                 "url"           => url('/w/'.$code.'/inner?i='.$invited_name.'&rsvp='.$display_rsvp),
             ]);
+        }else{
+          return view('_main._page.error',['lost'=>true]);
         }
     }
     public function inner_index($code){
@@ -45,6 +47,8 @@ class WeddingController extends Controller
                     array_push($addition_logic,$value);
                 }
             }
+        }else{
+          return view('_main._page.error',['lost'=>true]);
         }
 
         if(sizeof($subject_name) > 1){

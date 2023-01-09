@@ -13,7 +13,8 @@
 
 Route::get('/','Main\HomeController@index');
 
-/*--------------------------------------------------------------------------START--*/ 
+/*--------------------------------------------------------------------------START--*/
+    // start----wedding
     Route::group(['prefix' => 'w'], function()
     {
         Route::get('',function(){
@@ -43,6 +44,21 @@ Route::get('/','Main\HomeController@index');
         Route::get('ss/{code}/current','Invitation\WeddingManagementController@self_service_current_index');
         Route::post('ss/store-invite/{code}','Invitation\WeddingManagementController@ajax_store_invite');
     });
+    // end------wedding
+    // start----event
+    Route::group(['prefix' => 'e'], function()
+    {
+        Route::get('',function(){
+            return view('_main._page.error',['lost'=>true]);
+        });
+        Route::get('{code}','Invitation\EventController@outer_index');
+        Route::get('{code}/inner','Invitation\EventController@inner_index');
+        Route::post('{code}/send-rsvp','Invitation\EventController@ajax_send_rsvp');
+        Route::post('{code}/send-wish','Invitation\EventController@ajax_send_wish');
+        Route::get('{code}/get-rsvp','Invitation\EventController@ajax_get_rsvp');
+        Route::get('{code}/get-wish','Invitation\EventController@ajax_get_wish');
+    });
+    // end------wedding
     Route::group(['prefix' => 'co-solution'], function()
     {
         Route::get('/','Main\CoSoController@index');
