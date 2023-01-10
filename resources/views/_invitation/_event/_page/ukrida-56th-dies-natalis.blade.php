@@ -178,7 +178,7 @@
         <!-- OPEN -->
         <!-- #GOLD VERSION -->
             <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" id="gla_welcome"> 
-              <video class="bg-video-square" autoplay loop muted>
+              <video class="bg-video-square" autoplay loop muted="">
                 <source src="{{asset($cdn_link.'videos/bg.mp4')}}" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
