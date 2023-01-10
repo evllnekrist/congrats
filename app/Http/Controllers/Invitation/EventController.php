@@ -26,7 +26,7 @@ class EventController extends Controller
 
         if($exist){
             return view('_invitation._event._page.'.$code.'-wrap',[
-                "thumbnail_icon"=> 'asset-event-bg/'.$code.'/images/thumbnail.webp',
+                "thumbnail_icon"=> 'asset-event-bg/'.$code.'/images/thumbnail.jpg',
                 "event"         => $exist->name." | ".env("APP_NAME", "BeritaBaik"),
                 "code"          => $code,
                 "url"           => url('/e/'.$code.'/inner?i='.$invited_name.'&rsvp='.$display_rsvp),

@@ -198,8 +198,8 @@
                 <div class="gla_music_icon_cont">
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
-                        <source src="{{asset($cdn_link.'audios/Amazing Grace - Soren Madsen.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/Amazing Grace - Soren Madsen.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/mars.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/mars.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -229,7 +229,7 @@
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/23.webp')}}">  
+                                data-image="{{asset($cdn_link.'images/place.jpg')}}">  
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
@@ -240,18 +240,20 @@
                                 <div class="col-sm-6 col-xs-10">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
-                                            <img src="{{asset($cdn_link.'images/place.jpg')}}" alt="">
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5938799549294!2d106.77826055057366!3d-6.185069595500282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6faf51f385f%3A0x1e6ce15362f792f9!2sUniversitas%20Ukrida%20Fakultas%20Kedokteran!5e0!3m2!1sid!2sid!4v1673323001133!5m2!1sid!2sid" 
+                                            width="600" height="450" style="border:0;" allowfullscreen="" 
+                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                          </iframe>
                                         </span>
                                         <span class="gla_news_title">Ibadah & Perayaan</span>
                                         <p>
-                                            <span class="fix-montserrat-sm-b text-green-sh">
-                                              <b>Gedung B Kampus II Ukrida,</b>
+                                            <span class="fix-montserrat-sm-b text-info">
+                                              <b>Gedung B Kampus II UKRIDA, >Auditorium FKIK Lantai 2,</b>
                                             </span><br>
-                                            Auditorium FKIK Lantai 2,<br>
                                             Jl. Arjuna Utara No. 6,<br> 
                                             Jakarta Barat<br><br><br>
-                                            <span class="fix-montserrat-s-b text-green-sh">Jumat, 20 Januari 2023</span><br><br>
-                                            <span class="label label-success">09.00-12.00 WIB</span>
+                                            <span class="fix-montserrat-s-b text-info">Jumat, 20 Januari 2023</span><br><br>
+                                            <span class="label label-danger">09.00-12.00 WIB</span>
                                         </p>
                                     </a>
                                 </div> 
@@ -274,15 +276,15 @@
                                             <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
                                         </div>
                                         <div class="col-sm-6"><br>
-                                            <span class="fix-montserrat-s-b">Alamat</span>
+                                            <span class="fix-montserrat-s-b">NIM/Unit/Prodi/Instansi</span>
                                             <input type="text" name="rsvp_address" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" required>
                                         </div>
                                         <div class="col-md-12"><br>
                                             <span class="fix-montserrat-s-b">Apakah Anda datang?</span><br>
                                             <input type="radio" name="rsvp_attend" value="1" required>
                                             <small>Ya, tentu!</small><br>
-                                            <input type="radio" name="rsvp_attend" value="0">
-                                            <small>Maaf, tidak bisa hadir.</small>
+                                            <!-- <input type="radio" name="rsvp_attend" value="0">
+                                            <small>Maaf, tidak bisa hadir.</small> -->
                                         </div>
                                         <div class="col-md-12" style="padding-top:50px">
                                             <input type="submit" class="btn submit" id="form-rsvp-send" value="save">
@@ -299,7 +301,7 @@
                                                         <thead>
                                                             <tr>
                                                                 <th width="40%">Pengirim</th>
-                                                                <th width="40%">Alamat</th>                              
+                                                                <th width="40%">NIM/Unit/Prodi/Instansi</th>                              
                                                                 <th width="20%">Kehadiran</th>
                                                             </tr>
                                                         </thead>
@@ -358,13 +360,13 @@
                                   array("dir"=>"sekarang","title"=>"SEKARANG"),
                                 );
                                 $gallery_items[0]   = array(
-                                  array("img"=>"1.webp","desc"=>"Gedung"),
-                                  array("img"=>"2.webp","desc"=>"Hendra"),
-                                  array("img"=>"3.webp","desc"=>"Pameran"),
-                                  array("img"=>"4.webp","desc"=>"Pelantikan Dokter"),
-                                  array("img"=>"5.webp","desc"=>"Perkuliahan FK"),
-                                  array("img"=>"6.webp","desc"=>"Permulaan Kuliah 1967"),
-                                  array("img"=>"7.webp","desc"=>"Tumpeng","grid"=>"full","height"=>"auto"),
+                                  array("img"=>"1.webp","desc"=>"Gedung Kampus Tanjung Duren Tahun 1992"),
+                                  array("img"=>"2.webp","desc"=>"Pelantikan Dokter Pertama UKRIDA Tahun 1977"),
+                                  array("img"=>"3.webp","desc"=>"Pameran Pendidikan UKRIDA Tahun 1994"),
+                                  array("img"=>"4.webp","desc"=>"Lustrum Ke II UKRIDA Tahun 1977"),
+                                  array("img"=>"5.webp","desc"=>"Perkuliahan Fakultas Kedokteran UKRIDA Tahun 1985"),
+                                  array("img"=>"6.webp","desc"=>"Peresmian UKRIDA Tahun 1967"),
+                                  array("img"=>"7.webp","desc"=>"Pemotongan Tumpeng oleh Pimpinan UKRIDA Tahun 1976","grid"=>"full","height"=>"auto"),
                                 ); 
                                 $gallery_items[1] =   array(
                                   array("img"=>"1.webp","desc"=>""),
