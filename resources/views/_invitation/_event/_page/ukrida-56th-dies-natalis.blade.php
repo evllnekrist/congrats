@@ -248,7 +248,7 @@
                                         <span class="gla_news_title">Ibadah & Perayaan</span>
                                         <p>
                                             <span class="fix-montserrat-sm-b text-info">
-                                              <b>Gedung B Kampus II UKRIDA, >Auditorium FKIK Lantai 2,</b>
+                                              <b>Gedung B Kampus II UKRIDA, Auditorium FKIK Lantai 2,</b>
                                             </span><br>
                                             Jl. Arjuna Utara No. 6,<br> 
                                             Jakarta Barat<br><br><br>
@@ -362,7 +362,7 @@
                                 $gallery_items[0]   = array(
                                   array("img"=>"1.webp","desc"=>"Gedung Kampus Tanjung Duren Tahun 1992"),
                                   array("img"=>"2.webp","desc"=>"Pelantikan Dokter Pertama UKRIDA Tahun 1977"),
-                                  array("img"=>"3.webp","desc"=>"Pameran Pendidikan UKRIDA Tahun 1994"),
+                                  array("img"=>"3.webp","desc"=>"Pameran Pendidikan Tahun 1994"),
                                   array("img"=>"4.webp","desc"=>"Lustrum Ke II UKRIDA Tahun 1977"),
                                   array("img"=>"5.webp","desc"=>"Perkuliahan Fakultas Kedokteran UKRIDA Tahun 1985"),
                                   array("img"=>"6.webp","desc"=>"Peresmian UKRIDA Tahun 1967"),
