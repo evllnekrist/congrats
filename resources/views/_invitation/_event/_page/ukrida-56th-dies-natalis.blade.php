@@ -289,6 +289,8 @@
                                         <div class="col-md-12" style="padding-top:50px">
                                             <input type="submit" class="btn submit" id="form-rsvp-send" value="save">
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         <div class="panel panel-default" style="margin-top:50px">
                                             <div class="panel-heading">
                                                 <h5 class="panel-title">
@@ -326,7 +328,7 @@
                             </table>
                         </div>
                     </section>
-                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/sekarang/11.jpeg')}}">
+                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/sekarang/15.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.50"></div>
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
@@ -361,10 +363,10 @@
                                 );
                                 $gallery_items[0]   = array(
                                   array("img"=>"1.webp","desc"=>"Gedung Kampus Tanjung Duren Tahun 1992"),
-                                  array("img"=>"2.webp","desc"=>"Pelantikan Dokter Pertama UKRIDA Tahun 1977"),
-                                  array("img"=>"3.webp","desc"=>"Pameran Pendidikan Tahun 1994"),
+                                  array("img"=>"2.webp","desc"=>"Pelantikan Dokter Pertama Tahun 1977"),
+                                  array("img"=>"3.webp","desc"=>"Pameran Pendidikan UKRIDA Tahun 1994"),
                                   array("img"=>"4.webp","desc"=>"Lustrum Ke II UKRIDA Tahun 1977"),
-                                  array("img"=>"5.webp","desc"=>"Perkuliahan Fakultas Kedokteran UKRIDA Tahun 1985"),
+                                  array("img"=>"5.webp","desc"=>"Perkuliahan Fakultas Kedokteran Tahun 1985"),
                                   array("img"=>"6.webp","desc"=>"Peresmian UKRIDA Tahun 1967"),
                                   array("img"=>"7.webp","desc"=>"Pemotongan Tumpeng oleh Pimpinan UKRIDA Tahun 1976","grid"=>"full","height"=>"auto"),
                                 ); 
@@ -389,7 +391,7 @@
                               <div>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     @foreach($gallery_items[$i] as $item)
-                                    <div class="{{@$item['grid'] == 'full'?'col-xs-12':'col-xs-6'}}">
+                                    <div class="{{@$item['grid'] == 'full'?'col-xs-12':'col-xs-12 col-md-4'}}">
                                         <div class="gla_news_block">
                                             <a href="{{asset($cdn_link.'images/'.$galleries[$i]['dir'].'/'.$item['img'])}}" class="lightbox">
                                                 <img  class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" 
@@ -398,9 +400,9 @@
                                             </a>
                                             <!-- <span class="gla_news_title-m text-green-sh pd-sd"><strong>Rezeki Tambunan</strong></span> -->
                                             @if(@$item['desc'])
-                                              <p class="text-choco-2" >
+                                              <p class="text-choco-2 text-center" >
                                                   <br><br>
-                                                  <span>{{$item['desc']}}</span>
+                                                  <span>{!! $item['desc'] !!}</span>
                                               </p>
                                             @endif
                                         </div>
