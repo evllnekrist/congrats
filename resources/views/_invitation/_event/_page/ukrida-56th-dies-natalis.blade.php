@@ -184,8 +184,8 @@
               </video>
             </div>
             <div class="bottom_el" id="gla_welcome2">
-                  <h6 class="gla_wht_txt">Yang kami kasihi,<br><br><span class="fix-montserrat-s-b">{{@$invite?$invite:'Civitas Akademika Ukrida'}}</span></h6>
-                  <h6 class="fix-montserrat-s-b text-choco-1 ft-shadow-soft-dark">mengundang hadir dalam <br>acara Ibadah dan Perayaan</h6>
+                  <h6 class="gla_wht_txt">Kepada Yth.:<br><br><span class="fix-montserrat-s-b">{{@$invite?$invite:'Civitas Akademika Ukrida'}}</span></h6>
+                  <h6 class="fix-montserrat-s-b text-choco-1 ft-shadow-soft-dark">Mengundang hadir dalam <br>Ibadah dan Perayaan Dies Natalis Ukrida</h6>
             </div>
             <button type="button" class="btn btn-brown-light-transp gla_wht_txt gla_invitation_open_btn_longer__before" id="gla_welcome3" onclick="executeInv()">Open Invitation</button> 
         <!-- OPEN End -->
@@ -217,7 +217,7 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/1.png')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/1.webp')}}" data-stellar-background-ratio="0.8">
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                     </div><br><br>
@@ -248,9 +248,9 @@
                                         <span class="gla_news_title">Ibadah & Perayaan</span>
                                         <p>
                                             <span class="fix-montserrat-sm-b text-info">
-                                              <b>Gedung B Kampus II UKRIDA, Auditorium FKIK Lantai 2,</b>
-                                            </span><br>
-                                            Jl. Arjuna Utara No. 6,<br> 
+                                              <b>Gedung B<br>Kampus II UKRIDA<br>Auditorium FKIK Lt. 2</b><br>
+                                            </span>
+                                            Jl. Arjuna Utara No. 6<br> 
                                             Jakarta Barat<br><br><br>
                                             <span class="fix-montserrat-s-b text-info">Jumat, 20 Januari 2023</span><br><br>
                                             <span class="label label-danger">09.00-12.00 WIB</span>
@@ -273,20 +273,27 @@
                                     <div class="row">
                                         <div class="col-sm-6"><br>
                                             <span class="fix-montserrat-s-b">Nama</span>
-                                            <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
+                                            <input type="text" name="rsvp_name" maxlength="50" 
+                                            spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
                                         </div>
                                         <div class="col-sm-6"><br>
                                             <span class="fix-montserrat-s-b">NIM/Unit/Prodi/Instansi</span>
-                                            <input type="text" name="rsvp_address" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" required>
+                                            <input type="text" name="rsvp_org" maxlength="50" 
+                                            spellcheck="false" class="form-control form-opacity in-focus-white-light" required>
                                         </div>
-                                        <div class="col-md-12"><br>
+                                        <div class="col-sm-6"><br>
+                                            <span class="fix-montserrat-s-b">No Telephone/HP</span>
+                                            <input type="text" name="rsvp_address" maxlength="14" onkeydown="validateNumber(event);"
+                                            spellcheck="false" class="form-control form-opacity in-focus-white-light" required>
+                                        </div>
+                                        <div class="col-sm-6"><br>
                                             <span class="fix-montserrat-s-b">Apakah Anda datang?</span><br>
                                             <input type="radio" name="rsvp_attend" value="1" required>
                                             <small>Ya, tentu!</small><br>
                                             <!-- <input type="radio" name="rsvp_attend" value="0">
                                             <small>Maaf, tidak bisa hadir.</small> -->
                                         </div>
-                                        <div class="col-md-12" style="padding-top:50px">
+                                        <div class="col-sm-12" style="padding-top:60px">
                                             <input type="submit" class="btn submit" id="form-rsvp-send" value="save">
                                         </div>
                                     </div>
@@ -391,7 +398,7 @@
                               <div>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     @foreach($gallery_items[$i] as $item)
-                                    <div class="{{@$item['grid'] == 'full'?'col-xs-12':'col-xs-12 col-md-4'}}">
+                                    <div class="{{@$item['grid'] == 'full'?'col-xs-12':'col-xs-12 col-sm-4'}}">
                                         <div class="gla_news_block">
                                             <a href="{{asset($cdn_link.'images/'.$galleries[$i]['dir'].'/'.$item['img'])}}" class="lightbox">
                                                 <img  class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" 
@@ -400,10 +407,11 @@
                                             </a>
                                             <!-- <span class="gla_news_title-m text-green-sh pd-sd"><strong>Rezeki Tambunan</strong></span> -->
                                             @if(@$item['desc'])
-                                              <p class="text-choco-2 text-center" >
-                                                  <br><br>
-                                                  <span>{!! $item['desc'] !!}</span>
-                                              </p>
+                                            <br><br>
+                                              <span class="text-choco-2 text-center" >
+                                                {!! $item['desc'] !!}
+                                              </span>
+                                            <br><br>
                                             @endif
                                         </div>
                                     </div>
@@ -413,6 +421,21 @@
                             @endfor
                         </div>
                         <br><br><br>
+                    </section>
+                    <section    id="live-streaming" class="gla_section gla_image_bck" data-color="#ecf2f0">
+                        <div class="container">
+                            <div class="row">
+                                <!-- <span class="fix-montserrat-m"></span><br><br> -->
+                                <div class="col-sm-4 col-xs-12 gla_image_bck" data-color="#fff">
+                                    <div class="gla_simple_block">
+                                        <h2>UKRIDA TV</h2>
+                                        <!-- <p class="text-muted"></p><br><br><br> -->
+                                        <a href="https://www.youtube.com/watch?v=Zlqjnf3r-v0">stream at <i class="ti ti-youtube gla_icon_box"></i></a>
+                                    </div>
+                                </div>
+                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/Zlqjnf3r-v0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
                     </section>
                     <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
                         <div class="container text-center pd-md">
@@ -468,6 +491,33 @@
                 $('#gla_welcome3').remove();
                 $('#gla_page').show();
             }
+            
+            function validateNumber(evt) {
+              var e = evt || window.event;
+              var key = e.keyCode || e.which;
+
+              if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+              // numbers   
+              key >= 48 && key <= 57 ||
+              // Numeric keypad
+              key >= 96 && key <= 105 ||
+              // Backspace and Tab and Enter
+              key == 8 || key == 9 || key == 13 ||
+              // Home and End
+              key == 35 || key == 36 ||
+              // left and right arrows
+              key == 37 || key == 39 ||
+              // Del and Ins
+              key == 46 || key == 45) {
+                  // input is VALID
+              }
+              else {
+                  // input is INVALID
+                  toastr.warning("this input accepts only numbers", 'Nah..', {timeOut: 5000});
+                  e.returnValue = false;
+                  if (e.preventDefault) e.preventDefault();
+              }
+            }
 
             $( document ).ready(function() {
 
@@ -501,6 +551,7 @@
                             $('.gla_page_loader_light').show();
                             let name = $('[name="rsvp_name"]').val();
                             let address = $('[name="rsvp_address"]').val();
+                            let org = $('[name="rsvp_org"]').val();
                             let attend = $('input[name="rsvp_attend"]:checked').val();
                             $.ajax({
                                 url: 'send-rsvp',
@@ -511,6 +562,7 @@
                                 data: JSON.stringify({
                                     sender_name: name,
                                     sender_address: address,
+                                    sender_org: org,
                                     attend: attend
                                 }),
                                 contentType: 'application/json; charset=utf-8',
@@ -554,7 +606,6 @@
                                 }),
                                 contentType: 'application/json; charset=utf-8',
                                 success: (function (data) {
-                                    console.log(data);
                                     if(data.status){
                                         seeWishes();
                                         toastr.success(data.message, 'Thankyou!', {timeOut: 3000});
@@ -583,7 +634,8 @@
                         ajax: '{{url("/e/".$code."/get-rsvp")}}',
                         columns: [
                             {data: 'sender_name', name: 'sender_name'},
-                            {data: 'sender_address', name: 'sender_address'},
+                            // {data: 'sender_address', name: 'sender_address'},
+                            {data: 'sender_org', name: 'sender_org'},
                             {data: 'attend', name: 'attend'},
                         ],
                         columnDefs: [
@@ -592,7 +644,6 @@
                                 targets: 2,
                                 render: function(data, type, full, meta) {
                                     let temp_class = '';
-                                    console.log(data, full);
                                     if(data == 1){
                                         console.log('check');
                                         return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';

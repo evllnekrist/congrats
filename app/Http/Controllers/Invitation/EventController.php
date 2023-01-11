@@ -67,14 +67,19 @@ class EventController extends Controller
             $exist = Event::where('code',$code)->first();
             if(!$exist){
                 return array('status'=>false, 'message'=>'Code broken');
+            }elseif($exist->rsvp_limit > 0){
+              $current_total = Event::where('code',$code)->count();
+              if($current_total >= $exist->rsvp_limit){
+                return array('status'=>false, 'message'=>'Sorry, reservation cannot be made. The number of invitees has exceeded the capacity ('.$exist->rsvp_limit.')');
+              }
             }
             
             $msg = 'to send your RSVP';
             try{
                 $item = $request->all();
-                $existAndSameName = EventRSVP::where('code',$code)->where('sender_name',$request->sender_name)->first();
+                $existAndSameName = EventRSVP::where('code',$code)->whereRaw('LOWER(`sender_name`) = ? ',[trim(strtolower($request->sender_name))])->first();
                 if($existAndSameName){
-                  $id = EventRSVP::where('code',$code)->where('sender_name',$request->sender_name)->update(['sender_address' => $item['sender_address'],'attend' => $item['attend']]);
+                  $id = EventRSVP::where('code',$code)->whereRaw('LOWER(`sender_name`) = ? ',[trim(strtolower($request->sender_name))])->update(['sender_address' => $item['sender_address'],'sender_org' => $item['sender_org'],'attend' => $item['attend']]);
                   $output = array('status'=>true, 'message'=>'You have filled out this form before. Successfully updated your RSVP!', 'detail'=>$id);
                 }else{
                   $item['code'] = $code;
