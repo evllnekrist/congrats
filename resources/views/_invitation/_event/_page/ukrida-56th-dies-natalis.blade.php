@@ -456,7 +456,7 @@
                                         <a href="http://www.youtube.com/ukridatv">stream at <i class="ti ti-youtube gla_icon_box" style="font-size:18px;color:red;"></i></a>
                                     </div>
                                 </div>
-                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/Xfzck9I9V0I" 
+                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/Ulu2VE5jeiU" 
                                   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
