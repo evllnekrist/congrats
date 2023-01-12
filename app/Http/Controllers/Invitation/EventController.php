@@ -20,6 +20,9 @@ class EventController extends Controller
     }
     public function outer_index($code){
         $event = 'Event';
+        $code_org = $code;
+        $subject_name = explode("_",$code);
+        $code = $subject_name[0];
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
         $exist = Event::where('code',$code)->first();
@@ -29,13 +32,14 @@ class EventController extends Controller
                 "thumbnail_icon"=> 'asset-event-bg/'.$code.'/images/thumbnail.jpg',
                 "event"         => $exist->name." | ".env("APP_NAME", "BeritaBaik"),
                 "code"          => $code,
-                "url"           => url('/e/'.$code.'/inner?i='.$invited_name.'&rsvp='.$display_rsvp),
+                "url"           => url('/e/'.$code_org.'/inner?i='.$invited_name.'&rsvp='.$display_rsvp),
             ]);
         }
     }
     public function inner_index($code){
         $event = 'event';
-        $subject_name = explode("-",$code);
+        $subject_name = explode("_",$code);
+        $code = $subject_name[0];
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
         $addition_logic = array();

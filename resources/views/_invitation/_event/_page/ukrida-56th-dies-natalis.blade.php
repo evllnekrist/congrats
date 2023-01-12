@@ -252,6 +252,7 @@
                                             </span>
                                             Jl. Arjuna Utara No. 6<br> 
                                             Jakarta Barat<br><br><br>
+                                            <span class="fix-montserrat-s-b text-danger">Dresscode: Batik</span><br>
                                             <span class="fix-montserrat-s-b text-info">Jumat, 20 Januari 2023</span><br><br>
                                             <span class="label label-danger">09.00-12.00 WIB</span>
                                         </p>
@@ -288,10 +289,13 @@
                                         </div>
                                         <div class="col-sm-6"><br>
                                             <span class="fix-montserrat-s-b">Apakah Anda datang?</span><br>
-                                            <input type="radio" name="rsvp_attend" value="1" required>
+                                            <input type="radio" name="rsvp_attend" value="1" onchange="rsvpAttendanceChange(1)" required>
                                             <small>Ya, tentu!</small><br>
-                                            <!-- <input type="radio" name="rsvp_attend" value="0">
-                                            <small>Maaf, tidak bisa hadir.</small> -->
+                                            @if(!($addition_logic && in_array('celebration',$addition_logic)))
+                                            <input type="radio" name="rsvp_attend" value="0" onchange="rsvpAttendanceChange(0)">
+                                            <small>Maaf, tidak bisa hadir.</small><br><br>
+                                            @endif
+                                            <span id="rsvp_attend_info" class="text-green-sh"></span>
                                         </div>
                                         <div class="col-sm-12" style="padding-top:60px">
                                             <input type="submit" class="btn submit" id="form-rsvp-send" value="save">
@@ -422,21 +426,6 @@
                         </div>
                         <br><br><br>
                     </section>
-                    <section    id="live-streaming" class="gla_section gla_image_bck" data-color="#ecf2f0">
-                        <div class="container">
-                            <div class="row">
-                                <!-- <span class="fix-montserrat-m"></span><br><br> -->
-                                <div class="col-sm-4 col-xs-12 gla_image_bck" data-color="#fff">
-                                    <div class="gla_simple_block">
-                                        <h2>UKRIDA TV</h2>
-                                        <!-- <p class="text-muted"></p><br><br><br> -->
-                                        <a href="https://www.youtube.com/watch?v=Zlqjnf3r-v0">stream at <i class="ti ti-youtube gla_icon_box"></i></a>
-                                    </div>
-                                </div>
-                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/Zlqjnf3r-v0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </section>
                     <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
                         <div class="container text-center pd-md">
                             <span class="fix-montserrat-m">Protokol Kesehatan</span><br><br>
@@ -453,6 +442,22 @@
                                     <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3-a.png')}}"></div>
                                     <p class="text-choco-1">cuci tangan & pakai hand sanitizer</p>
                                 </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section    id="live-streaming" class="gla_section gla_image_bck" data-color="#ecf2f0">
+                        <div class="container">
+                            <div class="row">
+                                <!-- <span class="fix-montserrat-m">Live Streaming</span><br><br> -->
+                                <div class="col-sm-4 col-xs-12 gla_image_bck" data-color="#fff">
+                                    <div class="gla_simple_block">
+                                        <h2>LIVE STREAMING</h2>
+                                        <p class="text-muted">UKRIDA TV</p><br><br><br>
+                                        <a href="http://www.youtube.com/ukridatv">stream at <i class="ti ti-youtube gla_icon_box" style="font-size:18px;color:red;"></i></a>
+                                    </div>
+                                </div>
+                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/Xfzck9I9V0I" 
+                                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </section>
@@ -516,6 +521,14 @@
                   toastr.warning("this input accepts only numbers", 'Nah..', {timeOut: 5000});
                   e.returnValue = false;
                   if (e.preventDefault) e.preventDefault();
+              }
+            }
+
+            function rsvpAttendanceChange(value){
+              if(value){
+                $('#rsvp_attend_info').html("Dress Code: Batik");
+              }else{
+                $('#rsvp_attend_info').html("Anda dapat bergabung secara online<br>lewat <u><a href='#live-streaming'>live streaming UKRIDA TV</a></u>");
               }
             }
 
