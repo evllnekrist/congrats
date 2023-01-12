@@ -44,15 +44,14 @@ class EventController extends Controller
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
         $addition_logic = array();
         $exist = Event::where('code',$code)->first();
-
         if(array_key_exists(1, $subject_name)){
             foreach($subject_name as $key => $value){
-                if($key > 1){
+                if($key >= 1){
                     array_push($addition_logic,$value);
                 }
             }
         }
-
+        
         if($exist){
             return view('_invitation._event._page.'.$code,[
                 "thumbnail_icon"=> 'asset-event-bg/'.$code.'/images/thumbnail.webp',

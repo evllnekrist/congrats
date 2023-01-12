@@ -291,7 +291,7 @@
                                             <span class="fix-montserrat-s-b">Apakah Anda datang?</span><br>
                                             <input type="radio" name="rsvp_attend" value="1" onchange="rsvpAttendanceChange(1)" required>
                                             <small>Ya, tentu!</small><br>
-                                            @if(!($addition_logic && in_array('celebration',$addition_logic)))
+                                            @if($addition_logic && in_array('celebration',$addition_logic))
                                             <input type="radio" name="rsvp_attend" value="0" onchange="rsvpAttendanceChange(0)">
                                             <small>Maaf, tidak bisa hadir.</small><br><br>
                                             @endif
