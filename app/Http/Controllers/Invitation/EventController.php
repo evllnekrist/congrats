@@ -71,9 +71,9 @@ class EventController extends Controller
             if(!$exist){
                 return array('status'=>false, 'message'=>'Code broken');
             }elseif($exist->rsvp_limit > 0){
-              $current_total = Event::where('code',$code)->count();
+              $current_total = EventRSVP::where('code',$code)->count();
               if($current_total >= $exist->rsvp_limit){
-                return array('status'=>false, 'message'=>'Sorry, reservation cannot be made. The number of invitees has exceeded the capacity ('.$exist->rsvp_limit.')');
+                return array('status'=>false, 'message'=>'Sorry, reservations can no longer be made. The number of invitees has exceeded the capacity (max '.$exist->rsvp_limit.')');
               }
             }
             
