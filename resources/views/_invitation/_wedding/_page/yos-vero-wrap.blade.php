@@ -15,7 +15,7 @@
                 }
             }
         ?>
-        <meta name="description" content="Are getting married!"/>
+        <meta name="description" content="Are engaged!"/>
         <link href="{{asset('asset-wedding-1/css/custom.css').$version}}" rel="stylesheet">
     </head>
     <body class="bg-navy">
