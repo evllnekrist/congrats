@@ -23,7 +23,7 @@ class WeddingController extends Controller
         $subject_name = explode("-",$code);
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
-
+        // dd(sizeof($subject_name));
         if(sizeof($subject_name) > 1){
             return view('_invitation._wedding._page.'.$subject_name[0]."-".$subject_name[1].'-wrap',[
                 "thumbnail_icon"=> 'asset-wedding-bg/'.$subject_name[0]."-".$subject_name[1].'/images/thumbnail.webp',
@@ -41,7 +41,7 @@ class WeddingController extends Controller
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
         $addition_logic = array();
-        if(array_key_exists(2, $subject_name)){
+        if(array_key_exists(1, $subject_name)){
             foreach($subject_name as $key => $value){
                 if($key > 1){
                     array_push($addition_logic,$value);

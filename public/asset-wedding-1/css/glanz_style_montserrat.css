@@ -3134,6 +3134,21 @@ transform:translateY(-10px) translateX(-50%);
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
+.gla_invitation_open_btn_longer__before_after {
+	position: absolute;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 50%;
+	bottom: 10%;
+	transform: translateY(0) translateX(-50%);
+	text-align: center;
+	-webkit-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
 .gla_invitation_open_btn_longer__before {
 	position: absolute;
 	-ms-transform: translateY(-50%);
