@@ -216,7 +216,7 @@
                 <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-blue-baby" data-image="{{asset($cdn_link.'images/16.webp')}}"> 
                     <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-soft-white">               
                         <span class="fix-montserrat-s-b">The Engagement of</span><br><br>
-                        <span class="gla_slide_midtitle_m">Yosafat & Veronica</span><br><br>
+                        <span class="gla_slide_midtitle_m ff-ephesis">Yosafat&nbsp;&nbsp;&&nbsp;&nbsp;Veronica</span><br><br>
                     </p>
                 </div>
             </div>
@@ -280,7 +280,7 @@
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
-                                <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 26px">Mengikat janji bersama keluarga</span><br>
+                                <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Mengikat janji bersama keluarga</span><br>
                                 <span class="fix-montserrat-m-sb text-blue-baby ft-shadow-soft-reverse">Sabtu, 03 Februari 2024</span><br><br>
                                 <div class="gla_countdown" data-year="2024" data-month="02" data-day="03"></div><br><br>
                             </div>
@@ -355,7 +355,7 @@
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.65"></div> -->
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
-                                <p class=" ff-ephesis" style="font-size: 22px"><b>Doa dan harapanmu sangat berarti untuk kami <br>dalam semangat memulai <br>perjalanan baru ini ~</b></p>
+                                <p class=" ff-ephesis" style="font-size: 22px"><b>Doa dan harapanmu sangat berarti untuk kami <br>dalam semangat memulai perjalanan baru ini</b></p>
                                 <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">  
                                 <br><br>    
                                 <div class="row">
