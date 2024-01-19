@@ -54,7 +54,7 @@
                 padding: 5px 30px;
             }
             .text-subtitle-highlight-2{
-                background-color: black;
+                background-color:#5bc0de;
                 color: white;
                 padding: 5px 30px;
             }
@@ -113,7 +113,13 @@
                 color: white;
                 text-shadow: 2px 2px 4px #000000;
             }
-            .btn-brown-light-transp{
+            .btn-blue-light-transp{
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%);
+                background: rgba(91, 192, 222, 0.7) !important; 
+                /* 108,67,49 */
+                /* font-weight: 600; */
+            }
+            .btn-brown-light-transp, .btn-blue-light-transp:hover{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
                 background: rgba(224, 126, 51, 0.8) !important; 
                 /* 108,67,49 */
@@ -124,13 +130,8 @@
                 background: rgba(48, 34, 29, 0.4) !important; 
                 font-weight: 600;
             }
-            .btn-blue-light-transp{
-                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(90, 142, 191,0.4) !important;
-                font-weight: 600;
-            }
             .in-focus-white-light{
-                background: rgba(255,255,255,0.5) !important;
+                background: rgba(255,255,255,0.8) !important;
                 color: #6c4331 !important;
             }
             .in-focus-white-light:hover, .in-focus-white-light:active, .in-focus-white-light:after{
@@ -140,7 +141,7 @@
                 text-shadow: 1px 1px 1px #000000;
             }
             .ft-shadow-soft-white{
-                text-shadow: 2px 2px 4px #ffffff;
+                text-shadow: 1px 1px 1px #ffffff;
             }
             .ft-shadow-soft{
                 text-shadow: 2px 2px 4px #333333;/* #737373; */
@@ -214,8 +215,8 @@
         <!-- OPEN -->
         <!-- #GOLD VERSION -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-orange" data-image="{{asset($cdn_link.'images/GRM_8073.webp')}}"> 
-                    <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-soft-reverse">               
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-blue-baby" data-image="{{asset($cdn_link.'images/16.webp')}}"> 
+                    <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-soft-white">               
                         <span class="fix-montserrat-s-b">The Engagement of</span><br><br>
                         <span class="gla_slide_midtitle_m">Yosafat & Veronica</span><br><br>
                     </p>
@@ -231,7 +232,7 @@
                 @endif
                 <h6><small>Mengundang Anda untuk menjadi bagian<br>dari hari bahagia kami<br><br></small></h6>
             </div>
-            <button type="button" class="btn btn-brown-light-transp gla_wht_txt gla_invitation_open_btn_longer__before_after_custom" id="gla_welcome3" onclick="executeInv()">Buka Undangan</button> 
+            <button type="button" class="btn btn-blue-light-transp gla_wht_txt gla_invitation_open_btn_longer__before_after_custom" id="gla_welcome3" onclick="executeInv()">Buka Undangan</button> 
         <!-- OPEN End -->
         <!-- CONTENT -->
             <div class="gla_page" id="gla_page" style="display:none">
@@ -243,8 +244,8 @@
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/sara_bareilles__i_choose_you.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/sara_bareilles__i_choose_you.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/calum_scott_ft_lyodra__heaven.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/calum_scott_ft_lyodra__heaven.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -262,7 +263,7 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/GRM_7473.webp')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/8.webp')}}" data-stellar-background-ratio="0.8">
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
@@ -277,43 +278,32 @@
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/GRM_7510.webp')}}">  
+                                data-image="{{asset($cdn_link.'images/11.webp')}}">  
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
-                                <span class="fix-montserrat-m">Mengikat janji bersama keluarga</span><br>
-                                <span class="fix-montserrat-m-sb text-blue-baby">Sabtu, 03 Februari 2024</span><br><br>
+                                <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 26px">Mengikat janji bersama keluarga</span><br>
+                                <span class="fix-montserrat-m-sb text-blue-baby ft-shadow-soft-reverse">Sabtu, 03 Februari 2024</span><br><br>
                                 <div class="gla_countdown" data-year="2024" data-month="02" data-day="03"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
-                                <div class="col-xs-6">
+                                <div class="col-12">
                                     <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
-                                        <a href="{{asset($cdn_link.'images/groom.webp')}}">
-                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/groom.webp')}}" alt="">
-                                        </a>
-                                        <span class="gla_news_title-m text-blue-baby pd-sd"><strong>drg. Yosafat<br><br></strong></span>
-                                        <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
-                                        <p class="text-orange">
-                                            <small class="gla_wht_txt ft-shadow-soft-reverse">putra dari</small></b><br>
-                                            <span class="fix-montserrat-s-b">Sunardie, AMK</span>
-                                            <br>&<br>
-                                            <span class="fix-montserrat-s-b">Meiliana Hasien, S.Pd</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6">
-                                    <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
-                                        <a href="{{asset($cdn_link.'images/bride.webp')}}">
-                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride.webp')}}" alt="">
-                                        </a>
-                                        <span class="gla_news_title-m text-blue-baby pd-sd"><strong>dr. Veronica Rahayu</strong></span>
-                                        <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
-                                        <p class="text-orange">
-                                            <small class="gla_wht_txt ft-shadow-soft-reverse">putri dari</small><br>
-                                            <span class="fix-montserrat-s-b">Arius Frans Sediarta</span>
-                                            <br>&<br>
-                                            <span class="fix-montserrat-s-b">Marilaniasie</span>
-                                        </p>
+                                        <div style="padding: 20px 0px">
+                                            <span class="text-blue-baby"><strong>drg. Yosafat</strong></span>
+                                            <div class="text-orange">
+                                                <small class="gla_wht_txt ft-shadow-soft-reverse ff-ephesis" style="font-size: 18px">putra dari</small></b><br>
+                                                <span class="fix-montserrat-s-b">Bpk Sunardie, AMK & Ibu Meiliana Hasien, S.Pd</span>
+                                            </div>
+                                        </div>
+                                        <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;">
+                                        <div style="padding: 20px 0px">
+                                            <span class="text-blue-baby pt-4"><strong>dr. Veronica Rahayu</strong></span>
+                                            <div class="text-orange">
+                                                <small class="gla_wht_txt ft-shadow-soft-reverse ff-ephesis" style="font-size: 18px">putri dari</small></b><br>
+                                                <span class="fix-montserrat-s-b">Bpk Arius Frans Sediarta & Ibu Marilaniasie</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -323,32 +313,25 @@
                         <div class="container text-center">     
                             <!-- <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>    -->
                             <div class="container text-center">                
-                                <span class="fix-montserrat-m text-subtitle-highlight-2">Hanya oleh karunia Tuhan,</span><br>
+                                <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Hanya oleh karunia Tuhan,</span><br>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami umumkan pertunangan ini,<br></span><span class="text-subtitle-highlight-1">kepada keluarga dan sahabat</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
-                                    <div class="col-sm-6 col-xs-12">
+                                    <div class="col-12">
                                         <a href="#" class="gla_news_block">
-                                            <span class="gla_news_img">
-                                                <img src="{{asset($cdn_link.'images/place1.jpg')}}" alt="">
+                                            <span>
+                                                <img src="{{asset($cdn_link.'images/5.webp')}}" alt="">
                                             </span>
-                                            <span class="gla_news_title">Pertunangan</span>
-                                            <p>
-                                                <span class="fix-montserrat-sm-b text-green-sh"><b>Kediaman Keluarga<br>Bapak Arius FS</b></span><br>
-                                                Jl. Temanggung Jahan KM 1,<br>Tumbang Manggu<br><br><br>
-                                                <span class="fix-montserrat-s-b text-green-sh">Sabtu, 03 Februari 2024</span><br><br>
-                                                <span class="label label-success">13.00 WIB</span>
-                                            </p>
-                                        </a>
-                                    </div> 
-                                    <div class="col-sm-6 col-xs-12">
-                                        <a href="#" class="gla_news_block">
-                                            <span class="gla_news_img">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.834859776622!2d98.97215011441081!3d2.21589045879899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e1137c75fc27d%3A0xb1d80ed9325227fe!2sGedung%20Serbaguna%20HKBP%20Sabungan%20Siborong-borong!5e0!3m2!1sid!2sid!4v1665895336498!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                            </span>
-                                            <span class="gla_news_title">Ibadah Ucapan Syukur</span>
-                                            <p>
+                                            <p><br><br>
                                                 <span class="fix-montserrat-sm-b text-blue-baby"><b>Kediaman Keluarga<br>Bapak Arius FS</b></span><br>
-                                                Jl. Temanggung Jahan KM 1,<br>Tumbang Manggu<br><br><br>
+                                                Jl. Temanggung Jahan KM 1,<br>Tumbang Manggu
+                                            </p>
+                                            </p>
+                                                <span class="gla_news_title" style="margin-bottom: 0px">Engagement Ceremony</span>
+                                                <span class="fix-montserrat-s-b text-blue-baby">Sabtu, 03 Februari 2024</span><br><br>
+                                                <span class="label label-info">13.00 WIB</span>
+                                            </p>
+                                            </p>
+                                                <span class="gla_news_title" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span>
                                                 <span class="fix-montserrat-s-b text-blue-baby">Sabtu, 03 Februari 2024</span><br><br>
                                                 <span class="label label-info">16.00 WIB</span>
                                             </p>
@@ -370,26 +353,26 @@
                             </table>
                         </div>
                     </section>
-                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/GRM_7832-2.webp')}}">
+                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/3.webp')}}">
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.65"></div> -->
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
-                                <p class="fix-montserrat-xs-b"><b>Doa dan harapanmu sangat berarti untuk kami <br>dalam semangat memulai <br>perjalanan baru ini ~</b></p>
+                                <p class=" ff-ephesis" style="font-size: 22px"><b>Doa dan harapanmu sangat berarti untuk kami <br>dalam semangat memulai <br>perjalanan baru ini ~</b></p>
                                 <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">  
                                 <br><br>    
                                 <div class="row">
-                                    <div class="col-sm-6"><br>
+                                    <div class="col-sm-6"><br><br>
                                         <span class="fix-montserrat-s-b ft-shadow">Pengirim</span>
                                         <input type="text" name="wish_name" maxlength="50" spellcheck="false" class="form-control in-focus-white-light" value="{{$invite}}" required>
                                     </div>
-                                    <div class="col-sm-6"><br>
+                                    <div class="col-sm-6"><br><br>
                                         <span class="fix-montserrat-s-b ft-shadow">Harapan</span>
                                         <textarea name="wish_message" maxlength="500" spellcheck="false" class="form-control in-focus-white-light" required></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <input type="submit" class="btn submit btn-brown-light-transp" id="form-wish-send" value="kirim">
+                                        <input type="submit" class="btn submit btn-blue-light-transp" id="form-wish-send" value="kirim">
                                     </div>
                                 </div>
                             </form>
@@ -401,7 +384,7 @@
                             <span class="fix-montserrat-m text-choco">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('1','2','GRM_7591','GRM_7584','GRM_7670','GRM_7593','GRM_7623','GRM_7473','GRM_7663','GRM_7510','GRM_7539','GRM_7485','GRM_7544','GRM_7696-3','GRM_7832-2','GRM_7812-2','GRM_7801-2','GRM_7851','GRM_7956','GRM_7995'); 
+                                    $gallery_items = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21'); 
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
@@ -420,20 +403,20 @@
                             </div>
                         </div><br><br><br>
                     </section>
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/GRM_8075.webp')}}">
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/IMG_8717.webp')}}">
                         <div class="container text-right">
                             <div class="container-fluid">
                                 <div class="text-right">
                                     <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">     
                                 </div>
-                                <p class="fix-montserrat-sxs-b ft-shadow">Tidak sabar tuk sambut hari bahagia kami bersamamu.<br>Di bawah ini silahkan mengkonfirmasi kehadiran Anda, terima kasih.</p>
+                                <strong class="ft-shadow ff-ephesis" style="font-size: 18px">Tidak sabar untuk sambut hari bahagia kami bersamamu.<br>Di bawah ini silahkan mengkonfirmasi kehadiran Anda, terima kasih.</strong>
                                 <form id="form-rsvp" onsubmit="return false;">
                                     <div class="row">
                                         <div class="col-sm-6"><br>
                                             <span class="fix-montserrat-s-b">Nama</span>
                                             <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
                                         </div>
-                                        <div class="col-sm-6"><br>
+                                        <div class="col-sm-6"><br><br><br>
                                             <span class="fix-montserrat-s-b">Alamat</span>
                                             <input type="text" name="rsvp_address" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" required>
                                         </div>
@@ -445,7 +428,7 @@
                                             <small>Maaf, tidak bisa hadir.</small>
                                         </div>
                                         <div class="col-md-12" style="padding-top:50px">
-                                            <input type="submit" class="btn submit" id="form-rsvp-send" value="simpan">
+                                            <input type="submit" class="btn submit btn-brown-light-transp" id="form-rsvp-send" value="simpan">
                                         </div>
                                         @if($display['rsvp'] == 1)
                                         <div class="panel panel-default" style="margin-top:50px">
@@ -476,7 +459,7 @@
                     </section>
                     <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
                         <div class="container text-center pd-md">
-                            <span class="fix-montserrat-m">Protokol Kesehatan</span><br><br>
+                            <span class=" ff-ephesis" style="font-size: 26px">Protokol Kesehatan</span><br><br>
                             <p class="fix-montserrat-s-b text-orange">Agar kita semua merasa nyaman dan aman dalam upaya pencegahan penyakit menular, tamu undangan yang bersedia hadir di acara tersebut dimohon untuk mematuhi protokol kesehatan berikut ini: </p><br>
                             <div class="row text-center fix-montserrat-s-b">
                                 <div class="col-sm-3 col-xs-12 gla_round_block">
@@ -493,7 +476,7 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="quote" class="gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/GRM_7956.webp')}}">
+                    <section    id="quote" class="gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4.webp')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-green-sh"><i>
