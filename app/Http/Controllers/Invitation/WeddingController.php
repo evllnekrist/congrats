@@ -20,7 +20,7 @@ class WeddingController extends Controller
     }
     public function outer_index($code){
         $subject_name = explode("-",$code);
-        $event = isset($subject_name[2])?$subject_name[2]:'Wedding';
+        $event = isset($subject_name[2])?ucwords($subject_name[2]):'Wedding';
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
         // dd(sizeof($subject_name));
@@ -37,7 +37,7 @@ class WeddingController extends Controller
     }
     public function inner_index($code){
         $subject_name = explode("-",$code);
-        $event = isset($subject_name[2])?$subject_name[2]:'Wedding';
+        $event = isset($subject_name[2])?ucwords($subject_name[2]):'Wedding';
         $invited_name = (isset($_GET['i'])?$_GET['i']:'');
         $display_rsvp = (isset($_GET['rsvp'])?$_GET['rsvp']:'');
         $addition_logic = array();
