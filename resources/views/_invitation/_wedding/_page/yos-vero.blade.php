@@ -3,9 +3,7 @@
     <head>
         @include('_invitation._wedding._include.head-1')
         <?php
-            $version = "?var=".date("Ymd")."009";
-            $qrcode1 = "60010974057";
-            $qrcode2 = "4400017897";
+            $version = "?var=".date("Ymd")."010";
         ?>
         <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
