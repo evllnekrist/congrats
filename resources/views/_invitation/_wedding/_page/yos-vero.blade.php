@@ -102,7 +102,10 @@
                 padding-bottom: 20px;
             }  
             .pd-md-h{
-                padding: 80rem 20px 20px 20px;
+                padding: 8rem 20px 20px 20px;
+            }
+            .h-fix-img{
+                height: 1000px;
             }
             .gla_round_block{
                 margin-top: 0px !important;
@@ -379,7 +382,7 @@
                     <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
                                 data-image="{{asset($cdn_link.'images/white-bg.webp')}}">
                         <div class="container text-center"><br>
-                            <span class="fix-montserrat-m text-choco">Gallery</span><br><br>
+                            <span class="fix-montserrat-m text-choco">Our Moment</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
                                     $gallery_items = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21'); 
@@ -474,7 +477,7 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="quote" class="gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4.webp')}}">
+                    <section    id="quote" class="gla_image_bck gla_fixed h-fix-img" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4.webp')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-green-sh"><i>
