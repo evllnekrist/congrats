@@ -60,8 +60,15 @@
                 -webkit-box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
             }
-            .text-choco{
+            .text-choco-1{
                 color: #956c5a
+            }
+            .text-choco-2{
+                /* color: #6c4331 */
+                color: #a47766;
+            }
+            .text-choco-3{
+                color: #392F24
             }
             .text-orange{
                 /* color: #6c4331 */
@@ -120,15 +127,15 @@
                 /* 108,67,49 */
                 /* font-weight: 600; */
             }
-            .btn-brown-light-transp, .btn-blue-light-transp:hover{
+            .btn-brown-light-transp, .btn-blue-light-transp:hover, .btn-brown-light-transp-2:hover{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
                 background: rgba(224, 126, 51, 0.8) !important; 
                 /* 108,67,49 */
                 /* font-weight: 600; */
             }
-            .btn-brown-light-transp:hover{
-                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(48, 34, 29, 0.4) !important; 
+            .btn-brown-light-transp-2, .btn-brown-light-transp:hover{
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%) !important;
+                background: rgba(48, 34, 29, 0.9) !important; 
                 font-weight: 600;
             }
             .in-focus-white-light{
@@ -201,7 +208,7 @@
             <div class="gla_page_loader gla_image_bck gla_wht_txt" data-color="#181d23">
                 <div class="gla_loader">
                     <p><img src="{{asset($cdn_link.'images/loading.gif')}}" height="150" alt=""></p>
-                    <p>Loading ...</p>
+                    <p>Memuat ...</p>
                 </div>
             </div>
         <!-- Preloader End-->
@@ -209,31 +216,33 @@
             <div class="gla_page_loader_light gla_image_bck gla_wht_txt" data-color="#181d23" style="display:none">
                 <div class="gla_loader_light">
                     <p><img src="{{asset($cdn_link.'images/loading.gif')}}" height="150" alt=""></p>
-                    <p class="fix-montserrat-xs-b"><i>Processing your feedback ...</i></p>
+                    <p class="fix-montserrat-xs-b"><i>Memproses masukan Anda ...</i></p>
                 </div>
             </div>
         <!-- Preloader End-->
         <!-- OPEN -->
         <!-- #GOLD VERSION -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-blue-baby" data-image="{{asset($cdn_link.'images/16.webp')}}"> 
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3.jfif')}}"> 
                     <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-soft-white">               
-                        <span class="fix-montserrat-s-b">The Engagement of</span><br><br>
-                        <span class="gla_slide_midtitle_m ff-ephesis">Yosafat&nbsp;&nbsp;&&nbsp;&nbsp;Veronica</span><br><br>
+                        <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
+                        <span class="gla_slide_midtitle_m ff-ephesis">Yunan&nbsp;&nbsp;&&nbsp;&nbsp;Neng</span><br><br>
                     </p>
                 </div>
             </div>
-            <div class="row gla_wht_txt gla_invitation_open_btn_longer__before_custom text-blue-bicycle" id="gla_welcome2">
+            <div class="row gla_wht_txt gla_invitation_open_btn_longer__before_custom text-choco-3" id="gla_welcome2">
                 <h6>Dear <span class="fix-montserrat-s-b">{{$invite?$invite:'Saudara/(i)'}}</span>,</h6>
                 @if(isset($_GET['qty']))
-                    <span class="highlight-2-bold fix-montserrat-xs text-blue-baby">
-                        This invitation is limited to <span class="fix-montserrat-xs-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
+                    <span class="highlight-2-bold fix-montserrat-xs text-choco-3">
+                        Undangan ini terbatas untuk <span class="fix-montserrat-xs-b">{{$_GET['qty']}} orang {{$_GET['qty']>1?"'s":""}}</span>
                     </span> 
                     <br><br>
                 @endif
                 <h6><small>Mengundang Anda untuk menjadi bagian<br>dari hari bahagia kami<br><br></small></h6>
             </div>
-            <button type="button" class="btn btn-blue-light-transp gla_wht_txt gla_invitation_open_btn_longer__before_after_custom" id="gla_welcome3" onclick="executeInv()">Buka Undangan</button> 
+            <button type="button" class="btn btn-brown-light-transp-2 text-choco-1 gla_invitation_open_btn_longer__before_after_custom" 
+                id="gla_welcome3" onclick="executeInv()">Buka Undangan
+            </button> 
         <!-- OPEN End -->
         <!-- CONTENT -->
             <div class="gla_page" id="gla_page" style="display:none">
@@ -245,8 +254,8 @@
                     <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/calum_scott_ft_lyodra__heaven.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/calum_scott_ft_lyodra__heaven.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/Westlife_I-Wanna-Grow-Old-with-You.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/Westlife_I-Wanna-Grow-Old-with-You.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -255,8 +264,8 @@
                         <div class="container">
                             <div class="gla_logo_container clearfix">
                                 <div class="gla_logo_txt">
-                                    <a href="/" class="gla_logo">Yosafat & Veronica</a>
-                                    <div class="gla_logo_und">03 Februari 2024</div>
+                                    <a href="/" class="gla_logo">Yunan & Neng</a>
+                                    <div class="gla_logo_und">30 Juni 2024</div>
                                 </div>
                             </div>
                             @include('_invitation._wedding._include.nav-2')
@@ -264,11 +273,11 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/8.webp')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/1.jfif')}}" data-stellar-background-ratio="0.8">
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom text-center">
-                            <div class="gla_slide_midtitle">Y & V</div>
+                            <div class="gla_slide_midtitle text-choco-2">Y & V</div>
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
@@ -279,30 +288,30 @@
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/11.webp')}}">  
+                                data-image="{{asset($cdn_link.'images/0.webp')}}">  
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
-                                <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Mengikat janji bersama keluarga</span><br>
-                                <span class="fix-montserrat-m-sb text-blue-baby ft-shadow-soft-reverse">Sabtu, 03 Februari 2024</span><br><br>
-                                <div class="gla_countdown" data-year="2024" data-month="02" data-day="03"></div><br><br>
+                                <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Mengikat janji bersama</span><br>
+                                <span class="fix-montserrat-m-sb ft-shadow-soft-reverse">Senin, 30 Juni 2024</span><br><br>
+                                <div class="gla_countdown" data-year="2024" data-month="06" data-day="30"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
                                 <div class="col-12">
                                     <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
                                         <div style="padding: 20px 0px">
-                                            <span class="text-blue-baby"><strong>drg. Yosafat</strong></span>
-                                            <div class="text-orange">
+                                            <span class="text-blue-baby"><strong>Yunan Akbar Fajri S.H.</strong></span>
+                                            <div class="text-choco-2">
                                                 <small class="gla_wht_txt ft-shadow-soft-reverse ff-ephesis" style="font-size: 18px">putra dari</small></b><br>
-                                                <span class="fix-montserrat-s-b">Bpk Sunardie, AMK & Ibu Meiliana Hasien, S.Pd</span>
+                                                <span class="fix-montserrat-s-b">Bpk Rustam Usman & Ibu Nursiah (Alm)</span>
                                             </div>
                                         </div>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;">
                                         <div style="padding: 20px 0px">
-                                            <span class="text-blue-baby pt-4"><strong>dr. Veronica Rahayu</strong></span>
-                                            <div class="text-orange">
+                                            <span class="text-blue-baby pt-4"><strong>Neng Andri Tya Fasyha</strong></span>
+                                            <div class="text-choco-2">
                                                 <small class="gla_wht_txt ft-shadow-soft-reverse ff-ephesis" style="font-size: 18px">putri dari</small></b><br>
-                                                <span class="fix-montserrat-s-b">Bpk Arius Frans Sediarta & Ibu Marilaniasie</span>
+                                                <span class="fix-montserrat-s-b">Bpk Wahyudin (Ujang Ceper) & Ibu Indra Purbayani</span>
                                             </div>
                                         </div>
                                     </div>
@@ -310,36 +319,49 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/GRM_7544.webp')}}" data-stellar-background-ratio="0.8">
+                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/mbg4.webp')}}" data-stellar-background-ratio="0.8">
                         <div class="container text-center">     
-                            <!-- <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>    -->
-                            <div class="container text-center">                
-                                <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Hanya oleh karunia Tuhan,</span><br>
-                                <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami umumkan pertunangan ini,<br></span><span class="text-subtitle-highlight-1">kepada keluarga dan sahabat</span></span><br><br><br><br>
+                            
+                                <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Dengan memohon rahmat & ridho Allah SWT,</span><br>
+                                <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">mengundang keluarga dan sahabat<br></span><span class="text-subtitle-highlight-1">InsyaAllah diselenggarakan pada</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-12">
                                         <a href="#" class="gla_news_block">
                                             <span>
-                                                <img src="{{asset($cdn_link.'images/5.webp')}}" alt="">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15860.22815103946!2d106.8618735!3d-6.38664095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb83b250e2ef%3A0xc46824ede2aafa00!2sCisalak%2C%20Sukmajaya%2C%20Depok%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1715450985189!5m2!1sen!2sid" 
+                                                height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                             </span>
                                             <p><br><br>
-                                                <span class="fix-montserrat-sm-b text-blue-baby"><b>Kediaman Keluarga<br>Bapak Arius FS</b></span><br>
-                                                Jl. Temanggung Jahan KM 1,<br>Tumbang Manggu
+                                                <span class="fix-montserrat-sm-b text-blue-baby"><b>Kediaman Keluarga<br>Mempelai Wanita</b></span><br>
+                                                Kampung Cisalak Wetan,<br>RT. 02 / RW. 09,<br>Sukalilah, Cibatu,<br>Kabupaten Garut, Jawa Barat
                                             </p>
                                             </p>
-                                                <span class="gla_news_title" style="margin-bottom: 0px">Engagement Ceremony</span>
-                                                <span class="fix-montserrat-s-b text-blue-baby">Sabtu, 03 Februari 2024</span><br><br>
-                                                <span class="label label-info">13.00 WIB</span>
+                                                <span class="gla_news_title" style="margin-bottom: 0px">Akad Nikah</span>
+                                                <span class="fix-montserrat-s-b text-blue-baby">Senin, 30 Juni 2024</span><br><br>
+                                                <span class="label label-info">08.00 WIB</span>
                                             </p>
                                             </p>
-                                                <span class="gla_news_title" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span>
-                                                <span class="fix-montserrat-s-b text-blue-baby">Sabtu, 03 Februari 2024</span><br><br>
-                                                <span class="label label-info">16.00 WIB</span>
+                                                <span class="gla_news_title" style="margin-bottom: 0px">Resepsi</span>
+                                                <span class="fix-montserrat-s-b text-blue-baby">Senin, 30 Juni 2024</span><br><br>
+                                                <span class="label label-info">12.00 - 17.00 WIB</span>
                                             </p>
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                                
+                                <div class="gla_icon_boxes row">
+                                    <div class="col-12">
+                                        <div class="gla_news_block pd-md text-blue-baby" style="background-color:rgba(0,0,0,0.7);">
+                                            <span class="fix-montserrat-sm-b"><b>Turut mengundang:</b></span><br><br> 
+                                            Ajun Komisaris Polisi (AKP) Suhendar<br>
+                                            Keluarga Besar H. To’in & Hj. Sitiaisyah (Alm)<br>
+                                            Keluarga Besar Abah Oko (Alm)<br>
+                                            Keluarga Besar Bapak Komar (Alm) & Ibu Uum<br>
+                                            Keluarga Besar Aki Romli (Alm)<br>
+                                            Keluarga Besar Bapak Iing Sodikin (Alm)<br>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </section>
                     <section    id="wishes" class="gla_section">
@@ -354,7 +376,7 @@
                             </table>
                         </div>
                     </section>
-                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/3.webp')}}">
+                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/5.jfif')}}">
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.65"></div> -->
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
@@ -380,17 +402,17 @@
                         </div>
                     </section>
                     <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
-                                data-image="{{asset($cdn_link.'images/white-bg.webp')}}">
+                                data-image="{{asset($cdn_link.'images/white-bg.jfif')}}">
                         <div class="container text-center"><br>
-                            <span class="fix-montserrat-m text-choco">Our Moment</span><br><br>
+                            <span class="fix-montserrat-m text-choco-1">Our Moment</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21'); 
+                                    $gallery_items = array('2','3','4','5','6','1'); 
                                 ?>
                                 @foreach($gallery_items as $item)
-                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
+                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.jfif')}}">
                                     <div class="gla_over" data-color="#000" data-opacity="0"></div>
-                                    <a href="{{asset($cdn_link.'images/'.$item.'.webp')}}" class="lightbox">
+                                    <a href="{{asset($cdn_link.'images/'.$item.'.jfif')}}" class="lightbox">
                                         <div class="container">
                                             <div class="stick-bottom">
                                                 <div class="gla_slide_midtitle"></div>
@@ -404,13 +426,17 @@
                             </div>
                         </div><br><br><br>
                     </section>
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/IMG_8717.webp')}}">
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/6.jfif')}}">
                         <div class="container text-right">
                             <div class="container-fluid">
                                 <div class="text-right">
                                     <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">     
                                 </div>
-                                <strong class="ft-shadow ff-ephesis" style="font-size: 18px">Tidak sabar untuk sambut hari bahagia kami bersamamu.<br>Di bawah ini silahkan mengkonfirmasi kehadiran Anda, terima kasih.</strong>
+                                <strong class="text-orange ff-ephesis" style="font-size: 18px">
+                                    Tak sabar untuk sambut hari bahagia kami bersamamu.
+                                    <br>Di bawah ini silahkan mengkonfirmasi kehadiran Anda,
+                                    <br>terima kasih.<br>
+                                </strong>
                                 <form id="form-rsvp" onsubmit="return false;">
                                     <div class="row">
                                         <div class="col-sm-6"><br>
@@ -458,36 +484,27 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="health-protocol" class="gla_section gla_image_bck" data-color="#fff">
-                        <div class="container text-center pd-md">
-                            <span class=" ff-ephesis" style="font-size: 26px">Protokol Kesehatan</span><br><br>
-                            <p class="fix-montserrat-s-b text-orange">Agar kita semua merasa nyaman dan aman dalam upaya pencegahan penyakit menular, tamu undangan yang bersedia hadir di acara tersebut dimohon untuk mematuhi protokol kesehatan berikut ini: </p><br>
-                            <div class="row text-center fix-montserrat-s-b">
-                                <div class="col-sm-3 col-xs-12 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-1.png')}}"></div>
-                                    <p class="text-choco">menggunakan masker</p>
-                                </div>
-                                <div class="col-sm-6 col-xs-12 gla_round_block">
-                                    <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/hp-2.png')}}" style="max-width:300px">
-                                </div>
-                                <div class="col-sm-3 col-xs-12 gla_round_block">
-                                    <div class="gla_round_im gla_image_bck" data-image="{{asset($cdn_link.'images/hp-3-a.png')}}"></div>
-                                    <p class="text-choco">cuci tangan & pakai hand sanitizer</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section    id="quote" class="gla_image_bck gla_fixed h-fix-img" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/4.webp')}}">
+                    <section    id="quote" class="gla_image_bck gla_fixed h-fix-img" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/mbg9.webp')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
-                            <span class="fix-montserrat-s-b text-green-sh"><i>
-                                <sup>7</sup> <span class="ft-shadow">sebab itu laki-laki akan meninggalkan   
-                                <br>ayahnya dan ibunya dan bersatu dengan isterinya, </span>
-                                <br><sup>8</sup> <span class="ft-shadow">sehingga keduanya itu menjadi satu daging.  
-                                <br>Demikianlah mereka bukan lagi dua, melainkan satu.</span> 
-                                <br><sup>9</sup> <span class="ft-shadow">Karena itu, apa yang telah dipersatukan Allah, <br>tidak boleh diceraikan manusia.</span></i>
+                            <span class="fix-montserrat-s-b text-green-sh">
+                                <i>
+                                <sup>"</sup> 
+                                <span class="ft-shadow">
+                                    Di antara tanda-tanda (kebesaran)-Nya 
+                                    <br>ialah bahwa Dia menciptakan pasangan-pasangan 
+                                    <br>untukmu dari (jenis) dirimu sendiri 
+                                    <br>agar kamu merasa tenteram kepadanya. 
+                                    <br>Dia menjadikan di antaramu
+                                    <br>rasa cinta dan kasih sayang.
+                                    <br>Sesungguhnya pada yang demikian itu
+                                    <br>benar-benar terdapat tanda-tanda 
+                                    <br>(kebesaran Allah)
+                                    <br>bagi kaum yang berpikir.</span>
+                                <sup>"</sup> 
+                                </i>
                             </span><br><br><br><br><br>
-                            <p class="gla_subtitle ft-shadow">— Markus 10:7-9</p>
+                            <p class="gla_subtitle ft-shadow">— Qs Ar-Rum 21</p>
                         </div>
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
@@ -564,7 +581,7 @@
                                         if("{{$display['rsvp']}}"  == 1){
                                             seeRSVP();
                                         }
-                                        toastr.success(data.message, 'Thankyou!', {timeOut: 3000});
+                                        toastr.success(data.message, 'Terima kasih ya!', {timeOut: 3000});
                                     }else{
                                         toastr.error(data.message, 'Ooops..', {timeOut: 5000});
                                     }
@@ -604,7 +621,7 @@
                                     console.log(data);
                                     if(data.status){
                                         seeWishes();
-                                        toastr.success(data.message, 'Thankyou!', {timeOut: 3000});
+                                        toastr.success(data.message, 'Terima kasih ya!', {timeOut: 3000});
                                     }else{
                                         toastr.error(data.message, 'Ooops..', {timeOut: 5000});
                                     }

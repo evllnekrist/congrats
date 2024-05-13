@@ -551,7 +551,7 @@
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
-                            <a href='{{url("/")}}' target="_blank">© beritabaik.co</a>
+                            <a href='{{url("/")}}' target="_blank">© beritabaik.info</a>
                         </div>
                     </section>
                 </section>
@@ -577,7 +577,7 @@
                 @if($addition_logic && in_array('do',$addition_logic))
                     let auth_msg = `Hello! Thankyou for trying this page, 
                     unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom. 
-                    Even so, please feel free to contact our admin by select order menu at beritabaik.co main page`;
+                    Even so, please feel free to contact our admin by select order menu at beritabaik.info main page`;
                 @endif
                 $(document).on("click","#form-rsvp-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))

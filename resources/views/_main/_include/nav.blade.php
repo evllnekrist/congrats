@@ -6,7 +6,7 @@
             <div class="gla_logo_container clearfix">
                 <img src="{{asset('asset-main/images/logo/logo-v2-fill-darker.png')}}" alt="" class="gla_logo_rev">
                 <div class="gla_logo_txt">
-                    <a href="/" class="gla_logo" style="color:#333">beritabaik.co</a>
+                    <a href="/" class="gla_logo" style="color:#333">beritabaik.info</a>
                     <div class="gla_logo_und">digital solution</div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                             <button type="submit" class="btn">Search</button>
                         </form>
                         <br>
-                        <p>© beritabaik.co 2021</p>
+                        <p>© beritabaik.info 2021</p>
                         <!-- Social Buttons -->
                         <div class="gla_footer_social">
                             <a href="#"><i class="ti ti-instagram gla_icon_box"></i></a>

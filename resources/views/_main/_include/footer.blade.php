@@ -37,6 +37,7 @@
                     <li><a href="{{url('/w/glenn-dewi-wedding-do?i=Mr./Ms.')}}" target="_blank">Glenn & Dewi's Wedding</a></li>
                     <li><a href="{{url('/w/andreas-aprilia-wedding-do?i=Mr./Ms.')}}" target="_blank">Andreas & Aprilia's Wedding</a></li>
                     <li><a href="{{url('/w/petrick-menda-do?i=Mr./Ms.')}}" target="_blank">Petrick & Menda's Wedding</a></li>
+                    <li><a href="{{url('/w/yos-vero-engagement-do?i=Mr./Ms.')}}" target="_blank">Yos & Vero's Engagement</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4">
@@ -47,7 +48,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="gla_block">
-                    <p>© <a href="{{env('APP_URL')}}">beritabaik.co 2020</a> | Copyright</p>
+                    <p>© <a href="{{env('APP_URL')}}">beritabaik.info since 2020</a> | copyright</p>
                 </div>
             </div>
         </div>
