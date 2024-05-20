@@ -52,7 +52,7 @@
                 padding: 5px 30px;
             }
             .text-subtitle-highlight-2{
-                background-color:#5bc0de;
+                background-color:#392F24;
                 color: white;
                 padding: 5px 30px;
             }
@@ -68,7 +68,7 @@
                 color: #a47766;
             }
             .text-choco-3{
-                color: #392F24
+                color: #392F24;
             }
             .text-orange{
                 /* color: #6c4331 */
@@ -109,10 +109,10 @@
                 padding-bottom: 20px;
             }  
             .pd-md-h{
-                padding: 8rem 20px 20px 20px;
+                padding: 2rem 20px 20px 20px;
             }
             .h-fix-img{
-                height: 1000px;
+                height: 700px;
             }
             .gla_round_block{
                 margin-top: 0px !important;
@@ -226,7 +226,7 @@
                 <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3.jfif')}}"> 
                     <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-soft-white">               
                         <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
-                        <span class="gla_slide_midtitle_m ff-ephesis">Yunan&nbsp;&nbsp;&&nbsp;&nbsp;Neng</span><br><br>
+                        <span class="gla_slide_midtitle_m ff-ephesis">Yunan&nbsp;&nbsp;&&nbsp;&nbsp;Tya</span><br><br>
                     </p>
                 </div>
             </div>
@@ -264,7 +264,7 @@
                         <div class="container">
                             <div class="gla_logo_container clearfix">
                                 <div class="gla_logo_txt">
-                                    <a href="/" class="gla_logo">Yunan & Neng</a>
+                                    <a href="/" class="gla_logo">Yunan & Tya</a>
                                     <div class="gla_logo_und">30 Juni 2024</div>
                                 </div>
                             </div>
@@ -293,27 +293,38 @@
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
                                 <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Mengikat janji bersama</span><br>
-                                <span class="fix-montserrat-m-sb ft-shadow-soft-reverse">Senin, 30 Juni 2024</span><br><br>
+                                <span class="fix-montserrat-m-sb ft-shadow-soft-reverse">Minggu, 30 Juni 2024</span><br><br>
                                 <div class="gla_countdown" data-year="2024" data-month="06" data-day="30"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
-                                <div class="col-12">
+                                <div class="col-xs-6">
                                     <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
-                                        <div style="padding: 20px 0px">
-                                            <span class="text-blue-baby"><strong>Yunan Akbar Fajri S.H.</strong></span>
-                                            <div class="text-choco-2">
-                                                <small class="gla_wht_txt ft-shadow-soft-reverse ff-ephesis" style="font-size: 18px">putra dari</small></b><br>
-                                                <span class="fix-montserrat-s-b">Bpk Rustam Usman & Ibu Nursiah (Alm)</span>
-                                            </div>
-                                        </div>
-                                        <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;">
-                                        <div style="padding: 20px 0px">
-                                            <span class="text-blue-baby pt-4"><strong>Neng Andri Tya Fasyha</strong></span>
-                                            <div class="text-choco-2">
-                                                <small class="gla_wht_txt ft-shadow-soft-reverse ff-ephesis" style="font-size: 18px">putri dari</small></b><br>
-                                                <span class="fix-montserrat-s-b">Bpk Wahyudin (Ujang Ceper) & Ibu Indra Purbayani</span>
-                                            </div>
-                                        </div>
+                                        <a href="{{asset($cdn_link.'images/groom_2.webp')}}">
+                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/groom.webp')}}" alt="">
+                                        </a>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Yunan Akbar Fajri S.H.</small></strong></span>
+                                        <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
+                                        <p class="text-choco-2">
+                                            <small class="gla_wht_txt ft-shadow-soft-reverse">putra dari</small></b><br>
+                                            <span class="fix-montserrat-s-b">Bpk Rustam Usman</span>
+                                            <br>&<br>
+                                            <span class="fix-montserrat-s-b">Ibu Nursiah (Alm)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
+                                        <a href="{{asset($cdn_link.'images/bride_2.webp')}}">
+                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride.jfif')}}" alt="">
+                                        </a>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Neng Andri Tya Fasyha</small></strong></span>
+                                        <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
+                                        <p class="text-choco-2">
+                                            <small class="gla_wht_txt ft-shadow-soft-reverse">putri dari</small><br>
+                                            <span class="fix-montserrat-s-b">Bpk <small>Wahyudin (Ujang Ceper)</small></span>
+                                            <br>&<br>
+                                            <span class="fix-montserrat-s-b">Ibu Indra Purbayani</span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -322,46 +333,49 @@
                     <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/mbg4.webp')}}" data-stellar-background-ratio="0.8">
                         <div class="container text-center">     
                             
-                                <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Dengan memohon rahmat & ridho Allah SWT,</span><br>
+                                <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Dengan memohon Rahmat & Ridho&nbsp;&nbsp;<br>&nbsp;&nbsp;Allah SWT,</span><br>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">mengundang keluarga dan sahabat<br></span><span class="text-subtitle-highlight-1">InsyaAllah diselenggarakan pada</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-12">
                                         <a href="#" class="gla_news_block">
                                             <span>
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15860.22815103946!2d106.8618735!3d-6.38664095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb83b250e2ef%3A0xc46824ede2aafa00!2sCisalak%2C%20Sukmajaya%2C%20Depok%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1715450985189!5m2!1sen!2sid" 
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5680976885824!2d108.0066612!3d-7.0599257999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68cbb55e8279a3%3A0x2fb05aa0db127c97!2sPAWON%20BAKO!5e0!3m2!1sen!2sid!4v1716172166516!5m2!1sen!2sid" 
                                                 height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                             </span>
                                             <p><br><br>
-                                                <span class="fix-montserrat-sm-b text-blue-baby"><b>Kediaman Keluarga<br>Mempelai Wanita</b></span><br>
+                                                <span class="fix-montserrat-sm-b text-choco-2"><b>Kediaman Keluarga<br>Mempelai Wanita</b></span><br>
                                                 Kampung Cisalak Wetan,<br>RT. 02 / RW. 09,<br>Sukalilah, Cibatu,<br>Kabupaten Garut, Jawa Barat
                                             </p>
                                             </p>
                                                 <span class="gla_news_title" style="margin-bottom: 0px">Akad Nikah</span>
-                                                <span class="fix-montserrat-s-b text-blue-baby">Senin, 30 Juni 2024</span><br><br>
-                                                <span class="label label-info">08.00 WIB</span>
+                                                <span class="fix-montserrat-s-b text-choco-2">Minggu, 30 Juni 2024</span><br><br>
+                                                <span class="label label-default">08.00 WIB</span>
                                             </p>
                                             </p>
                                                 <span class="gla_news_title" style="margin-bottom: 0px">Resepsi</span>
-                                                <span class="fix-montserrat-s-b text-blue-baby">Senin, 30 Juni 2024</span><br><br>
-                                                <span class="label label-info">12.00 - 17.00 WIB</span>
+                                                <span class="fix-montserrat-s-b text-choco-2">Minggu, 30 Juni 2024</span><br><br>
+                                                <span class="label label-default">12.00 - 17.00 WIB</span>
                                             </p>
                                         </a>
                                     </div>
                                 </div>
-                                
-                                <div class="gla_icon_boxes row">
-                                    <div class="col-12">
-                                        <div class="gla_news_block pd-md text-blue-baby" style="background-color:rgba(0,0,0,0.7);">
-                                            <span class="fix-montserrat-sm-b"><b>Turut mengundang:</b></span><br><br> 
-                                            Ajun Komisaris Polisi (AKP) Suhendar<br>
-                                            Keluarga Besar H. To’in & Hj. Sitiaisyah (Alm)<br>
-                                            Keluarga Besar Abah Oko (Alm)<br>
-                                            Keluarga Besar Bapak Komar (Alm) & Ibu Uum<br>
-                                            Keluarga Besar Aki Romli (Alm)<br>
-                                            Keluarga Besar Bapak Iing Sodikin (Alm)<br>
-                                        </div>
+                        </div>
+                    </section>
+                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/mbg2.webp')}}" data-stellar-background-ratio="0.8">
+                        <div class="container text-center"> 
+                            <div class="gla_icon_boxes row">
+                                <div class="col-12">
+                                    <div class="gla_news_block pd-md text-choco-2" style="background-color:rgba(0,0,0,0.9);">
+                                        <span class="fix-montserrat-sm-b"><b>Turut mengundang:</b></span><br><br> 
+                                        Ajun Komisaris Polisi (AKP) Suhendar<br>
+                                        Keluarga Besar H. To’in & Hj. Sitiaisyah (Alm)<br>
+                                        Keluarga Besar Abah Oko (Alm)<br>
+                                        Keluarga Besar Bapak Komar (Alm) & Ibu Uum<br>
+                                        Keluarga Besar Aki Romli (Alm)<br>
+                                        Keluarga Besar Bapak Iing Sodikin (Alm)<br>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </section>
                     <section    id="wishes" class="gla_section">
@@ -376,11 +390,11 @@
                             </table>
                         </div>
                     </section>
-                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/5.jfif')}}">
-                        <!-- <div class="gla_over" data-color="#282828" data-opacity="0.65"></div> -->
+                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/mbg6.webp')}}">
+                        <div class="gla_over" data-color="#282828" data-opacity="0.65"></div>
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
-                                <p class=" ff-ephesis" style="font-size: 22px"><b>Doa dan harapanmu sangat berarti untuk kami <br>dalam semangat memulai perjalanan baru ini</b></p>
+                                <p class="ft-shadow ff-ephesis" style="font-size: 22px"><b>Doa dan harapanmu sangat berarti untuk kami <br>dalam semangat memulai perjalanan baru ini</b></p>
                                 <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">  
                                 <br><br>    
                                 <div class="row">
@@ -395,7 +409,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <input type="submit" class="btn submit btn-blue-light-transp" id="form-wish-send" value="kirim">
+                                        <input type="submit" class="btn btn-brown-light-transp-2 text-choco-1" id="form-wish-send" value="kirim">
                                     </div>
                                 </div>
                             </form>
@@ -426,13 +440,14 @@
                             </div>
                         </div><br><br><br>
                     </section>
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/6.jfif')}}">
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/mbg5.webp')}}">
+                        <div class="gla_over" data-color="#282828" data-opacity="0.65"></div>
                         <div class="container text-right">
                             <div class="container-fluid">
                                 <div class="text-right">
                                     <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">     
                                 </div>
-                                <strong class="text-orange ff-ephesis" style="font-size: 18px">
+                                <strong class="ff-ephesis" style="font-size: 18px">
                                     Tak sabar untuk sambut hari bahagia kami bersamamu.
                                     <br>Di bawah ini silahkan mengkonfirmasi kehadiran Anda,
                                     <br>terima kasih.<br>
@@ -455,7 +470,7 @@
                                             <small>Maaf, tidak bisa hadir.</small>
                                         </div>
                                         <div class="col-md-12" style="padding-top:50px">
-                                            <input type="submit" class="btn submit btn-brown-light-transp" id="form-rsvp-send" value="simpan">
+                                            <input type="submit" class="btn btn-brown-light-transp-2 text-choco-1" id="form-rsvp-send" value="simpan">
                                         </div>
                                         @if($display['rsvp'] == 1)
                                         <div class="panel panel-default" style="margin-top:50px">
@@ -484,13 +499,13 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="quote" class="gla_image_bck gla_fixed h-fix-img" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/mbg9.webp')}}">
+                    <section    id="quote" class="gla_image_bck gla_fixed h-fix-img" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/5.jfif')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
-                            <span class="fix-montserrat-s-b text-green-sh">
+                            <div style="font-size: xx-small; font-weight:bold">
                                 <i>
-                                <sup>"</sup> 
-                                <span class="ft-shadow">
+                                <sup class="text-choco">"</sup> 
+                                <span class="ft-shadow text-choco-3">
                                     Di antara tanda-tanda (kebesaran)-Nya 
                                     <br>ialah bahwa Dia menciptakan pasangan-pasangan 
                                     <br>untukmu dari (jenis) dirimu sendiri 
@@ -501,10 +516,10 @@
                                     <br>benar-benar terdapat tanda-tanda 
                                     <br>(kebesaran Allah)
                                     <br>bagi kaum yang berpikir.</span>
-                                <sup>"</sup> 
-                                </i>
-                            </span><br><br><br><br><br>
-                            <p class="gla_subtitle ft-shadow">— Qs Ar-Rum 21</p>
+                                <sup class="text-choco">"</sup> 
+                                </i><br><br><br><br><br>
+                                <p class="gla_subtitle ft-shadow">— Qs Ar-Rum 21</p>
+                            </div>
                         </div>
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
