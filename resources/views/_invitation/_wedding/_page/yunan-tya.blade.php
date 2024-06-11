@@ -368,7 +368,7 @@
                                     <div class="gla_news_block pd-md text-choco-2" style="background-color:rgba(0,0,0,0.9);">
                                         <span class="fix-montserrat-sm-b"><b>Turut mengundang:</b></span><br><br> 
                                         Ajun Komisaris Polisi (AKP) Suhendar<br>
-                                        Keluarga Besar H. To’in & Hj. Sitiaisyah<br>
+                                        Keluarga Besar H. To’in (Alm) & Hj. Sitiaisyah<br>
                                         Keluarga Besar Abah Oko (Alm)<br>
                                         Keluarga Besar Bapak Komar (Alm) & Ibu Uum<br>
                                         Keluarga Besar Aki Romli (Alm)<br>
