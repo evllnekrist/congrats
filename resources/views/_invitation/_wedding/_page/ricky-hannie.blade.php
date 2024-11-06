@@ -309,7 +309,7 @@
                                         <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>dr. Ricky Albert Husni, MM</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
                                         <p class="text-palette-5">
-                                            <small class="gla_wht_txt ft-shadow-soft-reverse">Second son of</small></b><br>
+                                            <small class="gla_wht_txt ft-shadow-soft-reverse">The second<br>son of</small></b><br>
                                             <span class="fix-montserrat-s-b">Mr Surya Luhur Husni</span>
                                             <br>&<br>
                                             <span class="fix-montserrat-s-b">Mrs Maudy <br>Himawanti <br>Kusuma</span>
@@ -324,8 +324,8 @@
                                         <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Hannie Novianty Kurnia, SE</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
                                         <p class="text-palette-5">
-                                            <small class="gla_wht_txt ft-shadow-soft-reverse">Only daughter of</small><br>
-                                            <span class="fix-montserrat-s-b">Mr Handoko Sastra Kurnia <small>(+)</small></span>
+                                            <small class="gla_wht_txt ft-shadow-soft-reverse">The only<br>daughter of</small><br>
+                                            <span class="fix-montserrat-s-b">Mr Handoko <small>Sastra Kurnia (+)</small></span>
                                             <br>&<br>
                                             <span class="fix-montserrat-s-b">Mrs Ong <br>Tjoan <br>Nie</span>
                                         </p>
