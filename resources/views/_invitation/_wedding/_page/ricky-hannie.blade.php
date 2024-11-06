@@ -309,10 +309,10 @@
                                         <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>dr. Ricky Albert Husni, MM</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
                                         <p class="text-palette-5">
-                                            <small class="gla_wht_txt ft-shadow-soft-reverse">The second son of</small></b><br>
+                                            <small class="gla_wht_txt ft-shadow-soft-reverse">Second son of</small></b><br>
                                             <span class="fix-montserrat-s-b">Mr Surya Luhur Husni</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Mrs Maudy Himawanti Kusuma</span>
+                                            <span class="fix-montserrat-s-b">Mrs Maudy <br>Himawanti <br>Kusuma</span>
                                         </p>
                                     </div>
                                 </div>
@@ -324,10 +324,10 @@
                                         <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Hannie Novianty Kurnia, SE</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
                                         <p class="text-palette-5">
-                                            <small class="gla_wht_txt ft-shadow-soft-reverse">The only daughter of</small><br>
+                                            <small class="gla_wht_txt ft-shadow-soft-reverse">Only daughter of</small><br>
                                             <span class="fix-montserrat-s-b">Mr Handoko Sastra Kurnia <small>(+)</small></span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Mrs Ong Tjoan Nie</span>
+                                            <span class="fix-montserrat-s-b">Mrs Ong <br>Tjoan <br>Nie</span>
                                         </p>
                                     </div>
                                 </div>
@@ -441,8 +441,16 @@
                         <div class="gla_over" data-color="#282828" data-opacity="0.1"></div>
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
-                                <p class="ft-shadow ff-ephesis text-choco-3" style="font-size: 22px"><b>Leave us your beautiful wishes <br>and most sincere prayers here<br>as we are so excited to embark <br>on this new journey together ~</b></p>
-                                <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">  
+                                <table>
+                                    <tr>
+                                        <td style="width: 20%">
+                                            <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">  
+                                        </td>
+                                        <td style="width: 80%">
+                                            <p class="ff-ephesis text-choco-3" style="font-size:18px;text-align:right"><b>Leave us your beautiful wishes <br>and most sincere prayers here as we are so excited<br>to embark on this new journey together ~</b></p>
+                                        </td>
+                                    </tr>
+                                </table>
                                 <br><br>    
                                 <div class="row gla_wht_txt">
                                     <div class="col-sm-6"><br><br>
@@ -490,13 +498,13 @@
                     <section    id="quote" class="gla_image_bck gla_fixed h-fix-img" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/16.webp')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
-                            <span class="fix-montserrat-s-b text-palette-7"><i>
-                                <sup>6</sup> <span class="ft-shadow">so they are no longer two,   
+                            <span class="fix-montserrat-s-b text-choco-3"><i>
+                                <sup class="ft-shadow">6</sup> <span>&nbsp;&nbsp;so they are no longer two,   
                                 <br>but one flesh. </span>
-                                <br><span class="ft-shadow">Therefore what God has joined together,</span> 
-                                <br><span class="ft-shadow">let no one separate.</span></i>
+                                <br><span>Therefore what God has joined together,</span> 
+                                <br><span>let no one separate.</span></i>
                             </span><br><br><br><br><br>
-                            <p class="gla_subtitle ft-shadow">— Matthew 19:6</p>
+                            <p class="gla_subtitle text-palette-7">— Matthew 19:6</p>
                         </div>
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
