@@ -447,7 +447,7 @@
                                             <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">  
                                         </td>
                                         <td style="width: 80%">
-                                            <p class="ff-ephesis text-choco-3" style="font-size:18px;text-align:right"><b>Leave us your beautiful wishes <br>and most sincere prayers here as we are so excited<br>to embark on this new journey together ~</b></p>
+                                            <p class="text-choco-3" style="font-size:12px;text-align:right"><b>Leave us your beautiful wishes <br>and most sincere prayers here<br>as we are so excited to embark<br>on this new journey together ~</b></p>
                                         </td>
                                     </tr>
                                 </table>
