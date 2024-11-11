@@ -211,7 +211,7 @@
             <div class="gla_page_loader gla_image_bck gla_wht_txt" data-color="#181d23">
                 <div class="gla_loader">
                     <p><img src="{{asset($cdn_link.'images/loading.gif')}}" height="150" alt=""></p>
-                    <p>Memuat ...</p>
+                    <p>Loading ...</p>
                 </div>
             </div>
         <!-- Preloader End-->
@@ -295,9 +295,9 @@
                                 data-image="{{asset($cdn_link.'images/bg15.jpg')}}">  
                         <div class="gla_over" data-color="#282828" data-opacity="0.1"></div>
                         <div class="container text-center">
-                            <div class="col gla_round_block gla_wht_txt">
+                            <div class="col gla_round_block text-palette-1">
                                 <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Bound by love, Blessed by grace</span><br>
-                                <span class="fix-montserrat-m-sb ft-shadow-soft-reverse">Sunday, 29 December 2024</span><br><br>
+                                <span class="gla_wht_txt fix-montserrat-m-sb ft-shadow-soft-reverse">Sunday, 29 December 2024</span><br><br>
                                 <div class="gla_countdown" data-year="2024" data-month="12" data-day="29"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
@@ -499,12 +499,12 @@
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-choco-3"><i>
-                                <sup class="ft-shadow">6</sup> <span>&nbsp;&nbsp;so they are no longer two,   
+                                <sup class="ft-shadow">6</sup> <span>&nbsp;&nbsp;So they are no longer two,   
                                 <br>but one flesh. </span>
                                 <br><span>Therefore what God has joined together,</span> 
                                 <br><span>let no one separate.</span></i>
                             </span><br><br><br><br><br>
-                            <p class="gla_subtitle text-palette-7">— Matthew 19:6</p>
+                            <p class="gla_subtitle text-palette-1"><b>— Matthew 19:6</b></p>
                         </div>
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">

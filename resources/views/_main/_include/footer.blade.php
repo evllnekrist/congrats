@@ -39,6 +39,8 @@
                     <li><a href="{{url('/w/petrick-menda-do?i=Mr./Ms.')}}" target="_blank">Petrick & Menda's Wedding</a></li>
                     <li><a href="{{url('/w/yos-vero-engagement-do?i=Mr./Ms.')}}" target="_blank">Yos & Vero's Engagement</a></li>
                     <li><a href="{{url('/w/yunan-tya-wedding-do?i=Mr./Ms.')}}" target="_blank">Yunan & Tya's Wedding</a></li>
+                    <li><a href="{{url('/w/ricky-hannie-wedding-do?i=Mr./Ms.')}}" target="_blank">Ricky & Hannie's Wedding</a></li>
+                    <li><a href="{{url('/w/lukas-desi-wedding-do?i=Mr./Ms.')}}" target="_blank">Lukas & Desi's Wedding</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4">
