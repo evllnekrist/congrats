@@ -298,7 +298,7 @@
                             <div class="col gla_round_block text-palette-1">
                                 <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Bound by love, Blessed by grace</span><br>
                                 <span class="gla_wht_txt fix-montserrat-m-sb ft-shadow-soft-reverse">Sabtu, 14 Desember 2024</span><br><br>
-                                <div class="gla_countdown" data-year="2024" data-month="12" data-day="29"></div><br><br>
+                                <div class="gla_countdown" data-year="2024" data-month="12" data-day="14"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
                                 <div class="col-xs-6">
@@ -306,11 +306,11 @@
                                         <a href="{{asset($cdn_link.'images/bride_2.webp')}}">
                                             <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Desi<br>Yosephine<br>Sinaga</small></strong></span>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Desi<br>Yosephine<br>Sinaga, S.Kom</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
                                         <p class="text-palette-5">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putri dari</small><br>
-                                            <span class="fix-montserrat-s-b">Pnt. P. Sinaga,<br>S.Pd.,<br>M.Si</span>
+                                            <span class="fix-montserrat-s-b">Pnt. P. Sinaga,<br>S.Pd., M.Si</span>
                                             <br>&<br>
                                             <span class="fix-montserrat-s-b"> J. Rajagukguk, S.Pd</span>
                                         </p>
@@ -321,13 +321,13 @@
                                         <a href="{{asset($cdn_link.'images/groom.webp')}}">
                                             <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/groom.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Lukas<br>Sigalingging<br><br></small></strong></span>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Lukas<br>Sigalingging, S.H.<br><br></small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
                                         <p class="text-palette-5">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putra dari</small></b><br>
-                                            <span class="fix-montserrat-s-b">Marihot<br>Marulitua<br>Sigalingging</span>
+                                            <span class="fix-montserrat-s-b">M. Sigalingging</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Nilawari br. Situngkir</span>
+                                            <span class="fix-montserrat-s-b">N br. Situngkir<br><br></span>
                                         </p>
                                     </div>
                                 </div>
@@ -340,6 +340,22 @@
                                 <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Hanya oleh karunia Tuhan,<br></span>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami dengan hormat meminta<br></span><span class="text-subtitle-highlight-1">kehadiran Anda</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
+                                    <div class="col-sm-12">
+                                        <a href="#" class="gla_news_block">
+                                            <div>
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15928.058737123549!2d98.62683015541992!3d3.5841022000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e33bb202527%3A0xb14ec086cf344e5a!2sGKPI%20Babura%20Dua!5e0!3m2!1sen!2sid!4v1731301094565!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                            </div>
+                                            <p><br><br>
+                                                <span class="fix-montserrat-sm-b text-choco-2"><b>GKPI Kota Siborongborong</b></span><br>
+                                                Rumah Pengantin Perempuan (Lumban Sinaga, Siborongborong)
+                                            </p>
+                                            </p>
+                                                <span class="gla_news_title" style="margin-bottom: 0px">Martupol</span>
+                                                <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 7 Desember 2024</span><br><br>
+                                                <span class="label label-default">08.00 WIB s/d selesai</span>
+                                            </p>
+                                        </a>
+                                    </div>
                                     <div class="col-sm-6">
                                         <a href="#" class="gla_news_block">
                                             <div>
@@ -347,12 +363,12 @@
                                             </div>
                                             <p><br><br>
                                                 <span class="fix-montserrat-sm-b text-choco-2"><b>GKPI Babura (Medan Baru)</b></span><br>
-                                                Jl. Sei Kapuas No.84, Babura Sunggal, Kec. Medan Sunggal, Kota Medan
+                                                l. Sei Bah Bolon No.18 Medan
                                             </p>
                                             </p>
-                                                <span class="gla_news_title" style="margin-bottom: 0px">Pemberkatan</span>
+                                                <span class="gla_news_title" style="margin-bottom: 0px">Pemberkatan Pernikahan</span>
                                                 <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 14 Desember 2024</span><br><br>
-                                                <span class="label label-default">10.00 WIB</span>
+                                                <span class="label label-default">10.00 WIB s/d selesai</span>
                                             </p>
                                         </a>
                                     </div>
@@ -362,13 +378,13 @@
                                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.027261613098!2d98.64547777497307!3d3.5812117963929513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e32c830844b%3A0x9805524f72d41e58!2sWisma%20Jayapuri!5e0!3m2!1sen!2sid!4v1731301273953!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                             </div>
                                             <p><br><br>
-                                                <span class="fix-montserrat-sm-b text-choco-2"><b>Wisma Jayapuri</b></span><br>
-                                                Jl. Sei Mencirim, Babura Sunggal, Kec. Medan Sunggal, Kota Medan
+                                                <span class="fix-montserrat-sm-b text-choco-2"><b>Wisma Jaya Puri</b></span><br>
+                                                Jl. Sei Mencirim no. 172 Medan
                                             </p>
                                             </p>
                                                 <span class="gla_news_title" style="margin-bottom: 0px">Pesta Adat</span>
                                                 <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 14 Desember 2024</span><br><br>
-                                                <span class="label label-default">13.00 WIB</span>
+                                                <span class="label label-default">12.00 WIB s/d selesai</span>
                                             </p>
                                         </a>
                                     </div>
