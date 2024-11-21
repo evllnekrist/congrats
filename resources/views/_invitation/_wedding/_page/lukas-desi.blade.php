@@ -4,6 +4,8 @@
         @include('_invitation._wedding._include.head-1')
         <?php
             $version = "?var=".date("Ymd")."010";
+            $qrcode1 = "2831587964";
+            $qrcode2 = "1980082527";
         ?>
         <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
@@ -38,7 +40,7 @@
                 color: #d5eaba;
             }
             .text-palette-7{
-                color: #81c0ae;
+                color: #abc94e;
             }
             
             .text-choco-1{
@@ -52,15 +54,9 @@
                 color: #392F24;
             }
 
-            .btn-pink-light-transp-2, .btn-pink-light-transp:hover{
-                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%) !important;
-                background: rgba(244, 173, 179, 0.8) !important; 
-                font-weight: 600;
-            }
-
             .btn-green-light-transp-2, .btn-green-light-transp:hover{
-                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%) !important;
-                background: rgba(129, 192, 174, 0.8) !important; 
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%) !important;
+                background: rgba(171, 201, 78, 0.8) !important; 
                 font-weight: 600;
             }
 
@@ -154,8 +150,8 @@
             .ft-shadow-soft-dark{
                 text-shadow: 1px 1px 1px #000000;
             }
-            .ft-shadow-soft-white{
-                text-shadow: 1px 1px 1px #ffffff;
+            .ft-shadow-dark{
+                text-shadow: 1px 1px 1px black;
             }
             .ft-shadow-soft{
                 text-shadow: 2px 2px 4px #333333;/* #737373; */
@@ -226,8 +222,8 @@
         <!-- OPEN -->
         <!-- #GOLD VERSION -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-palette-5" data-image="{{asset($cdn_link.'images/29.webp')}}"> 
-                    <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-soft-white">               
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-palette-5" data-image="{{asset($cdn_link.'images/42.webp')}}"> 
+                    <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-dark">               
                         <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
                         <span class="gla_slide_midtitle_m ff-ephesis">Lukas&nbsp;&nbsp;&&nbsp;&nbsp;Desi</span><br><br>
                     </p>
@@ -237,14 +233,14 @@
                 <h6>Dear <span class="fix-montserrat-s-b">{{$invite?$invite:'Saudara/(i)'}}</span>,</h6>
                 @if(isset($_GET['qty']))
                     <span class="highlight-2-bold fix-montserrat-xs text-choco-3">
-                        This invitation is limited to <span class="fix-montserrat-xs-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
+                        Undangan ini terbatas untuk <span class="fix-montserrat-xs-b">{{$_GET['qty']}} orang {{$_GET['qty']>1?"'s":""}}</span>
                     </span> 
                     <br><br>
                 @endif
-                <h6><small>We would like to invite you to be part of<br>our happy day !<br><br><br><br><br></small></h6>
+                <h6><small>Mengundang Anda untuk menjadi bagian<br>dari hari bahagia kami<br><br><br><br><br></small></h6>
                 
-                <button type="button" class="btn btn-pink-light-transp-2 gla_wht_txt gla_invitation_open_btn_longer__before_after_custom" 
-                id="gla_welcome3" onclick="executeInv()">Open Invitation
+                <button type="button" class="btn btn-green-light-transp-2 gla_wht_txt gla_invitation_open_btn_longer__before_after_custom" 
+                id="gla_welcome3" onclick="executeInv()">Buka Undangan
                 </button> 
             </div>
         <!-- OPEN End -->
@@ -292,19 +288,19 @@
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
                     <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/bg15.jpg')}}">  
-                        <div class="gla_over" data-color="#282828" data-opacity="0.1"></div>
+                                data-image="{{asset($cdn_link.'images/31b.webp')}}">  
+                        <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-center">
-                            <div class="col gla_round_block text-palette-1">
-                                <span class="gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Bound by love, Blessed by grace</span><br>
+                            <div class="col gla_round_block">
+                                <span class="text-palette-7 gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Bound by love, Blessed by grace</span><br>
                                 <span class="gla_wht_txt fix-montserrat-m-sb ft-shadow-soft-reverse">Sabtu, 14 Desember 2024</span><br><br>
-                                <div class="gla_countdown" data-year="2024" data-month="12" data-day="14"></div><br><br>
+                                <div class="text-palette-5 gla_countdown" data-year="2024" data-month="12" data-day="14"></div><br><br>
                             </div>
                             <div class="gla_icon_boxes row">
                                 <div class="col-xs-6">
                                     <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
-                                        <a href="{{asset($cdn_link.'images/bride_2.webp')}}">
-                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride.webp')}}" alt="">
+                                        <a href="{{asset($cdn_link.'images/bride2.webp')}}">
+                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride2.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Desi<br>Yosephine<br>Sinaga, S.Kom</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
@@ -318,8 +314,8 @@
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
-                                        <a href="{{asset($cdn_link.'images/groom.webp')}}">
-                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/groom.webp')}}" alt="">
+                                        <a href="{{asset($cdn_link.'images/groom2.webp')}}">
+                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/groom2.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Lukas<br>Sigalingging, S.H.<br><br></small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
@@ -327,66 +323,57 @@
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putra dari</small></b><br>
                                             <span class="fix-montserrat-s-b">M. Sigalingging</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">N br. Situngkir<br><br></span>
+                                            <span class="fix-montserrat-s-b">N. Situngkir<br><br></span>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section    id="event-detail" class="gla_section gla_fixed">
+                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/mbg4.jpg')}}" data-stellar-background-ratio="0.2">
                         <div class="container text-center">     
-                            
+                                <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>
                                 <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Hanya oleh karunia Tuhan,<br></span>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami dengan hormat meminta<br></span><span class="text-subtitle-highlight-1">kehadiran Anda</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
-                                    <div class="col-sm-12">
-                                        <a href="#" class="gla_news_block">
-                                            <div>
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15928.058737123549!2d98.62683015541992!3d3.5841022000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e33bb202527%3A0xb14ec086cf344e5a!2sGKPI%20Babura%20Dua!5e0!3m2!1sen!2sid!4v1731301094565!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                            </div>
-                                            <p><br><br>
-                                                <span class="fix-montserrat-sm-b text-choco-2"><b>GKPI Kota Siborongborong</b></span><br>
-                                                Rumah Pengantin Perempuan (Lumban Sinaga, Siborongborong)
-                                            </p>
-                                            </p>
-                                                <span class="gla_news_title" style="margin-bottom: 0px">Martupol</span>
-                                                <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 7 Desember 2024</span><br><br>
-                                                <span class="label label-default">08.00 WIB s/d selesai</span>
-                                            </p>
-                                        </a>
+                                    <div class="col-sm-12 gla_news_block">
+                                        <p><br><br>
+                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Martupol</span>
+                                        </p>
+                                        <p>
+                                            <span class="fix-montserrat-sm-b text-choco-2"><b>GKPI Kota Siborongborong</b></span><br>
+                                            Rumah Pengantin Perempuan (Lumban Sinaga, Siborongborong)
+                                        </p>
+                                        <p>
+                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 7 Desember 2024</span><br><br>
+                                            <span class="label label-default">08.00 WIB s/d selesai</span>
+                                        </p>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <a href="#" class="gla_news_block">
-                                            <div>
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15928.058737123549!2d98.62683015541992!3d3.5841022000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e33bb202527%3A0xb14ec086cf344e5a!2sGKPI%20Babura%20Dua!5e0!3m2!1sen!2sid!4v1731301094565!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                            </div>
-                                            <p><br><br>
-                                                <span class="fix-montserrat-sm-b text-choco-2"><b>GKPI Babura (Medan Baru)</b></span><br>
-                                                l. Sei Bah Bolon No.18 Medan
-                                            </p>
-                                            </p>
-                                                <span class="gla_news_title" style="margin-bottom: 0px">Pemberkatan Pernikahan</span>
-                                                <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 14 Desember 2024</span><br><br>
-                                                <span class="label label-default">10.00 WIB s/d selesai</span>
-                                            </p>
-                                        </a>
+                                    <div class="col-sm-6 gla_news_block">
+                                        <p><br><br>
+                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Pemberkatan</span>
+                                        </p>
+                                        <p>
+                                            <span class="fix-montserrat-sm-b text-choco-2"><b>GKPI Babura (Medan Baru)</b></span><br>
+                                            Jl. Sei Bah Bolon No.18 Medan
+                                        </p>
+                                        <p>
+                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 14 Desember 2024</span><br><br>
+                                            <span class="label label-default">10.00 WIB s/d selesai</span>
+                                        </p>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <a href="#" class="gla_news_block">
-                                            <div>
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.027261613098!2d98.64547777497307!3d3.5812117963929513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312e32c830844b%3A0x9805524f72d41e58!2sWisma%20Jayapuri!5e0!3m2!1sen!2sid!4v1731301273953!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                            </div>
-                                            <p><br><br>
-                                                <span class="fix-montserrat-sm-b text-choco-2"><b>Wisma Jaya Puri</b></span><br>
-                                                Jl. Sei Mencirim no. 172 Medan
-                                            </p>
-                                            </p>
-                                                <span class="gla_news_title" style="margin-bottom: 0px">Pesta Adat</span>
-                                                <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 14 Desember 2024</span><br><br>
-                                                <span class="label label-default">12.00 WIB s/d selesai</span>
-                                            </p>
-                                        </a>
+                                    <div class="col-sm-6 gla_news_block">
+                                        <p><br><br>
+                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Pesta Adat</span>
+                                        </p>
+                                        <p>
+                                            <a href="https://maps.app.goo.gl/Sg3r3gMetemVSfVG6" class="fix-montserrat-sm-b text-choco-2"><b>Wisma Jaya Puri</b></a>
+                                            <br>Jl. Sei Mencirim no. 172 Medan
+                                        </p>
+                                        <p>
+                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu, 14 Desember 2024</span><br><br>
+                                            <span class="label label-default">12.00 WIB s/d selesai</span>
+                                        </p>
                                     </div>
                                 </div>
                         </div>
@@ -421,7 +408,7 @@
                                             <small>Maaf, tidak dapat hadir</small>
                                         </div>
                                         <div class="col-md-12" style="padding-top:50px">
-                                            <input type="submit" class="btn btn-brown-light-transp-2 text-choco-1" id="form-rsvp-send" value="Save">
+                                            <input type="submit" class="btn btn-brown-light-transp-2 text-choco-1" id="form-rsvp-send" value="Simpan">
                                         </div>
                                         @if($display['rsvp'] == 1)
                                         <div class="panel panel-default" style="margin-top:50px">
@@ -489,10 +476,56 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <input type="submit" class="btn btn-green-light-transp-2 gla_wht_txt" id="form-wish-send" value="Send">
+                                        <input type="submit" class="btn btn-green-light-transp gla_wht_txt" id="form-wish-send" value="Kirim">
                                     </div>
                                 </div>
                             </form>
+                        </div>
+                    </section>
+                    <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/3.webp')}}" data-stellar-background-ratio="0.8">
+                        <div class="container-fluid text-center">     
+                            <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>   
+                            <div class="container text-center">                
+                                <span class="fix-montserrat-m-b highlight-2-light">Wedding Gift</span><br><br>
+                                <span class="text-choco-1"><span class="fix-montserrat-m-b ff-ephesis">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan yang bersedia memberikan tanda cinta, bisa melalui:</span></span>
+                                <p style="height:20vh"></p>
+                                <div class="gla_icon_boxes row justify-content-center">
+                                    <div class="col-sm-6 col-xs-6">
+                                        <div class="gla_news_block">
+                                            <span class="gla_news_img" style="height:auto!important"><br>
+                                                <a href="{{asset($cdn_link.'images/bca.webp')}}" target="_blank">
+                                                    <img src="{{asset($cdn_link.'images/bca.webp')}}" download="bca.webp" 
+                                                    style="height:15vh;width:15vh">
+                                                </a>
+                                            </span>
+                                            <p onclick="copy_to_clipboard('{{$qrcode1}}')">
+                                                <span class="fix-montserrat-s-b">
+                                                    <label class="text-success">{{$qrcode1}}<br>a/n Lukas Sigalingging</label>
+                                                    <i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i>
+                                                    <br><small>[copy]</small>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div> 
+                                    <div class="col-sm-6 col-xs-6">
+                                        <div class="gla_news_block">
+                                            <span class="gla_news_img" style="height:auto!important"><br>
+                                                <a href="{{asset($cdn_link.'images/bca.webp')}}" target="_blank">
+                                                    <img src="{{asset($cdn_link.'images/bca.webp')}}" download="bca.webp" 
+                                                    style="height:15vh;width:15vh">
+                                                </a>
+                                            </span>
+                                            <p onclick="copy_to_clipboard('{{$qrcode2}}')">
+                                                <span class="fix-montserrat-s-b">
+                                                    <label class="text-success">{{$qrcode2}}<br>a/n Desi Sinaga</label>
+                                                    <i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i>
+                                                    <br><small>[copy]</small>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
@@ -501,7 +534,7 @@
                             <span class="fix-montserrat-m text-choco-1">Our Moment</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('1','4','5','9','15','10','23','14','24','28','29','40','bride','groom','bride2','groom2','21','22','26','27','30','31','33','41','42','21','22','26','2','3','7','12','13','17','18','19','20','8','3'); 
+                                    $gallery_items = array('42','4','19','41','22','9'); 
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
