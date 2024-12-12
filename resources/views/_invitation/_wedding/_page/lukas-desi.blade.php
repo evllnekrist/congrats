@@ -396,7 +396,7 @@
                                         </div>
                                         <div class="col-sm-4"><br>
                                             <span class="fix-montserrat-s-b">Alamat</span>
-                                            <input type="number" name="rsvp_address" class="form-control form-opacity in-focus-white-light" required>
+                                            <input type="text" name="rsvp_address" class="form-control form-opacity in-focus-white-light" required>
                                         </div>
                                     </div>
                                     <div class="row">
