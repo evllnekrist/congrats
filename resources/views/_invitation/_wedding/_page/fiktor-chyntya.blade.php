@@ -200,6 +200,15 @@
                 -o-transition: all 0.3s;
                 transition: all 0.3s;
             }
+            .navbar-disabled {
+                pointer-events: none;
+                opacity: 0;
+            }
+
+            table.no-border, table.no-border th, table.no-border td {
+                border: none !important;
+            }
+
         </style>
     </head>
     <body class="bg-navy">
@@ -260,12 +269,12 @@
                     </audio>
                 </div>
                 <header>
-                    <nav class="gla_light_nav gla_transp_nav">
+                    <nav class="gla_light_nav gla_transp_nav"  id="navbar">
                         <div class="container">
                             <div class="gla_logo_container clearfix">
                                 <div class="gla_logo_txt">
                                     <a href="/" class="gla_logo">Fiktor & Chyntya</a>
-                                    <div class="gla_logo_und">29 . 12 . 2024</div>
+                                    <div class="gla_logo_und">03 . 04 . 2025</div>
                                 </div>
                             </div>
                             @include('_invitation._wedding._include.nav-2')
@@ -276,7 +285,7 @@
                 <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/5.webp')}}" data-stellar-background-ratio="0.8">
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
-                        <div class="gla_slide_txt gla_slide_center_bottom" style="text-align:right;top:35%;left:5%">
+                        <div class="gla_slide_txt gla_slide_center_bottom" style="text-align:right;top:35%;left:-20%">
                             <img src="{{asset($cdn_link.'images/logo.png')}}">
                         </div>
                     </div>
@@ -302,7 +311,7 @@
                                         <a href="{{asset($cdn_link.'images/bride.webp')}}">
                                             <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Pdt. Chyntya<br>Mutiara Putri,<br>S.Th</small></strong></span>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Pdt.Chyntya<br>Mutiara Putri,<br>S.Th</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
                                         <p class="text-palette-5">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putri bungsu dari</small><br>
@@ -323,7 +332,7 @@
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putra sulung dari</small></b><br>
                                             <span class="fix-montserrat-s-b">Putra Jaya Utama</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Helmie G. Sera</span>
+                                            <span class="fix-montserrat-s-b">Helmie <small>G. Sera</small></span>
                                         </p>
                                     </div>
                                 </div>
@@ -340,7 +349,7 @@
                                         <p><br><br>
                                             <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Peneguhan dan Pemberkatan Nikah</span>
                                         </p>
-                                        <p>=
+                                        <p>
                                             <a href="hhttps://maps.app.goo.gl/vgndgmaqCV2ee7m5A" class="fix-montserrat-sm-b text-choco-2"><b>GKE Sinar Kasih</b></a>
                                             Jl. G.obos XII – Palangka Raya
                                         </p>
@@ -351,11 +360,11 @@
                                     </div>
                                     <div class="col-sm-6 gla_news_block">
                                         <p><br><br>
-                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Resepsi</span>
+                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Resepsi</span><br><br><br>
                                         </p>
                                         <p>
                                             <a href="https://maps.app.goo.gl/pumRCRzzmjDXUb479" class="fix-montserrat-sm-b text-choco-2"><b>GPU. Tambun Bungai</b></a>
-                                            Jl. W. Sudirohusodo – Palangka Raya
+                                            <br>Jl. W. Sudirohusodo – Palangka Raya
                                         </p>
                                         <p>
                                             <span class="fix-montserrat-sm-b text-choco-2">Kamis, 3 April 2025</span><br><br>
@@ -384,7 +393,7 @@
                                 <div class="col-12">
                                     <div class="gla_news_block pd-md text-choco-2" style="background-color:rgba(0,0,0,0.9);">
                                         <span class="fix-montserrat-sm-b">Turut mengundang:</span><br><br>
-                                        <table class="table mx-auto small">
+                                        <table class="table no-border mx-auto small">
                                             <tbody>
                                                 <tr>
                                                     <td><b>Pihak mempelai wanita:</b></td>
@@ -560,8 +569,7 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0"
-                                data-image="{{asset($cdn_link.'images/white-bg.webp')}}">
+                    <section    id="gallery" class="gla_section gla_wht_txt">
                         <div class="container text-center"><br>
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
@@ -605,6 +613,13 @@
         <!-- CONTENT End -->
         @include('_invitation._wedding._include.asset-bottom-1')
         <script>
+            function toggleNavbar() {
+                if ($(window).scrollTop() === 0) {
+                    $("#navbar").addClass("navbar-disabled");
+                } else {
+                    $("#navbar").removeClass("navbar-disabled");
+                }
+            }
             function executeInv(){
                 $("body").removeClass("bg-navy");
                 document.getElementById('myaudio').play();
@@ -631,6 +646,9 @@
                         console.log('\033[42m\033[37m lazy :: \033[0m loaded all ');
                     }
                 });
+
+                $(window).on("scroll", toggleNavbar);
+                toggleNavbar(); // Run on page load
 
                 if("{{$display['rsvp']}}"  == 1){
                     seeRSVP();
