@@ -286,7 +286,7 @@
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom" style="text-align:right;top:35%;left:-20%">
-                            <img src="{{asset($cdn_link.'images/logo.png')}}">
+                            <img src="{{asset($cdn_link.'images/logo-pure.png')}}">
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
@@ -311,7 +311,7 @@
                                         <a href="{{asset($cdn_link.'images/bride.webp')}}">
                                             <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Pdt.Chyntya<br>Mutiara Putri,<br>S.Th</small></strong></span>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Pdt.Chyntya<br>Mutiara<br>Putri,<br>S.Th</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
                                         <p class="text-palette-5">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putri bungsu dari</small><br>
@@ -326,7 +326,7 @@
                                         <a href="{{asset($cdn_link.'images/groom.webp')}}">
                                             <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/groom.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Fiktor Eka<br>Pratama,<br>S.M</small></small></strong></span>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Fiktor<br>Eka<br>Pratama,<br>S.M</small></small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
                                         <p class="text-palette-5">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putra sulung dari</small></b><br>
@@ -454,7 +454,7 @@
                                 <table>
                                     <tr>
                                         <td style="width: 80%">
-                                            <p class="text-choco-3" style="font-size:12px;text-align:right"><b>Doa dan harapanmu sangat berarti untuk kami <br>dalam semangat memulai perjalanan baru ini</b></p>
+                                            <p class="text-choco-3" style="font-size:12px;text-align:right"><b>Doa dan harapanmu<br>sangat berarti untuk kami<br>dalam semangat memulai<br>perjalanan baru ini</b></p>
                                         </td>
                                         <td style="width: 20%">
                                             <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">
