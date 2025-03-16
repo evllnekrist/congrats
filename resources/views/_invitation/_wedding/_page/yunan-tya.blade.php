@@ -15,7 +15,7 @@
         <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
-        <?php 
+        <?php
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
         <style>.highlight-1{
@@ -44,7 +44,7 @@
                 color: #956c5a;
                 padding: 5px 30px;
                 line-height: 2;
-                border-radius: 10px; 
+                border-radius: 10px;
             }
             .text-subtitle-highlight-1{
                 background-color: white;
@@ -107,7 +107,7 @@
             .pd-md{
                 padding-top: 20px;
                 padding-bottom: 20px;
-            }  
+            }
             .pd-md-h{
                 padding: 2rem 20px 20px 20px;
             }
@@ -123,19 +123,19 @@
             }
             .btn-blue-light-transp{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%);
-                background: rgba(91, 192, 222, 0.7) !important; 
+                background: rgba(91, 192, 222, 0.7) !important;
                 /* 108,67,49 */
                 /* font-weight: 600; */
             }
             .btn-brown-light-transp, .btn-blue-light-transp:hover, .btn-brown-light-transp-2:hover{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(224, 126, 51, 0.8) !important; 
+                background: rgba(224, 126, 51, 0.8) !important;
                 /* 108,67,49 */
                 /* font-weight: 600; */
             }
             .btn-brown-light-transp-2, .btn-brown-light-transp:hover{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%) !important;
-                background: rgba(48, 34, 29, 0.9) !important; 
+                background: rgba(48, 34, 29, 0.9) !important;
                 font-weight: 600;
             }
             .in-focus-white-light{
@@ -223,8 +223,8 @@
         <!-- OPEN -->
         <!-- #GOLD VERSION -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3.jfif')}}"> 
-                    <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-soft-white">               
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3.jfif')}}">
+                    <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-soft-white">
                         <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
                         <span class="gla_slide_midtitle_m ff-ephesis">Yunan&nbsp;&nbsp;&&nbsp;&nbsp;Tya</span><br><br>
                     </p>
@@ -235,14 +235,14 @@
                 @if(isset($_GET['qty']))
                     <span class="highlight-2-bold fix-montserrat-xs text-choco-3">
                         Undangan ini terbatas untuk <span class="fix-montserrat-xs-b">{{$_GET['qty']}} orang {{$_GET['qty']>1?"'s":""}}</span>
-                    </span> 
+                    </span>
                     <br><br>
                 @endif
                 <h6><small>Mengundang Anda untuk menjadi bagian<br>dari hari bahagia kami<br><br></small></h6>
             </div>
-            <button type="button" class="btn btn-brown-light-transp-2 text-choco-1 gla_invitation_open_btn_longer__before_after_custom" 
+            <button type="button" class="btn btn-brown-light-transp-2 text-choco-1 gla_invitation_open_btn_longer__before_after_custom"
                 id="gla_welcome3" onclick="executeInv()">Buka Undangan
-            </button> 
+            </button>
         <!-- OPEN End -->
         <!-- CONTENT -->
             <div class="gla_page" id="gla_page" style="display:none">
@@ -259,7 +259,7 @@
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <header>      
+                <header>
                     <nav class="gla_light_nav gla_transp_nav">
                         <div class="container">
                             <div class="gla_logo_container clearfix">
@@ -287,8 +287,8 @@
                 <!-- Slider End -->
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
-                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/0.webp')}}">  
+                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8"
+                                data-image="{{asset($cdn_link.'images/0.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
@@ -331,15 +331,15 @@
                         </div>
                     </section>
                     <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/mbg4.webp')}}" data-stellar-background-ratio="0.8">
-                        <div class="container text-center">     
-                            
+                        <div class="container text-center">
+
                                 <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Dengan memohon Rahmat & Ridho&nbsp;&nbsp;<br>&nbsp;&nbsp;Allah SWT,</span><br>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">mengundang keluarga dan sahabat<br></span><span class="text-subtitle-highlight-1">InsyaAllah diselenggarakan pada</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-12">
                                         <a href="#" class="gla_news_block">
                                             <span>
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5680976885824!2d108.0066612!3d-7.0599257999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68cbb55e8279a3%3A0x2fb05aa0db127c97!2sPAWON%20BAKO!5e0!3m2!1sen!2sid!4v1716172166516!5m2!1sen!2sid" 
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5680976885824!2d108.0066612!3d-7.0599257999999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68cbb55e8279a3%3A0x2fb05aa0db127c97!2sPAWON%20BAKO!5e0!3m2!1sen!2sid!4v1716172166516!5m2!1sen!2sid"
                                                 height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                             </span>
                                             <p><br><br>
@@ -362,11 +362,11 @@
                         </div>
                     </section>
                     <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/mbg2.webp')}}" data-stellar-background-ratio="0.8">
-                        <div class="container text-center"> 
+                        <div class="container text-center">
                             <div class="gla_icon_boxes row">
                                 <div class="col-12">
                                     <div class="gla_news_block pd-md text-choco-2" style="background-color:rgba(0,0,0,0.9);">
-                                        <span class="fix-montserrat-sm-b"><b>Turut mengundang:</b></span><br><br> 
+                                        <span class="fix-montserrat-sm-b"><b>Turut mengundang:</b></span><br><br>
                                         Ajun Komisaris Polisi (AKP) Suhendar<br>
                                         Keluarga Besar H. To’in (Alm) & Hj. Sitiaisyah<br>
                                         Keluarga Besar Abah Oko (Alm)<br>
@@ -383,7 +383,7 @@
                             <table class="table table-sm table-borderless table-striped fix-montserrat-s" style="width:80%" id="table-wish">
                                 <thead>
                                     <tr class="text-text-blue-baby">
-                                        <th width="25%">Pengirim</th>                              
+                                        <th width="25%">Pengirim</th>
                                         <th width="75%">Harapan</th>
                                     </tr>
                                 </thead>
@@ -395,8 +395,8 @@
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
                                 <p class="ft-shadow ff-ephesis" style="font-size: 22px"><b>Doa dan harapanmu sangat berarti untuk kami <br>dalam semangat memulai perjalanan baru ini</b></p>
-                                <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">  
-                                <br><br>    
+                                <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">
+                                <br><br>
                                 <div class="row">
                                     <div class="col-sm-6"><br><br>
                                         <span class="fix-montserrat-s-b ft-shadow">Pengirim</span>
@@ -415,13 +415,13 @@
                             </form>
                         </div>
                     </section>
-                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
+                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0"
                                 data-image="{{asset($cdn_link.'images/white-bg.jfif')}}">
                         <div class="container text-center"><br>
                             <span class="fix-montserrat-m text-choco-1">Our Moment</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('2','3','4','5','6','1'); 
+                                    $gallery_items = array('2','3','4','5','6','1');
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.jfif')}}">
@@ -434,7 +434,7 @@
                                                 <!-- <p><a href="#" class="btn"></a></p> -->
                                             </div>
                                         </div>
-                                    </a>    
+                                    </a>
                                 </div>
                                 @endforeach
                             </div>
@@ -445,7 +445,7 @@
                         <div class="container text-right">
                             <div class="container-fluid">
                                 <div class="text-right">
-                                    <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">     
+                                    <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">
                                 </div>
                                 <strong class="ff-ephesis" style="font-size: 18px">
                                     Tak sabar untuk sambut hari bahagia kami bersamamu.
@@ -485,7 +485,7 @@
                                                         <thead>
                                                             <tr>
                                                                 <th width="40%">Pengirim</th>
-                                                                <th width="40%">Alamat</th>                              
+                                                                <th width="40%">Alamat</th>
                                                                 <th width="20%">Kehadiran</th>
                                                             </tr>
                                                         </thead>
@@ -504,19 +504,19 @@
                         <div class="container text-right pd-md-h">
                             <div style="font-size: xx-small; font-weight:bold">
                                 <i>
-                                <sup class="text-choco">"</sup> 
+                                <sup class="text-choco">"</sup>
                                 <span class="ft-shadow text-choco-3">
-                                    Di antara tanda-tanda (kebesaran)-Nya 
-                                    <br>ialah bahwa Dia menciptakan pasangan-pasangan 
-                                    <br>untukmu dari (jenis) dirimu sendiri 
-                                    <br>agar kamu merasa tenteram kepadanya. 
+                                    Di antara tanda-tanda (kebesaran)-Nya
+                                    <br>ialah bahwa Dia menciptakan pasangan-pasangan
+                                    <br>untukmu dari (jenis) dirimu sendiri
+                                    <br>agar kamu merasa tenteram kepadanya.
                                     <br>Dia menjadikan di antaramu
                                     <br>rasa cinta dan kasih sayang.
                                     <br>Sesungguhnya pada yang demikian itu
-                                    <br>benar-benar terdapat tanda-tanda 
+                                    <br>benar-benar terdapat tanda-tanda
                                     <br>(kebesaran Allah)
                                     <br>bagi kaum yang berpikir.</span>
-                                <sup class="text-choco">"</sup> 
+                                <sup class="text-choco">"</sup>
                                 </i><br><br><br><br><br>
                                 <p class="gla_subtitle ft-shadow">— Qs Ar-Rum 21</p>
                             </div>
@@ -524,7 +524,7 @@
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
-                            <a href='{{url("/")}}' target="_blank">© beritabaik.info</a>
+                            <a href='{{url("/")}}' target="_blank">© beritabaik.co</a>
                         </div>
                     </section>
                 </section>
@@ -535,7 +535,7 @@
         <script>
             function executeInv(){
                 $("body").removeClass("bg-navy");
-                document.getElementById('myaudio').play(); 
+                document.getElementById('myaudio').play();
                 document.getElementById('myaudio').volume = .35;
                 $('#gla_welcome').remove();
                 $('#gla_welcome2').remove();
@@ -565,15 +565,15 @@
                 }
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
-                    let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page, 
-                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.<br><br> 
-                    Even so, please feel free to contact our admin by select order menu <a href='{{url("/")}}'>at beritabaik.info main page</a>`;
+                    let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page,
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.<br><br>
+                    Even so, please feel free to contact our admin by select order menu <a href='{{url("/")}}'>at beritabaik.co main page</a>`;
                 @endif
                 $(document).on("click","#form-rsvp-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
                         toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
-                        if(document.getElementById('form-rsvp').checkValidity()){ 
+                        if(document.getElementById('form-rsvp').checkValidity()){
                             console.log('handling :: form-rsvp | validity passed');
                             $('.gla_page_loader_light').show();
                             let name = $('[name="rsvp_name"]').val();
@@ -616,7 +616,7 @@
                     @if($addition_logic && in_array('do',$addition_logic))
                         toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
-                        if(document.getElementById('form-wish').checkValidity()){ 
+                        if(document.getElementById('form-wish').checkValidity()){
                             console.log('handling :: form-wish | validity passed');
                             $('.gla_page_loader_light').show();
                             let name = $('[name="wish_name"]').val();

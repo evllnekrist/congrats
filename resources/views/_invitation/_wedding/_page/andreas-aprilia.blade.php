@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
-        <?php 
+        <?php
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
         <style>
@@ -42,7 +42,7 @@
             .pd-md{
                 padding-top: 20px;
                 padding-bottom: 20px;
-            }  
+            }
             .pd-md-h{
                 padding: 20px 20px 20px 20px;
             }
@@ -66,8 +66,8 @@
         <!-- Preloader End-->
         <!-- OPEN -->
             <div class="gla_invitation_container" id="gla_welcome">
-                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3_inv_ver3.webp')}}"> 
-                    <p style="margin-top:15vh;margin-bottom:5vh">               
+                <div class="gla_invitation_i gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/3_inv_ver3.webp')}}">
+                    <p style="margin-top:15vh;margin-bottom:5vh">
                         <span class="fix-montserrat-m">The Wedding of</span><br>
                         <span class="fix-montserrat-m-b">Andreas & Aprilia</span><br><br>
                     </p>
@@ -97,7 +97,7 @@
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <header>      
+                <header>
                     <nav class="gla_light_nav gla_transp_nav">
                         <div class="container">
                             <div class="gla_logo_container clearfix">
@@ -125,8 +125,8 @@
                 <!-- Slider End -->
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
-                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/7.webp')}}">  
+                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8"
+                                data-image="{{asset($cdn_link.'images/7.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
@@ -167,9 +167,9 @@
                         </div>
                     </section>
                     <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/21.webp')}}" data-stellar-background-ratio="0.8">
-                        <div class="container text-center">     
-                            <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>   
-                            <div class="container text-center">                
+                        <div class="container text-center">
+                            <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>
+                            <div class="container text-center">
                                 <span class="fix-montserrat-m text-choco-2">By the grace of God,</span><br>
                                 <span class="fix-montserrat-s-b text-choco-1">we are pleased to announce our wedding to you, <br>our family and friends</span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
@@ -189,7 +189,7 @@
                                                 <span class="label label-success">at 13:00 (1 PM)</span>
                                             </p>
                                         </a>
-                                    </div> 
+                                    </div>
                                     @if($addition_logic && in_array('wedding',$addition_logic))
                                     <div class="col-sm-6 col-xs-12">
                                         <a href="#" class="gla_news_block">
@@ -244,7 +244,7 @@
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-right">
-                            <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>         
+                            <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>
                             <p class="fix-montserrat-s">Can't wait to welcome our happy day with you. <br>At below you can confirm your attendance, thank you.</p>
                             <form id="form-rsvp" onsubmit="return false;">
                                 <div class="row">
@@ -279,7 +279,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th width="40%">Sender</th>
-                                                            <th width="40%">Address</th>                              
+                                                            <th width="40%">Address</th>
                                                             <th width="20%">Presence Status</th>
                                                         </tr>
                                                     </thead>
@@ -298,7 +298,7 @@
                             <table class="table table-sm table-borderless table-striped fix-montserrat-s text-choco-1" style="width:80%" id="table-wish">
                                 <thead>
                                     <tr>
-                                        <th width="25%">Sender</th>                              
+                                        <th width="25%">Sender</th>
                                         <th width="75%">Wishes</th>
                                     </tr>
                                 </thead>
@@ -326,13 +326,13 @@
                             </form>
                         </div>
                     </section>
-                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
+                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0"
                                 data-image="{{asset($cdn_link.'images/white-bg.webp')}}">
                         <div class="container text-center"><br>
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('23','22','2-mini','5','21','18','19','20','15','13','11','10','9','12','16','24'); 
+                                    $gallery_items = array('23','22','2-mini','5','21','18','19','20','15','13','11','10','9','12','16','24');
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
@@ -345,7 +345,7 @@
                                                 <!-- <p><a href="#" class="btn"></a></p> -->
                                             </div>
                                         </div>
-                                    </a>    
+                                    </a>
                                 </div>
                                 @endforeach
                             </div>
@@ -381,9 +381,9 @@
                         <div class="gla_over" data-color="#ffff" data-opacity="0.5"></div>
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-choco-1"><i>
-                                <sup>4</sup> <span class="ft-shadow">Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud.</span> 
-                                <br><sup>5</sup> <span class="ft-shadow">It does not dishonor others, <br>it is not self-seeking, <br>it is not easily angered, <br>it keeps no record of wrongs.</span> 
-                                <br><sup>6</sup> <span class="ft-shadow">Love does not delight in evil <br>but rejoices with the truth.</span> 
+                                <sup>4</sup> <span class="ft-shadow">Love is patient, love is kind. <br>It does not envy, it does not boast, <br>it is not proud.</span>
+                                <br><sup>5</sup> <span class="ft-shadow">It does not dishonor others, <br>it is not self-seeking, <br>it is not easily angered, <br>it keeps no record of wrongs.</span>
+                                <br><sup>6</sup> <span class="ft-shadow">Love does not delight in evil <br>but rejoices with the truth.</span>
                                 <br><sup>7</sup> <span class="ft-shadow">It always protects, always trusts, <br>always hopes, always perseveres.</span></i>
                             </span><br><br><br><br><br>
                             <p class="gla_subtitle">— 1 Corinthians 13:4-7 (NIV)</p>
@@ -392,13 +392,13 @@
                     <section    id="thank-you" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/17-mini.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.2"></div>
                         <div class="container text-center">
-                            <p style="height:100vh"><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" 
+                            <p style="height:100vh"><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}"
                                     data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" height="120" alt=""></p>
                         </div>
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
-                            <a href='{{url("/")}}' target="_blank">© beritabaik.info</a>
+                            <a href='{{url("/")}}' target="_blank">© beritabaik.co</a>
                         </div>
                     </section>
                 </section>
@@ -409,7 +409,7 @@
         <script>
             function executeInv(){
                 $("body").removeClass("bg-navy");
-                document.getElementById('myaudio').play(); 
+                document.getElementById('myaudio').play();
                 document.getElementById('myaudio').volume = .35;
                 $('#gla_welcome').remove();
                 $('#gla_page').show();
@@ -422,15 +422,15 @@
                 }
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
-                    let auth_msg = `Hello! Thankyou for trying this page, 
-                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom. 
-                    Even so, please feel free to contact our admin by select order menu at beritabaik.info main page`;
+                    let auth_msg = `Hello! Thankyou for trying this page,
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.
+                    Even so, please feel free to contact our admin by select order menu at beritabaik.co main page`;
                 @endif
                 $(document).on("click","#form-rsvp-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
                         alert(auth_msg);
                     @else
-                        if(document.getElementById('form-rsvp').checkValidity()){ 
+                        if(document.getElementById('form-rsvp').checkValidity()){
                             console.log('handling :: form-rsvp | validity passed');
                             let name = $('[name="rsvp_name"]').val();
                             let address = $('[name="rsvp_address"]').val();
@@ -470,7 +470,7 @@
                     @if($addition_logic && in_array('do',$addition_logic))
                         alert(auth_msg);
                     @else
-                        if(document.getElementById('form-wish').checkValidity()){ 
+                        if(document.getElementById('form-wish').checkValidity()){
                             console.log('handling :: form-wish | validity passed');
                             let name = $('[name="wish_name"]').val();
                             let message = $('[name="wish_message"]').val();

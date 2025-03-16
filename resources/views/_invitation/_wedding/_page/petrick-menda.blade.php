@@ -3,7 +3,7 @@
     <head>
         @include('_invitation._wedding._include.head-1')
         @include('_invitation._wedding._include.asset-top-1')
-        <?php 
+        <?php
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
     </head>
@@ -47,7 +47,7 @@
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <header>      
+                <header>
                     <nav class="gla_light_nav gla_transp_nav">
                         <div class="container">
                             <div class="gla_logo_container clearfix">
@@ -81,10 +81,10 @@
                             <p class="gla_subtitle">— 1 John 4:12</p>
                         </div>
                     </section>
-                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.9" 
-                                data-image="{{asset($cdn_link.'images/profile-bg-mask.webp')}}">  
+                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.9"
+                                data-image="{{asset($cdn_link.'images/profile-bg-mask.webp')}}">
                         <div class="row text-center">
-                            <div class="col gla_round_block">    
+                            <div class="col gla_round_block">
                                 <span class="fix-dosis-l-b gla_wht_txt">Are getting married<br>20 February, 2021</span>
                                 <p class="gla_slide_subtitle gla_wht_txt">Jayapura</p>
                                 <!-- <div class="gla_countdown" data-year="2021" data-month="02" data-day="20"></div> -->
@@ -93,7 +93,7 @@
                         <div class="row text-center" style="margin-top:-80px;margin-bottom:80px">
                             <div class="col-xs-6 gla_round_block">
                                 <div class="gla_round_im gla_image_bck border-wh" data-image="{{asset($cdn_link.'images/profile-groom.webp')}}"></div><br>
-                                <center>    
+                                <center>
                                     <div class="bio-card-m-top">
                                         <span class="fix-dosis-m-b">dr. Petrick <br>Aqrasvawinata</span>
                                     </div>
@@ -117,11 +117,11 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="timeline" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.9" 
+                    <section    id="timeline" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.9"
                                 data-image="{{asset($cdn_link.'images/timeline-bg.webp')}}">
                         <div class="container text-center">
                             <h4>Cerita Tentang Kami</h4><br>
-                            <div class="row"> 
+                            <div class="row">
                                 <div class="col-xs-5 col-md-8">
                                     <div class="txt_block text-right">
                                         <div class="gla_slide_midtitle">2014</div>
@@ -135,7 +135,7 @@
                                     <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-1.webp')}}">
                                 </div>
                             </div>
-                            <div class="row"> 
+                            <div class="row">
                                 <div class="col-xs-7 col-md-4">
                                     <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-2.webp')}}">
                                 </div>
@@ -148,7 +148,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row"> 
+                            <div class="row">
                                 <div class="col-xs-5 col-md-8">
                                     <div class="txt_block text-right"><br><br><br>
                                         <div class="gla_slide_midtitle">2016</div>
@@ -162,7 +162,7 @@
                                     <img class="img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-3.webp')}}">
                                 </div>
                             </div>
-                            <div class="row"> 
+                            <div class="row">
                                 <div class="col-xs-12">
                                     <div class="txt_block text-center">
                                         <div class="gla_slide_midtitle">2016-2017</div>
@@ -172,13 +172,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 no-margin-top wrap-vertical-img-fix"> 
+                                <div class="col-xs-12 no-margin-top wrap-vertical-img-fix">
                                     <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-4.webp')}}">
                                     <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-5.webp')}}">
                                     <img class="inner-vertical-img-fix img-fix-h box-shadow" src="{{asset($cdn_link.'images/timeline-6.webp')}}">
-                                </div> 
+                                </div>
                             </div>
-                            <div class="row"> 
+                            <div class="row">
                                 <div class="col-xs-12">
                                     <div class="txt_block text-center"><br><br>
                                         <div class="gla_slide_midtitle">2019</div>
@@ -193,7 +193,7 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="timeline-2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
+                    <section    id="timeline-2" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0"
                                 data-image="{{asset($cdn_link.'images/timeline-bg-3.webp')}}">
                         <div class="container text-center"><br>
                             <h4>Pre Wedding</h4>
@@ -268,7 +268,7 @@
                                 <div class="col-sm-4 col-xs-12">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7553214899303!2d140.64103621475596!3d-2.5859568981158003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5d1456d53a3%3A0xb96ef2ed929477c!2sGKI%20Siloam%20Waena!5e0!3m2!1sen!2sid!4v1612002853028!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7553214899303!2d140.64103621475596!3d-2.5859568981158003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5d1456d53a3%3A0xb96ef2ed929477c!2sGKI%20Siloam%20Waena!5e0!3m2!1sen!2sid!4v1612002853028!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                         </span>
                                         <span class="gla_news_title">Pemberkatan / Sakramen</span>
                                         <p>
@@ -277,11 +277,11 @@
                                             <span class="label label-success">07.30-09.30</span>
                                         </p>
                                     </a>
-                                </div> 
+                                </div>
                                 <div class="col-sm-4 col-xs-12">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7330346681897!2d140.67327171475603!3d-2.593040798110677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5f73e046929%3A0x24492cd17ffb9584!2sTongkonan%20Convention%20Center!5e0!3m2!1sen!2sid!4v1612002926508!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>  
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.7330346681897!2d140.67327171475603!3d-2.593040798110677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf5f73e046929%3A0x24492cd17ffb9584!2sTongkonan%20Convention%20Center!5e0!3m2!1sen!2sid!4v1612002926508!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                                         </span>
                                         <span class="gla_news_title">Resepsi</span>
                                         <p>
@@ -303,14 +303,14 @@
                                             <span class="label label-warning">12.30 – 17.00</span>
                                         </p>
                                     </a>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                     </section>
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/rsvp-bg.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.8"></div>
                         <div class="container text-center">
-                            <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>         
+                            <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>
                             <p>Tak sabar rasanya menyambut hari bahagia kami bersama Bapak/Ibu/Saudara/i. Di bawah ini dapat dilakukan konfirmasi kehadiran, terima kasih.</p>
                             <div class="row">
                                 <div class="col-md-8 col-md-push-2">
@@ -347,7 +347,7 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th width="40%">Pengirim</th>
-                                                                    <th width="40%">Alamat</th>                              
+                                                                    <th width="40%">Alamat</th>
                                                                     <th width="20%">Kehadiran</th>
                                                                 </tr>
                                                             </thead>
@@ -366,19 +366,19 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-6 text-left">
-                                    <p><img src="{{asset($cdn_link.'images/corner.png')}}" 
-                                            data-bottom-top="@src:{{asset($cdn_link.'images/corner.png')}}" height="100" alt=""></p>   
-                                </div>  
+                                    <p><img src="{{asset($cdn_link.'images/corner.png')}}"
+                                            data-bottom-top="@src:{{asset($cdn_link.'images/corner.png')}}" height="100" alt=""></p>
+                                </div>
                                 <div class="col-xs-6 text-right">
-                                    <p><img src="{{asset($cdn_link.'images/corner-2.png')}}" 
-                                            data-bottom-top="@src:{{asset($cdn_link.'images/corner-2.png')}}" height="100" alt=""></p>   
-                                </div> 
-                            </div>  
+                                    <p><img src="{{asset($cdn_link.'images/corner-2.png')}}"
+                                            data-bottom-top="@src:{{asset($cdn_link.'images/corner-2.png')}}" height="100" alt=""></p>
+                                </div>
+                            </div>
                             <div class="row text-left">
                                 <table class="table table-sm table-borderless table-striped fix-dosis-s" id="table-wish">
                                     <thead>
                                         <tr>
-                                            <th width="25%">Pengirim</th>                              
+                                            <th width="25%">Pengirim</th>
                                             <th width="75%">Ucapan</th>
                                         </tr>
                                     </thead>
@@ -386,7 +386,7 @@
                             </div>
                             <br>
                             <div class="row text-center">
-                                <img    src="{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" 
+                                <img    src="{{asset('asset-wedding-1/images/animations/flowers4.gif')}}"
                                         data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/flowers4.gif')}}" height="100" alt="">
                             </div>
                             <br>
@@ -411,26 +411,26 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-6 text-left">
-                                    <p><img src="{{asset($cdn_link.'images/corner-3.png')}}" 
-                                            data-bottom-top="@src:{{asset($cdn_link.'images/corner-3.png')}}" height="100" alt=""></p>   
-                                </div> 
+                                    <p><img src="{{asset($cdn_link.'images/corner-3.png')}}"
+                                            data-bottom-top="@src:{{asset($cdn_link.'images/corner-3.png')}}" height="100" alt=""></p>
+                                </div>
                                 <div class="col-xs-6 text-right">
-                                    <p><img src="{{asset($cdn_link.'images/corner-4.png')}}" 
-                                            data-bottom-top="@src:{{asset($cdn_link.'images/corner-4.png')}}" height="100" alt=""></p>   
-                                </div> 
+                                    <p><img src="{{asset($cdn_link.'images/corner-4.png')}}"
+                                            data-bottom-top="@src:{{asset($cdn_link.'images/corner-4.png')}}" height="100" alt=""></p>
+                                </div>
                             </div>
                         </div>
                     </section>
                     <section class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/bottom.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.4"></div>
                         <div class="container text-center">
-                            <p><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" 
+                            <p><img src="{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}"
                                     data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/thnyou_wh.gif')}}" height="70" alt=""></p>
                         </div>
                     </section>
                     <section class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
-                            <a href='{{url("/")}}' target="_blank">© beritabaik.info</a>
+                            <a href='{{url("/")}}' target="_blank">© beritabaik.co</a>
                         </div>
                     </section>
                 </section>
@@ -441,7 +441,7 @@
         <script>
             function executeInv(){
                 $("body").removeClass("bg-navy");
-                document.getElementById('myaudio').play(); 
+                document.getElementById('myaudio').play();
                 document.getElementById('myaudio').volume = .35;
                 $('#gla_welcome').remove();
                 $('#gla_page').show();
@@ -454,15 +454,15 @@
                 }
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
-                    let auth_msg = `Hello! Thankyou for trying this page, 
-                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom. 
-                    Even so, please feel free to contact our admin by select order menu at beritabaik.info main page`;
+                    let auth_msg = `Hello! Thankyou for trying this page,
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.
+                    Even so, please feel free to contact our admin by select order menu at beritabaik.co main page`;
                 @endif
                 $(document).on("click","#form-rsvp-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
                         alert(auth_msg);
                     @else
-                        if(document.getElementById('form-rsvp').checkValidity()){ 
+                        if(document.getElementById('form-rsvp').checkValidity()){
                             console.log('handling :: form-rsvp | validity passed');
                             let name = $('[name="rsvp_name"]').val();
                             let address = $('[name="rsvp_address"]').val();
@@ -502,7 +502,7 @@
                     @if($addition_logic && in_array('do',$addition_logic))
                         alert(auth_msg);
                     @else
-                        if(document.getElementById('form-wish').checkValidity()){ 
+                        if(document.getElementById('form-wish').checkValidity()){
                             console.log('handling :: form-wish | validity passed');
                             let name = $('[name="wish_name"]').val();
                             let message = $('[name="wish_message"]').val();

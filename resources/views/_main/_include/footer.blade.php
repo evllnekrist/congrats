@@ -51,11 +51,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="gla_block">
-                    <p>© <a href="{{env('APP_URL')}}">beritabaik.info since 2020</a> | copyright</p>
+                    <p>© <a href="{{env('APP_URL')}}">beritabaik.co since 2020</a> | copyright</p>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </section>
 <!-- Footer End -->

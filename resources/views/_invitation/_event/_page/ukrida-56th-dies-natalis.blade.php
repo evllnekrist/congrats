@@ -17,7 +17,7 @@
         <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
-        <?php 
+        <?php
             $cdn_link   = "asset-event-bg/".$code."/";
         ?>
         <style>.highlight-1{
@@ -46,7 +46,7 @@
                 color: #956c5a;
                 padding: 5px 30px;
                 line-height: 2;
-                border-radius: 10px; 
+                border-radius: 10px;
             }
             .text-subtitle-highlight-1{
                 background-color: white;
@@ -101,7 +101,7 @@
             .pd-md{
                 padding-top: 20px;
                 padding-bottom: 20px;
-            }  
+            }
             .pd-md-h{
                 padding: 80rem 20px 20px 20px;
             }
@@ -114,13 +114,13 @@
             }
             .btn-brown-light-transp{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(149, 108, 90, 0.4) !important; 
+                background: rgba(149, 108, 90, 0.4) !important;
                 /* 108,67,49 */
                 /* font-weight: 600; */
             }
             .btn-brown-light-transp:hover{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(48, 34, 29, 0.4) !important; 
+                background: rgba(48, 34, 29, 0.4) !important;
                 font-weight: 600;
             }
             .btn-blue-light-transp{
@@ -177,7 +177,7 @@
         <!-- Preloader End-->
         <!-- OPEN -->
         <!-- #GOLD VERSION -->
-            <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" id="gla_welcome"> 
+            <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" id="gla_welcome">
               <video class="bg-video-square" autoplay loop muted="">
                 <source src="{{asset($cdn_link.'videos/bg.mp4')}}" type="video/mp4">
                 Your browser does not support the video tag.
@@ -187,7 +187,7 @@
                   <h6 class="gla_wht_txt">Kepada Yth.:<br><br><span class="fix-montserrat-s-b">{{@$invite?$invite:'Civitas Akademika Ukrida'}}</span></h6>
                   <h6 class="fix-montserrat-s-b text-choco-1 ft-shadow-soft-dark">Mengundang hadir dalam <br>Ibadah dan Perayaan Dies Natalis Ukrida</h6>
             </div>
-            <button type="button" class="btn btn-brown-light-transp gla_wht_txt gla_invitation_open_btn_longer__before" id="gla_welcome3" onclick="executeInv()">Open Invitation</button> 
+            <button type="button" class="btn btn-brown-light-transp gla_wht_txt gla_invitation_open_btn_longer__before" id="gla_welcome3" onclick="executeInv()">Open Invitation</button>
         <!-- OPEN End -->
         <!-- CONTENT -->
             <div class="gla_page" id="gla_page" style="display:none">
@@ -203,7 +203,7 @@
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <header>      
+                <header>
                     <nav class="gla_light_nav gla_transp_nav">
                         <div class="container">
                             <div class="gla_logo_container clearfix">
@@ -228,8 +228,8 @@
                 <!-- Slider End -->
                 <!-- Main -->
                 <section id="gla_content" class="gla_content">
-                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/place.jpg')}}">  
+                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8"
+                                data-image="{{asset($cdn_link.'images/place.jpg')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
@@ -240,8 +240,8 @@
                                 <div class="col-sm-6 col-xs-10">
                                     <a href="#" class="gla_news_block">
                                         <span class="gla_news_img">
-                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5938799549294!2d106.77826055057366!3d-6.185069595500282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6faf51f385f%3A0x1e6ce15362f792f9!2sUniversitas%20Ukrida%20Fakultas%20Kedokteran!5e0!3m2!1sid!2sid!4v1673323001133!5m2!1sid!2sid" 
-                                            width="600" height="450" style="border:0;" allowfullscreen="" 
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5938799549294!2d106.77826055057366!3d-6.185069595500282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6faf51f385f%3A0x1e6ce15362f792f9!2sUniversitas%20Ukrida%20Fakultas%20Kedokteran!5e0!3m2!1sid!2sid!4v1673323001133!5m2!1sid!2sid"
+                                            width="600" height="450" style="border:0;" allowfullscreen=""
                                             loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                                           </iframe>
                                         </span>
@@ -250,14 +250,14 @@
                                             <span class="fix-montserrat-sm-b text-info">
                                               <b>Gedung B<br>Kampus II UKRIDA<br>Auditorium FKIK Lt. 2</b><br>
                                             </span>
-                                            Jl. Arjuna Utara No. 6<br> 
+                                            Jl. Arjuna Utara No. 6<br>
                                             Jakarta Barat<br><br><br>
                                             <span class="fix-montserrat-s-b text-danger">Dresscode: Batik</span><br>
                                             <span class="fix-montserrat-s-b text-info">Jumat, 20 Januari 2023</span><br><br>
                                             <span class="label label-danger">09.00-12.00 WIB</span>
                                         </p>
                                     </a>
-                                </div> 
+                                </div>
                                 <div class="col-sm-3 col-xs-1"></div>
                             </div>
                         </div>
@@ -267,19 +267,19 @@
                         <div class="container text-right">
                             <div class="container-fluid">
                                 <div class="text-right">
-                                    <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">     
+                                    <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">
                                 </div>
                                 <p class="fix-montserrat-sxs-b ft-shadow">Mohon mengkonfirmasi kehadiran dengan menggunakan nama asli Anda, terima kasih.</p>
                                 <form id="form-rsvp" onsubmit="return false;">
                                     <div class="row">
                                         <div class="col-sm-6"><br>
                                             <span class="fix-montserrat-s-b">Nama</span>
-                                            <input type="text" name="rsvp_name" maxlength="50" 
+                                            <input type="text" name="rsvp_name" maxlength="50"
                                             spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
                                         </div>
                                         <div class="col-sm-6"><br>
                                             <span class="fix-montserrat-s-b">NIM/Unit/Prodi/Instansi</span>
-                                            <input type="text" name="rsvp_org" maxlength="50" 
+                                            <input type="text" name="rsvp_org" maxlength="50"
                                             spellcheck="false" class="form-control form-opacity in-focus-white-light" required>
                                         </div>
                                         <div class="col-sm-6"><br>
@@ -314,7 +314,7 @@
                                                         <thead>
                                                             <tr>
                                                                 <th width="40%">Pengirim</th>
-                                                                <th width="40%">NIM/Unit/Prodi/Instansi</th>                              
+                                                                <th width="40%">NIM/Unit/Prodi/Instansi</th>
                                                                 <th width="20%">Kehadiran</th>
                                                             </tr>
                                                         </thead>
@@ -332,7 +332,7 @@
                             <table class="table table-sm table-borderless table-striped fix-montserrat-s" style="width:80%" id="table-wish">
                                 <thead>
                                     <tr class="text-choco-2">
-                                        <th width="25%">Pengirim</th>                              
+                                        <th width="25%">Pengirim</th>
                                         <th width="75%">Harapan</th>
                                     </tr>
                                 </thead>
@@ -344,7 +344,7 @@
                         <div class="container text-left">
                             <form id="form-wish" onsubmit="return false;">
                                 <p class="fix-montserrat-xs-b"><b>Tuliskan pesan Anda disini ~</b></p>
-                                <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">  
+                                <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">
                                 <br>
                                 <div class="row">
                                     <div class="col-sm-6"><br>
@@ -364,7 +364,7 @@
                             </form>
                         </div>
                     </section>
-                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
+                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0"
                                 data-image="{{asset($cdn_link.'images/white-bg.webp')}}">
                         <div class="container text-center">
                             <?php
@@ -380,7 +380,7 @@
                                   array("img"=>"5.webp","desc"=>"Perkuliahan Fakultas Kedokteran Tahun 1985"),
                                   array("img"=>"6.webp","desc"=>"Peresmian UKRIDA Tahun 1967"),
                                   array("img"=>"7.webp","desc"=>"Pemotongan Tumpeng oleh Pimpinan UKRIDA Tahun 1976","grid"=>"full","height"=>"auto"),
-                                ); 
+                                );
                                 $gallery_items[1] =   array(
                                   array("img"=>"1.webp","desc"=>""),
                                   array("img"=>"2.webp","desc"=>""),
@@ -395,7 +395,7 @@
                                   array("img"=>"11.webp","desc"=>""),
                                   array("img"=>"12.webp","desc"=>""),
                                   // array("img"=>"14.webp","desc"=>"","height"=>"auto"),
-                                ); 
+                                );
                             ?>
                             @for($i = 0; $i < sizeof($galleries); $i++)
                               <br><br><span class="fix-montserrat-m-b text-old-green-sh highlight-2-light">{{$galleries[$i]['title']}}</span><br><br><br><br>
@@ -405,8 +405,8 @@
                                     <div class="{{@$item['grid'] == 'full'?'col-xs-12':'col-xs-12 col-sm-4'}}">
                                         <div class="gla_news_block">
                                             <a href="{{asset($cdn_link.'images/'.$galleries[$i]['dir'].'/'.$item['img'])}}" class="lightbox">
-                                                <img  class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" 
-                                                      data-src="{{asset($cdn_link.'images/'.$galleries[$i]['dir'].'/'.$item['img'])}}" 
+                                                <img  class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}"
+                                                      data-src="{{asset($cdn_link.'images/'.$galleries[$i]['dir'].'/'.$item['img'])}}"
                                                       alt="foto ukrida dulu" style="{{@$item['height'] == 'auto'?'':'height:200px;'}}">
                                             </a>
                                             <!-- <span class="gla_news_title-m text-green-sh pd-sd"><strong>Rezeki Tambunan</strong></span> -->
@@ -456,7 +456,7 @@
                                         <a href="http://www.youtube.com/ukridatv">stream at <i class="ti ti-youtube gla_icon_box" style="font-size:18px;color:red;"></i></a>
                                     </div>
                                 </div>
-                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/Ulu2VE5jeiU" 
+                                <iframe class="col-sm-8 col-xs-12 gla_image_bck" width="100%" style="min-height:300px" src="https://www.youtube.com/embed/Ulu2VE5jeiU"
                                   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
@@ -465,7 +465,7 @@
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-green-sh"><i>
-                                <sup>"</sup> 
+                                <sup>"</sup>
                                 <span class="ft-shadow">
                                   Penyelenggara Tridharma Perguruan Tinggi<br>
                                   yang unggul di taraf nasional dan internasional<br>
@@ -478,7 +478,7 @@
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
-                            <a href='{{url("/")}}' target="_blank">© beritabaik.info</a>
+                            <a href='{{url("/")}}' target="_blank">© beritabaik.co</a>
                         </div>
                     </section>
                 </section>
@@ -489,20 +489,20 @@
         <script>
             function executeInv(){
                 $("body").removeClass("bg-navy");
-                document.getElementById('myaudio').play(); 
+                document.getElementById('myaudio').play();
                 document.getElementById('myaudio').volume = .35;
                 $('#gla_welcome').remove();
                 $('#gla_welcome2').remove();
                 $('#gla_welcome3').remove();
                 $('#gla_page').show();
             }
-            
+
             function validateNumber(evt) {
               var e = evt || window.event;
               var key = e.keyCode || e.which;
 
               if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
-              // numbers   
+              // numbers
               key >= 48 && key <= 57 ||
               // Numeric keypad
               key >= 96 && key <= 105 ||
@@ -551,15 +551,15 @@
                 seeRSVP();
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
-                    let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page, 
-                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.<br><br> 
-                    Even so, please feel free to contact our admin by select order menu <a href='{{url("/")}}'>at beritabaik.info main page</a>`;
+                    let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page,
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.<br><br>
+                    Even so, please feel free to contact our admin by select order menu <a href='{{url("/")}}'>at beritabaik.co main page</a>`;
                 @endif
                 $(document).on("click","#form-rsvp-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
                         toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
-                        if(document.getElementById('form-rsvp').checkValidity()){ 
+                        if(document.getElementById('form-rsvp').checkValidity()){
                             console.log('handling :: form-rsvp | validity passed');
                             $('.gla_page_loader_light').show();
                             let name = $('[name="rsvp_name"]').val();
@@ -602,7 +602,7 @@
                     @if($addition_logic && in_array('do',$addition_logic))
                         toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
-                        if(document.getElementById('form-wish').checkValidity()){ 
+                        if(document.getElementById('form-wish').checkValidity()){
                             console.log('handling :: form-wish | validity passed');
                             $('.gla_page_loader_light').show();
                             let name = $('[name="wish_name"]').val();

@@ -15,7 +15,7 @@
         <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
-        <?php 
+        <?php
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
         <style>.highlight-1{
@@ -44,7 +44,7 @@
                 color: #956c5a;
                 padding: 5px 30px;
                 line-height: 2;
-                border-radius: 10px; 
+                border-radius: 10px;
             }
             .text-subtitle-highlight-1{
                 background-color: white;
@@ -102,7 +102,7 @@
             .pd-md{
                 padding-top: 20px;
                 padding-bottom: 20px;
-            }  
+            }
             .pd-md-h{
                 padding: 80rem 20px 20px 20px;
             }
@@ -120,7 +120,7 @@
             }
             .btn-brown-light-transp{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(0,0,0,0.6) !important; 
+                background: rgba(0,0,0,0.6) !important;
                 /* 108,67,49 */
                 font-weight: 600;
             }
@@ -170,8 +170,8 @@
         <!-- OPEN -->
         <!-- #GOLD VERSION -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/10.webp')}}"> 
-                    <p style="margin-top:5vh;margin-bottom:5vh" class="ft-shadow-soft-reverse">               
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-choco-2" data-image="{{asset($cdn_link.'images/10.webp')}}">
+                    <p style="margin-top:5vh;margin-bottom:5vh" class="ft-shadow-soft-reverse">
                         <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
                         <span class="gla_slide_midtitle_m2">Chris & Lusye</span><br><br>
                     </p>
@@ -181,7 +181,7 @@
                             @if(isset($_GET['qty']))
                                 <span class="highlight-2-bold fix-montserrat-xs text-blue-baby">
                                     This invitation is limited to <span class="fix-montserrat-xs-b">{{$_GET['qty']}} person {{$_GET['qty']>1?"'s":""}}</span>
-                                </span>    
+                                </span>
                                 @if(isset($_GET['seat']))
                                     <br><span class="highlight-2-bold fix-montserrat-xs text-blue-baby"> Your seat{{$_GET['qty']>1?"'s are":" is"}} number <span class="fix-montserrat-xs-b">{{$_GET['seat']}}</span></span>
                                 @endif
@@ -192,11 +192,11 @@
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-brown-light-transp text-choco-1 gla_invitation_open_btn_longer" onclick="executeInv()">Open Invitation</button> 
+            <button type="button" class="btn btn-brown-light-transp text-choco-1 gla_invitation_open_btn_longer" onclick="executeInv()">Open Invitation</button>
         <!-- #BLUE VERSION -->
             <!-- <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{--asset($cdn_link.'images/3_expand.webp')--}}"> 
-                    <p style="margin-top:-2vh;margin-bottom:4vh" class="">               
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck" data-image="{{--asset($cdn_link.'images/3_expand.webp')--}}">
+                    <p style="margin-top:-2vh;margin-bottom:4vh" class="">
                         <span class="fix-montserrat-s-b gla_wht_txt">The Wedding of</span><br><br>
                         <span class="gla_slide_midtitle_m2 text-blue-baby-sh mt-5">Chris & Lusye</span>
                     </p>
@@ -226,7 +226,7 @@
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <header>      
+                <header>
                     <nav class="gla_light_nav gla_transp_nav">
                         <div class="container">
                             <div class="gla_logo_container clearfix">
@@ -258,15 +258,15 @@
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-info"><i>
-                                <sup>3</sup> <span class="ft-shadow">The Lord appeared to us in the past 
-                                <br>“I have loved you with an everlasting love; 
+                                <sup>3</sup> <span class="ft-shadow">The Lord appeared to us in the past
+                                <br>“I have loved you with an everlasting love;
                                 <br>I have drawn you with unfailing kindness."</span></i>
                             </span><br><br><br><br><br>
                             <p class="gla_subtitle ft-shadow">— Jeremiah 31:3 (NIV)</p>
                         </div>
                     </section>
-                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" 
-                                data-image="{{asset($cdn_link.'images/13_2.webp')}}">  
+                    <section    id="profile" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8"
+                                data-image="{{asset($cdn_link.'images/13_2.webp')}}">
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.6"></div> -->
                         <div class="container text-center">
                             <div class="col gla_round_block gla_wht_txt">
@@ -310,9 +310,9 @@
                         </div>
                     </section>
                     <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/9.webp')}}" data-stellar-background-ratio="0.8">
-                        <div class="container text-center">     
+                        <div class="container text-center">
                             <!-- <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>    -->
-                            <div class="container text-center">                
+                            <div class="container text-center">
                                 <span class="fix-montserrat-m text-subtitle-highlight-2">By the grace of God,</span><br>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">we are pleased to announce our wedding to you,<br></span><span class="text-subtitle-highlight-1">our family and friends</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
@@ -329,7 +329,7 @@
                                                 <span class="label label-success">at 13:00 WIT</span>
                                             </p>
                                         </a>
-                                    </div> 
+                                    </div>
                                     <div class="col-sm-6 col-xs-12">
                                         <a href="#" class="gla_news_block">
                                             <span class="gla_news_img">
@@ -364,9 +364,9 @@
                         </div>
                     </section>
                     <section    id="rsvp" class="gla_section gla_image_bck gla_wht_txt gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/15.webp')}}">
-                        
+
                         <div class="container text-right">
-                            <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>         
+                            <p><img src="{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" data-bottom-top="@src:{{asset('asset-wedding-1/images/animations/rsvp_wh.gif')}}" height="150" alt=""></p>
                             <p class="fix-montserrat-xs-b">Can't wait to welcome our happy day with you. <br>At below you can confirm your attendance, thank you.</p>
                             <form id="form-rsvp" onsubmit="return false;">
                                 <div class="row">
@@ -401,7 +401,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th width="40%">Sender</th>
-                                                            <th width="40%">Address</th>                              
+                                                            <th width="40%">Address</th>
                                                             <th width="20%">Presence Status</th>
                                                         </tr>
                                                     </thead>
@@ -419,7 +419,7 @@
                             <table class="table table-sm table-borderless table-striped fix-montserrat-s" style="width:80%" id="table-wish">
                                 <thead>
                                     <tr class="text-choco-2">
-                                        <th width="25%">Sender</th>                              
+                                        <th width="25%">Sender</th>
                                         <th width="75%">Wishes</th>
                                     </tr>
                                 </thead>
@@ -430,7 +430,7 @@
                         <!-- <div class="gla_over" data-color="#282828" data-opacity="0.65"></div> -->
                         <div class="container text-left text-info">
                             <form id="form-wish" onsubmit="return false;">
-                                <p class="fix-montserrat-xs-b"><b>Leave us your beautiful wishes <br>and most sincere prayers here<br>as we are so excited to embark <br>on this new journey together ~</b></p>    
+                                <p class="fix-montserrat-xs-b"><b>Leave us your beautiful wishes <br>and most sincere prayers here<br>as we are so excited to embark <br>on this new journey together ~</b></p>
                                 <div class="row">
                                     <div class="col-sm-6"><br>
                                         <span class="fix-montserrat-s-b">Sender</span>
@@ -449,11 +449,11 @@
                             </form>
                         </div>
                     </section>
-                    
+
                     <section    id="gift_qrcode" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/14.webp')}}" data-stellar-background-ratio="0.8">
-                        <div class="container text-center">     
-                            <div class="gla_over" data-color="#ffffff" data-opacity="0.6"></div>   
-                            <div class="container text-center">                
+                        <div class="container text-center">
+                            <div class="gla_over" data-color="#ffffff" data-opacity="0.6"></div>
+                            <div class="container text-center">
                                 <span class="fix-montserrat-m-b text-rose-sh highlight-2-light">Wedding Gift</span><br><br>
                                 <span class="fix-montserrat-s-b text-choco-1">Without reducing respect, for invited guests who are willing to give a sign of love for us, can go through:<br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
@@ -466,7 +466,7 @@
                                                 <span class="fix-montserrat-s-b text-success">BCA - 60110007011<br>a/n Lusye Diana Jacob</span><br><br>
                                             </p>
                                         </a>
-                                    </div> 
+                                    </div>
                                 </div>
                                 or ..<br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
@@ -479,18 +479,18 @@
                                                 <span class="fix-montserrat-s-b text-success">QRIS<br>a/n Christian Jorhans Peters Manoe</span><br><br>
                                             </p>
                                         </a>
-                                    </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0" 
+                    <section    id="gallery" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0"
                                 data-image="{{asset($cdn_link.'images/white-bg.webp')}}">
                         <div class="container text-center"><br>
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
                             <div class="gla_slider_carousel">
                                 <?php
-                                    $gallery_items = array('4','5','6','7','8','0','11','12','1','2','3','13','14','16','15','17','bride','groom'); 
+                                    $gallery_items = array('4','5','6','7','8','0','11','12','1','2','3','13','14','16','15','17','bride','groom');
                                 ?>
                                 @foreach($gallery_items as $item)
                                 <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
@@ -503,7 +503,7 @@
                                                 <!-- <p><a href="#" class="btn"></a></p> -->
                                             </div>
                                         </div>
-                                    </a>    
+                                    </a>
                                 </div>
                                 @endforeach
                             </div>
@@ -532,9 +532,9 @@
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b text-info"><i>
-                                <sup>18</sup> <span class="ft-shadow">There is no fear in love. 
-                                <br>But perfect love drives out fear <br>because fear has to do with punishment. 
-                                <br>The one who fears is not made perfect in love.</span> 
+                                <sup>18</sup> <span class="ft-shadow">There is no fear in love.
+                                <br>But perfect love drives out fear <br>because fear has to do with punishment.
+                                <br>The one who fears is not made perfect in love.</span>
                                 <br><sup>19</sup> <span class="ft-shadow">We love because he first loved us.</span></i>
                             </span><br><br><br><br><br>
                             <p class="gla_subtitle ft-shadow">— 1 John 4:18-19 (NIV)</p>
@@ -542,7 +542,7 @@
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
                         <div class="container">
-                            <a href='{{url("/")}}' target="_blank">© beritabaik.info</a>
+                            <a href='{{url("/")}}' target="_blank">© beritabaik.co</a>
                         </div>
                     </section>
                 </section>
@@ -553,7 +553,7 @@
         <script>
             function executeInv(){
                 $("body").removeClass("bg-navy");
-                document.getElementById('myaudio').play(); 
+                document.getElementById('myaudio').play();
                 document.getElementById('myaudio').volume = .35;
                 $('#gla_welcome').remove();
                 $('#gla_page').show();
@@ -581,15 +581,15 @@
                 }
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
-                    let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page, 
-                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.<br><br> 
-                    Even so, please feel free to contact our admin by select order menu <a href='{{url("/")}}'>at beritabaik.info main page</a>`;
+                    let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page,
+                    unfortunately rsvp & wishes can only be filled by guests of our respected bride and groom.<br><br>
+                    Even so, please feel free to contact our admin by select order menu <a href='{{url("/")}}'>at beritabaik.co main page</a>`;
                 @endif
                 $(document).on("click","#form-rsvp-send",function(){
                     @if($addition_logic && in_array('do',$addition_logic))
                         toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
-                        if(document.getElementById('form-rsvp').checkValidity()){ 
+                        if(document.getElementById('form-rsvp').checkValidity()){
                             console.log('handling :: form-rsvp | validity passed');
                             $('.gla_page_loader_light').show();
                             let name = $('[name="rsvp_name"]').val();
@@ -632,7 +632,7 @@
                     @if($addition_logic && in_array('do',$addition_logic))
                         toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
                     @else
-                        if(document.getElementById('form-wish').checkValidity()){ 
+                        if(document.getElementById('form-wish').checkValidity()){
                             console.log('handling :: form-wish | validity passed');
                             $('.gla_page_loader_light').show();
                             let name = $('[name="wish_name"]').val();
