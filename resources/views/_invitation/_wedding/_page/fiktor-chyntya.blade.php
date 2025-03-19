@@ -209,6 +209,22 @@
                 border: none !important;
             }
 
+            .grid {
+                max-width: 100%;
+            }
+            .grid-item {
+                display: block;
+                margin-bottom: 10px;
+            }
+            .type-1 { width: 33%; } /* 1/3 width */
+            .type-2 { width: 66%; } /* 2/3 width */
+            .type-3 { width: 50%; } /* 1/2 width */
+            .grid-item img {
+                width: 100%;
+                display: block;
+                border-radius: 8px;
+                padding-right: 10px;
+            }
         </style>
     </head>
     <body class="bg-navy">
@@ -346,20 +362,26 @@
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami dengan hormat meminta<br></span><span class="text-subtitle-highlight-1">kehadiran Anda</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     <div class="col-sm-12 gla_news_block">
-                                        <p><br><br>
+                                        <span class="gla_news_img">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.806913414784!2d113.88247697496777!3d-2.2262457977540975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dfcb31376666be9%3A0xaba517e9bf60728d!2sGereja%20Sinar%20Kasih!5e0!3m2!1sen!2sid!4v1742369051086!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </span>
+                                        <p>
                                             <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Peneguhan dan Pemberkatan Nikah</span>
                                         </p>
                                         <p>
                                             <a href="hhttps://maps.app.goo.gl/vgndgmaqCV2ee7m5A" class="fix-montserrat-sm-b text-choco-2"><b>GKE Sinar Kasih</b></a>
-                                            Jl. G.obos XII – Palangka Raya
+                                            <br>Jl. G.obos XII – Palangka Raya
                                         </p>
                                         <p>
                                             <span class="fix-montserrat-sm-b text-choco-2">Kamis, 3 April 2025</span><br><br>
-                                            <span class="label label-default">09.00 WIB s/d selesai</span>
+                                            <span class="label label-default">08.00 WIB s/d selesai</span>
                                         </p>
                                     </div>
                                     <div class="col-sm-6 gla_news_block">
-                                        <p><br><br>
+                                        <span class="gla_news_img">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.8522992459098!2d113.92329547454585!3d-2.209403797771055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dfcb25e914da077%3A0xa188263c11d97f15!2sGPU%20Tambun%20Bungai!5e0!3m2!1sen!2sid!4v1742369244335!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </span>
+                                        <p>
                                             <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Resepsi</span><br><br><br>
                                         </p>
                                         <p>
@@ -372,7 +394,10 @@
                                         </p>
                                     </div>
                                     <div class="col-sm-6 gla_news_block">
-                                        <p><br><br>
+                                        <span class="gla_news_img">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.8522992459098!2d113.92329547454585!3d-2.209403797771055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dfcb25e914da077%3A0xa188263c11d97f15!2sGPU%20Tambun%20Bungai!5e0!3m2!1sen!2sid!4v1742369244335!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </span>
+                                        <p>
                                             <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span>
                                         </p>
                                         <p>
@@ -512,13 +537,13 @@
                     </section>
                     <section    id="rsvp" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/2.webp')}}">
                         <div class="gla_over" data-color="#282828" data-opacity="0.65"></div>
-                        <div class="container text-right">
+                        <div class="container">{{-- text-right --}}
                             <div class="container-fluid">
                                 <div class="text-right">
                                     <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">
                                 </div>
                                 <strong class="ff-ephesis" style="font-size: 18px">
-                                    Tidak sabar untuk sambut hari bahagia kami bersamamu.<br>Di bawah ini silahkan mengkonfirmasi kehadiran Anda,<br>terima kasih.
+                                    Tidak sabar<br>untuk sambut hari bahagia kami bersamamu.<br>Di bawah ini silahkan mengkonfirmasi<br>kehadiran Anda, terima kasih.
                                 </strong>
                                 <form id="form-rsvp" onsubmit="return false;">
                                     <div class="row">
@@ -569,29 +594,37 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="gallery" class="gla_section gla_wht_txt">
+                    <section    id="gallery">
                         <div class="container text-center"><br>
                             <span class="fix-montserrat-m text-choco-1">Gallery</span><br><br>
-                            <div class="gla_slider_carousel">
-                                <?php
-                                    $gallery_items = array('1','2','3','4','5','6','7','8','9','10','11','12','13');
-                                ?>
+                            <?php
+                                $gallery_items = array(
+                                    array('name'=>'1','class'=>'col-xs-4'),
+                                    array('name'=>'9','class'=>'col-xs-8'),
+                                    array('name'=>'4','class'=>'col-xs-4'),
+                                    array('name'=>'5','class'=>'col-xs-4'),
+                                    array('name'=>'6','class'=>'col-xs-4'),
+                                    array('name'=>'2','class'=>'col-xs-6'),
+                                    array('name'=>'3','class'=>'col-xs-6'),
+                                    array('name'=>'7','class'=>'col-xs-6'),
+                                    array('name'=>'10','class'=>'col-xs-6'),
+                                    array('name'=>'11','class'=>'col-xs-4'),
+                                    array('name'=>'12','class'=>'col-xs-4'),
+                                    array('name'=>'13','class'=>'col-xs-4'),
+                                );
+                            ?>
+
+                            <div class="d-flex flex-wrap gap-3">
                                 @foreach($gallery_items as $item)
-                                <div class="gla_slider gla_slider_md gla_image_bck gla_wht_txt" data-image="{{asset($cdn_link.'images/'.$item.'.webp')}}">
-                                    <div class="gla_over" data-color="#000" data-opacity="0"></div>
-                                    <a href="{{asset($cdn_link.'images/'.$item.'.webp')}}" class="lightbox">
-                                        <div class="container">
-                                            <div class="stick-bottom">
-                                                <div class="gla_slide_midtitle"></div>
-                                                <div class="gla_slide_subtitle no-margin-top">~</div>
-                                                <!-- <p><a href="#" class="btn"></a></p> -->
-                                            </div>
-                                        </div>
-                                    </a>
+                                <div class="{{$item['class']}} text-center">
+                                    <a href="{{asset($cdn_link.'images/'.$item['name'].'.webp')}}" class="lightbox">
+                                        <img src="{{asset($cdn_link.'images/'.$item['name'].'.webp')}}" class="img-fluid"  alt="img-{{$item['name']}}">
+                                    </a><br><br>
                                 </div>
                                 @endforeach
                             </div>
-                        </div><br><br><br>
+
+                        </div><br><br>
                     </section>
                     <section    id="quote" class="gla_image_bck gla_fixed h-fix-img" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/9.webp')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
