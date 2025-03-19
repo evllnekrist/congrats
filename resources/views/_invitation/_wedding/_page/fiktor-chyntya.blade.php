@@ -4,7 +4,7 @@
         @include('_invitation._wedding._include.head-1')
         <?php
             $version = "?var=".date("Ymd")."010";
-            // $qrcode1 = "2831587964";
+            $qrcode1 = "1210201000643";
             $qrcode2 = "024301022670536";
         ?>
         <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
@@ -512,8 +512,8 @@
                                 <span class="text-choco-1"><span class="fix-montserrat-m-b ff-ephesis">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan yang bersedia memberikan tanda cinta, bisa melalui:</span></span>
                                 <p style="height:5vh"></p>
                                 <div class="gla_icon_boxes row justify-content-center">
-                                    <div class="col-2"></div>
-                                    <div class="col-8">
+                                    {{-- <div class="col-2"></div> --}}
+                                    <div class="col-xs-6">
                                         <div class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important"><br>
                                                 <a href="{{asset($cdn_link.'images/bri.jpg')}}" target="_blank">
@@ -530,7 +530,24 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-2"></div>
+                                    <div class="col-xs-6">
+                                        <div class="gla_news_block">
+                                            <span class="gla_news_img" style="height:auto!important"><br>
+                                                <a href="{{asset($cdn_link.'images/bpk.png')}}" target="_blank">
+                                                    <img src="{{asset($cdn_link.'images/bpk.png')}}" download="bpk.png"
+                                                    style="height:15vh;width:15vh">
+                                                </a>
+                                            </span>
+                                            <p onclick="copy_to_clipboard('{{$qrcode1}}')">
+                                                <span class="fix-montserrat-s-b">
+                                                    <label class="text-success">{{$qrcode1}}<br>a/n Chyntya Mutiara Putri</label>
+                                                    <i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i>
+                                                    <br><small>[copy]</small>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    {{-- <div class="col-2"></div> --}}
                                 </div>
                             </div>
                         </div>
