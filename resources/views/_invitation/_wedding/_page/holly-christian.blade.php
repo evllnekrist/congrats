@@ -37,21 +37,14 @@
                 color: #956c5a
             }
             .text-choco-2{
-                /* color: #6c4331 */
-                color: #a47766;
+                color: #bf913e;
             }
             .text-choco-3{
                 color: #392F24;
             }
-            .btn-blue-light-transp{
-                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%);
-                background: rgba(91, 192, 222, 0.7) !important;
-                /* 108,67,49 */
-                /* font-weight: 600; */
-            }
-            .btn-brown-light-transp, .btn-blue-light-transp:hover, .btn-brown-light-transp-2:hover{
+            .btn-brown-light-transp, .btn-brown-light-transp-2:hover{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(224, 126, 51, 0.8) !important;
+                background: rgba(149, 108, 90, 0.4) !important;
                 /* 108,67,49 */
                 /* font-weight: 600; */
             }
@@ -132,7 +125,7 @@
             }
             .ft-shadow{
                 color: white;
-                text-shadow: 2px 2px 4px #000000;
+                text-shadow: 1px 1px 4px #000000;
             }
             .in-focus-white-light{
                 background: rgba(255,255,255,0.8) !important;
@@ -184,7 +177,7 @@
                 margin: 10px 0;
                 width: 75%;
                 border-radius: 20px;
-                background: rgba(255, 255, 255, 0.9) !important;
+                background: rgba(255, 255, 255, 0.7) !important;
                 transform: translateY(0) translateX(-50%);
                 text-align: center;
                 -webkit-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
@@ -310,8 +303,8 @@
                 <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/s-2.webp')}}" data-stellar-background-ratio="0.8">
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
-                        <div class="gla_slide_txt gla_slide_center_bottom" style="text-align:right;top:65%;left:-60%">
-                            <img src="{{asset($cdn_link.'images/logo-pure.gif')}}" style="width:50vw !important">
+                        <div class="gla_slide_txt gla_slide_center_bottom" style="text-align:right;top:55%;left:-62%">
+                            <img src="{{asset($cdn_link.'images/logo-pure.gif')}}" style="width:40vw !important">
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
@@ -326,7 +319,7 @@
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block">
-                                <span class="text-babypink gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Dua&nbsp;&nbsp;Menjadi&nbsp;&nbsp;Satu</span><br>
+                                <span class="text-babypink gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Dua&nbsp;&nbsp;jadi&nbsp;&nbsp;satu</span><br>
                                 <span class="gla_wht_txt fix-montserrat-m-sb ft-shadow-soft-reverse">Sabtu,  12 Juli 2025</span><br><br>
                                 <div class="text-skyblue gla_countdown" data-year="2025" data-month="07" data-day="12"></div><br><br>
                             </div>
@@ -336,7 +329,7 @@
                                         <a href="{{asset($cdn_link.'images/bride-1.webp')}}">
                                             <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride-1.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small><small>Bernadeta Holly</small><br>Ayuningrum,<br>S.T.</small></strong></span>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Bernadeta<br>Holly<br>Ayuningrum,<br>S.T.</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
                                         <p class="text-skyblue">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putri sulung<br>dari</small><br>
@@ -351,7 +344,7 @@
                                         <a href="{{asset($cdn_link.'images/groom-2.webp')}}">
                                             <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/groom-2.webp')}}" alt="">
                                         </a>
-                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Christian<br>Leonard,<br>S.T.</small></small></strong></span>
+                                        <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Christian<br>Leonard,<br>S.T.<br><br></small></small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
                                         <p class="text-skyblue">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putra bungsu<br>dari</small></b><br>
@@ -392,6 +385,7 @@
                                             <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span><br><br>
                                             <span class="label label-default">11.00 WIB s/d selesai</span>
                                         </p>
+                                            <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 50px;width:auto">
                                         <p>
                                             <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Resepsi</span><br><br>
                                             <span class="label label-default">12.00 s/d 15.00 WIB</span>
@@ -412,11 +406,11 @@
                         <!-- <div class="gla_over" data-color="#000" data-opacity="0.1"></div> -->
                         <div class="container" style="padding-bottom: 0px !important;">
                                 <div class="row mb-10">
-                                    <div class="col-xs-4"><br>
+                                    <div class="col-xs-3"><br>
                                         <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">
                                     </div>
-                                    <strong class="col-xs-8 ff-ephesis text-right" style="font-size: 22px">
-                                        Doa dan ucapanmu begitu berarti,<br>untuk kami memulai<br>perjalanan baru ini</b>
+                                    <strong class="col-xs-9 ff-ephesis text-right" style="font-size: 22px">
+                                        Doa dan ucapanmu<br>sangat berarti untuk kami <br>dalam semangat memulai<br>perjalanan baru ini
                                     </strong>
                                 </div>
                                 <form id="form-rsvp" onsubmit="return false;">
@@ -429,11 +423,11 @@
                                             <span class="fix-montserrat-s-b">Ucapan</span>
                                             <textarea name="wish_message" maxlength="500" spellcheck="false" class="form-control form-opacity in-focus-white-light" required></textarea>
                                         </div>
-                                        <div class="col-xs-6"><br><br>
+                                        <div class="col-xs-6"><br><br><br><br>
                                             <span class="fix-montserrat-s-b">Alamat</span>
                                             <input type="text" name="rsvp_address" class="form-control form-opacity in-focus-white-light" required>
                                         </div>
-                                        <div class="col-xs-6 text-choco-1"><br><br>
+                                        <div class="col-xs-6 text-choco-3"><br><br><br><br>
                                             <span class="fix-montserrat-s-b">Apakah kamu datang?</span><br>
                                             <input type="radio" name="rsvp_attend" value="1" required>
                                             <small>Ya, tentu!</small><br>
@@ -475,8 +469,7 @@
                                             <p onclick="copy_to_clipboard('{{$qrcode2}}')">
                                                 <span class="fix-montserrat-s-b">
                                                     <label class="text-success">{{$qrcode2}}<br>a/n Bernadeta Holly </label>
-                                                    <i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i>
-                                                    <br><small>[copy]</small>
+                                                    <br><small><i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i> [copy]</small>
                                                 </span>
                                             </p>
                                         </div>
@@ -492,8 +485,7 @@
                                             <p onclick="copy_to_clipboard('{{$qrcode1}}')">
                                                 <span class="fix-montserrat-s-b">
                                                     <label class="text-success">{{$qrcode1}}<br>a/n Christian Leonard</label>
-                                                    <i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i>
-                                                    <br><small>[copy]</small>
+                                                    <br><small><i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i> [copy]</small>
                                                 </span>
                                             </p>
                                         </div>
