@@ -324,7 +324,7 @@
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block">
-                                <span class="text-babypink gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Dua&nbsp;&nbsp;jadi&nbsp;&nbsp;satu</span><br>
+                                <img src="{{asset($cdn_link.'images/line-epilog.png')}}" style="width: 50vw;"><br>
                                 <span class="gla_wht_txt fix-montserrat-m-sb ft-shadow-soft-reverse">Sabtu,  12 Juli 2025</span><br><br>
                                 <div class="text-skyblue gla_countdown" data-year="2025" data-month="07" data-day="12"></div><br><br>
                             </div>
@@ -447,7 +447,7 @@
                                     </div>
                                 </form>
                         </div>
-                        <img src="{{asset($cdn_link.'images/line-wishes.png')}}">
+                        <img src="{{asset($cdn_link.'images/line-wishes2.png')}}">
                         <div class="text-left pd-md"><br><br><br><br><br><br><br><br>
                             <div id="chat" class="chat_box_wrapper chat_box_small chat_box_active" style="opacity: 1; display: block; transform: translateX(0px); background-color: rgba(255,255,255,0.2);border-radius: 25px;">
                                 <div class="chat_box touchscroll chat_box_colors_a" id="table-wish">
@@ -466,8 +466,8 @@
                                     <div class="col-xs-6">
                                         <div class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important"><br>
-                                                <a href="{{asset($cdn_link.'images/bca.jpg')}}" target="_blank">
-                                                    <img src="{{asset($cdn_link.'images/bca.jpg')}}" download="bca.jpg"
+                                                <a href="{{asset($cdn_link.'images/bca.png')}}" target="_blank">
+                                                    <img src="{{asset($cdn_link.'images/bca.png')}}" download="bca.jpg"
                                                     style="height:15vh;width:15vh">
                                                 </a>
                                             </span>
