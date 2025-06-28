@@ -14,35 +14,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" rel="stylesheet" />
         <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
+        <link href="{{asset('asset-main/css/chatbox.css').$version}}" rel="stylesheet">
         <?php
             $cdn_link   = "asset-wedding-bg/".$code."/";
         ?>
         <style>
-            .text-palette-1{
-                color: #ee7071;
-            }
-            .text-palette-2{
-                color: #f4adb3;
-            }
-            .text-palette-3{
-                color: #fddee3;
-            }
-            .text-palette-4{
-                color: #fef5f6;
-            }
-            .text-skyblue{
-                color: #d0ab76;
-            }
             .text-babypink{
                 color: #ff99ff;
             }
-            .text-palette-6{
-                color: #d5eaba;
-            }
-            .text-palette-7{
+            .text-green{
                 color: #abc94e;
             }
             .text-skyblue{
@@ -59,7 +43,23 @@
             .text-choco-3{
                 color: #392F24;
             }
-
+            .btn-blue-light-transp{
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%);
+                background: rgba(91, 192, 222, 0.7) !important;
+                /* 108,67,49 */
+                /* font-weight: 600; */
+            }
+            .btn-brown-light-transp, .btn-blue-light-transp:hover, .btn-brown-light-transp-2:hover{
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
+                background: rgba(224, 126, 51, 0.8) !important;
+                /* 108,67,49 */
+                /* font-weight: 600; */
+            }
+            .btn-brown-light-transp-2, .btn-brown-light-transp:hover{
+                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%) !important;
+                background: rgba(48, 34, 29, 0.9) !important;
+                font-weight: 600;
+            }
             .btn-green-light-transp-2, .btn-green-light-transp:hover{
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%) !important;
                 background: rgba(171, 201, 78, 0.8) !important;
@@ -119,8 +119,7 @@
                 padding-bottom: 10px;
             }
             .pd-md{
-                padding-top: 20px;
-                padding-bottom: 20px;
+                padding: 20px;
             }
             .pd-md-h{
                 padding: 2rem 20px 20px 20px;
@@ -134,23 +133,6 @@
             .ft-shadow{
                 color: white;
                 text-shadow: 2px 2px 4px #000000;
-            }
-            .btn-blue-light-transp{
-                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%);
-                background: rgba(91, 192, 222, 0.7) !important;
-                /* 108,67,49 */
-                /* font-weight: 600; */
-            }
-            .btn-brown-light-transp, .btn-blue-light-transp:hover, .btn-brown-light-transp-2:hover{
-                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 40%);
-                background: rgba(224, 126, 51, 0.8) !important;
-                /* 108,67,49 */
-                /* font-weight: 600; */
-            }
-            .btn-brown-light-transp-2, .btn-brown-light-transp:hover{
-                box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 60%) !important;
-                background: rgba(48, 34, 29, 0.9) !important;
-                font-weight: 600;
             }
             .in-focus-white-light{
                 background: rgba(255,255,255,0.8) !important;
@@ -198,11 +180,11 @@
                 transform: translateY(-50%);
                 left: 50%;
                 bottom: 10%;
-                padding: 10px 20px;
+                padding: 5px 10px;
                 margin: 10px 0;
                 width: 75%;
                 border-radius: 20px;
-                background-color: white;
+                background: rgba(255, 255, 255, 0.9) !important;
                 transform: translateY(0) translateX(-50%);
                 text-align: center;
                 -webkit-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
@@ -237,6 +219,25 @@
                 border-radius: 8px;
                 padding-right: 10px;
             }
+            .badge{
+                font-size: 10px;
+                font-weight: 400;
+            }
+            .badge-info{
+                background-color: #f7f5bc;
+                color: black;
+            }
+            .video-wrapper {
+                max-width: 720px;
+                margin: 10px 10px 5px 10px;
+                aspect-ratio: 16 / 9;
+                position: relative;
+            }
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
         </style>
     </head>
     <body class="bg-navy">
@@ -259,11 +260,7 @@
         <!-- OPEN -->
         <!-- #GOLD VERSION -->
             <div class="gla_invitation_container_longer" id="gla_welcome">
-                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-skyblue" data-image="{{asset($cdn_link.'images/top-3.webp')}}">
-                    <p style="margin-top:2vh;margin-bottom:2vh" class="ft-shadow-dark">
-                        <span class="fix-montserrat-s-b">The Wedding of</span><br><br>
-                        <span class="gla_slide_midtitle_m ff-ephesis">Holly&nbsp;&nbsp;&&nbsp;&nbsp;Christian</span><br><br>
-                    </p>
+                <div class="gla_invitation_i_longer gla_invitation_ii gla_image_bck text-skyblue" data-image="{{asset($cdn_link.'images/open.png')}}">
                 </div>
             </div>
             <div class="row gla_wht_txt gla_invitation_open_btn_longer__before_custom text-choco-3" id="gla_welcome2">
@@ -310,7 +307,7 @@
                     </nav>
                 </header>
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/top-0b.webp')}}" data-stellar-background-ratio="0.8">
+                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/s-2.webp')}}" data-stellar-background-ratio="0.8">
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom" style="text-align:right;top:65%;left:-60%">
@@ -329,7 +326,7 @@
                         <div class="gla_over" data-color="#282828" data-opacity="0.6"></div>
                         <div class="container text-center">
                             <div class="col gla_round_block">
-                                <span class="text-babypink gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Dua menjadi satu</span><br>
+                                <span class="text-babypink gla_slide_midtitle_m ff-ephesis" style="font-size: 20px">Dua&nbsp;&nbsp;Menjadi&nbsp;&nbsp;Satu</span><br>
                                 <span class="gla_wht_txt fix-montserrat-m-sb ft-shadow-soft-reverse">Sabtu,  12 Juli 2025</span><br><br>
                                 <div class="text-skyblue gla_countdown" data-year="2025" data-month="07" data-day="12"></div><br><br>
                             </div>
@@ -343,9 +340,9 @@
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
                                         <p class="text-skyblue">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putri sulung<br>dari</small><br>
-                                            <span class="fix-montserrat-s-b">Yohannes Aris<br>Murkadaryanta</span>
+                                            <span class="fix-montserrat-s-b"><small>Bapak Yohannes</small> Aris M.</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Martane</span>
+                                            <span class="fix-montserrat-s-b">Ibu Martane</span>
                                         </p>
                                     </div>
                                 </div>
@@ -358,9 +355,9 @@
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
                                         <p class="text-skyblue">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putra bungsu<br>dari</small></b><br>
-                                            <span class="fix-montserrat-s-b">Setia<br>Jaya</span>
+                                            <span class="fix-montserrat-s-b">Bapak Setia Jaya</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Riak</small></span>
+                                            <span class="fix-montserrat-s-b">Ibu Riak</small></span>
                                         </p>
                                     </div>
                                 </div>
@@ -373,107 +370,97 @@
                                 <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Hanya oleh karunia Tuhan,<br></span>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami dengan hormat meminta<br></span><span class="text-subtitle-highlight-1">kehadiran Anda</span></span><br><br><br><br>
                                 <div class="gla_icon_boxes row justify-content-center">
-                                    <div class="col-sm-12 gla_news_block">
-                                        <span class="gla_news_img">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.9729869594444!2d113.84669357496767!3d-2.1639810978167895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dfcb6b04476e945%3A0xaa8f6656fb5bc653!2sGereja%20Katolik%20Paroki%20Yesus%20Gembala%20Baik%2C%20Bukit%20Tunggal!5e0!3m2!1sid!2sid!4v1750595469779!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                        </span>
+                                    <div class="col-sm-6 gla_news_block">
+                                        <div class="gla_news_img">
+                                            <img src="{{asset($cdn_link.'images/ygb.webp')}}">
+                                        </div>
                                         <p>
                                             <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Peneguhan dan Pemberkatan Nikah</span>
                                         </p>
                                         <p>
-                                            <a href="hhttps://maps.app.goo.gl/vgndgmaqCV2ee7m5A" class="fix-montserrat-sm-b text-choco-2"><b>Gereja Katolik Yesus Gembala Baik</b></a>
+                                            <span class="label label-default">08.00 WIB s/d selesai</span><br><br>
+                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
+                                            <a href="https://g.co/kgs/fcbJTY9" class="fix-montserrat-sm-b text-choco-2" title="Klik untuk ke google map"><b>Gereja Katolik<br>Yesus Gembala Baik</b></a>
                                             <br>Jl. Tjilik Riwut KM. 9, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
                                         </p>
-                                        <p>
-                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
-                                            <span class="label label-default">08.00 WIB s/d selesai</span>
-                                        </p>
                                     </div>
                                     <div class="col-sm-6 gla_news_block">
-                                        <span class="gla_news_img">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.9238900271384!2d113.8867021!3d-2.1825734999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dfcb3dc22a599e7%3A0xbea81e55a4e66ebd!2sHotel%20Hawaii!5e0!3m2!1sid!2sid!4v1750230648970!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
+                                        <div class="gla_news_img">
+                                            <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
+                                        </div>
                                         <p>
-                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span>
-                                        </p>
-                                        <p>
-                                            <a href="https://maps.app.goo.gl/edshuTQLJN2EScyK7" class="fix-montserrat-sm-b text-choco-2"><b>Hotel Hawaii</b></a>
-                                            <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
-                                        </p>
-                                        <p>
-                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
+                                            <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span><br><br>
                                             <span class="label label-default">11.00 WIB s/d selesai</span>
                                         </p>
-                                    </div>
-                                    <div class="col-sm-6 gla_news_block">
-                                        <span class="gla_news_img">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.9238900271384!2d113.8867021!3d-2.1825734999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dfcb3dc22a599e7%3A0xbea81e55a4e66ebd!2sHotel%20Hawaii!5e0!3m2!1sid!2sid!4v1750230648970!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></span>
                                         <p>
-                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Resepsi</span><br><br><br>
-                                        </p>
-                                        <p>
-                                            <a href="https://maps.app.goo.gl/edshuTQLJN2EScyK7" class="fix-montserrat-sm-b text-choco-2"><b>Hotel Hawaii</b></a>
-                                            <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
+                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Resepsi</span><br><br>
+                                            <span class="label label-default">12.00 s/d 15.00 WIB</span>
                                         </p>
                                         <p>
                                             <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
-                                            <span class="label label-default">12.00 s/d 15.00 WIB</span>
+                                            <a href="https://maps.app.goo.gl/Hwb4HfY6h3NxRwgz6" class="fix-montserrat-sm-b text-choco-2"><b>Hotel Hawaii</b></a>
+                                            <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
                                         </p>
                                     </div>
                                 </div>
                         </div>
                     </section>
-                    <iframe style="width:100vw" src="https://www.youtube.com/embed/qb3LGsi2JMQ?si=QZfdxCX4TD_MUBmf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <section    id="wishes" class="gla_section">
-                        <div class="row text-left pd-md">
-                            <table class="table table-sm table-borderless table-striped fix-montserrat-s" style="width:80%" id="table-wish">
-                                <thead>
-                                    <tr class="text-text-blue-baby">
-                                        <th width="25%">Pengirim</th>
-                                        <th width="75%">Harapan</th>
-                                    </tr>
-                                </thead>
-                            </table>
+                    <div class="video-wrapper" id="video_container">
+                            <!-- Placeholder to be replaced when visible -->
+                    </div>
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/top-3.webp')}}">
+                        <!-- <div class="gla_over" data-color="#000" data-opacity="0.1"></div> -->
+                        <div class="container" style="padding-bottom: 0px !important;">
+                                <div class="row mb-10">
+                                    <div class="col-xs-4"><br>
+                                        <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">
+                                    </div>
+                                    <strong class="col-xs-8 ff-ephesis text-right" style="font-size: 22px">
+                                        Doa dan ucapanmu begitu berarti,<br>untuk kami memulai<br>perjalanan baru ini</b>
+                                    </strong>
+                                </div>
+                                <form id="form-rsvp" onsubmit="return false;">
+                                    <div class="row">
+                                        <div class="col-sm-8"><br>
+                                            <span class="fix-montserrat-s-b">Pengirim</span>
+                                            <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <span class="fix-montserrat-s-b">Ucapan</span>
+                                            <textarea name="wish_message" maxlength="500" spellcheck="false" class="form-control form-opacity in-focus-white-light" required></textarea>
+                                        </div>
+                                        <div class="col-xs-6"><br><br>
+                                            <span class="fix-montserrat-s-b">Alamat</span>
+                                            <input type="text" name="rsvp_address" class="form-control form-opacity in-focus-white-light" required>
+                                        </div>
+                                        <div class="col-xs-6 text-choco-1"><br><br>
+                                            <span class="fix-montserrat-s-b">Apakah kamu datang?</span><br>
+                                            <input type="radio" name="rsvp_attend" value="1" required>
+                                            <small>Ya, tentu!</small><br>
+                                            <input type="radio" name="rsvp_attend" value="0">
+                                            <small>Maaf, tidak dapat hadir</small>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12" style="padding-top:30px">
+                                            <input type="submit" class="btn btn-brown-light-transp-2 text-choco-1" id="form-rsvp-send" value="Simpan">
+                                        </div>
+                                    </div>
+                                </form>
                         </div>
-                    </section>
-                    <section    id="wishes2" class="gla_section gla_image_bck gla_fixed" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/dyk-8.webp')}}">
-                        <div class="gla_over" data-color="#282828" data-opacity="0.1"></div>
-                        <div class="container text-left">
-                            <form id="form-wish" onsubmit="return false;">
-                                <table>
-                                    <tr>
-                                        <td style="width: 80%">
-                                            <strong class="ff-ephesis" style="font-size: 18px">
-                                                Doa dan harapanmu<br>sangat berarti untuk kami,<br>dalam semangat memulai<br>perjalanan baru ini</b>
-                                            </strong>
-                                        </td>
-                                        <td style="width: 20%">
-                                            <img src="{{asset($cdn_link.'images/ani-write.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-write.gif')}}" height="80" alt="">
-                                        </td>
-                                    </tr>
-                                </table>
-                                <div class="row gla_wht_txt">
-                                    <div class="col-sm-6"><br><br>
-                                        <span class="fix-montserrat-s-b ft-shadow">Pengirim</span>
-                                        <input type="text" name="wish_name" maxlength="50" spellcheck="false" class="form-control in-focus-white-light" value="{{$invite}}" required>
-                                    </div><br><br>
-                                    <div class="col-sm-6"><br><br>
-                                        <span class="fix-montserrat-s-b ft-shadow">Harapan</span>
-                                        <textarea name="wish_message" maxlength="500" spellcheck="false" class="form-control in-focus-white-light" required></textarea>
-                                    </div>
+                        <img src="{{asset($cdn_link.'images/line-wishes.png')}}">
+                        <div class="text-left pd-md"><br><br><br><br><br><br><br><br>
+                            <div id="chat" class="chat_box_wrapper chat_box_small chat_box_active" style="opacity: 1; display: block; transform: translateX(0px); background-color: rgba(255,255,255,0.2);border-radius: 25px;">
+                                <div class="chat_box touchscroll chat_box_colors_a" id="table-wish">
                                 </div>
-                                <div class="row gla_wht_txt">
-                                    <div class="col-md-12">
-                                        <input type="submit" class="btn btn-brown-light-transp-2" id="form-rsvp-send" value="Simpan">
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </section>
                     <section    id="gift_qrcode" class="gla_section">
                         <div class="container-fluid text-center">
                             <div class="container text-center">
-                                <span class="fix-montserrat-m-b highlight-2-light">Wedding Gift</span><br><br>
-                                <span class="text-choco-1"><span class="fix-montserrat-m-b ff-ephesis">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan yang bersedia memberikan tanda cinta, bisa melalui:</span></span>
+                                <span class="fix-montserrat-m-b highlight-2-light">Wedding <i class="fas fa-gifts"></i> Gift</span><br><br>
+                                <span class="text-choco-1"><span class="fix-montserrat-m-b ff-ephesis">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan<br>yang ingin memberikan tanda cinta,<br>dapat melalui:</span></span>
                                 <p style="height:5vh"></p>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     {{-- <div class="col-2"></div> --}}
@@ -513,65 +500,6 @@
                                     </div>
                                     {{-- <div class="col-2"></div> --}}
                                 </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/s-2.webp')}}">
-                        <div class="gla_over" data-color="#282828" data-opacity="0.75"></div>
-                        <div class="container">{{-- text-right --}}
-                            <div class="container-fluid">
-                                <div class="text-right">
-                                    <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">
-                                </div>
-                                <strong class="ff-ephesis" style="font-size: 18px">
-                                    Tidak sabar untuk sambut<br>hari bahagia kami bersamamu.<br>Di bawah ini silahkan mengkonfirmasi<br>kehadiran Anda, terima kasih.
-                                </strong>
-                                <form id="form-rsvp" onsubmit="return false;">
-                                    <div class="row">
-                                        <div class="col-sm-8"><br>
-                                            <span class="fix-montserrat-s-b">Nama</span>
-                                            <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
-                                        </div>
-                                        <div class="col-sm-4"><br>
-                                            <span class="fix-montserrat-s-b">Alamat</span>
-                                            <input type="text" name="rsvp_address" class="form-control form-opacity in-focus-white-light" required>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12"><br>
-                                            <span class="fix-montserrat-s-b">Apakah kamu datang?</span><br>
-                                            <input type="radio" name="rsvp_attend" value="1" required>
-                                            <small>Ya, tentu!</small><br>
-                                            <input type="radio" name="rsvp_attend" value="0">
-                                            <small>Maaf, tidak dapat hadir</small>
-                                        </div>
-                                        <div class="col-md-12" style="padding-top:50px">
-                                            <input type="submit" class="btn btn-brown-light-transp-2 text-choco-1" id="form-rsvp-send" value="Simpan">
-                                        </div>
-                                        @if($display['rsvp'] == 1)
-                                        <div class="panel panel-default" style="margin-top:50px">
-                                            <div class="panel-heading">
-                                                <h5 class="panel-title">
-                                                    <a class="ft-dark" data-toggle="collapse" href="#table-rsvp-wrap">Lihat RSVP</a>
-                                                </h5>
-                                            </div>
-                                            <div id="table-rsvp-wrap" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    <table class="table table-sm table-borderless table-striped ft-dark" id="table-rsvp" width="100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th width="40%">Pengirim</th>
-                                                                <th width="40%">Alamat</th>
-                                                                <th width="20%">Kehadiran</th>
-                                                            </tr>
-                                                        </thead>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        @endif
-                                    </div>
-                                </form>
                             </div>
                         </div>
                     </section>
@@ -626,11 +554,11 @@
                     <section    id="quote" class="gla_image_bck gla_fixed h-fix-img" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/dyk-3.webp')}}">
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
-                            <span class="fix-montserrat-s-b gla_wht_txt ft-shadow" style="font-size:65%"><i>
-                                <sup>14</sup> <span>&nbsp;&nbsp;Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan.</span>
-                                <sup>15</sup> <span>&nbsp;&nbsp;Hendaklah damai sejahtera Kristus memerintah dalam hatimu, karena untuk itulah kamu telah dipanggil menjadi satu tubuh. Dan bersyukurlah.</span>
+                            <span class="fix-montserrat-s-b gla_wht_txt" style="font-size:75%"><i>
+                                <sup class="text-green">14</sup> <span class="ft-shadow">&nbsp;&nbsp;Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan.</span>
+                                <sup class="text-green">15</sup> <span class="ft-shadow">&nbsp;&nbsp;Hendaklah damai sejahtera Kristus memerintah dalam hatimu, karena untuk itulah kamu telah dipanggil menjadi satu tubuh. Dan bersyukurlah.</span>
                             </i></span><br><br><br><br><br>
-                            <p class="gla_subtitle text-choco-3 ft-shadow"><b>— Kolose 3:14-15</b></p>
+                            <p class="gla_subtitle text-choco-3 ft-shadow"><b>— Kolose 3 : 14-15</b></p>
                         </div>
                     </section>
                     <section    id="credit" class="gla_image_bck gla_section_extra_sml gla_wht_txt" data-color="#282828">
@@ -644,6 +572,38 @@
         <!-- CONTENT End -->
         @include('_invitation._wedding._include.asset-bottom-1')
         <script>
+            let entered = 0;
+            const myaudio = document.getElementById('myaudio');
+            const videoContainer = document.getElementById('video_container');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Load and autoplay YouTube when in view
+                        videoContainer.innerHTML = `
+                            <iframe
+                                src="https://www.youtube.com/embed/qb3LGsi2JMQ?si=QZfdxCX4TD_MUBmf&autoplay=1&rel=0"
+                                title="YouTube video"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen
+                                >
+                            </iframe>`;
+                        // Pause background audio
+                        myaudio.pause();
+                    } else {
+                        if(entered){
+                            // Remove iframe to stop video playback
+                            videoContainer.innerHTML = '';
+                            // Resume background audio
+                            myaudio.play();
+                        }
+                    }
+                });
+            }, {
+            threshold: 0.5 // 50% visibility triggers
+            });
+
+            observer.observe(videoContainer);
+
             function toggleNavbar() {
                 if ($(window).scrollTop() === 0) {
                     $("#navbar").addClass("navbar-disabled");
@@ -653,8 +613,9 @@
             }
             function executeInv(){
                 $("body").removeClass("bg-navy");
-                document.getElementById('myaudio').play();
-                document.getElementById('myaudio').volume = .35;
+                entered = 1;
+                myaudio.play();
+                myaudio.volume = .35;
                 $('#gla_welcome').remove();
                 $('#gla_welcome2').remove();
                 $('#gla_welcome3').remove();
@@ -681,9 +642,6 @@
                 $(window).on("scroll", toggleNavbar);
                 toggleNavbar(); // Run on page load
 
-                if("{{$display['rsvp']}}"  == 1){
-                    seeRSVP();
-                }
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
                     let auth_msg = `<br><br>Hello!<br>Thankyou for trying this page,
@@ -699,9 +657,10 @@
                             $('.gla_page_loader_light').show();
                             let name = $('[name="rsvp_name"]').val();
                             let address = $('[name="rsvp_address"]').val();
+                            let message = $('[name="wish_message"]').val();
                             let attend = $('input[name="rsvp_attend"]:checked').val();
                             $.ajax({
-                                url: 'send-rsvp',
+                                url: 'send-wish&rsvp',
                                 headers: {
                                     'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
                                 },
@@ -709,15 +668,19 @@
                                 data: JSON.stringify({
                                     sender_name: name,
                                     sender_address: address,
+                                    message: message,
                                     attend: attend
                                 }),
                                 contentType: 'application/json; charset=utf-8',
                                 success: (function (data) {
                                     if(data.status){
-                                        if("{{$display['rsvp']}}"  == 1){
-                                            seeRSVP();
-                                        }
+                                        seeWishes();
+                                        document.getElementById('form-rsvp').reset();
                                         toastr.success(data.message, 'Terima kasih ya!', {timeOut: 3000});
+                                        document.getElementById("form-rsvp-send").scrollIntoView({
+                                            behavior: "smooth", // or "auto"
+                                            block: "start" // top of the element
+                                        });
                                     }else{
                                         toastr.error(data.message, 'Ooops..', {timeOut: 5000});
                                     }
@@ -732,91 +695,39 @@
                         }
                     @endif
                 });
-
-                $(document).on("click","#form-wish-send",function(){
-                    @if($addition_logic && in_array('do',$addition_logic))
-                        toastr.warning(auth_msg, 'Ooops..', {timeOut: 60000});
-                    @else
-                        if(document.getElementById('form-wish').checkValidity()){
-                            console.log('handling :: form-wish | validity passed');
-                            $('.gla_page_loader_light').show();
-                            let name = $('[name="wish_name"]').val();
-                            let message = $('[name="wish_message"]').val();
-                            $.ajax({
-                                url: 'send-wish',
-                                headers: {
-                                    'x-csrf-token': $('meta[name="csrf-token"]').attr('content'),
-                                },
-                                type: 'POST',
-                                data: JSON.stringify({
-                                    sender_name: name,
-                                    message: message
-                                }),
-                                contentType: 'application/json; charset=utf-8',
-                                success: (function (data) {
-                                    console.log(data);
-                                    if(data.status){
-                                        seeWishes();
-                                        toastr.success(data.message, 'Terima kasih ya!', {timeOut: 3000});
-                                    }else{
-                                        toastr.error(data.message, 'Ooops..', {timeOut: 5000});
-                                    }
-                                    $('.gla_page_loader_light').hide();
-                                }),error:function(xhr,status,error) {
-                                    toastr.error(xhr.responseText, 'error [sys]', {timeOut: 5000});
-                                    $('.gla_page_loader_light').hide();
-                                }
-                            });
-                        }else{
-                            console.log('handling :: form-wish | validity 0');
-                        }
-                    @endif
-                });
-
-                function seeRSVP(){
-                    $('#table-rsvp').DataTable().clear().destroy();
-                    $('#table-rsvp').DataTable({
-                        processing: true,
-                        serverSide: true,
-                        paging: false,
-                        ajax: '{{url("/w/".$code."/get-rsvp")}}',
-                        columns: [
-                            {data: 'sender_name', name: 'sender_name'},
-                            {data: 'sender_address', name: 'sender_address'},
-                            {data: 'attend', name: 'attend'},
-                        ],
-                        columnDefs: [
-                            {
-                                width: '80px',
-                                targets: 2,
-                                render: function(data, type, full, meta) {
-                                    let temp_class = '';
-                                    console.log(data, full);
-                                    if(data == 1){
-                                        console.log('check');
-                                        return  '<center><span><i class="ti ti-check text-primary"></i></span></center>';
-                                    }else{
-                                        console.log('close');
-                                        return  '<center><span><i class="ti ti-close text-danger"></i></span></center>';
-                                    }
-                                },
-                            },
-                        ],
-                    });
-                }
-
+                
                 function seeWishes(){
-                    $('#table-wish').DataTable().clear().destroy();
-                    $('#table-wish').DataTable({
-                        processing: true,
-                        serverSide: true,
-                        paging: false,
-                        ajax: '{{url("/w/".$code."/get-wish")}}',
-                        columns: [
-                            {data: 'sender_name', name: 'sender_name'},
-                            {data: 'message', name: 'message'},
-                        ],
-                        sDom: '<"top"flp>rt<"bottom"i><"clear">'
+                    $.ajax({
+                        url: "{{ url('/w/'.$code.'/get-wish/v2') }}",
+                        type: "GET",
+                        success: function(response) {
+                            console.log("Data diterima:", response.products);
+                            let template = ``;
+                            (response.products).forEach((item) => {
+                                template += `
+                                        <div class="chat_message_wrapper">
+                                            <ul class="chat_message">
+                                                <li>
+                                                    <div class="row">
+                                                        <span class="chat_user_txt col-xs-8">`+item.sender_name+`</span>
+                                                        <div class="col-xs-4">
+                                                            <span class="badge badge-info small">  `+
+                                                                (item.attend?`<i class="fas fa-circle-check"></i>&nbsp;&nbsp; hadir`:`tidak hadir`)+
+                                                            `</span>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <p>`+item.message+` <span class="chat_message_time">`+item.created_at+`</span> </p>
+                                    
+                                                </li>
+                                            </ul>
+                                        </div>`;
+                            });
+                            $('#table-wish').html(template);
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error:", error);
+                        }
                     });
                 }
             });
