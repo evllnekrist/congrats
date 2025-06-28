@@ -197,7 +197,7 @@ span.initial {
     font-size: 13px;
     padding: 8px 16px;
     position: relative;
-    word-break: break-all;
+    word-break:  normal;
 }
 .chat_box .chat_message_wrapper ul.chat_message, .chat_box .chat_message_wrapper ul.chat_message > li {
     list-style: outside none none;

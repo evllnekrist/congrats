@@ -88,7 +88,8 @@
             .highlight-2-light{
                 background: rgba(255,255,255,0.8) !important;
                 box-shadow: 0 1.5px 9px 0 rgb(0 0 0 / 20%);
-                color: #956c5a;
+                /* color: #956c5a; */
+                color: #bf913e;
                 padding: 5px 30px;
                 line-height: 2;
                 border-radius: 10px;
@@ -187,10 +188,10 @@
                 -o-transition: all 0.3s;
                 transition: all 0.3s;
             }
-            .navbar-disabled {
+            /* .navbar-disabled {
                 pointer-events: none;
                 opacity: 0;
-            }
+            } */
 
             table.no-border, table.no-border th, table.no-border td {
                 border: none !important;
@@ -230,6 +231,13 @@
                 width: 100%;
                 height: 100%;
                 border: none;
+            }
+            #slide_img, #quote {
+                transition: background-image 0.5s ease-in-out, opacity 0.8s ease;
+                opacity: 1;
+            }
+            .fade-out {
+                opacity: 0;
             }
         </style>
     </head>
@@ -278,7 +286,6 @@
                     <i class="ti ti-music"></i>
                 </div>
                 <div class="gla_music_icon_cont">
-                    <br><br><br><br>
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
                         <source src="{{asset($cdn_link.'audios/westlife-evergreen.mp3')}}" type="audio/mpeg">
@@ -286,21 +293,19 @@
                         Your browser does not support the audio element.
                     </audio>
                 </div>
-                <header>
+                <!-- <header>
                     <nav class="gla_light_nav gla_transp_nav"  id="navbar">
                         <div class="container">
                             <div class="gla_logo_container clearfix">
                                 <div class="gla_logo_txt">
                                     <a href="/" class="gla_logo">Holly & Christian</a>
-                                    <div class="gla_logo_und">12 . 07 . 2025</div>
                                 </div>
                             </div>
-                            @include('_invitation._wedding._include.nav-2')
                         </div>
                     </nav>
-                </header>
+                </header> -->
                 <!-- Slider -->
-                <div class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/s-2.webp')}}" data-stellar-background-ratio="0.8">
+                <div id="slide_img" class="gla_slider gla_image_bck gla_wht_txt gla_fixed"  data-image="{{asset($cdn_link.'images/s-2.webp')}}" data-stellar-background-ratio="0.8">
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom" style="text-align:right;top:55%;left:-62%">
@@ -423,11 +428,11 @@
                                             <span class="fix-montserrat-s-b">Ucapan</span>
                                             <textarea name="wish_message" maxlength="500" spellcheck="false" class="form-control form-opacity in-focus-white-light" required></textarea>
                                         </div>
-                                        <div class="col-xs-6"><br><br><br><br>
+                                        <div class="col-xs-6"><br><br><br><br><br><br>
                                             <span class="fix-montserrat-s-b">Alamat</span>
                                             <input type="text" name="rsvp_address" class="form-control form-opacity in-focus-white-light" required>
                                         </div>
-                                        <div class="col-xs-6 text-choco-3"><br><br><br><br>
+                                        <div class="col-xs-6 text-choco-3"><br><br><br><br><br><br>
                                             <span class="fix-montserrat-s-b">Apakah kamu datang?</span><br>
                                             <input type="radio" name="rsvp_attend" value="1" required>
                                             <small>Ya, tentu!</small><br>
@@ -453,8 +458,8 @@
                     <section    id="gift_qrcode" class="gla_section">
                         <div class="container-fluid text-center">
                             <div class="container text-center">
-                                <span class="fix-montserrat-m-b highlight-2-light">Wedding <i class="fas fa-gifts"></i> Gift</span><br><br>
-                                <span class="text-choco-1"><span class="fix-montserrat-m-b ff-ephesis">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan<br>yang ingin memberikan tanda cinta,<br>dapat melalui:</span></span>
+                                <span class="fix-montserrat-m-b highlight-2-light">Wedding Gift&nbsp;&nbsp;<i class="fas fa-gifts"></i></span><br><br>
+                                <span class="text-choco-2"><span class="fix-montserrat-m-b ff-ephesis">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan<br>yang ingin memberikan tanda cinta,<br>dapat melalui:</span></span>
                                 <p style="height:5vh"></p>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     {{-- <div class="col-2"></div> --}}
@@ -596,13 +601,20 @@
 
             observer.observe(videoContainer);
 
-            function toggleNavbar() {
-                if ($(window).scrollTop() === 0) {
-                    $("#navbar").addClass("navbar-disabled");
-                } else {
-                    $("#navbar").removeClass("navbar-disabled");
-                }
-            }
+            // function toggleNavbar() {
+            //     if ($(window).scrollTop() === 0) {
+            //         $("#navbar").addClass("navbar-disabled");
+            //     } else {
+            //         $("#navbar").removeClass("navbar-disabled");
+            //     }
+        // }
+            const mainimages = ['s-2','s-1','top-0b'];
+            const mainimages_bottom = ['dyk-3','dyk-8','dyk-2','dyk-1b'];
+            const baseurl = "{{asset($cdn_link.'images')}}";
+            let el_mi = document.getElementById("slide_img");
+            let el_mi_bottom = document.getElementById("quote");
+            let index = 0;
+            let index_bottom = 0;
             function executeInv(){
                 $("body").removeClass("bg-navy");
                 entered = 1;
@@ -612,6 +624,18 @@
                 $('#gla_welcome2').remove();
                 $('#gla_welcome3').remove();
                 $('#gla_page').show();
+
+                el_mi.classList.add("fade-out");
+                el_mi_bottom.classList.add("fade-out");
+                setInterval(() => {
+                    index = (index + 1) % mainimages.length;
+                    el_mi.style.backgroundImage = "url('"+baseurl+"/"+mainimages[index]+".webp')";
+                    el_mi.classList.remove("fade-out");
+                    
+                    index_bottom = (index_bottom + 1) % mainimages_bottom.length;
+                    el_mi_bottom.style.backgroundImage = "url('"+baseurl+"/"+mainimages_bottom[index_bottom]+".webp')";
+                    el_mi_bottom.classList.remove("fade-out");
+                }, 5000); 
             }
 
             $( document ).ready(function() {
@@ -631,8 +655,8 @@
                     }
                 });
 
-                $(window).on("scroll", toggleNavbar);
-                toggleNavbar(); // Run on page load
+                // $(window).on("scroll", toggleNavbar);
+                // toggleNavbar(); // Run on page load
 
                 seeWishes();
                 @if($addition_logic && in_array('do',$addition_logic))
