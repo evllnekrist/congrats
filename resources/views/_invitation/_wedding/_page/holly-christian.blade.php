@@ -14,8 +14,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" rel="stylesheet" />
-        <link href="{{asset('asset-wedding-1/fonts/marsha/stylesheet.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/chatbox.css').$version}}" rel="stylesheet">
@@ -132,6 +132,9 @@
             .ft-shadow{
                 color: white;
                 text-shadow: 1px 1px 4px #000000;
+            }
+            .ft-shadow-white{
+                text-shadow: 1px 1px 4px #ffffff;
             }
             .in-focus-white-light{
                 background: rgba(255,255,255,0.8) !important;
@@ -367,9 +370,9 @@
                             </div>
                         </div>
                     </section>
-                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/pawel-czerwinski.jpg')}}" data-stellar-background-ratio="0.2">
+                    <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/pawel-czerwinski.jpg')}}" data-stellar-background-ratio="0.8">
                         <div class="container text-center">
-                                <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Hanya oleh karunia Tuhan,<br></span>
+                                <span class="text-subtitle-highlight-2 ff-tangerine" style="font-size: 26px">Hanya oleh karunia Tuhan,<br></span>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami dengan hormat meminta<br></span><span class="text-subtitle-highlight-1">kehadiran Anda</span></span><br><br><br><br>
                                 <div class="row">
                                     <div class="col-xs-2"></div>
@@ -378,13 +381,13 @@
                                             <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
                                         </div>
                                         <p>
-                                            <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Pemenuhan Hukum Adat</span><br><br>
+                                            <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Pemenuhan Hukum Adat</span><br><br>
                                             <span class="fix-montserrat-sm-b text-choco-2">Jumat,  11 Juli 2025</span><br><br>
-                                            <span class="label label-default">09.00 WIB s/d selesai</span><br><br>
+                                            <span class="label label-default">09.00 WIB s/d selesai</span>
                                         </p>
-                                            <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 50px;width:auto">
+                                            <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 100px;width:auto">
                                         <p>
-                                            <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Ibadah setelah Acara Adat</span><br><br>
+                                            <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Ibadah setelah Acara Adat</span><br><br>
                                             <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  11 Juli 2025</span><br><br>
                                             <span class="label label-default">11.00 WIB s/d selesai</span><br><br>
                                         </p>
@@ -404,7 +407,7 @@
                                             <img src="{{asset($cdn_link.'images/ygb.webp')}}">
                                         </div>
                                         <p>
-                                            <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Peneguhan dan Pemberkatan Nikah</span>
+                                            <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Peneguhan & Pemberkatan Nikah</span>
                                         </p>
                                         <p>
                                             <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
@@ -424,13 +427,13 @@
                                             <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
                                         </div>
                                         <p>
-                                            <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span><br><br>
+                                            <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span><br><br>
                                             <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
-                                            <span class="label label-default">11.00 WIB s/d selesai</span><br><br>
+                                            <span class="label label-default">11.00 WIB s/d selesai</span>
                                         </p>
-                                            <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 50px;width:auto">
+                                            <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 100px;width:auto">
                                         <p>
-                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Resepsi</span><br><br>
+                                            <span class="gla_slide_midtitle_m ff-tangerine" style="margin-bottom: 0px">Resepsi</span><br><br>
                                             <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
                                             <span class="label label-default">12.00 s/d 15.00 WIB</span><br><br>
                                         </p>
@@ -455,7 +458,7 @@
                                     <div class="col-xs-3"><br>
                                         <img src="{{asset($cdn_link.'images/ani-rsvp.gif')}}" data-bottom-top="@src:{{asset($cdn_link.'images/ani-rsvp.gif')}}" height="100" alt="">
                                     </div>
-                                    <strong class="col-xs-9 ff-ephesis text-right" style="font-size: 22px">
+                                    <strong class="col-xs-9 ff-tangerine text-right" style="font-size: 22px">
                                         Doa dan ucapanmu<br>sangat berarti untuk kami <br>dalam semangat memulai<br>perjalanan baru ini
                                     </strong>
                                 </div>
@@ -506,7 +509,7 @@
                         <div class="container-fluid text-center">
                             <div class="container text-center">
                                 <span class="fix-montserrat-m-b highlight-2-light">Wedding Gift&nbsp;&nbsp;<i class="fas fa-gifts"></i></span><br><br>
-                                <span class="text-choco-2"><span class="fix-montserrat-m-b ff-ephesis">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan<br>yang ingin memberikan tanda cinta,<br>dapat melalui:</span></span>
+                                <span class="text-choco-2"><span class="fix-montserrat-m-b ff-tangerine">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan<br>yang ingin memberikan tanda cinta,<br>dapat melalui:</span></span>
                                 <p style="height:5vh"></p>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     {{-- <div class="col-2"></div> --}}
@@ -599,8 +602,8 @@
                         <!-- <div class="gla_over" data-color="#ffff" data-opacity="0.2"></div> -->
                         <div class="container text-right pd-md-h">
                             <span class="fix-montserrat-s-b gla_wht_txt" style="font-size:75%"><i>
-                                <sup class="text-green">14</sup> <span class="ft-shadow">&nbsp;&nbsp;Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan.</span>
-                                <sup class="text-green">15</sup> <span class="ft-shadow">&nbsp;&nbsp;Hendaklah damai sejahtera Kristus memerintah dalam hatimu, karena untuk itulah kamu telah dipanggil menjadi satu tubuh. Dan bersyukurlah.</span>
+                                <sup class="text-green ft-shadow-white"><b>14</b></sup> <span class="ft-shadow">&nbsp;&nbsp;Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan.</span>
+                                <sup class="text-green ft-shadow-white"><b>15</b></sup> <span class="ft-shadow">&nbsp;&nbsp;Hendaklah damai sejahtera Kristus memerintah dalam hatimu, karena untuk itulah kamu telah dipanggil menjadi satu tubuh. Dan bersyukurlah.</span>
                             </i></span><br><br><br><br><br>
                             <p class="gla_subtitle text-choco-3 ft-shadow"><b>— Kolose 3 : 14-15</b></p>
                         </div>
