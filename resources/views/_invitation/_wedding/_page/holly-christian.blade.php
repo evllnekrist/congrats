@@ -3,7 +3,7 @@
     <head>
         @include('_invitation._wedding._include.head-1')
         <?php
-            $version = "?var=".date("Ymd")."010";
+            $version = "?var=".date("Ymd")."012";
             $qrcode1 = "0823261785";
             $qrcode2 = "8601177412";
         ?>
@@ -14,7 +14,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" rel="stylesheet" />
         <link href="{{asset('asset-main/css/jquery.dataTables.css')}}" rel="stylesheet">
         <link href="{{asset('asset-main/css/toastr.css')}}" rel="stylesheet">
@@ -317,7 +316,7 @@
                     <!-- <div class="gla_over" data-color="#1e1d2d" data-opacity="0.15"></div> -->
                     <div class="container">
                         <div class="gla_slide_txt gla_slide_center_bottom" style="text-align:right;top:55%;left:-62%">
-                            <img src="{{asset($cdn_link.'images/logo-pure.gif')}}" style="width:40vw !important">
+                            <img src="{{asset($cdn_link.'images/logo-pure-2.gif')}}" style="width:40vw !important">
                         </div>
                     </div>
                     <a class="gla_scroll_down gla_go" href="#gla_content">
@@ -372,8 +371,8 @@
                     </section>
                     <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/pawel-czerwinski.jpg')}}" data-stellar-background-ratio="0.8">
                         <div class="container text-center">
-                                <span class="text-subtitle-highlight-2 ff-tangerine" style="font-size: 26px">Hanya oleh karunia Tuhan,<br></span>
-                                <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami dengan hormat meminta<br></span><span class="text-subtitle-highlight-1">kehadiran Anda</span></span><br><br><br><br>
+                            
+                        <img src="{{asset($cdn_link.'images/line-event.png')}}">
                                 <div class="row">
                                     <div class="col-xs-2"></div>
                                     <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
@@ -509,7 +508,7 @@
                         <div class="container-fluid text-center">
                             <div class="container text-center">
                                 <span class="fix-montserrat-m-b highlight-2-light">Wedding Gift&nbsp;&nbsp;<i class="fas fa-gifts"></i></span><br><br>
-                                <span class="text-choco-2"><span class="fix-montserrat-m-b ff-tangerine">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan<br>yang ingin memberikan tanda cinta,<br>dapat melalui:</span></span>
+                                <span class="text-choco-2"><span class="fix-montserrat-l-b ff-tangerine">Tanpa mengurangi rasa hormat,</span><span class="fix-montserrat-xs-b"><br>untuk tamu undangan yang ingin memberikan tanda cinta, dapat melalui:</span></span>
                                 <p style="height:5vh"></p>
                                 <div class="gla_icon_boxes row justify-content-center">
                                     {{-- <div class="col-2"></div> --}}
@@ -523,7 +522,7 @@
                                             </span>
                                             <p onclick="copy_to_clipboard('{{$qrcode2}}')">
                                                 <span class="fix-montserrat-s-b">
-                                                    <label class="text-success">{{$qrcode2}}<br>a/n Bernadeta Holly </label>
+                                                    <label class="text-success">{{$qrcode2}}<br><small>a/n Bernadeta</small><br>Holly </label>
                                                     <br><small><i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i> [copy]</small>
                                                 </span>
                                             </p>
@@ -539,7 +538,7 @@
                                             </span>
                                             <p onclick="copy_to_clipboard('{{$qrcode1}}')">
                                                 <span class="fix-montserrat-s-b">
-                                                    <label class="text-success">{{$qrcode1}}<br>a/n Christian Leonard</label>
+                                                    <label class="text-success">{{$qrcode1}}<br><small>a/n Christian</small><br>Leonard</label>
                                                     <br><small><i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i> [copy]</small>
                                                 </span>
                                             </p>
