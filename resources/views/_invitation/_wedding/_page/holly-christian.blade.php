@@ -39,6 +39,11 @@
             .text-choco-2{
                 color: #bf913e;
             }
+            a.text-choco-2:hover{
+                color: #99ccff; !important;
+                font-weight: 200;
+                text-decoration: underline;
+            }
             .text-choco-3{
                 color: #392F24;
             }
@@ -174,11 +179,11 @@
                 transform: translateY(-50%);
                 left: 50%;
                 bottom: 10%;
-                padding: 5px 10px;
+                padding: 0px 10px;
                 margin: 10px 0;
                 width: 75%;
                 border-radius: 20px;
-                background: rgba(255, 255, 255, 0.7) !important;
+                background: rgba(255, 255, 255, 0.8) !important;
                 transform: translateY(0) translateX(-50%);
                 text-align: center;
                 -webkit-box-shadow: 0 1.5px 9px 0 rgba(0,0,0,0.2);
@@ -272,9 +277,9 @@
                     </span>
                     <br><br>
                 @endif
-                <h6><small>Mengundang Anda untuk menjadi bagian<br>dari hari bahagia kami<br><br><br><br><br></small></h6>
+                <h6><small>Mengundang Anda untuk menjadi bagian<br>dari hari bahagia kami<br><br><br><br></small></h6>
 
-                <button type="button" class="btn btn-skyblue-light-transp-2 gla_wht_txt gla_invitation_open_btn_longer__before_after_custom"
+                <button type="button" class="btn btn-xs btn-skyblue-light-transp-2 gla_wht_txt gla_invitation_open_btn_longer__before_after_custom"
                 id="gla_welcome3" onclick="executeInv()">Buka Undangan
                 </button>
             </div>
@@ -364,43 +369,79 @@
                     </section>
                     <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/pawel-czerwinski.jpg')}}" data-stellar-background-ratio="0.2">
                         <div class="container text-center">
-                                <div class="gla_over" data-color="#ffffff" data-opacity="0.2"></div>
                                 <span class="text-subtitle-highlight-2 ff-ephesis" style="font-size: 26px">Hanya oleh karunia Tuhan,<br></span>
                                 <span class="fix-montserrat-s-b"><span class="text-subtitle-highlight-1">kami dengan hormat meminta<br></span><span class="text-subtitle-highlight-1">kehadiran Anda</span></span><br><br><br><br>
-                                <div class="gla_icon_boxes row justify-content-center">
-                                    <div class="col-sm-6 gla_news_block">
+                                <div class="row">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
+                                        <div class="gla_news_img">
+                                            <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
+                                        </div>
+                                        <p>
+                                            <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Pemenuhan Hukum Adat</span><br><br>
+                                            <span class="fix-montserrat-sm-b text-choco-2">Jumat,  11 Juli 2025</span><br><br>
+                                            <span class="label label-default">09.00 WIB s/d selesai</span><br><br>
+                                        </p>
+                                            <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 50px;width:auto">
+                                        <p>
+                                            <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Ibadah setelah Acara Adat</span><br><br>
+                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  11 Juli 2025</span><br><br>
+                                            <span class="label label-default">11.00 WIB s/d selesai</span><br><br>
+                                        </p>
+                                        <p>
+                                            <a href="https://maps.app.goo.gl/Hwb4HfY6h3NxRwgz6" target="_blank" class="fix-montserrat-sm-b text-choco-2">
+                                                <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Hotel Hawaii</b>
+                                            </a>
+                                            <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-2"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
                                         <div class="gla_news_img">
                                             <img src="{{asset($cdn_link.'images/ygb.webp')}}">
                                         </div>
                                         <p>
-                                            <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Peneguhan dan Pemberkatan Nikah</span>
+                                            <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Peneguhan dan Pemberkatan Nikah</span>
                                         </p>
                                         <p>
-                                            <span class="label label-default">08.00 WIB s/d selesai</span><br><br>
                                             <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
-                                            <a href="https://g.co/kgs/fcbJTY9" class="fix-montserrat-sm-b text-choco-2" title="Klik untuk ke google map"><b>Gereja Katolik<br>Yesus Gembala Baik</b></a>
+                                            <span class="label label-default">08.00 WIB s/d selesai</span><br><br>
+                                            <a href="https://g.co/kgs/fcbJTY9" target="_blank" class="fix-montserrat-sm-b text-choco-2">
+                                                <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Gereja Katolik<br>Yesus Gembala Baik</b>
+                                            </a>
                                             <br>Jl. Tjilik Riwut KM. 9, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
                                         </p>
                                     </div>
-                                    <div class="col-sm-6 gla_news_block">
+                                    <div class="col-xs-2"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-2"></div>
+                                    <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
                                         <div class="gla_news_img">
                                             <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
                                         </div>
                                         <p>
                                             <span class="gla_slide_midtitle_m2 ff-ephesis ff-ephesis" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span><br><br>
-                                            <span class="label label-default">11.00 WIB s/d selesai</span>
+                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
+                                            <span class="label label-default">11.00 WIB s/d selesai</span><br><br>
                                         </p>
                                             <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 50px;width:auto">
                                         <p>
                                             <span class="gla_slide_midtitle_m ff-ephesis ff-ephesis" style="margin-bottom: 0px">Resepsi</span><br><br>
-                                            <span class="label label-default">12.00 s/d 15.00 WIB</span>
+                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
+                                            <span class="label label-default">12.00 s/d 15.00 WIB</span><br><br>
                                         </p>
                                         <p>
-                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
-                                            <a href="https://maps.app.goo.gl/Hwb4HfY6h3NxRwgz6" class="fix-montserrat-sm-b text-choco-2"><b>Hotel Hawaii</b></a>
+                                            <a href="https://maps.app.goo.gl/Hwb4HfY6h3NxRwgz6" target="_blank" class="fix-montserrat-sm-b text-choco-2">
+                                                <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Hotel Hawaii</b>
+                                            </a>
                                             <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
                                         </p>
                                     </div>
+                                    <div class="col-xs-2"></div>
                                 </div>
                         </div>
                     </section>
@@ -419,37 +460,43 @@
                                     </strong>
                                 </div>
                                 <form id="form-rsvp" onsubmit="return false;">
-                                    <div class="row">
-                                        <div class="col-sm-8"><br>
-                                            <span class="fix-montserrat-s-b">Pengirim</span>
-                                            <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
+                                        <div class="row">
+                                            <div class="col-xs-1"></div>
+                                            <div class="col-xs-10">
+                                                <span class="fix-montserrat-s-b">Pengirim</span>
+                                                <input type="text" name="rsvp_name" maxlength="50" spellcheck="false" class="form-control form-opacity in-focus-white-light" value="{{$invite}}" required>
+                                            </div>
+                                            <div class="col-xs-1"></div>
                                         </div>
-                                        <div class="col-sm-8">
-                                            <span class="fix-montserrat-s-b">Ucapan</span>
-                                            <textarea name="wish_message" maxlength="500" spellcheck="false" class="form-control form-opacity in-focus-white-light" required></textarea>
+                                        <div class="row">
+                                            <div class="col-xs-1"></div>
+                                            <div class="col-xs-10">
+                                                <span class="fix-montserrat-s-b">Ucapan</span>
+                                                <textarea name="wish_message" maxlength="500" spellcheck="false" class="form-control form-opacity in-focus-white-light" required></textarea>
+                                            </div>
+                                            <div class="col-xs-1"></div>
                                         </div>
-                                        <div class="col-xs-6"><br><br><br><br><br><br>
-                                            <span class="fix-montserrat-s-b">Alamat</span>
-                                            <input type="text" name="rsvp_address" class="form-control form-opacity in-focus-white-light" required>
+                                        <div class="row">
+                                            <div class="col-xs-1"></div>
+                                            <div class="col-xs-5"><br><br><br><br><br><br>
+                                                <span class="fix-montserrat-s-b">Alamat</span>
+                                                <input type="text" name="rsvp_address" class="form-control form-opacity in-focus-white-light" required>
+                                                <input type="submit" class="btn btn-block btn-skyblue-light-transp-2 text-choco-1" 
+                                                style="margin-top:20px" id="form-rsvp-send" value="Kirim">
+                                            </div>
+                                            <div class="col-xs-6 text-choco-3"><br><br><br><br><br><br>
+                                                <span class="fix-montserrat-s-b">Apakah kamu datang?</span><br>
+                                                <input type="radio" name="rsvp_attend" value="1" required>
+                                                <small>Ya, tentu!</small><br>
+                                                <input type="radio" name="rsvp_attend" value="0">
+                                                <small>Maaf, tidak dapat hadir</small><br><br>
+                                            </div>
                                         </div>
-                                        <div class="col-xs-6 text-choco-3"><br><br><br><br><br><br>
-                                            <span class="fix-montserrat-s-b">Apakah kamu datang?</span><br>
-                                            <input type="radio" name="rsvp_attend" value="1" required>
-                                            <small>Ya, tentu!</small><br>
-                                            <input type="radio" name="rsvp_attend" value="0">
-                                            <small>Maaf, tidak dapat hadir</small>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12" style="padding-top:30px">
-                                            <input type="submit" class="btn btn-brown-light-transp-2 text-choco-1" id="form-rsvp-send" value="Simpan">
-                                        </div>
-                                    </div>
                                 </form>
-                        </div>
+                        </div><br><br>
                         <img src="{{asset($cdn_link.'images/line-wishes2.png')}}">
                         <div class="text-left pd-md"><br><br><br><br><br><br><br><br>
-                            <div id="chat" class="chat_box_wrapper chat_box_small chat_box_active" style="opacity: 1; display: block; transform: translateX(0px); background-color: rgba(255,255,255,0.2);border-radius: 25px;">
+                            <div id="chat" class="chat_box_wrapper chat_box_small chat_box_active" style="opacity: 1; display: block; transform: translateX(0px); background-color: rgba(255,255,255,0.3);border-radius: 25px;">
                                 <div class="chat_box touchscroll chat_box_colors_a" id="table-wish">
                                 </div>
                             </div>
@@ -608,7 +655,7 @@
             //         $("#navbar").removeClass("navbar-disabled");
             //     }
         // }
-            const mainimages = ['s-2','s-1','top-0b'];
+            const mainimages = ['s-2','s-1'];
             const mainimages_bottom = ['dyk-3','dyk-8','dyk-2','dyk-1b'];
             const baseurl = "{{asset($cdn_link.'images')}}";
             let el_mi = document.getElementById("slide_img");
