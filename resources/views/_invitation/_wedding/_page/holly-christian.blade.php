@@ -339,7 +339,7 @@
                                 <div class="col-xs-6">
                                     <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
                                         <a href="{{asset($cdn_link.'images/bride-3.webp')}}">
-                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride-1.webp')}}" alt="">
+                                            <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride-3.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Bernadeta<br>Holly<br>Ayuningrum,<br>S.T.</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
