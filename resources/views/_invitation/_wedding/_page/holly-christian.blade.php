@@ -5,7 +5,7 @@
         <?php
             $version = "?var=".date("Ymd")."012";
             $qrcode1 = "0823261785";
-            $qrcode2 = "8601177412";
+            $qrcode2 = "1590003340113";
         ?>
         <link href="{{asset('asset-wedding-1/css/glanz_library.css')}}" rel="stylesheet">
         <link href="{{asset('asset-wedding-1/fonts/themify-icons.css')}}" rel="stylesheet">
@@ -295,8 +295,8 @@
                 <div class="gla_music_icon_cont">
                     <audio id="myaudio" controls loop>
                     <!-- dami_im__they_long_to_be_close_to_you.mp3 -->
-                        <source src="{{asset($cdn_link.'audios/westlife-evergreen.mp3')}}" type="audio/mpeg">
-                        <source src="{{asset($cdn_link.'audios/westlife-evergreen.mp3')}}" type="audio/ogg">
+                        <source src="{{asset($cdn_link.'audios/chrisye-kala-cinta-menggoda-sape-cover-by-alif-fakod.mp3')}}" type="audio/mpeg">
+                        <source src="{{asset($cdn_link.'audios/chrisye-kala-cinta-menggoda-sape-cover-by-alif-fakod.mp3')}}" type="audio/ogg">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
@@ -338,14 +338,14 @@
                             <div class="gla_icon_boxes row">
                                 <div class="col-xs-6">
                                     <div class="gla_news_block" style="background-color:rgba(0,0,0,0.6);">
-                                        <a href="{{asset($cdn_link.'images/bride-1.webp')}}">
+                                        <a href="{{asset($cdn_link.'images/bride-3.webp')}}">
                                             <img class="lazy" src="{{asset('asset-main/images/image/lazyload-bbc.webp')}}" data-src="{{asset($cdn_link.'images/bride-1.webp')}}" alt="">
                                         </a>
                                         <span class="gla_news_title-m pd-sd gla_wht_txt"><strong><small>Bernadeta<br>Holly<br>Ayuningrum,<br>S.T.</small></strong></span>
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon10_wh.gif')}}" style="width:40px!important;"><br><br>
                                         <p class="text-skyblue">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putri sulung<br>dari</small><br>
-                                            <span class="fix-montserrat-s-b"><small>Bapak Yohannes</small> Aris M.</span>
+                                            <span class="fix-montserrat-s-b">Bapak<br><small>Yohannes Aris</small><br>Murkadaryanta</span>
                                             <br>&<br>
                                             <span class="fix-montserrat-s-b">Ibu Martane</span>
                                         </p>
@@ -360,9 +360,9 @@
                                         <img src="{{asset('asset-wedding-1/images/animations/icons/icon15_wh.gif')}}" style="width:55px!important;"><br><br>
                                         <p class="text-skyblue">
                                             <small class="gla_wht_txt ft-shadow-soft-reverse">putra bungsu<br>dari</small></b><br>
-                                            <span class="fix-montserrat-s-b">Bapak Setia Jaya</span>
+                                            <span class="fix-montserrat-s-b">Bapak<br>Setia Jaya</span>
                                             <br>&<br>
-                                            <span class="fix-montserrat-s-b">Ibu Riak</small></span>
+                                            <span class="fix-montserrat-s-b">Ibu Riak</small></span><br><br>
                                         </p>
                                     </div>
                                 </div>
@@ -371,86 +371,86 @@
                     </section>
                     <section    id="event-detail" class="gla_section gla_image_bck gla_fixed"  data-image="{{asset($cdn_link.'images/pawel-czerwinski.jpg')}}" data-stellar-background-ratio="0.8">
                         <div class="container text-center">
-                            
-                        <img src="{{asset($cdn_link.'images/line-event.png')}}">
-                                <div class="row">
-                                    <div class="col-xs-2"></div>
-                                    <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
-                                        <div class="gla_news_img">
-                                            <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
-                                        </div>
-                                        <p>
-                                            <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Pemenuhan Hukum Adat</span><br><br>
-                                            <span class="fix-montserrat-sm-b text-choco-2">Jumat,  11 Juli 2025</span><br><br>
-                                            <span class="label label-default">09.00 WIB s/d selesai</span>
-                                        </p>
-                                            <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 100px;width:auto">
-                                        <p>
-                                            <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Ibadah setelah Acara Adat</span><br><br>
-                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  11 Juli 2025</span><br><br>
-                                            <span class="label label-default">11.00 WIB s/d selesai</span><br><br>
-                                        </p>
-                                        <p>
-                                            <a href="https://maps.app.goo.gl/Hwb4HfY6h3NxRwgz6" target="_blank" class="fix-montserrat-sm-b text-choco-2">
-                                                <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Hotel Hawaii</b>
-                                            </a>
-                                            <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
-                                        </p>
+                            <img src="{{asset($cdn_link.'images/line-event.png')}}">
+                            <div class="row">
+                                <div class="col-xs-2"></div>
+                                <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
+                                    <div class="gla_news_img">
+                                        <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
                                     </div>
-                                    <div class="col-xs-2"></div>
+                                    <p>
+                                        <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Pemenuhan<br>Hukum Adat</span><br><br>
+                                        <span class="fix-montserrat-sm-b text-choco-2">Jumat,  11 Juli 2025</span><br><br>
+                                        <span class="label label-default">09.00 WIB s/d selesai</span>
+                                    </p>
+                                        <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 100px;width:auto">
+                                    <p>
+                                        <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Ibadah<br><small>(setelah Acara Adat)</small></span><br><br>
+                                        <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  11 Juli 2025</span><br><br>
+                                        <span class="label label-default">11.00 WIB s/d selesai</span><br><br>
+                                    </p>
+                                    <p>
+                                        <a href="https://maps.app.goo.gl/Hwb4HfY6h3NxRwgz6" target="_blank" class="fix-montserrat-sm-b text-choco-2">
+                                            <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Hotel Hawaii</b>
+                                        </a>
+                                        <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
+                                    </p>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-2"></div>
-                                    <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
-                                        <div class="gla_news_img">
-                                            <img src="{{asset($cdn_link.'images/ygb.webp')}}">
-                                        </div>
-                                        <p>
-                                            <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Peneguhan & Pemberkatan Nikah</span>
-                                        </p>
-                                        <p>
-                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
-                                            <span class="label label-default">08.00 WIB s/d selesai</span><br><br>
-                                            <a href="https://g.co/kgs/fcbJTY9" target="_blank" class="fix-montserrat-sm-b text-choco-2">
-                                                <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Gereja Katolik<br>Yesus Gembala Baik</b>
-                                            </a>
-                                            <br>Jl. Tjilik Riwut KM. 9, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
-                                        </p>
+                                <div class="col-xs-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-2"></div>
+                                <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
+                                    <div class="gla_news_img">
+                                        <img src="{{asset($cdn_link.'images/ygb.webp')}}">
                                     </div>
-                                    <div class="col-xs-2"></div>
+                                    <p>
+                                        <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Pemberkatan Nikah</span>
+                                    </p>
+                                    <p>
+                                        <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
+                                        <span class="label label-default">08.00 WIB s/d selesai</span><br><br>
+                                        <a href="https://g.co/kgs/fcbJTY9" target="_blank" class="fix-montserrat-sm-b text-choco-2">
+                                            <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Gereja Katolik<br>Yesus Gembala Baik</b>
+                                        </a>
+                                        <br>Jl. Tjilik Riwut KM. 9, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
+                                    </p>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-2"></div>
-                                    <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
-                                        <div class="gla_news_img">
-                                            <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
-                                        </div>
-                                        <p>
-                                            <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span><br><br>
-                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
-                                            <span class="label label-default">11.00 WIB s/d selesai</span>
-                                        </p>
-                                            <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 100px;width:auto">
-                                        <p>
-                                            <span class="gla_slide_midtitle_m ff-tangerine" style="margin-bottom: 0px">Resepsi</span><br><br>
-                                            <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
-                                            <span class="label label-default">12.00 s/d 15.00 WIB</span><br><br>
-                                        </p>
-                                        <p>
-                                            <a href="https://maps.app.goo.gl/Hwb4HfY6h3NxRwgz6" target="_blank" class="fix-montserrat-sm-b text-choco-2">
-                                                <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Hotel Hawaii</b>
-                                            </a>
-                                            <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
-                                        </p>
+                                <div class="col-xs-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-2"></div>
+                                <div class="col-xs-8 gla_news_block" style="background-color:rgba(255,255,255,0.3);">
+                                    <div class="gla_news_img">
+                                        <img src="{{asset($cdn_link.'images/hawaii.webp')}}">
                                     </div>
-                                    <div class="col-xs-2"></div>
+                                    <p>
+                                        <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Ibadah Ucapan Syukur</span><br><br>
+                                        <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
+                                        <span class="label label-default">11.00 WIB s/d selesai</span>
+                                    </p>
+                                        <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 100px;width:auto">
+                                    <p>
+                                        <span class="gla_slide_midtitle_m ff-tangerine" style="margin-bottom: 0px">Resepsi</span><br><br>
+                                        <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  12 Juli 2025</span><br><br>
+                                        <span class="label label-default">12.00 s/d 15.00 WIB</span><br><br>
+                                    </p>
+                                    <p>
+                                        <a href="https://maps.app.goo.gl/Hwb4HfY6h3NxRwgz6" target="_blank" class="fix-montserrat-sm-b text-choco-2">
+                                            <i class="fa-solid fa-location-dot text-danger"></i>&nbsp;&nbsp;<b>Hotel Hawaii</b>
+                                        </a>
+                                        <br>Jl. Bubut No.3, Bukit Tunggal, Kec. Jekan Raya, Kota Palangka Raya
+                                    </p>
                                 </div>
+                                <div class="col-xs-2"></div>
+                            </div>
                         </div>
+                        <img src="{{asset($cdn_link.'images/line-video.png')}}">
                     </section>
                     <div class="video-wrapper" id="video_container">
                             <!-- Placeholder to be replaced when visible -->
                     </div>
-                    <section    id="rsvp" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/top-3.webp')}}">
+                    <section    id="rsvp" class="gla_section gla_image_bck gla_fixed gla_wht_txt" data-stellar-background-ratio="0.8" data-image="{{asset($cdn_link.'images/top-3b.webp')}}">
                         <!-- <div class="gla_over" data-color="#000" data-opacity="0.1"></div> -->
                         <div class="container" style="padding-bottom: 0px !important;">
                                 <div class="row mb-10">
@@ -515,14 +515,14 @@
                                     <div class="col-xs-6">
                                         <div class="gla_news_block">
                                             <span class="gla_news_img" style="height:auto!important"><br>
-                                                <a href="{{asset($cdn_link.'images/bca.png')}}" target="_blank">
-                                                    <img src="{{asset($cdn_link.'images/bca.png')}}" download="bca.jpg"
+                                                <a href="{{asset($cdn_link.'images/mandiri.svg')}}" target="_blank">
+                                                    <img src="{{asset($cdn_link.'images/mandiri.svg')}}" download="bca.jpg"
                                                     style="height:15vh;width:15vh">
                                                 </a>
                                             </span>
                                             <p onclick="copy_to_clipboard('{{$qrcode2}}')">
                                                 <span class="fix-montserrat-s-b">
-                                                    <label class="text-success">{{$qrcode2}}<br><small>a/n Bernadeta</small><br>Holly </label>
+                                                    <label class="text-success">{{$qrcode2}}<br><small>a/n Bernadeta</small><br>Holly</label>
                                                     <br><small><i class="fa fa-clipboard text-secondary" aria-hidden="true" title="copy qrcode"></i> [copy]</small>
                                                 </span>
                                             </p>
@@ -553,7 +553,7 @@
                         <div class="container text-center"><br>
                             <?php
                                 $gallery_items = array(
-                                    array('name'=>'dyk-1a','class'=>'col-xs-4'),
+                                    array('name'=>'dyk-10','class'=>'col-xs-4'),
                                     array('name'=>'dyk-1b','class'=>'col-xs-4'),
                                     array('name'=>'dyk-9','class'=>'col-xs-4'),
                                     array('name'=>'dyk-6','class'=>'col-xs-4'),
@@ -658,7 +658,7 @@
             //     }
         // }
             const mainimages = ['s-2','s-1'];
-            const mainimages_bottom = ['dyk-3','dyk-8','dyk-2','dyk-1b'];
+            const mainimages_bottom = ['dyk-3b','dyk-7','dyk-2','dyk-1b'];
             const baseurl = "{{asset($cdn_link.'images')}}";
             let el_mi = document.getElementById("slide_img");
             let el_mi_bottom = document.getElementById("quote");
