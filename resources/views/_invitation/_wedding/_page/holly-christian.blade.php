@@ -386,7 +386,7 @@
                                         <img src="{{asset($cdn_link.'images/line-spare.png')}}" style="height: 100px;width:auto">
                                     <p>
                                         <span class="gla_slide_midtitle_m2 ff-tangerine" style="margin-bottom: 0px">Ibadah<br><small>(setelah Acara Adat)</small></span><br><br>
-                                        <span class="fix-montserrat-sm-b text-choco-2">Sabtu,  11 Juli 2025</span><br><br>
+                                        <span class="fix-montserrat-sm-b text-choco-2">Jumat,  11 Juli 2025</span><br><br>
                                         <span class="label label-default">11.00 WIB s/d selesai</span><br><br>
                                     </p>
                                     <p>
