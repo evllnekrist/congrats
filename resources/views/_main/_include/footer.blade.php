@@ -42,6 +42,7 @@
                     <li><a href="{{url('/w/ricky-hannie-wedding-do?i=Mr./Ms.')}}" target="_blank">Ricky & Hannie's Wedding</a></li>
                     <li><a href="{{url('/w/lukas-desi-wedding-do?i=Mr./Ms.')}}" target="_blank">Lukas & Desi's Wedding</a></li>
                     <li><a href="{{url('/w/fiktor-chyntya-wedding-do?i=Mr./Ms.')}}" target="_blank">Fiktor & Chytya's Wedding</a></li>
+                    <li><a href="{{url('/w/holly-christian-wedding-do?i=Mr./Ms.')}}" target="_blank">Christian & Holly's Wedding</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4">
